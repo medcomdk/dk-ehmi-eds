@@ -100,3 +100,23 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^experimental = false
 * include codes from system ehmi-auditevent-agent-who-identifiers
 
+CodeSystem: ehmi-auditevent-audit-source-type
+Id: ehmi-auditevent-audit-source-type
+Title: "EHMI AuditEvent audit-source-type CS"
+Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* 1 "User Device" "End-user display device, diagnostic device"
+
+ValueSet: EHMIAuditeventAuditSourceTypeValueset
+Id: ehmi-auditevent-audit-source-type-valueset
+Title: "EHMI AuditEvent audit-source-type Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system ehmi-auditevent-audit-source-type
