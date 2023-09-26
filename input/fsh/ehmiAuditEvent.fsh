@@ -19,11 +19,11 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * agent.who.identifier 1..1
 * agent.who only Reference(Device)
 * agent.name 1..1 MS 
-* agent.network.type 1..1 MS SU
+* agent.network.type 1..1 MS 
 * agent.network.type from ehmi-auditevent-network-valueset
-* source.observer 1..1 MS SU
+* source.observer 1..1 MS 
 * source.observer only Reference(Device)
-* source.type 1..1 MS SU
+* source.type 1..1 MS 
 * source.type from ehmi-auditevent-audit-source-type-valueset
 * entity 3..
 * entity ^slicing.discriminator.type = #pattern
