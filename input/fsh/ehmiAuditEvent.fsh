@@ -1,6 +1,6 @@
 Profile: EHMIAuditEvent
 Parent: AuditEvent
-Description: "EHMI profile of the AuditEvent resource."
+Description: "EHMI profile of the AuditEvent resource. X"
 
 //  Instance: EHMIAuditEventExample
 //  InstanceOf: EHMIAuditEvent
