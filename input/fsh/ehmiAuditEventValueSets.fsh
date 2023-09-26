@@ -55,3 +55,28 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * include #8 from system http://hl7.org/fhir/audit-event-outcome
 * exclude #4 from system http://hl7.org/fhir/audit-event-outcome
 * exclude #12 from system http://hl7.org/fhir/audit-event-outcome
+
+CodeSystem: ehmi-audit-event-participationroletype
+Id: ehmi-audit-event-participationroletype
+Title: "EHMI AuditEvent ParticipationRoleType CS"
+Description: "ehmi-audit-event-participationroletype for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* #SENDER "The application that creates a new message"
+* #MSH "The Message Service Handler that passes the message on"
+* #EDEL-AP "The eDelivery Access Point that passes the message on"
+* #RECEIVER "The application that receives the new message"
+
+ValueSet: EHMIAuditEventParticipationRoleTypeValueset
+Id: ehmi-audit-event-participationroletype-valueset
+Title: "EHMI AuditEvent ParticipationRoleType Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system ehmi-audit-event-participationroletype
+

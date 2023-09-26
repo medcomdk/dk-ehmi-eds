@@ -10,10 +10,10 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * subtype from ehmi-auditevent-sub-types-valueset
 * outcome 1..1
 * outcome MS
-* outcome from auditevent-outcome-valueset
+* outcome from ehmi-auditevent-outcome-valueset
 * agent.type 1..1
 * agent.type MS
-* agent.type from ehmi-audit-event-outcome-valueset
+* agent.type from ehmi-audit-event-participationroletype-valueset
 
 //  Instance: EHMIAuditEventExample
 //  InstanceOf: EHMIAuditEvent
