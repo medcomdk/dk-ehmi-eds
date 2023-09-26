@@ -14,6 +14,17 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * agent.type 1..1
 * agent.type MS
 * agent.type from ehmi-auditevent-participationroletype-valueset
+* agent.who 1..1
+* agent.who MS
+* agent.who.identifier 1..1
+* agent.name 1..1
+* agent.name MS
+* agent.network 1..1
+* agent.network MS
+* agent.network.type 1..1
+* agent.network.type MS
+* agent.network.type from ehmi-auditevent-network-valueset
+
 
 //  Instance: EHMIAuditEventExample
 //  InstanceOf: EHMIAuditEvent
