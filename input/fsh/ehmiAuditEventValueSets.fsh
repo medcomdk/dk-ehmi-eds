@@ -1,4 +1,4 @@
-CodeSystem: ehmi-auditevent-type
+CodeSystem: EHMIAuditEventTypes
 Id: ehmi-auditevent-types
 Title: "EHMI AuditEvent Types CS"
 Description: "ehmi-auditevent-types for the EHMI Messaging Infrastructure"
@@ -17,9 +17,9 @@ Description: "ValueSet containing codes for EHMI AuditEventTypes"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-type
+* include codes from system EHMIAuditEventTypes
 
-CodeSystem: ehmi-auditevent-sub-type
+CodeSystem: EHMIAuditEventSubTypes
 Id: ehmi-auditevent-sub-types
 Title: "EHMI AuditEvent SubTypes CS"
 Description: "ehmi-auditevent-types for the EHMI Messaging Infrastructure"
@@ -41,7 +41,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-sub-type
+* include codes from system EHMIAuditEventSubTypes
 
 ValueSet: EHMIAuditEventOutcomeValueset
 Id: ehmi-auditevent-outcome-valueset
