@@ -56,7 +56,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * exclude #4 from system http://hl7.org/fhir/audit-event-outcome
 * exclude #12 from system http://hl7.org/fhir/audit-event-outcome
 
-CodeSystem: ehmi-auditevent-participationroletype
+CodeSystem: EHMIAuditEventParticipationRoleType
 Id: ehmi-auditevent-participationroletype
 Title: "EHMI AuditEvent ParticipationRoleType CS"
 Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infrastructure"
@@ -78,9 +78,9 @@ Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-participationroletype
+* include codes from system EHMIAuditEventParticipationRoleType
 
-CodeSystem: ehmi-auditevent-agent.who.identifiers
+CodeSystem: EHMIAuditEventAgentWhoIdentifiers
 Id: ehmi-auditevent-agent-who-identifiers
 Title: "EHMI AuditEvent agent.who.identifier CS"
 Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infrastructure"
@@ -98,7 +98,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-agent-who-identifiers
+* include codes from system EHMIAuditEventAgentWhoIdentifiers
 
 /*
 CodeSystem: AuditEventAgentNetwork
