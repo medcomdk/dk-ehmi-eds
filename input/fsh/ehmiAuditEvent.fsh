@@ -17,7 +17,7 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * agent.who 1..1
 * agent.who MS
 * agent.who.identifier 1..1
-* agent.who Reference(Device)
+* agent.who only Reference(Device)
 * agent.name 1..1
 * agent.name MS
 * agent.network.type 1..1
@@ -25,7 +25,7 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * agent.network.type from ehmi-auditevent-network-valueset
 * source.observer MS
 * source.observer 1..1
-* source.observer Reference(Device)
+* source.observer only Reference(Device)
 * source.type MS
 * source.type 1..1
 * source.type from ehmi-auditevent-audit-source-type-valueset
