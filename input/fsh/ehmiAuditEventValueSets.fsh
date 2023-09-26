@@ -125,7 +125,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-netw
 * include #1 from system http://hl7.org/fhir/network-type
 * include #8 from system http://hl7.org/fhir/network-type
 
-CodeSystem: ehmi-auditevent-audit-source-type
+CodeSystem: EHMIAuditeventAuditSourceType
 Id: ehmi-auditevent-audit-source-type
 Title: "EHMI AuditEvent audit-source-type CS"
 Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastructure"
@@ -144,4 +144,4 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-audit-source-type
+* include codes from system EHMIAuditeventAuditSourceType
