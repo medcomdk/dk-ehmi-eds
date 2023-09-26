@@ -62,9 +62,10 @@ dependencies:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
+parameters:
+  apply-contact: true
+  apply-juristiction: true
+  apply-publisher: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -75,9 +76,13 @@ dependencies:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
+  Table of Contents: toc.html
   Home: index.html
+  Profiles: profiles.html
+  Extensions: extensions.html
   Artifacts: artifacts.html
-
+  Downloads: downloads.html
+#
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
@@ -212,15 +217,3 @@ instanceOptions:
   #
   # setId: always # always | standalone-only
 
-menu:
-  Table of Contents: toc.html
-  Home: index.html
-  Profiles: profiles.html
-  Extensions: extensions.html
-  Artifacts: artifacts.html
-  Downloads: downloads.html
-
-parameters:
-  apply-contact: true
-  apply-juristiction: true
-  apply-publisher: true
