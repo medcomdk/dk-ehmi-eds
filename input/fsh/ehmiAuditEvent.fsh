@@ -13,7 +13,7 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * outcome from ehmi-auditevent-outcome-valueset
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-* agent.type 1..1 MS SU
+* agent.type 1..1 MS 
 * agent.type from ehmi-auditevent-participationroletype-valueset
 * agent.who 1..1 MS SU
 * agent.who.identifier 1..1
