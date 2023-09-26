@@ -100,6 +100,30 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^experimental = false
 * include codes from system ehmi-auditevent-agent-who-identifiers
 
+/*
+CodeSystem: AuditEventAgentNetwork
+Id: ehmi-auditevent-network
+Title: "EHMI AuditEvent audit-source-type CS"
+Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* #1 "Machine Name" "The machine name, including DNS name"
+*/
+
+ValueSet: AuditEventAgentNetworkValueset
+Id: ehmi-auditevent-network-valueset
+Title: "EHMI AuditEvent audit-source-type Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-network"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+//* include codes from system ehmi-auditevent-network
+* include #1 from system http://hl7.org/fhir/network-type
+
 CodeSystem: ehmi-auditevent-audit-source-type
 Id: ehmi-auditevent-audit-source-type
 Title: "EHMI AuditEvent audit-source-type CS"
@@ -109,7 +133,7 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* 1 "User Device" "End-user display device, diagnostic device"
+* #1 "User Device" "End-user display device, diagnostic device"
 
 ValueSet: EHMIAuditeventAuditSourceTypeValueset
 Id: ehmi-auditevent-audit-source-type-valueset
