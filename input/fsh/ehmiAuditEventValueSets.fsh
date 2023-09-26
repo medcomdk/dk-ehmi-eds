@@ -51,10 +51,10 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include #0 from system http://hl7.org/fhir/auditevent-outcome
-* include #8 from system http://hl7.org/fhir/auditevent-outcome
-* exclude #4 from system http://hl7.org/fhir/auditevent-outcome
-* exclude #12 from system http://hl7.org/fhir/auditevent-outcome
+* include #0 from system http://hl7.org/fhir/audit-event-outcome
+* include #8 from system http://hl7.org/fhir/audit-event-outcome
+* exclude #4 from system http://hl7.org/fhir/audit-event-outcome
+* exclude #12 from system http://hl7.org/fhir/audit-event-outcome
 
 CodeSystem: ehmi-auditevent-participationroletype
 Id: ehmi-auditevent-participationroletype
@@ -69,6 +69,26 @@ Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infra
 * #MSH "The Message Service Handler that passes the message on"
 * #EDEL-AP "The eDelivery Access Point that passes the message on"
 * #RECEIVER "The application that receives the new message"
+
+ValueSet: EHMIAuditEventParticipationRoleTypeValueset
+Id: ehmi-auditevent-participationroletype-valueset
+Title: "EHMI AuditEvent ParticipationRoleType Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system ehmi-auditevent-participationroletype
+
+CodeSystem: ehmi-auditevent-agent.who.identifiers
+Id: ehmi-auditevent-agent.who.identifiers
+Title: "EHMI AuditEvent agent.who.identifier CS"
+Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
 
 ValueSet: EHMIAuditEventParticipationRoleTypeValueset
 Id: ehmi-auditevent-participationroletype-valueset
