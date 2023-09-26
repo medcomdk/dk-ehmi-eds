@@ -6,6 +6,7 @@ Description: "ehmi-audit-event-types for the EHMI Messaging Infrastructure"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
+* ^caseSensitive = true
 * #EHMI-messaging "EHMI message events"
 
 ValueSet: EHMIAuditEventTypesValueset
@@ -26,6 +27,7 @@ Description: "ehmi-audit-event-types for the EHMI Messaging Infrastructure"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
+* ^caseSensitive = true
 * #msg-created "A new message has been created"
 * #msg-sent "A new message has been sent"
 * #msg-received "A new message has been recieved"
@@ -49,7 +51,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include #0 from system audit-event-outcome
-* include #8 from system audit-event-outcome
-* exclude #4 from system audit-event-outcome
-* exclude #12 from system audit-event-outcome
+* include #0 from system http://hl7.org/fhir/audit-event-outcome
+* include #8 from system http://hl7.org/fhir/audit-event-outcome
+* exclude #4 from system http://hl7.org/fhir/audit-event-outcome
+* exclude #12 from system http://hl7.org/fhir/audit-event-outcome
