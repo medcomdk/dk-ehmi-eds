@@ -31,12 +31,12 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * entity ^slicing.rules = #open
 * entity ^slicing.ordered = false   // can be omitted, since false is the default
 * entity ^slicing.description = "Slice based on the entity.what pattern"
-* entity[Patient].what only Reference(Patient)
-* entity[Person].what only Reference(Person)
 /*
+* entity[Patient].what only Reference(Patient)
 * entity[Patient].what 1..1
 * entity[Patient].what only Reference(Patient)
 * entity[Patient].detail.id 1..1
+* entity[Person].what only Reference(Person)
 * entity[Person].what 1..1
 * entity[Person].what only Reference(Person)
 * entity[Person].detail.id 1..1
