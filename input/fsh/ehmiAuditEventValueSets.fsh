@@ -115,7 +115,7 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 
 ValueSet: AuditEventAgentNetworkValueset
 Id: ehmi-auditevent-network-valueset
-Title: "EHMI AuditEvent audit-source-type Valueset"
+Title: "EHMI AuditEvent Network Valueset"
 Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-network"
 * ^version  =  "1.0.0"
 * ^status  =  #active
