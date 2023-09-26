@@ -8,7 +8,12 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * subtype 1..1
 * subtype MS
 * subtype from ehmi-auditevent-sub-types-valueset
-
+* outcome 1..1
+* outcome MS
+* outcome from auditevent-outcome-valueset
+* agent.type 1..1
+* agent.type MS
+* agent.type from ehmi-audit-event-outcome-valueset
 
 //  Instance: EHMIAuditEventExample
 //  InstanceOf: EHMIAuditEvent
