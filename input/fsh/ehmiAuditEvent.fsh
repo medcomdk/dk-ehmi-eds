@@ -22,17 +22,17 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * source.type 1..1 MS SU
 * source.type from ehmi-auditevent-audit-source-type-valueset
 * entity 3..
-* entity ^slicing.discriminator.type = #what
-* entity ^slicing.discriminator.path = "$this.content"
+* entity ^slicing.discriminator.type = #pattern
+* entity ^slicing.discriminator.path = "what"
 * entity ^slicing.rules = #open
 * entity ^slicing.ordered = false   // can be omitted, since false is the default
 * entity ^slicing.description = "Slice based on the entity.what pattern"
 /*
-* entity[Patient] 1..1
-* entity[Patient].what only Reference(Patient) 1..1
+* entity[Patient].what 1..1
+* entity[Patient].what only Reference(Patient)
 * entity[Patient].detail.id 1..1
-* entity[Person] 1..1
-* entity[Person].what only Reference(Person) 1..1
+* entity[Person].what 1..1
+* entity[Person].what only Reference(Person)
 * entity[Person].detail.id 1..1
 */
 
