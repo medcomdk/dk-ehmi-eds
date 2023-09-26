@@ -123,6 +123,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-netw
 * ^experimental = false
 //* include codes from system ehmi-auditevent-network
 * include #1 from system http://hl7.org/fhir/network-type
+* include #8 from system http://hl7.org/fhir/network-type
 
 CodeSystem: ehmi-auditevent-audit-source-type
 Id: ehmi-auditevent-audit-source-type
