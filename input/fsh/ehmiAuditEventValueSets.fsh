@@ -81,7 +81,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 * include codes from system ehmi-auditevent-participationroletype
 
 CodeSystem: ehmi-auditevent-agent.who.identifiers
-Id: ehmi-auditevent-agent.who.identifiers
+Id: ehmi-auditevent-agent-who-identifiers
 Title: "EHMI AuditEvent agent.who.identifier CS"
 Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
@@ -90,13 +90,13 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * ^experimental = false
 * ^caseSensitive = true
 
-ValueSet: EHMIAuditEventParticipationRoleTypeValueset
-Id: ehmi-auditevent-participationroletype-valueset
-Title: "EHMI AuditEvent ParticipationRoleType Valueset"
-Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
+ValueSet: EHMIAuditEventAgentWhoIdentifiersValueset
+Id: ehmi-auditevent-agent-who-identifiers-valueset
+Title: "EHMI AuditEvent AgentWhoIdentifiers Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system ehmi-auditevent-participationroletype
+* include codes from system ehmi-auditevent-agent-who-identifiers
 
