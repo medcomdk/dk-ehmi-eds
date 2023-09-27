@@ -23,13 +23,13 @@ Description: "EHMI profile of the AuditEvent resource."
     Device 1..1
 * agent[Sender].who only Reference(Organization)
 * agent[Sender].who.identifier 1..1 MS SU
-* ^agent[Sender].requestor = true
+//* ^agent[Sender].requestor = true
 * agent[Receiver].who only Reference(Organization)
 * agent[Receiver].who.identifier 1..1 MS SU
-* ^agent[Receiver].requestor = false
+//* ^agent[Receiver].requestor = false
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
-* ^agent[Device].requestor = false
+//* ^agent[Device].requestor = false
 * agent.type from ehmi-auditevent-participationroletype-valueset
 * agent.who 1..1 MS SU
 * agent.who.identifier 1..1
