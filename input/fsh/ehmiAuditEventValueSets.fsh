@@ -155,9 +155,9 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #1 "Patient" "Patient"
-* #2 "Message" "Message"
-* #3 "Envelope" "Envelope"
+* #Patient "Patient"
+* #Message "Message"
+* #Envelope "Envelope"
 
 ValueSet: EHMIAuditEventEntityTypeValueset
 Id: ehmi-auditevent-entity-type-valueset
