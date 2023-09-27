@@ -125,9 +125,9 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-netw
 * include #1 from system http://hl7.org/fhir/network-type
 * include #8 from system http://hl7.org/fhir/network-type
 
-CodeSystem: EHMIAuditeventAuditSourceType
-Id: ehmi-auditevent-audit-source-type
-Title: "EHMI AuditEvent audit-source-type CS"
+CodeSystem: EHMIAuditeventSourceType
+Id: ehmi-auditevent-source-type
+Title: "EHMI AuditEvent Source Type CS"
 Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -136,15 +136,15 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * ^caseSensitive = true
 * #1 "User Device" "End-user display device, diagnostic device"
 
-ValueSet: EHMIAuditeventAuditSourceTypeValueset
-Id: ehmi-auditevent-audit-source-type-valueset
-Title: "EHMI AuditEvent audit-source-type Valueset"
+ValueSet: EHMIAuditeventSourceTypeValueset
+Id: ehmi-auditevent-source-type-valueset
+Title: "EHMI AuditEvent Source Type Valueset"
 Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system EHMIAuditeventAuditSourceType
+* include codes from system EHMIAuditeventSourceType
 
 CodeSystem: EHMIAuditEventEntityType
 Id: ehmi-auditevent-entity-type
