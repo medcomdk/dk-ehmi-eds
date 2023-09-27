@@ -1,6 +1,6 @@
 Profile: EHMIAuditEvent
 Parent: AuditEvent
-Description: "EHMI profile of the AuditEvent resource. X"
+Description: "EHMI profile of the AuditEvent resource."
 * id 1..
 * id MS SU
 * type MS SU
@@ -14,6 +14,12 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 * agent.type 1..1 MS 
+* agent ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = type
+  * ^slicing.rules = #closed //#closed eller #open 
+* agent contains
+    Sender 1..1 and //check kardinalitet
+    Receiver 1..1
 * agent.type from ehmi-auditevent-participationroletype-valueset
 * agent.who 1..1 MS SU
 * agent.who.identifier 1..1
@@ -33,20 +39,16 @@ Description: "EHMI profile of the AuditEvent resource. X"
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
     Envelope 1..1
-/*
 * code.coding[Patient]
   * ^short = "Describe usage of slice - Patient"
-  * type 1..1
-  * type = 1
+  * type = #1
 * code.coding[Message]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1
-  * type = 2
+  * type = #2
 * code.coding[Envelope]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1
-  * type = 3
-*/
+  * type = #3
+
 /*
 * entity 3..
 * entity ^slicing.discriminator.type = #pattern
@@ -66,7 +68,3 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * entity[Person].what only Reference(Person)
 * entity[Person].detail.id 1..1
 */
-
-//  Instance: EHMIAuditEventExample
-//  InstanceOf: EHMIAuditEvent
-//  Description: "An example of a EHMIAuditEvent"
