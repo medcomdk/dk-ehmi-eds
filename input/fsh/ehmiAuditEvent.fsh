@@ -18,8 +18,18 @@ Description: "EHMI profile of the AuditEvent resource."
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * agent contains
-    Sender 1..1 and //check kardinalitet
-    Receiver 1..1
+    Sender 1..1 and
+    Receiver 1..1 and
+    Device 1..1
+* agent[Sender].who only Reference(Organization)
+* agent[Sender].who.identifier 1..1 MS SU
+* ^agent[Sender].requestor = true
+* agent[Receiver].who only Reference(Organization)
+* agent[Receiver].who.identifier 1..1 MS SU
+* ^agent[Receiver].requestor = false
+* agent[Device].who only Reference(Device)
+* agent[Device].who.identifier 1..1 MS SU
+* ^agent[Device].requestor = false
 * agent.type from ehmi-auditevent-participationroletype-valueset
 * agent.who 1..1 MS SU
 * agent.who.identifier 1..1
@@ -30,7 +40,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer 1..1 MS 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
-* source.type from ehmi-auditevent-audit-source-type-valueset
+* source.type from ehmi-auditevent-source-type-valueset
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -40,6 +50,8 @@ Description: "EHMI profile of the AuditEvent resource."
     Message 1..1 and
     Envelope 1..1
 * entity[Patient].type from ehmi-auditevent-entity-type-valueset
+* entity[Patient].what only Reference(Patient)
+* entity[Message].what only Reference(MessageHeader)
 /*
 * ^entity[Patient].type.code = Patient
 * [Patient]
