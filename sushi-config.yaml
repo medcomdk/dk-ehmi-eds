@@ -75,8 +75,8 @@ parameters:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Table of Contents: toc.html
   Home: index.html
+  Table of Contents: toc.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
