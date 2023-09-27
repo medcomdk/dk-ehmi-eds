@@ -31,18 +31,17 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-audit-source-type-valueset
-//* entity.type 1..1 from ehmi-auditevent-entity-type-valueset
+* entity.type from ehmi-auditevent-entity-type-valueset
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
+  * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
     Envelope 1..1
 /*
-* code.coding[Patient]
+* [Patient]
   * ^short = "Describe usage of slice - Patient"
-  * type = #1
 * code.coding[Message]
   * ^short = "Describe usage of slice - Message"
   * type = #2
