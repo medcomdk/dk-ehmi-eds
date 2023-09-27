@@ -161,7 +161,7 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 
 ValueSet: EHMIAuditEventEntityTypeValueset
 Id: ehmi-auditevent-entity-type-valueset
-Title: "EHMI AuditEvent audit-source-type Valueset"
+Title: "EHMI AuditEvent Entity Type Valueset"
 Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
 * ^version  =  "1.0.0"
 * ^status  =  #active
