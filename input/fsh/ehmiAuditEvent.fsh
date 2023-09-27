@@ -14,6 +14,12 @@ Description: "EHMI profile of the AuditEvent resource."
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 * agent.type 1..1 MS 
+* agent.type from ehmi-auditevent-participationroletype-valueset
+* agent.name 1..1 MS 
+* agent.network 0..0
+* agent.network.type 0..0
+* agent.who 0..1 
+* agent.who.identifier 1..1 MS SU
 * agent ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
@@ -30,13 +36,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
 //* ^agent[Device].requestor = false
-* agent.type from ehmi-auditevent-participationroletype-valueset
-* agent.who 1..1 MS SU
-* agent.who.identifier 1..1
-* agent.who only Reference(Device)
-* agent.name 1..1 MS 
-* agent.network.type 1..1 MS 
-* agent.network.type from ehmi-auditevent-network-valueset
+//* agent.who only Reference(Device)
 * source.observer 1..1 MS 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
