@@ -35,15 +35,15 @@ Description: "EHMI profile of the AuditEvent resource. X"
     Envelope 1..1
 * code.coding[Patient]
   * ^short = "Describe usage of slice - Patient"
-  * type 1..1 from ehmi-auditevent-entity-type-valueset
+  * type 1..1
   * type = 1
 * code.coding[Message]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1 from ehmi-auditevent-entity-type-valueset
+  * type 1..1
   * type = 2
 * code.coding[Envelope]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1 from ehmi-auditevent-entity-type-valueset
+  * type 1..1
   * type = 3
 
 /*
