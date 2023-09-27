@@ -39,6 +39,7 @@ Description: "EHMI profile of the AuditEvent resource."
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
     Envelope 1..1
+* ^entity[Patient].type.code = Patient
 /*
 * [Patient]
   * ^short = "Describe usage of slice - Patient"
