@@ -28,11 +28,12 @@ Description: "EHMI profile of the AuditEvent resource. X"
 //* entity.type 1..1 from ehmi-auditevent-entity-type-valueset
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #closed //eller #open
+  * ^slicing.rules = #open //#closed eller #open 
 * entity contains
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
     Envelope 1..1
+/*
 * code.coding[Patient]
   * ^short = "Describe usage of slice - Patient"
   * type 1..1
@@ -45,7 +46,7 @@ Description: "EHMI profile of the AuditEvent resource. X"
   * ^short = "Describe usage of slice - Message"
   * type 1..1
   * type = 3
-
+*/
 /*
 * entity 3..
 * entity ^slicing.discriminator.type = #pattern
