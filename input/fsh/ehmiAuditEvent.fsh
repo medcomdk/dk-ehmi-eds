@@ -25,7 +25,7 @@ Description: "EHMI profile of the AuditEvent resource. X"
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-audit-source-type-valueset
-* entity.type 1..1 from ehmi-auditevent-entity-type-valueset
+//* entity.type 1..1 from ehmi-auditevent-entity-type-valueset
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //eller #open
@@ -35,15 +35,15 @@ Description: "EHMI profile of the AuditEvent resource. X"
     Envelope 1..1
 * code.coding[Patient]
   * ^short = "Describe usage of slice - Patient"
-  * type 1..1
+  * type 1..1 from ehmi-auditevent-entity-type-valueset
   * type = 1
 * code.coding[Message]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1
+  * type 1..1 from ehmi-auditevent-entity-type-valueset
   * type = 2
 * code.coding[Envelope]
   * ^short = "Describe usage of slice - Message"
-  * type 1..1
+  * type 1..1 from ehmi-auditevent-entity-type-valueset
   * type = 3
 
 /*
