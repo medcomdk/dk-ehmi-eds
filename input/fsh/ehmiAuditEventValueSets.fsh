@@ -145,3 +145,28 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditeventAuditSourceType
+
+CodeSystem: EHMIAuditEventEntityType
+Id: ehmi-auditevent-entity-type
+Title: "EHMI AuditEvent Entity Type CS"
+Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* #1 "Patient" "Patient"
+* #2 "Message" "Message"
+* #3 "Envelope" "Envelope"
+
+ValueSet: EHMIAuditEventEntityTypeValueset
+Id: ehmi-auditevent-entity-type-valueset
+Title: "EHMI AuditEvent audit-source-type Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system EHMIAuditEventEntityType
+
+
