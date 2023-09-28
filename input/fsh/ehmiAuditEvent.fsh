@@ -51,21 +51,21 @@ Description: "EHMI profile of the AuditEvent resource."
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
     Envelope 1..1
-* entity[Patient].type from ehmi-auditevent-entity-type-valueset
 * entity[Patient].modifierExtension 0..0 
 * entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
 * entity[Patient].what.type 1..1 MS SU
-* entity[Message].type from ehmi-auditevent-entity-type-valueset
+* entity[Patient].type from ehmi-auditevent-entity-type-valueset
 * entity[Message].modifierExtension 0..0 
 * entity[Message].what only Reference(MessageHeader)
 * entity[Message].what.identifier 1..1 MS SU
 * entity[Message].what.type 1..1 MS SU
-* entity[Envelope].type from ehmi-auditevent-entity-type-valueset
+* entity[Message].type from ehmi-auditevent-entity-type-valueset
 * entity[Envelope].modifierExtension 0..0 
 * entity[Envelope].what only Reference(MessageHeader)
 * entity[Envelope].what.identifier 1..1 MS SU
 * entity[Envelope].what.type 1..1 MS SU
+* entity[Envelope].type from ehmi-auditevent-entity-type-valueset
 /*
 * ^entity[Patient].type.code = Patient
 * [Patient]
