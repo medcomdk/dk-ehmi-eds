@@ -123,7 +123,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-auditevent-netw
 * ^experimental = false
 //* include codes from system ehmi-auditevent-network
 * include #1 from system http://hl7.org/fhir/network-type
-* include #8 from system http://hl7.org/fhir/network-type
+//* include #2 from system http://hl7.org/fhir/network-type
 
 CodeSystem: EHMIAuditeventSourceType
 Id: ehmi-auditevent-source-type
@@ -134,7 +134,12 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #1 "User Device" "End-user display device, diagnostic device"
+* #1 "EUP (End-user Application)" "End-user display device, diagnostic device"
+* #2 "MSH (Application Server)" "ISO level 4-6 operating software."
+* #3 "AP (Access Point -Network Router)" "ISO level 4-6 operating software."
+* include #1 from system http://terminology.hl7.org/CodeSystem/security-source-type
+* include #4 from system http://terminology.hl7.org/CodeSystem/security-source-type
+* include #8 from system http://terminology.hl7.org/CodeSystem/security-source-type
 
 ValueSet: EHMIAuditeventSourceTypeValueset
 Id: ehmi-auditevent-source-type-valueset
