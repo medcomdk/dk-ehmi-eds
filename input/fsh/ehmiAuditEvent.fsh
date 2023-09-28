@@ -13,12 +13,13 @@ Description: "EHMI profile of the AuditEvent resource."
 * outcome from ehmi-auditevent-outcome-valueset
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
+* agent.modifierExtension 0..0 
 * agent.type 1..1 MS 
 * agent.type from ehmi-auditevent-participationroletype-valueset
 * agent.name 1..1 MS 
 * agent.network 0..0
 * agent.network.type 0..0
-* agent.who 0..1 
+* agent.who 3..3 
 * agent.who.identifier 1..1 MS SU
 * agent ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -41,6 +42,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
+* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -51,7 +53,11 @@ Description: "EHMI profile of the AuditEvent resource."
     Envelope 1..1
 * entity[Patient].type from ehmi-auditevent-entity-type-valueset
 * entity[Patient].what only Reference(Patient)
+* entity[Patient].what.identifier 1..1 MS SU
+* entity[Patient].what.type 1..1 MS SU
 * entity[Message].what only Reference(MessageHeader)
+* entity[Message].what.identifier 1..1 MS SU
+* entity[Message].what.type 1..1 MS SU
 /*
 * ^entity[Patient].type.code = Patient
 * [Patient]
