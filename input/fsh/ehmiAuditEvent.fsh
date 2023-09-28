@@ -30,12 +30,15 @@ Description: "EHMI profile of the AuditEvent resource."
     Device 1..1
 * agent[Sender].who only Reference(Organization)
 * agent[Sender].who.identifier 1..1 MS SU
+* agent[Sender].who.type 1..1 MS SU
 //* ^agent[Sender].requestor = true
 * agent[Receiver].who only Reference(Organization)
 * agent[Receiver].who.identifier 1..1 MS SU
+* agent[Receiver].who.type 1..1 MS SU
 //* ^agent[Receiver].requestor = false
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
+* agent[Device].who.type 1..1 MS SU
 //* ^agent[Device].requestor = false
 //* agent.who only Reference(Device)
 * source.observer 1..1 MS 
@@ -43,7 +46,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 * entity.modifierExtension 0..0 
-* entity.type from ehmi-auditevent-entity-type-valueset
+* entity.type
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
