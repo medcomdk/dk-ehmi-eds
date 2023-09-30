@@ -35,6 +35,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Sender].who ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
+* agent[Sender].who contains
     SOR 1..1 and
     GLN 1..1
 //* ^agent[Sender].requestor = true
@@ -44,6 +45,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Receiver].who ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
+* agent[Receiver].who contains
     SOR 1..1 and
     GLN 1..1
 //* ^agent[Receiver].requestor = false
