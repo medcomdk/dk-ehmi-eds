@@ -19,7 +19,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent[Receiver].who[SOR].identifier = "SOR12345"
 * agent[Receiver].who[GLN].type = "GLN"
 * agent[Receiver].who[GLN].identifier = "GLN12345"
-* agent[Device].type.coding.code =  "DEVICE"
+* agent[Device].type.coding.code =  "Sender"
 * agent[Device].name = "Systematic Cura"
 * agent[Device].requestor = false
 
