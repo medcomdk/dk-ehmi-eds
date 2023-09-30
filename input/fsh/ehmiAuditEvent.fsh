@@ -19,9 +19,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent.name 1..1 MS 
 * agent.network 0..0
 * agent.network.type 0..0
-* agent.who 1..1 
-* agent.who.type 1..1 MS SU
-* agent.who.identifier 1..1 MS SU
+* agent.who 0..1 
+* agent.who.type 0..1 
+* agent.who.identifier 0..1 
 * agent ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
