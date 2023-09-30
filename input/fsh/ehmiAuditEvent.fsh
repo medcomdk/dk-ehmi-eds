@@ -19,7 +19,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent.name 1..1 MS 
 * agent.network 0..0
 * agent.network.type 0..0
-* agent.who 1..2 
+* agent.who 1..1 
 * agent.who.type 1..1 MS SU
 * agent.who.identifier 1..1 MS SU
 * agent ^slicing.discriminator.type = #value
@@ -32,30 +32,18 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Sender].who only Reference(Organization)
 * agent[Sender].who.identifier 1..1 MS SU
 * agent[Sender].who.type 1..1 MS SU
-* agent[Sender].who ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #closed //#closed eller #open 
-* agent[Sender].who contains
-    SOR 1..1 and
-    GLN 1..1
 //* ^agent[Sender].requestor = true
 * agent[Receiver].who only Reference(Organization)
 * agent[Receiver].who.identifier 1..1 MS SU
 * agent[Receiver].who.type 1..1 MS SU
-* agent[Receiver].who ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #closed //#closed eller #open 
-* agent[Receiver].who contains
-    SOR 1..1 and
-    GLN 1..1
 //* ^agent[Receiver].requestor = false
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
 * agent[Device].who.type 1..1 MS SU
 //* ^agent[Device].requestor = false
-* source.observer 1..1 MS 
+* source.observer 0..1 
 * source.observer only Reference(Device)
-* source.type 1..1 MS 
+* source.type 0..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 * entity.modifierExtension 0..0 
 * entity.type
@@ -69,15 +57,15 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[Patient].modifierExtension 0..0 
 * entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
-* entity[Patient].what.type 1..1 MS SU
+* entity[Patient].type 1..1 MS SU
 * entity[Patient].type from ehmi-auditevent-entity-type-valueset
 * entity[Message].modifierExtension 0..0 
 * entity[Message].what only Reference(MessageHeader)
 * entity[Message].what.identifier 1..1 MS SU
-* entity[Message].what.type 1..1 MS SU
+* entity[Message].type 1..1 MS SU
 * entity[Message].type from ehmi-auditevent-entity-type-valueset
 * entity[Envelope].modifierExtension 0..0 
 * entity[Envelope].what only Reference(MessageHeader)
 * entity[Envelope].what.identifier 1..1 MS SU
-* entity[Envelope].what.type 1..1 MS SU
+* entity[Envelope].type 1..1 MS SU
 * entity[Envelope].type from ehmi-auditevent-entity-type-valueset
