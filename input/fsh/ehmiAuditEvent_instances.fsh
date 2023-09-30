@@ -1,12 +1,12 @@
 Instance: EHMIAuditEventExample-1.1-msg-created
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
-* id = 1.1
-* type =  EHMI-messaging
-* subtype =  msg-created
-* outcome = 0
-* agent.type =  SENDER
-
+* id = "1.1"
+* type =  "EHMI-messaging"
+* subtype =  "msg-created"
+* outcome = "0"
+* agent.type =  "SENDER"
+/*
 Instance: EHMIAuditEventExample-1.2-msg-sent
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
@@ -105,9 +105,4 @@ Description: "An example of an EHMIAuditEvent."
 * subtype =  msg-finalized
 * outcome = 0
 * agent.type =  RECEIVER
-
-/*
-* name
-  * given[0] = "James"
-  * family = "Pond"
 */
