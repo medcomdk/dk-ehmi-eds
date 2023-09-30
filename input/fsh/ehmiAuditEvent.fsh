@@ -20,6 +20,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent.network 0..0
 * agent.network.type 0..0
 * agent.who 1..1 
+* agent.who.type 1..1 MS SU
 * agent.who.identifier 1..1 MS SU
 * agent ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -31,16 +32,25 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Sender].who only Reference(Organization)
 * agent[Sender].who.identifier 1..1 MS SU
 * agent[Sender].who.type 1..1 MS SU
+* agent[Sender].who ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = type
+  * ^slicing.rules = #closed //#closed eller #open 
+    SOR 1..1 and
+    GLN 1..1
 //* ^agent[Sender].requestor = true
 * agent[Receiver].who only Reference(Organization)
 * agent[Receiver].who.identifier 1..1 MS SU
 * agent[Receiver].who.type 1..1 MS SU
+* agent[Receiver].who ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = type
+  * ^slicing.rules = #closed //#closed eller #open 
+    SOR 1..1 and
+    GLN 1..1
 //* ^agent[Receiver].requestor = false
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
 * agent[Device].who.type 1..1 MS SU
 //* ^agent[Device].requestor = false
-//* agent.who only Reference(Device)
 * source.observer 1..1 MS 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
