@@ -69,33 +69,3 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[Envelope].what.identifier 1..1 MS SU
 * entity[Envelope].what.type 1..1 MS SU
 * entity[Envelope].type from ehmi-auditevent-entity-type-valueset
-/*
-* ^entity[Patient].type.code = Patient
-* [Patient]
-  * ^short = "Describe usage of slice - Patient"
-* code.coding[Message]
-  * ^short = "Describe usage of slice - Message"
-  * type = #2
-* code.coding[Envelope]
-  * ^short = "Describe usage of slice - Message"
-  * type = #3
-*/
-/*
-* entity 3..
-* entity ^slicing.discriminator.type = #pattern
-* entity ^slicing.discriminator.path = "what"
-* entity ^slicing.rules = #open
-* entity ^slicing.ordered = false   // can be omitted, since false is the default
-* entity ^slicing.description = "Slice based on the entity.what pattern"
-*/
-/*
-* entity[Patient].what only Reference(Patient)
-* entity[Patient].what 1..1
-* entity[Patient].what only Reference(Patient)
-* entity[Patient].detail.id 1..1
-* entity[Person].what only Reference(Person)
-
-* entity[Person].what 1..1
-* entity[Person].what only Reference(Person)
-* entity[Person].detail.id 1..1
-*/
