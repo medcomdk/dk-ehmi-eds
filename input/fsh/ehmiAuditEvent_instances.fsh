@@ -19,7 +19,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent[Device].type.coding.code =  #Sender
 * agent[Device].name = "Systematic Cura EUP"
 * agent[Device].requestor = false
-* source.observer = "DEV12345"
+* source.observer.identifier.value = "DEV12345"
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type.code = #Patient
