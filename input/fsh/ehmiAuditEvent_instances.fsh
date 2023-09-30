@@ -4,7 +4,7 @@ Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
 * type.code =  #EHMI-messaging
 * subtype.code =  #msg-created
-* recorded = "2023-10-01 00:00"
+* recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome.value = "0"
 * agent[Sender].type.coding.code =  #SENDER
 * agent[Sender].name = "Aarhus Kommune"
@@ -23,10 +23,10 @@ Description: "An example of an EHMIAuditEvent."
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type.code = #Patient
-* entity[Patient].what.identifier.value = " = MSG1234567890"
-* entity[Patient].type.code = #Message
-* entity[Patient].what.identifier.value = " = ENV1234567890"
-* entity[Patient].type.code = #Envelope
+* entity[Message].what.identifier.value = " = MSG1234567890"
+* entity[Message].type.code = #Message
+* entity[Envelope].what.identifier.value = " = ENV1234567890"
+* entity[Envelope].type.code = #Envelope
 
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
