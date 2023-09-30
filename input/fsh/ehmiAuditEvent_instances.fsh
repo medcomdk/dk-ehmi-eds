@@ -16,14 +16,17 @@ Description: "An example of an EHMIAuditEvent."
 * agent[Receiver].who.type = "GLN"
 * agent[Receiver].who.identifier = "GLN12345"
 * agent[Device].type.coding.code =  "Sender"
-* agent[Device].name = "Systematic Cura"
+* agent[Device].name = "Systematic Cura EUP"
 * agent[Device].requestor = false
+* source.observer = "DEV12345"
+* source.type = "EUP"
 * entity[Patient].what.identifier = "PAT1234567890"
 * entity[Patient].type = "Patient"
 * entity[Patient].what.identifier = "MSG1234567890"
 * entity[Patient].type = "Message"
 * entity[Patient].what.identifier = "ENV1234567890"
 * entity[Patient].type = "Envelope"
+
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
 InstanceOf: EHMIAuditEvent
