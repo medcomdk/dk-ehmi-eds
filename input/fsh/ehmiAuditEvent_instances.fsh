@@ -8,21 +8,22 @@ Description: "An example of an EHMIAuditEvent."
 * agent[Sender].type.coding.code =  "SENDER"
 * agent[Sender].name = "Aarhus Kommune"
 * agent[Sender].requestor = true
-* agent[Sender].who[SOR].type = "SOR"
-* agent[Sender].who[SOR].identifier = "SOR1234"
-* agent[Sender].who[GLN].type = "GLN"
-* agent[Sender].who[GLN].identifier = "GLN1234"
+* agent[Sender].who.type = "GLN"
+* agent[Sender].who.identifier = "GLN1234"
 * agent[Receiver].type.coding.code =  "RECEIVER"
 * agent[Receiver].name = "Løgten Lægehus"
 * agent[Receiver].requestor = false
-* agent[Receiver].who[SOR].type = "SOR"
-* agent[Receiver].who[SOR].identifier = "SOR12345"
-* agent[Receiver].who[GLN].type = "GLN"
-* agent[Receiver].who[GLN].identifier = "GLN12345"
+* agent[Receiver].who.type = "GLN"
+* agent[Receiver].who.identifier = "GLN12345"
 * agent[Device].type.coding.code =  "Sender"
 * agent[Device].name = "Systematic Cura"
 * agent[Device].requestor = false
-
+* entity[Patient].what.identifier = "PAT1234567890"
+* entity[Patient].type = "Patient"
+* entity[Patient].what.identifier = "MSG1234567890"
+* entity[Patient].type = "Message"
+* entity[Patient].what.identifier = "ENV1234567890"
+* entity[Patient].type = "Envelope"
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
 InstanceOf: EHMIAuditEvent
