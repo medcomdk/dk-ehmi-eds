@@ -41,9 +41,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Device].who.identifier 1..1 MS SU
 * agent[Device].who.type 1..1 MS SU
 //* ^agent[Device].requestor = false
-* source.observer 0..1 
+* source.observer 1..1 
 * source.observer only Reference(Device)
-* source.type 0..1 MS 
+* source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 * entity.modifierExtension 0..0 
 * entity.type
