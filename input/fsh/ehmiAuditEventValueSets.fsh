@@ -134,9 +134,9 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #1 "EUP (End-user Application)" "End-user display device, diagnostic device"
-* #2 "MSH (Application Server)" "ISO level 4-6 operating software."
-* #3 "AP (Access Point -Network Router)" "ISO level 4-6 operating software."
+* #EUP "EUP (End-user Application)" "End-user display device, diagnostic device"
+* #MSH "MSH (Application Server)" "ISO level 4-6 operating software."
+* #AP "AP (Access Point -Network Router)" "ISO level 4-6 operating software."
 /*
 * include #1 from system http://terminology.hl7.org/CodeSystem/security-source-type
 * include #4 from system http://terminology.hl7.org/CodeSystem/security-source-type
