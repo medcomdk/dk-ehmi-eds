@@ -16,11 +16,13 @@ Description: "An example of an EHMIAuditEvent."
 * agent[RECEIVER].requestor = false
 * agent[RECEIVER].who.type = "GLN"
 * agent[RECEIVER].who.identifier.value = "GLN12345"
+/*
 * agent[DEVICE].type.coding.code =  #DEVICE
 * agent[DEVICE].name = "Systematic Cura EUP"
 * agent[DEVICE].requestor = false
 * agent[DEVICE].who.type = "DEVICEID"
 * agent[DEVICE].who.identifier.value = "DEV12345"
+*/
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
