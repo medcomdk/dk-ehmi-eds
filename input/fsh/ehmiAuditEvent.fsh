@@ -5,6 +5,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * id MS SU
 * type MS SU
 * type from ehmi-auditevent-types-valueset
+* type = #EHMI-messaging
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
 * action 0..0
@@ -45,7 +46,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
-* entity 1..3 MS SU
+* entity 1..3 MS
 * entity.modifierExtension 0..0 
 //* entity.type MS SU
 * entity ^slicing.discriminator.type = #value
