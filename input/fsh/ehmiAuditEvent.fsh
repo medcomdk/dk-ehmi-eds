@@ -6,10 +6,8 @@ Description: "EHMI profile of the AuditEvent resource."
 * type MS SU
 * type from ehmi-auditevent-types-valueset
 * type.code = #EHMI-messaging
-* type.system.value = "ehmi-auditevent-types"
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
-* subtype.system.value = "ehmi-auditevent-subtypes"
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU
