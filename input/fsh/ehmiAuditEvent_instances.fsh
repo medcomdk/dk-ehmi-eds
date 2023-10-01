@@ -6,27 +6,29 @@ Description: "An example of an EHMIAuditEvent."
 * subtype.code =  #msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
-* agent[Sender].type.coding.code =  #SENDER
-* agent[Sender].name = "Aarhus Kommune"
-* agent[Sender].requestor = true
-* agent[Sender].who.type = "GLN"
-* agent[Sender].who.identifier.value = "GLN1234"
-* agent[Receiver].type.coding.code =  #RECEIVER
-* agent[Receiver].name = "Løgten Lægehus"
-* agent[Receiver].requestor = false
-* agent[Receiver].who.type = "GLN"
-* agent[Receiver].who.identifier.value = "GLN12345"
-* agent[Device].type.coding.code =  #DEVICE
-* agent[Device].name = "Systematic Cura EUP"
-* agent[Device].requestor = false
+* agent[SENDER].type.coding.code =  #SENDER
+* agent[SENDER].name = "Aarhus Kommune"
+* agent[SENDER].requestor = true
+* agent[SENDER].who.type = "GLN"
+* agent[SENDER].who.identifier.value = "GLN1234"
+* agent[RECEIVER].type.coding.code =  #RECEIVER
+* agent[RECEIVER].name = "Løgten Lægehus"
+* agent[RECEIVER].requestor = false
+* agent[RECEIVER].who.type = "GLN"
+* agent[RECEIVER].who.identifier.value = "GLN12345"
+* agent[DEVICE].type.coding.code =  #DEVICE
+* agent[DEVICE].name = "Systematic Cura EUP"
+* agent[DEVICE].requestor = false
+* agent[DEVICE].who.type = "DEVICEID"
+* agent[DEVICE].who.identifier.value = "DEV12345"
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type.code = #Patient
-* entity[Message].what.identifier.value = " = MSG1234567890"
-* entity[Message].type.code = #Message
-* entity[Envelope].what.identifier.value = " = ENV1234567890"
-* entity[Envelope].type.code = #Envelope
+* entity[MessageHeader].what.identifier.value = " = MSG1234567890"
+* entity[MessageHeader].type.code = #Message
+* entity[MessageHeader].what.identifier.value = " = ENV1234567890"
+* entity[MessageHeader].type.code = #Envelope
 
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
