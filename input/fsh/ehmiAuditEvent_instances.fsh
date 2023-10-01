@@ -5,7 +5,7 @@ Description: "An example of an EHMIAuditEvent."
 * type.code =  #EHMI-messaging
 * subtype.code =  #msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
-* outcome.value = #0
+* outcome = #0
 * agent[Sender].type.coding.code =  #SENDER
 * agent[Sender].name = "Aarhus Kommune"
 * agent[Sender].requestor = true
@@ -16,7 +16,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent[Receiver].requestor = false
 * agent[Receiver].who.type = "GLN"
 * agent[Receiver].who.identifier.value = "GLN12345"
-* agent[Device].type.coding.code =  #Sender
+* agent[Device].type.coding.code =  #DEVICE
 * agent[Device].name = "Systematic Cura EUP"
 * agent[Device].requestor = false
 * source.observer.identifier.value = "DEV12345"
