@@ -25,10 +25,10 @@ Description: "An example of an EHMIAuditEvent."
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type.code = #Patient
-* entity[MessageHeader].what.identifier.value = " = MSG1234567890"
-* entity[MessageHeader].type.code = #Message
-* entity[MessageHeader].what.identifier.value = " = ENV1234567890"
-* entity[MessageHeader].type.code = #Envelope
+* entity[Message].what.identifier.value = " = MSG1234567890"
+* entity[Message].type.code = #Message
+* entity[Envelope].what.identifier.value = " = ENV1234567890"
+* entity[Envelope].type.code = #Envelope
 
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
