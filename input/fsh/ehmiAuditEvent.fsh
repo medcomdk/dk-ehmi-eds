@@ -33,14 +33,17 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[Sender].who only Reference(Organization)
 * agent[Sender].who.identifier 1..1 MS SU
 * agent[Sender].who.type 1..1 MS SU
+* agent[Sender].who.type.value = #SENDER
 //* ^agent[Sender].requestor = true
 * agent[Receiver].who only Reference(Organization)
 * agent[Receiver].who.identifier 1..1 MS SU
 * agent[Receiver].who.type 1..1 MS SU
+* agent[Receiver].who.type.value = #RECEIVER
 //* ^agent[Receiver].requestor = false
 * agent[Device].who only Reference(Device)
 * agent[Device].who.identifier 1..1 MS SU
 * agent[Device].who.type 1..1 MS SU
+* agent[Device].who.type.value = #DEVICE
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
