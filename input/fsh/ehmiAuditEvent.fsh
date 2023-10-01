@@ -22,7 +22,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent.name 1..1 MS 
 * agent.network 0..0
 * agent.network.type 0..0
-* agent.who 0..1 
+* agent.who 0.. 
 * agent.who.type 0..1 
 * agent.who.identifier 0..1 
 * agent ^slicing.discriminator.type = #value
@@ -61,7 +61,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity contains
     Patient 1..1 and //check kardinalitet
     Message 1..1 and
-    Envelope 1..1
+    Envelope 1..1 and
+    OrigMessage 0..1 and
+    OrigEnvelope 0..1
 * entity[Patient].modifierExtension 0..0 
 * entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
