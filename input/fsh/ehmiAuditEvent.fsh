@@ -45,6 +45,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
+* entity 1..3 MS SU
 * entity.modifierExtension 0..0 
 //* entity.type MS SU
 * entity ^slicing.discriminator.type = #value
