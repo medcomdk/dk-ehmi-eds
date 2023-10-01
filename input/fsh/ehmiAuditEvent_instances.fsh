@@ -3,7 +3,9 @@ InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
 * type.code =  #EHMI-messaging
+* type.system.value = "ehmi-auditevent-types"
 * subtype.code =  #msg-created
+* subtype.system.value = "ehmi-auditevent-subtypes"
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
 * agent[SENDER].type.coding.code =  #SENDER
