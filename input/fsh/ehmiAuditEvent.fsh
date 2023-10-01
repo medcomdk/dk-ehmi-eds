@@ -5,9 +5,11 @@ Description: "EHMI profile of the AuditEvent resource."
 * id MS SU
 * type MS SU
 * type from ehmi-auditevent-types-valueset
-* type = #EHMI-messaging
+* type.code = #EHMI-messaging
+* type.system.value = "ehmi-auditevent-types"
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
+* subtype.system.value = "ehmi-auditevent-subtypes"
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU
@@ -28,8 +30,8 @@ Description: "EHMI profile of the AuditEvent resource."
   * ^slicing.rules = #closed //#closed eller #open 
 * agent contains
     SENDER 1..1 and
-    RECEIVER 1..1 and
-    DEVICE 1..1
+    RECEIVER 1..1 
+//    and     DEVICE 1..1
 * agent[SENDER].who only Reference(Organization)
 * agent[SENDER].who.identifier 1..1 MS SU
 * agent[SENDER].who.type 1..1 MS SU
@@ -39,11 +41,12 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[RECEIVER].who.identifier 1..1 MS SU
 * agent[RECEIVER].who.type 1..1 MS SU
 * agent[RECEIVER].who.type.value = #RECEIVER
-//* ^agent[Receiver].requestor = false
+/* ^agent[Receiver].requestor = false
 * agent[DEVICE].who only Reference(Device)
 * agent[DEVICE].who.identifier 1..1 MS SU
 * agent[DEVICE].who.type 1..1 MS SU
 * agent[DEVICE].who.type.value = #DEVICE
+*/
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
