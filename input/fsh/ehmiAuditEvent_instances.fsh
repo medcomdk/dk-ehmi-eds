@@ -18,6 +18,8 @@ Description: "An example of an EHMIAuditEvent."
 * agent[RECEIVER].requestor = false
 * agent[RECEIVER].who.type = "GLN"
 * agent[RECEIVER].who.identifier.value = "GLN12345"
+* source.observer.identifier.value = "DEV12345"
+* source.type.code = #EUP
 /*
 * agent[DEVICE].type.coding.code =  #DEVICE
 * agent[DEVICE].name = "Systematic Cura EUP"
@@ -25,8 +27,6 @@ Description: "An example of an EHMIAuditEvent."
 * agent[DEVICE].who.type = "DEVICEID"
 * agent[DEVICE].who.identifier.value = "DEV12345"
 */
-* source.observer.identifier.value = "DEV12345"
-* source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type = #Patient
 * entity[Message].what.identifier.value = "MSG1234567890"
