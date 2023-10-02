@@ -89,7 +89,7 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #GLN "GLN representing either the sender or the receiver organization "
+* #GLN "GLN representing either the sender or the receiver organization"
 * #DEVICEID "The recorded deviceid of a device used in EHMI"
 
 ValueSet: EHMIAuditEventAgentWhoIdentifiersValueset
