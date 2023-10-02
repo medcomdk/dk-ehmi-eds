@@ -21,7 +21,8 @@ Description: "EHMI profile of the AuditEvent resource."
     SENDER 1..1 and
     RECEIVER 1..1 
 * agent.modifierExtension 0..0 
-* agent.type 0..1 from ehmi-auditevent-participationroletype-valueset 
+* agent.type 0..1
+* agent.type from ehmi-auditevent-participationroletype-valueset 
 * agent.name 0..1 
 * agent.network 0..0
 * agent.network.type 0..0
