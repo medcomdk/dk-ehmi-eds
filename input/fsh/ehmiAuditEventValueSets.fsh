@@ -165,6 +165,8 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * #Patient "Patient"
 * #Message "Message"
 * #Envelope "Envelope"
+* #OrigMessage "Original Message"
+* #OrigEnvelope "Original Envelope"
 
 ValueSet: EHMIAuditEventEntityTypeValueset
 Id: ehmi-auditevent-entity-type-valueset
