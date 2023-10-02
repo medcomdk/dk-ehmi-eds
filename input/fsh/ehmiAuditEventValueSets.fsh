@@ -66,8 +66,9 @@ Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infra
 * ^experimental = false
 * ^caseSensitive = true
 * #SENDER "The application that creates a new message"
-* #MSH "The Message Service Handler that passes the message on"
-* #EDEL-AP "The eDelivery Access Point that passes the message on"
+* #EUAPPLICATION "End-user application"
+* #MESSAGESERVICEHANDLER "The Message Service Handler that passes the message on"
+* #EDELIVERY-AP "The eDelivery Access Point that passes the message on"
 * #RECEIVER "The application that receives the new message"
 
 ValueSet: EHMIAuditEventParticipationRoleTypeValueset
