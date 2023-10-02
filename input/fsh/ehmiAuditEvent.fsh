@@ -53,7 +53,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity 1..3 MS
 * entity.modifierExtension 0..0 
 //* entity.type MS SU
-* entity ^slicing.discriminator.type = #value
+* entity ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
@@ -80,3 +80,15 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[Envelope].type 1..1 MS
 * entity[Envelope].type from ehmi-auditevent-entity-type-valueset
 * entity[Envelope].type.code = #Envelope
+* entity[OrigMessage].modifierExtension 0..0 
+* entity[OrigMessage].what only Reference(MessageHeader)
+* entity[OrigMessage].what.identifier 1..1 MS SU
+* entity[OrigMessage].type 1..1 MS 
+* entity[OrigMessage].type from ehmi-auditevent-entity-type-valueset
+* entity[OrigMessage].type.code = #OrigMessage
+* entity[OrigEnvelope].modifierExtension 0..0 
+* entity[OrigEnvelope].what only Reference(MessageHeader)
+* entity[OrigEnvelope].what.identifier 1..1 MS SU
+* entity[OrigEnvelope].type 1..1 MS
+* entity[OrigEnvelope].type from ehmi-auditevent-entity-type-valueset
+* entity[OrigEnvelope].type.code = #OrigEnvelope
