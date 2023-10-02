@@ -8,29 +8,34 @@ Description: "An example of an EHMIAuditEvent."
 * subtype.system.value = "ehmi-auditevent-subtypes"
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
-* agent[SENDER].type.coding.code =  #SENDER
+// SENDER
+* agent[SENDER].type.coding.code = #SENDER
 * agent[SENDER].name = "Aarhus Kommune"
-* agent[SENDER].requestor = true
+* agent[SENDER].requestor = false
 * agent[SENDER].who.type = "GLN"
 * agent[SENDER].who.identifier.value = "GLN1234"
-* agent[RECEIVER].type.coding.code =  #RECEIVER
+// RECEIVER
+* agent[RECEIVER].type.coding.code = #RECEIVER
 * agent[RECEIVER].name = "Løgten Lægehus"
 * agent[RECEIVER].requestor = false
 * agent[RECEIVER].who.type = "GLN"
 * agent[RECEIVER].who.identifier.value = "GLN12345"
-* source.observer.identifier.value = "DEV12345"
-* source.type.code = #EUP
-/*
-* agent[DEVICE].type.coding.code =  #DEVICE
+// Device
+* agent[DEVICE].type.coding.code = #EUAPPLICATION
 * agent[DEVICE].name = "Systematic Cura EUP"
-* agent[DEVICE].requestor = false
+* agent[DEVICE].requestor = true
 * agent[DEVICE].who.type = "DEVICEID"
 * agent[DEVICE].who.identifier.value = "DEV12345"
-*/
+// source
+* source.observer.identifier.value = "DEV12345"
+* source.type.code = #EUP
+// Patient
 * entity[Patient].what.identifier.value = "PAT1234567890"
 * entity[Patient].type = #Patient
+// Message
 * entity[Message].what.identifier.value = "MSG1234567890"
 * entity[Message].type = #Message
+// Envelope
 * entity[Envelope].what.identifier.value = "ENV1234567890"
 * entity[Envelope].type = #Envelope
 
