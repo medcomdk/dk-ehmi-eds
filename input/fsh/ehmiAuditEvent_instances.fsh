@@ -28,11 +28,11 @@ Description: "An example of an EHMIAuditEvent."
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = #EUP
 * entity[Patient].what.identifier.value = "PAT1234567890"
-* entity[Patient].type.code = #Patient
+* entity[Patient].type = #Patient
 * entity[Message].what.identifier.value = "MSG1234567890"
-* entity[Message].type.code = #Message
+* entity[Message].type = #Message
 * entity[Envelope].what.identifier.value = "ENV1234567890"
-* entity[Envelope].type.code = #Envelope
+* entity[Envelope].type = #Envelope
 
 /*
 Instance: EHMIAuditEventExample-1.2-msg-sent
