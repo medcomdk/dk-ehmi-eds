@@ -69,9 +69,9 @@ Description: "EHMI profile of the AuditEvent resource."
 //* entity 1..5 MS
 * entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
-* entity.type 0..1 MS
-* entity.what only Reference(Patient, MessageHeader)
-* entity.what.identifier 0..1 MS
+* entity.type 0..1 
+// * entity.what only Reference(Patient, MessageHeader)
+* entity.what.identifier 0..1 
 //* entity[Patient].modifierExtension 0..0 
 //* entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
