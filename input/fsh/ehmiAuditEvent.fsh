@@ -56,8 +56,6 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
-* entity 1..5 MS
-* entity.modifierExtension 0..0 
 //* entity.type MS SU
 * entity ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = type
@@ -68,6 +66,8 @@ Description: "EHMI profile of the AuditEvent resource."
     Envelope 1..1 and
     OrigMessage 0..1 and
     OrigEnvelope 0..1
+* entity 1..5 MS
+* entity.modifierExtension 0..0 
 * entity[Patient].modifierExtension 0..0 
 * entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
