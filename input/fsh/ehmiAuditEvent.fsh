@@ -66,7 +66,7 @@ Description: "EHMI profile of the AuditEvent resource."
     Envelope 1..1 and
     OrigMessage 0..1 and
     OrigEnvelope 0..1
-* entity 1..5 MS
+//* entity 1..5 MS
 * entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.type 1..1 MS
