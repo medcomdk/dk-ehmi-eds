@@ -72,32 +72,32 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity.type 0..1 MS
 * entity.what only Reference(Patient, MessageHeader)
 * entity.what.identifier 0..1 MS
-* entity[Patient].modifierExtension 0..0 
-* entity[Patient].what only Reference(Patient)
+//* entity[Patient].modifierExtension 0..0 
+//* entity[Patient].what only Reference(Patient)
 * entity[Patient].what.identifier 1..1 MS SU
 * entity[Patient].type 1..1 MS 
 //* entity[Patient].type from ehmi-auditevent-entity-type-valueset
 * entity[Patient].type.code = #Patient
-* entity[Message].modifierExtension 0..0 
-* entity[Message].what only Reference(MessageHeader)
+//* entity[Message].modifierExtension 0..0 
+//* entity[Message].what only Reference(MessageHeader)
 * entity[Message].what.identifier 1..1 MS SU
 * entity[Message].type 1..1 MS 
 //* entity[Message].type from ehmi-auditevent-entity-type-valueset
 * entity[Message].type.code = #Message
-* entity[Envelope].modifierExtension 0..0 
-* entity[Envelope].what only Reference(MessageHeader)
+//* entity[Envelope].modifierExtension 0..0 
+//* entity[Envelope].what only Reference(MessageHeader)
 * entity[Envelope].what.identifier 1..1 MS SU
 * entity[Envelope].type 1..1 MS
 //* entity[Envelope].type from ehmi-auditevent-entity-type-valueset
 * entity[Envelope].type.code = #Envelope
-* entity[OrigMessage].modifierExtension 0..0 
-* entity[OrigMessage].what only Reference(MessageHeader)
+//* entity[OrigMessage].modifierExtension 0..0 
+//* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[OrigMessage].what.identifier 1..1 MS SU
 * entity[OrigMessage].type 1..1 MS 
 //* entity[OrigMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[OrigMessage].type.code = #OrigMessage
-* entity[OrigEnvelope].modifierExtension 0..0 
-* entity[OrigEnvelope].what only Reference(MessageHeader)
+//* entity[OrigEnvelope].modifierExtension 0..0 
+//* entity[OrigEnvelope].what only Reference(MessageHeader)
 * entity[OrigEnvelope].what.identifier 1..1 MS SU
 * entity[OrigEnvelope].type 1..1 MS
 //* entity[OrigEnvelope].type from ehmi-auditevent-entity-type-valueset
