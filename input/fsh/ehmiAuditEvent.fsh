@@ -18,8 +18,9 @@ Description: "EHMI profile of the AuditEvent resource."
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * agent contains
-    SENDER 1..2 and
-    RECEIVER 0..1 
+    SENDER 1..3 and
+    RECEIVER 0..1 and
+    DEVICE 0..1
 * agent.modifierExtension 0..0 
 * agent.type 0..1
 * agent.type from ehmi-auditevent-participationroletype-valueset 
@@ -30,7 +31,6 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent.who 0.. 
 * agent.who.type 0..1 
 * agent.who.identifier 0..1 
-//    and     DEVICE 1..1
 * agent[SENDER].name 1..1 MS
 * agent[SENDER].type 1..1 MS
 * agent[SENDER].type.coding.code = #SENDER
@@ -41,17 +41,21 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[SENDER].who.type.value = #GLN
 //* ^agent[Sender].requestor = true
 * agent[RECEIVER].name 1..1 MS
+* agent[RECEIVER].type 1..1 MS
+* agent[RECEIVER].type.coding.code = #RECEIVER
 * agent[RECEIVER].who 1..1 MS
 * agent[RECEIVER].who only Reference(Organization)
 * agent[RECEIVER].who.identifier 1..1 MS SU
 * agent[RECEIVER].who.type 1..1 MS SU
-* agent[RECEIVER].who.type.value = #RECEIVER
-/* ^agent[Receiver].requestor = false
+* agent[RECEIVER].who.type.value = #GLN
+// ^agent[Receiver].requestor = false
+* agent[DEVICE].name 1..1 MS
+* agent[DEVICE].type 1..1 MS
+* agent[DEVICE].who 1..1 MS
 * agent[DEVICE].who only Reference(Device)
 * agent[DEVICE].who.identifier 1..1 MS SU
 * agent[DEVICE].who.type 1..1 MS SU
-* agent[DEVICE].who.type.value = #DEVICE
-*/
+* agent[DEVICE].who.type.value = #DEVICEID
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
