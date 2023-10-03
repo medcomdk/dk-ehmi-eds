@@ -34,7 +34,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[Message].what.identifier.value = "MSG1234567890"
 * entity[Message].type = #Message
 * entity[Message].detail[MessageType].type = "MessageType"
-* entity[Message].detail[MessageType].valueString = "MuniciplalityObservations"
+* entity[Message].detail[MessageType].valueString = "MunicipalityObservations"
 * entity[Message].detail[MessageVersion].type = "MessageVersion"
 * entity[Message].detail[MessageVersion].valueString = "1.0"
 // Envelope
