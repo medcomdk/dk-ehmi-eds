@@ -18,7 +18,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * purposeOfEvent 0..0
 * agent 3..3
 * agent ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = type
+  * ^slicing.discriminator.path = agent.type
   * ^slicing.rules = #closed //#closed eller #open 
 * agent contains
     SENDER 1..1 and
@@ -67,7 +67,7 @@ Description: "EHMI profile of the AuditEvent resource."
 // entity
 * entity 3..5
 * entity ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = type
+  * ^slicing.discriminator.path = entity.type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
     Patient 1..1 and
