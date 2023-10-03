@@ -70,13 +70,19 @@ Description: "EHMI profile of the AuditEvent resource."
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
-    Patient 1..1 and //check kardinalitet
+    Patient 1..1 and
     Message 1..1 and
     Envelope 1..1 and
     OrigMessage 0..1 and
     OrigEnvelope 0..1
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
+* entity.detail ^slicing.discriminator.type = #type
+  * ^slicing.discriminator.path = entity.detail.type
+  * ^slicing.rules = #closed //#closed eller #open 
+* entity.detail contains
+    MessageType 0..1 and
+    MessageVersion 0..1 
 //* entity.type 0..1 
 //* entity.what only Reference(Patient, MessageHeader)
 //* entity.what.identifier 0..1 
