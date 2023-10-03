@@ -89,12 +89,20 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[Message].type 1..1 MS 
 * entity[Message].type from ehmi-auditevent-entity-type-valueset
 * entity[Message].type.code = #Message
+* entity[Message].detail.type = "MessageType"
+* entity[Message].detail.valueString = "MuniciplalityObservations"
+* entity[Message].detail.type = "MessageVersion"
+* entity[Message].detail.valueString = "1.0"
 //* entity[Envelope].modifierExtension 0..0 
 //* entity[Envelope].what only Reference(MessageHeader)
 * entity[Envelope].what.identifier 1..1 MS SU
 * entity[Envelope].type 1..1 MS
 * entity[Envelope].type from ehmi-auditevent-entity-type-valueset
 * entity[Envelope].type.code = #Envelope
+* entity[Envelope].detail.type = "EnvelopeType"
+* entity[Envelope].detail.valueString = "SBDH"
+* entity[Envelope].detail.type = "EnvelopeVersion"
+* entity[Envelope].detail.valueString = "2.0"
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[OrigMessage].what.identifier 1..1 MS SU
