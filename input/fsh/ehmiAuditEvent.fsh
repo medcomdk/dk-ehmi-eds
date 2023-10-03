@@ -21,16 +21,16 @@ Description: "EHMI profile of the AuditEvent resource."
     SENDER 1..3 and
     RECEIVER 0..1 and
     DEVICE 0..1
-* agent.modifierExtension 0..0 
-* agent.type 0..1
+//* agent.modifierExtension 0..0 
+//* agent.type 0..1
 * agent.type from ehmi-auditevent-participationroletype-valueset 
-* agent.name 0..1 
-* agent.network 0..0
-* agent.network.type 0..0
+//* agent.name 0..1 
+//* agent.network 0..0
+//* agent.network.type 0..0
 * agent.who.type from ehmi-auditevent-agent-who-identifiers-valueset
-* agent.who 0.. 
-* agent.who.type 0..1 
-* agent.who.identifier 0..1 
+//* agent.who 0.. 
+//* agent.who.type 0..1 
+//* agent.who.identifier 0..1 
 * agent[SENDER].name 1..1 MS
 * agent[SENDER].type 1..1 MS
 * agent[SENDER].type.coding.code = #SENDER
