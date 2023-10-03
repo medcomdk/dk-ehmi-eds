@@ -77,14 +77,16 @@ Description: "EHMI profile of the AuditEvent resource."
     OrigEnvelope 0..1
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
-* entity.detail ^slicing.discriminator.type = #type
+* entity.detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = entity.detail.type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity.detail contains
     MessageType 0..1 and
-    MessageVersion 0..1 
+    MessageVersion 0..1 and 
+    EnvelopeType 0..1 and
+    EnvelopeVersion 0..1
 //* entity.type 0..1 
-//* entity.what only Reference(Patient, MessageHeader)
+//* entity.what only Reference(Patient, M essageHeader)
 //* entity.what.identifier 0..1 
 //* entity[Patient].modifierExtension 0..0 
 //* entity[Patient].what only Reference(Patient)
