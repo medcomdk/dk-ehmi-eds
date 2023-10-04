@@ -12,19 +12,19 @@ Description: "An example of an ehmiAuditEvent."
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
 // ehmiSender
-* agent[ehmiSender].type = $ehmiAuditEventParticipationRoleType#ehmiSender "Sender"
+* agent[ehmiSender].type = $ehmiAuditEventParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = $ehmiAuditEventAgentWhoIdentifiers#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $ehmiAuditEventParticipationRoleType#ehmiReceiver "Receiver"
+* agent[ehmiReceiver].type = $ehmiAuditEventParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $ehmiAuditEventAgentWhoIdentifiers#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
-* agent[ehmiDevice].type = $ehmiAuditEventParticipationRoleType#EUAPPLICATION "End-user Appliaction"
+* agent[ehmiDevice].type = $ehmiAuditEventParticipationRoleType#EUAPPLICATION 
 * agent[ehmiDevice].name = "Systematic Cura EUAPPL"
 * agent[ehmiDevice].requestor = true
 * agent[ehmiDevice].who.type = $ehmiAuditEventAgentWhoIdentifiers#DEVICEID
@@ -38,17 +38,17 @@ Description: "An example of an ehmiAuditEvent."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $ehmiAuditEventEntityType#Message
-* entity[ehmiMessage].detail[MessageType].type = "MessageType"
-* entity[ehmiMessage].detail[MessageType].valueString = "MunicipalityObservations"
-* entity[ehmiMessage].detail[MessageVersion].type = "MessageVersion"
-* entity[ehmiMessage].detail[MessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageType].type = "MessageType"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = "MessageVersion"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $ehmiAuditEventEntityType#Envelope
-* entity[ehmiEnvelope].detail[EnvelopeType].type = "EnvelopeType"
-* entity[ehmiEnvelope].detail[EnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[EnvelopeVersion].type = "EnvelopeVersion"
-* entity[ehmiEnvelope].detail[EnvelopeVersion].valueString = "2.0"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = "EnvelopeType"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = "EnvelopeVersion"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
 /*
 Instance: ehmiAuditEventExample-1.2-msg-sent
