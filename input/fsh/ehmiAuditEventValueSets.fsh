@@ -65,11 +65,12 @@ Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infra
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #SENDER "The application that creates a new message"
+* #ehmiSender "The application that creates a new message"
 * #EUAPPLICATION "End-user application"
 * #MESSAGESERVICEHANDLER "The Message Service Handler that passes the message on"
 * #EDELIVERY-AP "The eDelivery Access Point that passes the message on"
-* #RECEIVER "The application that receives the new message"
+* #ehmiReceiver "The application that receives the new message"
+* #ehmiDevice "The Device that reports the AuditEvent"
 
 ValueSet: EHMIAuditEventParticipationRoleTypeValueset
 Id: ehmi-auditevent-participationroletype-valueset
