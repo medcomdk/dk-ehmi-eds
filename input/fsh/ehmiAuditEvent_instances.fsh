@@ -58,7 +58,7 @@ Description: "An example of an EHMIAuditEvent."
 Instance: EHMIAuditEventExample-1.2-msg-sent
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
-* id = 1.2
+* id = "1.2"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype.code = $EHMIAuditEventSubTypesValueset#msg-sent
 * recorded = "2023-10-01T00:00:00.001+02:00" 

@@ -100,6 +100,8 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
+* entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
+* entity[ehmiMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
 //* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 //* entity[ehmiMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
@@ -110,6 +112,8 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from ehmi-auditevent-entity-detail-type-valueset
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from ehmi-auditevent-entity-detail-type-valueset
 //* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
 //* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type 1..1 MS SU
 //* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
@@ -120,6 +124,8 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiOrigMessage].type 1..1 MS
 * entity[ehmiOrigMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType 
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
