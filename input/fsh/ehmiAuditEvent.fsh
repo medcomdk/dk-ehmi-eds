@@ -57,7 +57,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[ehmiDevice].who only Reference(Device)
 * agent[ehmiDevice].who.identifier 1..1 MS SU
 * agent[ehmiDevice].who.type 1..1 MS SU
-* agent[ehmiDevice].who.type = #DEVICEID
+* agent[ehmiDevice].who.type = #ehmiDEVICEID
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
