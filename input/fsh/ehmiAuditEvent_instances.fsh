@@ -1,3 +1,5 @@
+Alias: $EHMIAuditEventParticipationRoleType = http://medcomehmi.dk/ig/ehmi_balp/ValueSet/ehmi-auditevent-participationroletype-valueset
+
 Instance: EHMIAuditEventExample-1.1-msg-created
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
@@ -7,22 +9,22 @@ Description: "An example of an EHMIAuditEvent."
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
 // ehmiSender
-* agent[ehmiSender].type.coding.code = #ehmiSender
+* agent[ehmiSender].type.coding.code = $EHMIAuditEventParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = "GLN"
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type.coding.code = #ehmiReceiver
+* agent[ehmiReceiver].type.coding.code = $EHMIAuditEventParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = "GLN"
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
-* agent[ehmiDevice].type.coding.code = #EUAPPLICATION
+* agent[ehmiDevice].type.coding.code = $EHMIAuditEventParticipationRoleType#EUAPPLICATION
 * agent[ehmiDevice].name = "Systematic Cura EUP"
 * agent[ehmiDevice].requestor = true
-* agent[ehmiDevice].who.type = "ehmiDeviceID"
+* agent[ehmiDevice].who.type = "DEVICCEID"
 * agent[ehmiDevice].who.identifier.value = "DEV12345"
 // source
 * source.observer.identifier.value = "DEV12345"
