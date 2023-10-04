@@ -33,22 +33,22 @@ Description: "An example of an ehmiAuditEvent."
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $ehmiAuditEventSourceType#EUP
 // Patient
-* entity[Patient].what.identifier.value = "PAT1234567890"
-* entity[Patient].type = $ehmiAuditEventEntityType#Patient
+* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
+* entity[ehmiPatient].type = $ehmiAuditEventEntityType#Patient
 // Message
-* entity[Message].what.identifier.value = "MSG1234567890"
-* entity[Message].type = $ehmiAuditEventEntityType#Message
-* entity[Message].detail[MessageType].type = "MessageType"
-* entity[Message].detail[MessageType].valueString = "MunicipalityObservations"
-* entity[Message].detail[MessageVersion].type = "MessageVersion"
-* entity[Message].detail[MessageVersion].valueString = "1.0"
+* entity[ehmiMessage].what.identifier.value = "MSG1234567890"
+* entity[ehmiMessage].type = $ehmiAuditEventEntityType#Message
+* entity[ehmiMessage].detail[MessageType].type = "MessageType"
+* entity[ehmiMessage].detail[MessageType].valueString = "MunicipalityObservations"
+* entity[ehmiMessage].detail[MessageVersion].type = "MessageVersion"
+* entity[ehmiMessage].detail[MessageVersion].valueString = "1.0"
 // Envelope
-* entity[Envelope].what.identifier.value = "ENV1234567890"
-* entity[Envelope].type = $ehmiAuditEventEntityType#Envelope
-* entity[Envelope].detail[EnvelopeType].type = "EnvelopeType"
-* entity[Envelope].detail[EnvelopeType].valueString = "SBDH"
-* entity[Envelope].detail[EnvelopeVersion].type = "EnvelopeVersion"
-* entity[Envelope].detail[EnvelopeVersion].valueString = "2.0"
+* entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiEnvelope].type = $ehmiAuditEventEntityType#Envelope
+* entity[ehmiEnvelope].detail[EnvelopeType].type = "EnvelopeType"
+* entity[ehmiEnvelope].detail[EnvelopeType].valueString = "SBDH"
+* entity[ehmiEnvelope].detail[EnvelopeVersion].type = "EnvelopeVersion"
+* entity[ehmiEnvelope].detail[EnvelopeVersion].valueString = "2.0"
 
 /*
 Instance: ehmiAuditEventExample-1.2-msg-sent
