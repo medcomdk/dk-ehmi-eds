@@ -66,9 +66,6 @@ Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infra
 * ^experimental = false
 * ^caseSensitive = true
 * #ehmiSender "Sender" "The application that creates a new message"
-* #ehmiEUAPPLICATION "End-user application" "End-user application"
-* #ehmiMESSAGESERVICEHANDLER "MSH" "The Message Service Handler that passes the message on"
-* #ehmiEDELIVERY-AP "eDelivery AP" "The eDelivery Access Point that passes the message on"
 * #ehmiReceiver "Receiver" "The application that receives the new message"
 * #ehmiDevice "Device" "The Device that reports the AuditEvent"
 
@@ -141,6 +138,9 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * #EUP "EUP (End-user Application)" "End-user display device, diagnostic device"
 * #MSH "MSH (Application Server)" "ISO level 4-6 operating software."
 * #AP "AP (Access Point -Network Router)" "ISO level 4-6 operating software."
+* #ehmiEUAPPLICATION "End-user application" "End-user application"
+* #ehmiMESSAGESERVICEHANDLER "MSH" "The Message Service Handler that passes the message on"
+* #ehmiEDELIVERY-AP "eDelivery AP" "The eDelivery Access Point that passes the message on"
 /*
 * include #1 from system http://terminology.hl7.org/CodeSystem/security-source-type
 * include #4 from system http://terminology.hl7.org/CodeSystem/security-source-type
@@ -181,5 +181,29 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventEntityType
+
+CodeSystem: EHMIAuditEventEntityDetailType
+Id: ehmi-auditevent-entity-detail-type
+Title: "EHMI AuditEvent Entity Type CS"
+Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* #ehmiMessageType "Message Type"
+* #ehmiEnvelopeType "Envelope Type"
+* #ehmiMessageVersion "Message Version"
+* #ehmiEnvelopeVersion "Envelope Version"
+
+ValueSet: EHMIAuditEventEntityDetailTypeValueset
+Id: ehmi-auditevent-entity-detail-type-valueset
+Title: "EHMI AuditEvent Entity Detail Type Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent Entity Detail Type"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system EHMIAuditEventEntityDetailType
 
 
