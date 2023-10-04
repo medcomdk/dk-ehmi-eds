@@ -72,7 +72,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity contains
     ehmiPatient 1..1 and
     ehmiMessage 1..1 and
-    ehmiEnvelope 1..1 and
+    ehmiEnvelope 0..1 and
     ehmiOrigMessage 0..1 
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
