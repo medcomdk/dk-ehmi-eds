@@ -5,7 +5,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * id MS SU
 * type MS SU
 * type from ehmi-auditevent-types-valueset
-* type.code = #ehmiMessaging
+* type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
 * action 0..0
@@ -35,21 +35,21 @@ Description: "EHMI profile of the AuditEvent resource."
 //* agent.who.identifier 0..1 
 * agent[ehmiSender].name 1..1 MS
 * agent[ehmiSender].type 1..1 MS
-* agent[ehmiSender].type = #ehmiSender
+* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender
 * agent[ehmiSender].who 1..1 MS
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
 * agent[ehmiSender].who.type 1..1 MS SU
-* agent[ehmiSender].who.type = #GLN
+* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
 //* ^agent[ehmiSender].requestor = true
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
-* agent[ehmiReceiver].type = #ehmiReceiver
+* agent[ehmiReceiver].type = $EHMIAuditEventParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].who 1..1 MS
 * agent[ehmiReceiver].who only Reference(Organization)
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
 * agent[ehmiReceiver].who.type 1..1 MS SU
-* agent[ehmiReceiver].who.type = #GLN
+* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
 // ^agent[Receiver].requestor = false
 * agent[ehmiDevice].name 1..1 MS
 * agent[ehmiDevice].type 1..1 MS
@@ -57,7 +57,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent[ehmiDevice].who only Reference(Device)
 * agent[ehmiDevice].who.identifier 1..1 MS SU
 * agent[ehmiDevice].who.type 1..1 MS SU
-* agent[ehmiDevice].who.type = #ehmiDEVICEID
+* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifiers#ehmiDEVICEID
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
@@ -108,7 +108,7 @@ Description: "EHMI profile of the AuditEvent resource."
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
-* entity[ehmiOrigMessage].type 1..1 MS 
+* entity[ehmiOrigMessage].type 1..1 MS
 * entity[ehmiOrigMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
 //* entity[OrigEnvelope].modifierExtension 0..0 
