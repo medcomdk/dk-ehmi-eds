@@ -92,28 +92,28 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiPatient].type = #ehmiPatient
+* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiMessage].type = #ehmiMessage
+* entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
 //* entity[Envelope].modifierExtension 0..0 
 //* entity[Envelope].what only Reference(MessageHeader)
 * entity[ehmiEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiEnvelope].type = #ehmiEnvelope
+* entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS 
 * entity[ehmiOrigMessage].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiOrigMessage].type = #ehmiOrigMessage
+* entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
 //* entity[OrigEnvelope].modifierExtension 0..0 
 //* entity[OrigEnvelope].what only Reference(MessageHeader)
 * entity[ehmiOrigEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigEnvelope].type 1..1 MS
 * entity[ehmiOrigEnvelope].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiOrigEnvelope].type = #ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type = $EHMIAuditEventEntityType#ehmiOrigEnvelope
