@@ -5,27 +5,26 @@ Description: "EHMI profile of the AuditEvent resource."
 * id MS SU
 * type MS SU
 * type from ehmi-auditevent-types-valueset
-//* type.system.value = "ehmi-auditevent-types"
 * type.code = #EHMI-messaging
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
-//* subtype.system.value = "ehmi-auditevent-subtypes"
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU
 * outcome from ehmi-auditevent-outcome-valueset
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-* agent 3..3
-* agent ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = agent.type
-  * ^slicing.rules = #closed //#closed eller #open 
+* agent ^slicing.discriminator.type = #value
+* agent ^slicing.discriminator.path = agent.type.coding.code
+* agent ^slicing.rules = #closed //#closed eller #open 
+* agent ^slicing.ordered = true
 * agent contains
     SENDER 1..1 and
     RECEIVER 1..1 and
     DEVICE 1..1
 //* agent.modifierExtension 0..0 
 //* agent.type 0..1
+* agent 3..3
 * agent.type from ehmi-auditevent-participationroletype-valueset 
 //* agent.name 0..1 
 //* agent.network 0..0
