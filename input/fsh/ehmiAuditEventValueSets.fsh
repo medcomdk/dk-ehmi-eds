@@ -166,11 +166,11 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #ehmiPatient "Patient"
-* #ehmiMessage "Message"
-* #ehmiEnvelope "Envelope"
-* #ehmiOrigMessage "Original Message"
-* #ehmiOrigEnvelope "Original Envelope"
+* #ehmiPatient "Patient" "Patient"
+* #ehmiMessage "Message" "Message"
+* #ehmiEnvelope "Envelope" "Envelope"
+* #ehmiOrigMessage "Original Message" "Original Message"
+* #ehmiOrigEnvelope "Original Envelope" "Original Envelope"
 
 ValueSet: EHMIAuditEventEntityTypeValueset
 Id: ehmi-auditevent-entity-type-valueset
@@ -191,10 +191,10 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #ehmiMessageType "Message Type"
-* #ehmiEnvelopeType "Envelope Type"
-* #ehmiMessageVersion "Message Version"
-* #ehmiEnvelopeVersion "Envelope Version"
+* #ehmiMessageType "Message Type" "Message Type"
+* #ehmiEnvelopeType "Envelope Type" "Envelope Type"
+* #ehmiMessageVersion "Message Version" "Message Version"
+* #ehmiEnvelopeVersion "Envelope Version" "Envelope Version"
 
 ValueSet: EHMIAuditEventEntityDetailTypeValueset
 Id: ehmi-auditevent-entity-detail-type-valueset
