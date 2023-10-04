@@ -1,4 +1,4 @@
-Profile: ehmiAuditEvent
+Profile: EHMIAuditEvent
 Parent: AuditEvent
 Description: "EHMI profile of the AuditEvent resource."
 * id 1..
