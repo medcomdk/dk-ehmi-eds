@@ -53,6 +53,7 @@ Description: "EHMI profile of the AuditEvent resource."
 // ^agent[Receiver].requestor = false
 * agent[ehmiDevice].name 1..1 MS
 * agent[ehmiDevice].type 1..1 MS
+* agent[ehmiDevice].type = $EHMIAuditEventParticipationRoleType#ehmiDevice
 * agent[ehmiDevice].who 1..1 MS
 * agent[ehmiDevice].who only Reference(Device)
 * agent[ehmiDevice].who.identifier 1..1 MS SU
@@ -72,8 +73,7 @@ Description: "EHMI profile of the AuditEvent resource."
     ehmiPatient 1..1 and
     ehmiMessage 1..1 and
     ehmiEnvelope 1..1 and
-    ehmiOrigMessage 0..1 and
-    ehmiOrigEnvelope 0..1
+    ehmiOrigMessage 0..1 
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.detail ^slicing.discriminator.type = #value
@@ -99,21 +99,27 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
+//* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+//* entity[ehmiMessage].detail[ehmiMessageType].type 1..1 MS SU
+//* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+//* entity[ehmiMessage].detail[ehmiMessageVersion].type 1..1 MS SU
 //* entity[Envelope].modifierExtension 0..0 
 //* entity[Envelope].what only Reference(MessageHeader)
 * entity[ehmiEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type 1..1 MS SU
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type 1..1 MS SU
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS
 * entity[ehmiOrigMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
-//* entity[OrigEnvelope].modifierExtension 0..0 
-//* entity[OrigEnvelope].what only Reference(MessageHeader)
-* entity[ehmiOrigEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiOrigEnvelope].type 1..1 MS
-* entity[ehmiOrigEnvelope].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiOrigEnvelope].type = $EHMIAuditEventEntityType#ehmiOrigEnvelope
+//* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType 
+//* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS SU
+//* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+//* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type 1..1 MS SU
