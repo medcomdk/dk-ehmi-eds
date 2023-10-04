@@ -1,3 +1,6 @@
+Alias: $EHMIAuditEventOutcome = http://hl7.org/fhir/audit-event-outcome
+Alias: $EHMIAuditEventTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-types
+Alias: $EHMIAuditEventSubTypesValueset = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
 Alias: $EHMIAuditEventParticipationRoleType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-participationroletype
 Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-type
 Alias: $EHMIAuditEventAgentWhoIdentifiers = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-agent-who-identifiers
@@ -7,10 +10,10 @@ Instance: EHMIAuditEventExample-1.1-msg-created
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
-* type.code = #EHMI-messaging
-* subtype.code = #msg-created
+* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* subtype.code = $EHMIAuditEventSubTypesValueset#msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
-* outcome = #0
+* outcome = $EHMIAuditEventOutcome#0
 // ehmiSender
 * agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
