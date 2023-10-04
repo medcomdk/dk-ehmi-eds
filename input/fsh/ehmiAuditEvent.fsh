@@ -65,7 +65,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 // entity
-* entity 3..5
+* entity 2..4
 * entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
