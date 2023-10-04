@@ -48,13 +48,14 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
+/*
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
-
+*/
 Instance: EHMIAuditEventExample-1.2-msg-sent
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
