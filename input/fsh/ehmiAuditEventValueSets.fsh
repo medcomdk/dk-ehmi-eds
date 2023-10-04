@@ -66,9 +66,9 @@ Description: "ehmi-auditevent-participationroletype for the EHMI Messaging Infra
 * ^experimental = false
 * ^caseSensitive = true
 * #ehmiSender "Sender" "The application that creates a new message"
-* #EUAPPLICATION "End-user application" "End-user application"
-* #MESSAGESERVICEHANDLER "MSH" "The Message Service Handler that passes the message on"
-* #EDELIVERY-AP "eDelivery AP" "The eDelivery Access Point that passes the message on"
+* #ehmiEUAPPLICATION "End-user application" "End-user application"
+* #ehmiMESSAGESERVICEHANDLER "MSH" "The Message Service Handler that passes the message on"
+* #ehmiEDELIVERY-AP "eDelivery AP" "The eDelivery Access Point that passes the message on"
 * #ehmiReceiver "Receiver" "The application that receives the new message"
 * #ehmiDevice "Device" "The Device that reports the AuditEvent"
 
@@ -92,7 +92,7 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * ^experimental = false
 * ^caseSensitive = true
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
-* #DEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
+* #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
 
 ValueSet: ehmiAuditEventAgentWhoIdentifiersValueset
 Id: ehmi-auditevent-agent-who-identifiers-valueset
