@@ -6,24 +6,24 @@ Description: "An example of an EHMIAuditEvent."
 * subtype.code =  #msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = #0
-// SENDER
-* agent[SENDER].type.coding.code = #SENDER
-* agent[SENDER].name = "Aarhus Kommune"
-* agent[SENDER].requestor = false
-* agent[SENDER].who.type = "GLN"
-* agent[SENDER].who.identifier.value = "GLN1234"
-// RECEIVER
-* agent[RECEIVER].type.coding.code = #RECEIVER
-* agent[RECEIVER].name = "Løgten Lægehus"
-* agent[RECEIVER].requestor = false
-* agent[RECEIVER].who.type = "GLN"
-* agent[RECEIVER].who.identifier.value = "GLN12345"
+// ehmiSender
+* agent[ehmiSender].type.coding.code = #ehmiSender
+* agent[ehmiSender].name = "Aarhus Kommune"
+* agent[ehmiSender].requestor = false
+* agent[ehmiSender].who.type = "GLN"
+* agent[ehmiSender].who.identifier.value = "GLN1234"
+// ehmiReceiver
+* agent[ehmiReceiver].type.coding.code = #ehmiReceiver
+* agent[ehmiReceiver].name = "Løgten Lægehus"
+* agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].who.type = "GLN"
+* agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
-* agent[DEVICE].type.coding.code = #EUAPPLICATION
-* agent[DEVICE].name = "Systematic Cura EUP"
-* agent[DEVICE].requestor = true
-* agent[DEVICE].who.type = "DEVICEID"
-* agent[DEVICE].who.identifier.value = "DEV12345"
+* agent[ehmiDevice].type.coding.code = #EUAPPLICATION
+* agent[ehmiDevice].name = "Systematic Cura EUP"
+* agent[ehmiDevice].requestor = true
+* agent[ehmiDevice].who.type = "ehmiDeviceID"
+* agent[ehmiDevice].who.identifier.value = "DEV12345"
 // source
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = #EUP
@@ -53,7 +53,7 @@ Description: "An example of an EHMIAuditEvent."
 * type =  EHMI-messaging
 * subtype =  msg-sent
 * outcome = 0
-* agent.type =  SENDER
+* agent.type =  ehmiSender
 
 Instance: EHMIAuditEventExamplemsg-2.1-received
 InstanceOf: EHMIAuditEvent
@@ -134,7 +134,7 @@ Description: "An example of an EHMIAuditEvent."
 * type =  EHMI-messaging
 * subtype =  msg-received
 * outcome = 0
-* agent.type =  RECEIVER
+* agent.type =  ehmiReceiver
 
 Instance: EHMIAuditEventExamplemsg-6.1-finalized
 InstanceOf: EHMIAuditEvent
@@ -143,5 +143,5 @@ Description: "An example of an EHMIAuditEvent."
 * type =  EHMI-messaging
 * subtype =  msg-finalized
 * outcome = 0
-* agent.type =  RECEIVER
+* agent.type =  ehmiReceiver
 */
