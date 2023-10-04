@@ -24,27 +24,27 @@ Description: "An example of an ehmiAuditEvent."
 * agent[ehmiReceiver].who.type = $ehmiAuditEventAgentWhoIdentifiers#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
-* agent[ehmiDevice].type = $ehmiAuditEventParticipationRoleType#EUAPPLICATION 
+* agent[ehmiDevice].type = $ehmiAuditEventParticipationRoleType#ehmiEUAPPLICATION 
 * agent[ehmiDevice].name = "Systematic Cura EUAPPL"
 * agent[ehmiDevice].requestor = true
-* agent[ehmiDevice].who.type = $ehmiAuditEventAgentWhoIdentifiers#DEVICEID
+* agent[ehmiDevice].who.type = $ehmiAuditEventAgentWhoIdentifiers#ehmiDEVICEID
 * agent[ehmiDevice].who.identifier.value = "DEV12345"
 // source
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $ehmiAuditEventSourceType#EUP
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-* entity[ehmiPatient].type = $ehmiAuditEventEntityType#Patient
+* entity[ehmiPatient].type = $ehmiAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiMessage].type = $ehmiAuditEventEntityType#Message
-* entity[ehmiMessage].detail[ehmiMessageType].type = "MessageType"
+* entity[ehmiMessage].type = $ehmiAuditEventEntityType#ehmiMessage
+* entity[ehmiMessage].detail[ehmiMessageType].type = "ehmiMessageType"
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = "MessageVersion"
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = "ehmiMessageVersion"
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiEnvelope].type = $ehmiAuditEventEntityType#Envelope
+* entity[ehmiEnvelope].type = $ehmiAuditEventEntityType#ehmiEnvelope
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = "EnvelopeType"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = "EnvelopeVersion"
