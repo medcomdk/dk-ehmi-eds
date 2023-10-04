@@ -19,9 +19,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * agent ^slicing.rules = #closed //#closed eller #open 
 * agent ^slicing.ordered = true
 * agent contains
-    SENDER 1..1 and
-    RECEIVER 1..1 and
-    DEVICE 1..1
+    ehmiSender 1..1 and
+    ehmiReceiver 1..1 and
+    ehmiDevice 1..1
 //* agent.modifierExtension 0..0 
 //* agent.type 0..1
 * agent 3..3
@@ -33,31 +33,31 @@ Description: "EHMI profile of the AuditEvent resource."
 //* agent.who 0.. 
 //* agent.who.type 0..1 
 //* agent.who.identifier 0..1 
-* agent[SENDER].name 1..1 MS
-* agent[SENDER].type 1..1 MS
-* agent[SENDER].type.coding.code = #SENDER
-* agent[SENDER].who 1..1 MS
-* agent[SENDER].who only Reference(Organization)
-* agent[SENDER].who.identifier 1..1 MS SU
-* agent[SENDER].who.type 1..1 MS SU
-* agent[SENDER].who.type.value = #GLN
-//* ^agent[Sender].requestor = true
-* agent[RECEIVER].name 1..1 MS
-* agent[RECEIVER].type 1..1 MS
-* agent[RECEIVER].type.coding.code = #RECEIVER
-* agent[RECEIVER].who 1..1 MS
-* agent[RECEIVER].who only Reference(Organization)
-* agent[RECEIVER].who.identifier 1..1 MS SU
-* agent[RECEIVER].who.type 1..1 MS SU
-* agent[RECEIVER].who.type.value = #GLN
+* agent[ehmiSender].name 1..1 MS
+* agent[ehmiSender].type 1..1 MS
+* agent[ehmiSender].type.coding.code = #SENDER
+* agent[ehmiSender].who 1..1 MS
+* agent[ehmiSender].who only Reference(Organization)
+* agent[ehmiSender].who.identifier 1..1 MS SU
+* agent[ehmiSender].who.type 1..1 MS SU
+* agent[ehmiSender].who.type.value = #GLN
+//* ^agent[ehmiSender].requestor = true
+* agent[ehmiReceiver].name 1..1 MS
+* agent[ehmiReceiver].type 1..1 MS
+* agent[ehmiReceiver].type.coding.code = #ehmiReceiver
+* agent[ehmiReceiver].who 1..1 MS
+* agent[ehmiReceiver].who only Reference(Organization)
+* agent[ehmiReceiver].who.identifier 1..1 MS SU
+* agent[ehmiReceiver].who.type 1..1 MS SU
+* agent[ehmiReceiver].who.type.value = #GLN
 // ^agent[Receiver].requestor = false
-* agent[DEVICE].name 1..1 MS
-* agent[DEVICE].type 1..1 MS
-* agent[DEVICE].who 1..1 MS
-* agent[DEVICE].who only Reference(Device)
-* agent[DEVICE].who.identifier 1..1 MS SU
-* agent[DEVICE].who.type 1..1 MS SU
-* agent[DEVICE].who.type.value = #DEVICEID
+* agent[ehmiDevice].name 1..1 MS
+* agent[ehmiDevice].type 1..1 MS
+* agent[ehmiDevice].who 1..1 MS
+* agent[ehmiDevice].who only Reference(Device)
+* agent[ehmiDevice].who.identifier 1..1 MS SU
+* agent[ehmiDevice].who.type 1..1 MS SU
+* agent[ehmiDevice].who.type.value = #ehmiDeviceID
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
