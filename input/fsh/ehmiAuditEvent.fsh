@@ -69,51 +69,51 @@ Description: "EHMI profile of the AuditEvent resource."
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
-    Patient 1..1 and
-    Message 1..1 and
-    Envelope 1..1 and
-    OrigMessage 0..1 and
-    OrigEnvelope 0..1
+    ehmiPatient 1..1 and
+    ehmiMessage 1..1 and
+    ehmiEnvelope 1..1 and
+    ehmiOrigMessage 0..1 and
+    ehmiOrigEnvelope 0..1
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #closed //#closed eller #open 
 * entity.detail contains
-    MessageType 0..1 and
-    MessageVersion 0..1 and 
-    EnvelopeType 0..1 and
-    EnvelopeVersion 0..1
+    ehmiMessageType 0..1 and
+    ehmiMessageVersion 0..1 and 
+    ehmiEnvelopeType 0..1 and
+    ehmiEnvelopeVersion 0..1
 //* entity.type 0..1 
 //* entity.what only Reference(Patient, M essageHeader)
 //* entity.what.identifier 0..1 
 //* entity[Patient].modifierExtension 0..0 
 //* entity[Patient].what only Reference(Patient)
-* entity[Patient].what.identifier 1..1 MS SU
-* entity[Patient].type 1..1 MS 
-* entity[Patient].type from ehmi-auditevent-entity-type-valueset
-* entity[Patient].type = #Patient
+* entity[ehmiPatient].what.identifier 1..1 MS SU
+* entity[ehmiPatient].type 1..1 MS 
+* entity[ehmiPatient].type from ehmi-auditevent-entity-type-valueset
+* entity[ehmiPatient].type = #ehmiPatient
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
-* entity[Message].what.identifier 1..1 MS SU
-* entity[Message].type 1..1 MS 
-* entity[Message].type from ehmi-auditevent-entity-type-valueset
-* entity[Message].type = #Message
+* entity[ehmiMessage].what.identifier 1..1 MS SU
+* entity[ehmiMessage].type 1..1 MS 
+* entity[ehmiMessage].type from ehmi-auditevent-entity-type-valueset
+* entity[ehmiMessage].type = #ehmiMessage
 //* entity[Envelope].modifierExtension 0..0 
 //* entity[Envelope].what only Reference(MessageHeader)
-* entity[Envelope].what.identifier 1..1 MS SU
-* entity[Envelope].type 1..1 MS
-* entity[Envelope].type from ehmi-auditevent-entity-type-valueset
-* entity[Envelope].type = #Envelope
+* entity[ehmiEnvelope].what.identifier 1..1 MS SU
+* entity[ehmiEnvelope].type 1..1 MS
+* entity[ehmiEnvelope].type from ehmi-auditevent-entity-type-valueset
+* entity[ehmiEnvelope].type = #ehmiEnvelope
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
-* entity[OrigMessage].what.identifier 1..1 MS SU
-* entity[OrigMessage].type 1..1 MS 
-* entity[OrigMessage].type from ehmi-auditevent-entity-type-valueset
-* entity[OrigMessage].type = #OrigMessage
+* entity[ehmiOrigMessage].what.identifier 1..1 MS SU
+* entity[ehmiOrigMessage].type 1..1 MS 
+* entity[ehmiOrigMessage].type from ehmi-auditevent-entity-type-valueset
+* entity[ehmiOrigMessage].type = #ehmiOrigMessage
 //* entity[OrigEnvelope].modifierExtension 0..0 
 //* entity[OrigEnvelope].what only Reference(MessageHeader)
-* entity[OrigEnvelope].what.identifier 1..1 MS SU
-* entity[OrigEnvelope].type 1..1 MS
-* entity[OrigEnvelope].type from ehmi-auditevent-entity-type-valueset
-* entity[OrigEnvelope].type = #OrigEnvelope
+* entity[ehmiOrigEnvelope].what.identifier 1..1 MS SU
+* entity[ehmiOrigEnvelope].type 1..1 MS
+* entity[ehmiOrigEnvelope].type from ehmi-auditevent-entity-type-valueset
+* entity[ehmiOrigEnvelope].type = #ehmiOrigEnvelope
