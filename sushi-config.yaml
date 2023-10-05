@@ -28,7 +28,7 @@ dependencies:
   ihe.iti.balp: 1.1.2
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: current
-  medcom.fhir.dk.messaging: current
+#  medcom.fhir.dk.messaging: current
   medcom.fhir.dk.terminology: current
 #
 #
