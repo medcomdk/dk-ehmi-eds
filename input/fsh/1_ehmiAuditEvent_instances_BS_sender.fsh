@@ -1,4 +1,5 @@
 Alias: $EHMIAuditEventTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-types
+Alias: $EHMIAuditEventSubTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
 Alias: $EHMIAuditEventSubTypesValueset = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
 Alias: $EHMIAuditEventOutcome = http://hl7.org/fhir/audit-event-outcome
 Alias: $EHMIAuditEventSourceType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-source-type
@@ -6,7 +7,6 @@ Alias: $EHMIAuditEventParticipationRoleType = http://medcomehmi.dk/ig/ehmi_balp/
 Alias: $EHMIAuditEventAgentWhoIdentifiers = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-agent-who-identifiers
 Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-type
 Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-detail-type
-
 
 Instance: EHMIAuditEventExample-1.1-BS-Sender-msg-created
 InstanceOf: EHMIAuditEvent
@@ -56,6 +56,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 */
+
 Instance: EHMIAuditEventExample-1.2-BS-Sender-msg-sent
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
@@ -91,107 +92,14 @@ Description: "An example of an EHMIAuditEvent."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type.value = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type.value = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
-
-
-/*
-Instance: EHMIAuditEventExamplemsg-2.1-received
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 2.1
-* type =  EHMI-messaging
-* subtype =  msg-received
-* outcome = 0
-* agent.type =  MSH
-
-Instance: EHMIAuditEventExamplemsg-2.2-sent
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 2.2
-* type =  EHMI-messaging
-* subtype =  msg-sent
-* outcome = 0
-* agent.type =  MSH
-
-Instance: EHMIAuditEventExamplemsg-3.1-received
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 3.1
-* type =  EHMI-messaging
-* subtype =  msg-received
-* outcome = 0
-* agent.type =  AP
-
-Instance: EHMIAuditEventExamplemsg-3.2-sent
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 3.2
-* type =  EHMI-messaging
-* subtype =  msg-sent
-* outcome = 0
-* agent.type =  AP
-
-Instance: EHMIAuditEventExamplemsg-4.1-received
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 4.1
-* type =  EHMI-messaging
-* subtype =  msg-received
-* outcome = 0
-* agent.type =  AP
-
-Instance: EHMIAuditEventExamplemsg-4.2-sent
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 4.2
-* type =  EHMI-messaging
-* subtype =  msg-sent
-* outcome = 0
-* agent.type =  AP
-
-Instance: EHMIAuditEventExamplemsg-5.1-received
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 5.1
-* type =  EHMI-messaging
-* subtype =  msg-received
-* outcome = 0
-* agent.type =  MSH
-
-Instance: EHMIAuditEventExamplemsg-5.2-sent
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 5.2
-* type =  EHMI-messaging
-* subtype =  msg-sent
-* outcome = 0
-* agent.type =  MSH
-
-Instance: EHMIAuditEventExamplemsg-6.1-finalized
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 6.1
-* type =  EHMI-messaging
-* subtype =  msg-received
-* outcome = 0
-* agent.type =  ehmiReceiver
-
-Instance: EHMIAuditEventExamplemsg-6.1-finalized
-InstanceOf: EHMIAuditEvent
-Description: "An example of an EHMIAuditEvent."
-* id = 6.2
-* type =  EHMI-messaging
-* subtype =  msg-finalized
-* outcome = 0
-* agent.type =  ehmiReceiver
-*/
