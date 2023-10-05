@@ -102,7 +102,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
-//* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageType
 //* entity[ehmiMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type 1..1 MS SU
