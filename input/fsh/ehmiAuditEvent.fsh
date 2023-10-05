@@ -6,8 +6,11 @@ Description: "EHMI profile of the AuditEvent resource."
 * type MS SU
 * type from ehmi-auditevent-types-valueset
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
+* type.system = $EHMIAuditEventTypes
+* type.display = "EHMI message events"
 * subtype 1..1 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
+* subtype.system = $EHMIAuditEventSubTypes
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU
@@ -102,7 +105,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageType
+//* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 //* entity[ehmiMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type 1..1 MS SU
