@@ -1,4 +1,4 @@
-Profile: EHMIBasicAuditPatientCreate
+Profile: EHMIBasicAuditCreate
 Parent: IHE.BasicAudit.Create
 Description: "EHMI profile of the IHE.BasicAudit.Create profile." 
 /*
