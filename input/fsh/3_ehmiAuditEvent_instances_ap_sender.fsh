@@ -9,7 +9,7 @@ Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeS
 
 
 Instance: EHMIAuditEventExample-3.1-AP-Sender-msg-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "3.1"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
@@ -56,7 +56,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
 Instance: EHMIAuditEventExample-3.2-AP-Sender-msg-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "3.2"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
@@ -105,7 +105,7 @@ Description: "An example of an EHMIAuditEvent."
 
 /*
 Instance: EHMIAuditEventExamplemsg-2.1-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 2.1
 * type =  EHMI-messaging
@@ -114,7 +114,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  MSH
 
 Instance: EHMIAuditEventExamplemsg-2.2-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 2.2
 * type =  EHMI-messaging
@@ -123,7 +123,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  MSH
 
 Instance: EHMIAuditEventExamplemsg-3.1-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 3.1
 * type =  EHMI-messaging
@@ -132,7 +132,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  AP
 
 Instance: EHMIAuditEventExamplemsg-3.2-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 3.2
 * type =  EHMI-messaging
@@ -141,7 +141,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  AP
 
 Instance: EHMIAuditEventExamplemsg-4.1-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 4.1
 * type =  EHMI-messaging
@@ -150,7 +150,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  AP
 
 Instance: EHMIAuditEventExamplemsg-4.2-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 4.2
 * type =  EHMI-messaging
@@ -159,7 +159,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  AP
 
 Instance: EHMIAuditEventExamplemsg-5.1-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 5.1
 * type =  EHMI-messaging
@@ -168,7 +168,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  MSH
 
 Instance: EHMIAuditEventExamplemsg-5.2-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 5.2
 * type =  EHMI-messaging
@@ -177,7 +177,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  MSH
 
 Instance: EHMIAuditEventExamplemsg-6.1-finalized
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 6.1
 * type =  EHMI-messaging
@@ -186,7 +186,7 @@ Description: "An example of an EHMIAuditEvent."
 * agent.type =  ehmiReceiver
 
 Instance: EHMIAuditEventExamplemsg-6.1-finalized
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = 6.2
 * type =  EHMI-messaging
