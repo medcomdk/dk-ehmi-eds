@@ -1,5 +1,5 @@
 Profile: EHMIBasicAuditPatientCreate
-Parent: IHE.BasicAudit.PatientCreate
+Parent: EHMIBasicAuditCreate
 Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile. UNDER CONSTRUCTION" 
 /*
 * id 1..
@@ -69,17 +69,15 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile. UNDER CO
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
+*/
 // entity
-* entity 2..4
-* entity ^slicing.discriminator.type = #value
+* entity ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #closed //#closed eller #open 
+  * ^slicing.rules = #open //#closed eller #open 
 * entity contains
-    ehmiPatient 1..1 and
-    ehmiMessage 1..1 and
-    ehmiEnvelope 0..1 and
-    ehmiOrigMessage 0..1 
-//* entity.modifierExtension 0..0 
+    ehmiPatient 1..1 
+* entity 3..
+/* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -95,11 +93,12 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile. UNDER CO
 //* entity.what.identifier 0..1 
 //* entity[Patient].modifierExtension 0..0 
 //* entity[Patient].what only Reference(Patient)
+*/
 * entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
-//* entity[Message].modifierExtension 0..0 
+/* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type 1..1 MS 

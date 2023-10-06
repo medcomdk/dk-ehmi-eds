@@ -71,7 +71,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 // entity
-* entity 2..4
+* entity 2..
 * entity ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
