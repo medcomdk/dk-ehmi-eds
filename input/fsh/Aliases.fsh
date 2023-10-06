@@ -1,4 +1,15 @@
+Alias: $EHMIAuditEventTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-types
+Alias: $EHMIAuditEventSubTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
+Alias: $EHMIAuditEventSubTypesValueset = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
+Alias: $EHMIAuditEventOutcome = http://hl7.org/fhir/audit-event-outcome
+Alias: $EHMIAuditEventSourceType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-source-type
+Alias: $EHMIAuditEventParticipationRoleType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-participationroletype
+Alias: $EHMIAuditEventAgentWhoIdentifiers = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-agent-who-identifiers
+Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-type
+Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-detail-type
 Alias: $EHMIAuditEventValueSet = http://medcomfhir.dk/fhir/ehmi/CodeSystem/EHMIAuditEventValueSet
+
+/*
 Alias: $StatusCodes = http://hl7.org/fhir/encounter-status
 Alias: $ActCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode 
 Alias: $EventStatus = http://hl7.org/fhir/event-status
@@ -12,3 +23,4 @@ Alias: $MessageEvents = http://medcomfhir.dk/fhir/messaging/CodeSystem/medcom-me
 Alias: $SORCode = urn:oid:1.2.208.176.1.1
 Alias: $EANCode = urn:oid:1.3.88
 Alias: $activityCodes = http://medcomfhir.dk/fhir/messaging/CodeSystem/medcom-messaging-activityCodes
+*/
