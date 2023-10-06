@@ -1,7 +1,7 @@
 Profile: EHMIBasicAuditCreate
 Parent: IHE.BasicAudit.Create
 Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
-/*
+
 * id 1..
 * id MS SU
 * type MS SU
@@ -18,17 +18,17 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * outcome from ehmi-auditevent-outcome-valueset
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-* agent ^slicing.discriminator.type = #value
-* agent ^slicing.discriminator.path = agent
+* agent ^slicing.discriminator.type = #pattern
+* agent ^slicing.discriminator.path = type
 * agent ^slicing.rules = #open //#closed eller #open 
 //* agent ^slicing.ordered = false
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 and
-    ehmiDevice 1..
-//* agent.modifierExtension 0..0 
-//* agent.type 0..1
+    ehmiDevice 1..1
 * agent 5..
+/* agent.modifierExtension 0..0 
+//* agent.type 0..1
 * agent.type from ehmi-auditevent-participationroletype-valueset 
 //* agent.name 0..1 
 //* agent.network 0..0
