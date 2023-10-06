@@ -97,6 +97,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+/*
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
@@ -104,3 +105,4 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+*/
