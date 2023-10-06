@@ -9,7 +9,7 @@ Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeS
 
 
 Instance: EHMIAuditEventExample-4.1-AP-Receiver-msg-received
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "4.1"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
@@ -56,7 +56,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
 Instance: EHMIAuditEventExample-4.2-AP-Receiver-msg-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "4.2"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
