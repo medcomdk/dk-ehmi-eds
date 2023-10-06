@@ -1,13 +1,3 @@
-Alias: $EHMIAuditEventTypes = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-types
-Alias: $EHMIAuditEventSubTypesValueset = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-subtypes
-Alias: $EHMIAuditEventOutcome = http://hl7.org/fhir/audit-event-outcome
-Alias: $EHMIAuditEventSourceType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-source-type
-Alias: $EHMIAuditEventParticipationRoleType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-participationroletype
-Alias: $EHMIAuditEventAgentWhoIdentifiers = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-agent-who-identifiers
-Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-type
-Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-detail-type
-
-
 Instance: EHMISampleAuditEvent-5.1-MSH-Receiver-msg-received
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
