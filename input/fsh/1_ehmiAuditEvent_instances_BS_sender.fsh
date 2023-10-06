@@ -8,12 +8,13 @@ Alias: $EHMIAuditEventAgentWhoIdentifiers = http://medcomehmi.dk/ig/ehmi_balp/Co
 Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-type
 Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-detail-type
 
+
 Instance: EHMIAuditEventExample-1.1-BS-Sender-msg-created
 InstanceOf: EHMIAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
-* subtype.code = $EHMIAuditEventSubTypesValueset#msg-created
+* subtype.code = $EHMIAuditEventSubTypes#msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // ehmiSender
@@ -92,9 +93,9 @@ Description: "An example of an EHMIAuditEvent."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
-* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
