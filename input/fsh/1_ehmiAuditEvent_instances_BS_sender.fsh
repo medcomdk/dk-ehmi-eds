@@ -10,7 +10,7 @@ Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeS
 
 
 Instance: EHMIAuditEventExample-1.1-BS-Sender-msg-created
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
@@ -59,7 +59,7 @@ Description: "An example of an EHMIAuditEvent."
 */
 
 Instance: EHMIAuditEventExample-1.2-BS-Sender-msg-sent
-InstanceOf: EHMIAuditEvent
+InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.2"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging
