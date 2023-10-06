@@ -9,7 +9,7 @@ Alias: $EHMIAuditEventEntityType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/
 Alias: $EHMIAuditEventEntityDetailType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-detail-type
 
 
-Instance: EHMIAuditEventExample-1.1-BS-Sender-msg-created
+Instance: EHMISampleAuditEvent-1.1-BS-Sender-msg-created
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.1"
@@ -58,7 +58,7 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 */
 
-Instance: EHMIAuditEventExample-1.2-BS-Sender-msg-sent
+Instance: EHMISampleAuditEvent-1.2-BS-Sender-msg-sent
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
 * id = "1.2"
