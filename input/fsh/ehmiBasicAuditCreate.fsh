@@ -1,6 +1,6 @@
 Profile: EHMIBasicAuditCreate
 Parent: IHE.BasicAudit.Create
-Description: "EHMI profile of the IHE.BasicAudit.Create profile." 
+Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
 /*
 * id 1..
 * id MS SU

@@ -1,6 +1,6 @@
 Profile: EHMIBasicAuditQuery
 Parent: IHE.BasicAudit.Query
-Description: "EHMI profile of the IHE.BasicAudit.Query profile." 
+Description: "EHMI profile of the IHE.BasicAudit.Query profile. UNDER CONSTRUCTION" 
 /*
 * id 1..
 * id MS SU
