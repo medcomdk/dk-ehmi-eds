@@ -1,6 +1,7 @@
+/*
 Instance: SampleEHMIBasicAuditCreate-1.1-BS-Sender-msg-created
 InstanceOf: EHMISampleAuditEvent
-//InstanceOf: EHMIBasicAuditCreate
+//InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIAuditEvent."
 * id = "BAC1.1"
 * type.code = $EHMIAuditEventTypes#ehmiMessaging

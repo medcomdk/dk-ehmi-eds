@@ -1,7 +1,7 @@
-Profile: EHMIBasicAuditQuery
+Profile: EHMIBasicAuditQueryx
 Parent: IHE.BasicAudit.Query
-Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
-
+Description: "EHMI profile of the IHE.BasicAudit.Query profile. UNDER CONSTRUCTION" 
+/*
 * id 1..
 * id MS SU
 * type MS SU
@@ -18,18 +18,17 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * outcome from ehmi-auditevent-outcome-valueset
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-* agent ^slicing.discriminator.type = #pattern
-* agent ^slicing.discriminator.path = type
+* agent ^slicing.discriminator.type = #value
+* agent ^slicing.discriminator.path = agent
 * agent ^slicing.rules = #open //#closed eller #open 
 //* agent ^slicing.ordered = false
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 and
-    ehmiDevice 1..1
-* agent 5..5
-/* agent.modifierExtension 0..0 
+    ehmiDevice 1..
+//* agent.modifierExtension 0..0 
 //* agent.type 0..1
-*/
+* agent 5..
 * agent.type from ehmi-auditevent-participationroletype-valueset 
 //* agent.name 0..1 
 //* agent.network 0..0
@@ -71,20 +70,20 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * source.type 1..1 MS 
 * source.type from ehmi-auditevent-source-type-valueset
 // entity
-* entity 2..
-* entity ^slicing.discriminator.type = #pattern
+* entity 2..4
+* entity ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
+  * ^slicing.rules = #closed //#closed eller #open 
 * entity contains
-//    ehmiPatient 1..1 and
+    ehmiPatient 1..1 and
     ehmiMessage 1..1 and
     ehmiEnvelope 0..1 and
     ehmiOrigMessage 0..1 
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
-* entity.detail ^slicing.discriminator.type = #pattern
+* entity.detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
+  * ^slicing.rules = #closed //#closed eller #open 
 * entity.detail contains
     ehmiMessageType 0..1 and
     ehmiMessageVersion 0..1 and 
@@ -96,11 +95,10 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* entity.what.identifier 0..1 
 //* entity[Patient].modifierExtension 0..0 
 //* entity[Patient].what only Reference(Patient)
-/* entity[ehmiPatient].what.identifier 1..1 MS SU
+* entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
-*/
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
 * entity[ehmiMessage].what.identifier 1..1 MS SU
@@ -137,4 +135,4 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type 1..1 MS SU
-//*/
+*/
