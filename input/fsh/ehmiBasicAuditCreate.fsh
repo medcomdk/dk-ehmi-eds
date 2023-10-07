@@ -9,7 +9,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.system = $EHMIAuditEventTypes
 //* type.display = "EHMI message events"
-* subtype 1..1 MS SU
+* subtype 1..3 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
 * subtype.system = $EHMIAuditEventSubTypes
 * action 0..0
@@ -26,7 +26,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
     ehmiSender 1..1 and
     ehmiReceiver 1..1 and
     ehmiDevice 1..1
-* agent 5..5
+* agent 5..6
 /* agent.modifierExtension 0..0 
 //* agent.type 0..1
 */
