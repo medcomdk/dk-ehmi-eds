@@ -25,8 +25,8 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 and
-    ehmiDevice 1..1
-* agent 5..6
+    ehmiDevice 0..1
+* agent 4..6
 /* agent.modifierExtension 0..0 
 //* agent.type 0..1
 */
@@ -57,7 +57,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
 // ^agent[Receiver].requestor = false
-* agent[ehmiDevice].name 1..1 MS
+/* agent[ehmiDevice].name 1..1 MS
 * agent[ehmiDevice].type 1..1 MS
 * agent[ehmiDevice].type = $EHMIAuditEventParticipationRoleType#ehmiDevice
 * agent[ehmiDevice].who 1..1 MS
@@ -66,6 +66,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * agent[ehmiDevice].who.type 1..1 MS SU
 * agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifiers#ehmiDEVICEID
 //* ^agent[Device].requestor = false
+*/
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
