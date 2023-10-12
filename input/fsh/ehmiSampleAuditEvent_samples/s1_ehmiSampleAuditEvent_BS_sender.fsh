@@ -10,19 +10,19 @@ Description: "An example of an EHMIAuditEvent."
 * agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
-* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
 * agent[ehmiReceiver].type = $EHMIAuditEventParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
 * agent[ehmiDevice].type = $EHMIAuditEventParticipationRoleType#ehmiDevice 
 * agent[ehmiDevice].name = "Systematic Cura EUAPPL"
 * agent[ehmiDevice].requestor = true
-* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifiers#ehmiDEVICEID
+* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#ehmiDEVICEID
 * agent[ehmiDevice].who.identifier.value = "DEV12345"
 // source
 * source.observer.identifier.value = "DEV12345"
@@ -59,19 +59,19 @@ Description: "An example of an EHMIAuditEvent."
 * agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
-* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
 * agent[ehmiReceiver].type = $EHMIAuditEventParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
 * agent[ehmiDevice].type = $EHMIAuditEventParticipationRoleType#ehmiDevice 
 * agent[ehmiDevice].name = "Systematic Cura MSH"
 * agent[ehmiDevice].requestor = true
-* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifiers#ehmiDEVICEID
+* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#ehmiDEVICEID
 * agent[ehmiDevice].who.identifier.value = "DEV123456"
 // source
 * source.observer.identifier.value = "DEV123456"
