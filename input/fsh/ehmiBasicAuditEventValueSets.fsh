@@ -106,6 +106,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventAgentWhoIdentifiers
+//* include codes from system 
 
 /*
 CodeSystem: AuditEventAgentNetwork
@@ -187,6 +188,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventEntityType
+* include codes from system http://terminology.hl7.org/CodeSystem/audit-entity-type
 
 CodeSystem: EHMIAuditEventEntityDetailType
 Id: ehmi-auditevent-entity-detail-type
