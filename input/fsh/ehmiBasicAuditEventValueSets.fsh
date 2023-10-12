@@ -107,6 +107,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^experimental = false
 * include codes from system EHMIAuditEventAgentWhoIdentifierTypes
 * include codes from system $AuditEventAgentWhoTypes
+* include codes from system http://dicom.nema.org/resources/ontology/DCM
 
 /*
 CodeSystem: AuditEventAgentNetwork
