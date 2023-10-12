@@ -33,7 +33,7 @@ Description: "EHMI profile of the AuditEvent resource."
 //* agent.name 0..1 
 //* agent.network 0..0
 //* agent.network.type 0..0
-* agent.who.type from ehmi-auditevent-agent-who-identifiers-valueset
+* agent.who.type from ehmi-auditevent-agent-who-identifier-types-valueset
 //* agent.who 0.. 
 //* agent.who.type 0..1 
 //* agent.who.identifier 0..1 

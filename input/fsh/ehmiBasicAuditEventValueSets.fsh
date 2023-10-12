@@ -85,9 +85,9 @@ Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 * include codes from system EHMIAuditEventParticipationRoleType
 * include codes from system http://dicom.nema.org/resources/ontology/DCM
 
-CodeSystem: EHMIAuditEventAgentWhoIdentifiers
-Id: ehmi-auditevent-agent-who-identifiers
-Title: "EHMI AuditEvent agent.who.identifier CS"
+CodeSystem: EHMIAuditEventAgentWhoIdentifierTypes
+Id: ehmi-auditevent-agent-who-identifier-types
+Title: "EHMI AuditEvent agent.who.identifier Types CS"
 Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -97,16 +97,16 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
 * #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
 
-ValueSet: EHMIAuditEventAgentWhoIdentifiersValueset
-Id: ehmi-auditevent-agent-who-identifiers-valueset
+ValueSet: EHMIAuditEventAgentWhoIdentifierTypesValueset
+Id: ehmi-auditevent-agent-who-identifier-types-valueset
 Title: "EHMI AuditEvent AgentWhoIdentifiers Valueset"
 Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-* include codes from system EHMIAuditEventAgentWhoIdentifiers
-//* include codes from system 
+* include codes from system EHMIAuditEventAgentWhoIdentifierTypes
+* include codes from system $AuditEventAgentWhoTypes
 
 /*
 CodeSystem: AuditEventAgentNetwork
