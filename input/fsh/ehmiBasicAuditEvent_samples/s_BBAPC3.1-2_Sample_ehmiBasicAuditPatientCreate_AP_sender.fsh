@@ -1,4 +1,4 @@
-Instance: SampleEHMIBasicAuditPatientCreate-3.1-MSH-Sender-msg-created
+Instance: SampleEHMIBasicAuditPatientCreate-3.1-AP-Sender-msg-created
 //InstanceOf: EHMISampleAuditEvent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
@@ -60,7 +60,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: SampleEHMIBasicAuditPatientCreate-3.2-MSH-Sender-msg-sent
+Instance: SampleEHMIBasicAuditPatientCreate-3.2-AP-Sender-msg-sent
 //InstanceOf: EHMISampleAuditEvent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
