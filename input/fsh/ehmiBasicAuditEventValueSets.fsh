@@ -20,6 +20,7 @@ Description: "ValueSet containing codes for EHMI AuditEventTypes"
 * include codes from system EHMIAuditEventTypes
 * include codes from system $AuditEventTypes
 * include codes from system http://hl7.org/fhir/restful-interaction
+* include codes from system http://terminology.hl7.org/CodeSystem/audit-entity-type
 
 CodeSystem: EHMIAuditEventSubTypes
 Id: ehmi-auditevent-sub-types
