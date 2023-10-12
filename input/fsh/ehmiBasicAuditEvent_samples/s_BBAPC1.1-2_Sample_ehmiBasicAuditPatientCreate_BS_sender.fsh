@@ -6,7 +6,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype.code = $EHMIAuditEventSubTypes#msg-created
-* recorded = "2023-10-01T00:00:00.000+02:00" 
+* recorded = "2023-10-01T00:00:01.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
 //* agent[client].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
@@ -60,7 +60,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC1.2"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype.code = $EHMIAuditEventSubTypesValueset#msg-sent
-* recorded = "2023-10-01T00:00:00.001+02:00" 
+* recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
 * agent[client].name = "Systematic Cura EUAPPL"
