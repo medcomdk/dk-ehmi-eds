@@ -24,8 +24,8 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* agent ^slicing.ordered = false
 * agent contains
     ehmiSender 1..1 and
-    ehmiReceiver 1..1 and
-    ehmiDevice 0..1
+    ehmiReceiver 1..1 
+//    ehmiDevice 0..1
 * agent 4..6
 /* agent.modifierExtension 0..0 
 //* agent.type 0..1
