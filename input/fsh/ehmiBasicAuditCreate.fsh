@@ -11,7 +11,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* type.display = "EHMI message events"
 * subtype 1..3 MS SU
 * subtype from ehmi-auditevent-sub-types-valueset
-* subtype.system = $EHMIAuditEventSubTypes
+//* subtype.system = $EHMIAuditEventSubTypes
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU
