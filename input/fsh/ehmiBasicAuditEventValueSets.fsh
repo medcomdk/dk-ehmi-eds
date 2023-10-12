@@ -99,7 +99,7 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 
 ValueSet: EHMIAuditEventAgentWhoIdentifierTypesValueset
 Id: ehmi-auditevent-agent-who-identifier-types-valueset
-Title: "EHMI AuditEvent AgentWhoIdentifiers Valueset"
+Title: "EHMI AuditEvent AgentWhoIdentifier Types Valueset"
 Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -109,6 +109,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * include codes from system $AuditEventAgentWhoTypes
 * include codes from system http://dicom.nema.org/resources/ontology/DCM
 * include codes from system http://hl7.org/fhir/R4/valueset-participation-role-type.html
+* include codes from system http://hl7.org/fhir/R5/valueset-resource-types.html
 /*
 CodeSystem: AuditEventAgentNetwork
 Id: ehmi-auditevent-network
