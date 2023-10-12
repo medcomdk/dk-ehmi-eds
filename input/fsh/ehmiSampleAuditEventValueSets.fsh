@@ -42,6 +42,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventSubTypes
+* include codes from system $AuditEventSubTypes
 
 ValueSet: EHMIAuditEventOutcomeValueset
 Id: ehmi-auditevent-outcome-valueset
