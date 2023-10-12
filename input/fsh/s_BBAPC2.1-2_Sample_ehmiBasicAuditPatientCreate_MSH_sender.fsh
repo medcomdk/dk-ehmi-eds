@@ -5,7 +5,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC2.1"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
-* subtype.code = $EHMIAuditEventSubTypes#msg-created
+* subtype.code = $EHMIAuditEventSubTypes#msg-received
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
