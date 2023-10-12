@@ -45,6 +45,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^experimental = false
 * include codes from system EHMIAuditEventSubTypes
 * include codes from system $AuditEventSubTypes
+* include codes from system http://hl7.org/fhir/restful-interaction
 
 ValueSet: EHMIAuditEventOutcomeValueset
 Id: ehmi-auditevent-outcome-valueset
