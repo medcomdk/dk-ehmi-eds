@@ -96,7 +96,7 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * ^experimental = false
 * ^caseSensitive = true
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
-//* #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
+* #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
 
 ValueSet: EHMIAuditEventAgentWhoIdentifierTypesValueset
 Id: ehmi-auditevent-agent-who-identifier-types-valueset
