@@ -3,14 +3,12 @@ Instance: SampleEHMIBasicAuditPatientCreate-5.1-AP-Sender-msg-created
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC5.1"
-//* type.code = $EHMIAuditEventTypes#ehmiMessaging
-//* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:09.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-//* agent[client].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[client].name = "MultiMed MSH"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
@@ -18,7 +16,6 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
-//* agent[server].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[server].name = "MedCom Messaging Shipping Status (MMSS)"
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
@@ -67,7 +64,7 @@ Instance: SampleEHMIBasicAuditPatientCreate-5.2-AP-Sender-msg-sent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC5.2"
-//* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:10.001+02:00" 
@@ -80,7 +77,6 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
-//* agent[server].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[server].name = "MedCom Messaging Shipping Status (MMSS)"
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
