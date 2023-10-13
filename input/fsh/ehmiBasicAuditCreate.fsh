@@ -97,7 +97,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
     ehmiMessageVersion 0..1 and 
     ehmiEnvelopeType 0..1 and
     ehmiEnvelopeVersion 0..1
-* entity.detail.type from ehmi-auditevent-entity-detail-type-valueset
+//* entity.detail.type from ehmi-auditevent-entity-detail-type-valueset
 //* entity.type 0..1 
 //* entity.what only Reference(Patient, M essageHeader)
 //* entity.what.identifier 0..1 
