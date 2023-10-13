@@ -1,4 +1,4 @@
-Instance: SampleEHMIBasicAuditPatientCreate-6.1-BS-Sender-msg-created
+Instance: SampleEHMIBasicAuditPatientCreate-6.1-BS-Receiver-msg-received
 //InstanceOf: EHMISampleAuditEvent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
@@ -52,13 +52,13 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 
-Instance: SampleEHMIBasicAuditPatientCreate-6.2-BS-Sender-msg-sent
+Instance: SampleEHMIBasicAuditPatientCreate-6.2-BS-Receiver-msg-finalized
 //InstanceOf: EHMISampleAuditEvent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC6.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-finalized
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:12.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
