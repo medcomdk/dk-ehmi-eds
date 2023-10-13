@@ -3,7 +3,7 @@ Instance: SampleEHMIBasicAuditPatientCreate-1.1-BS-Sender-msg-created
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC1.1"
-* subtype[anyCreate].code = $AuditEventSubTypesValueset#create
+* subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-created
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:01.000+02:00" 
