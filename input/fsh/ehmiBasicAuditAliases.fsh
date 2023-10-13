@@ -11,7 +11,8 @@ Alias: $EHMIAuditEventValueSet = http://medcomfhir.dk/fhir/ehmi/CodeSystem/EHMIA
 Alias: $AuditEventAgentNetworkType = http://hl7.org/fhir/R4/valueset-network-type.html
 Alias: $AuditEventEntityType = http://hl7.org/fhir/R4/valueset-audit-entity-type.html
 Alias: $AuditEventAgentWhoTypes = http://hl7.org/fhir/R4/valueset-participation-role-type.html
-Alias: $AuditEventSubTypes = http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
+Alias: $AuditEventSubTypes = http://hl7.org/fhir/restful-interaction
+Alias: $AuditEventSubTypesValueset = http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
 Alias: $AuditEventTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $AuditEventTypes2 = http://dicom.nema.org/resources/ontology/DCM
 
