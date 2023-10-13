@@ -141,7 +141,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType 
-//* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS SU
+//* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
-//* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type 1..1 MS SU
+//* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type 1..1 MS
 //*/
