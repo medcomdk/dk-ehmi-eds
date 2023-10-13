@@ -45,7 +45,7 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on 
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
 * agent[ehmiSender].who.type 1..1 MS SU
-* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 //* ^agent[ehmiSender].requestor = true
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
@@ -54,7 +54,7 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on 
 * agent[ehmiReceiver].who only Reference(Organization)
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
 * agent[ehmiReceiver].who.type 1..1 MS SU
-* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifiers#GLN
+* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 // ^agent[Receiver].requestor = false
 * agent[ehmiDevice].name 1..1 MS
 * agent[ehmiDevice].type 1..1 MS
@@ -63,7 +63,7 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on 
 * agent[ehmiDevice].who only Reference(Device)
 * agent[ehmiDevice].who.identifier 1..1 MS SU
 * agent[ehmiDevice].who.type 1..1 MS SU
-* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifiers#ehmiDEVICEID
+* agent[ehmiDevice].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#ehmiDEVICEID
 //* ^agent[Device].requestor = false
 * source.observer 1..1 
 * source.observer only Reference(Device)
