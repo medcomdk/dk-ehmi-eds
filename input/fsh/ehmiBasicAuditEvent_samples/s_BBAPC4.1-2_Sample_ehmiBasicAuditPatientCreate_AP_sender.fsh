@@ -5,7 +5,8 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC4.1"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
-* subtype.code = $EHMIAuditEventSubTypes#msg-received
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
+* subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:07.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
@@ -39,6 +40,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 // source
 * source.observer.identifier.value = "AP123456"
 * source.type.code = $EHMIAuditEventSourceType#MSH
+* source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
@@ -66,7 +68,8 @@ InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC4.2"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
-* subtype.code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:08.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
@@ -99,6 +102,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 // source
 * source.observer.identifier.value = "AP123456"
 * source.type.code = $EHMIAuditEventSourceType#EUP
+* source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
