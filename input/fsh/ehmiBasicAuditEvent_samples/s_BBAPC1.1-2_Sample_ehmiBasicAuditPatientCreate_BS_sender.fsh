@@ -60,13 +60,14 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC1.2"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype.code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype.system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
 * agent[client].name = "Systematic Cura EUAPPL"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "DEV12345"
+* agent[client].who.identifier.value = "EUA12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -90,8 +91,9 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
-* source.observer.identifier.value = "DEV12345"
+* source.observer.identifier.value = "EUA12345"
 * source.type.code = $EHMIAuditEventSourceType#EUP
+* source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
