@@ -107,7 +107,6 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventAgentWhoIdentifierTypes
-//* include codes from system $AuditEventAgentWhoTypes
 * include #110152 from system http://dicom.nema.org/resources/ontology/DCM
 * include #110153 from system http://dicom.nema.org/resources/ontology/DCM
 //* include codes from system http://hl7.org/fhir/R4/valueset-participation-role-type.html
@@ -146,7 +145,8 @@ Description: "ehmi-auditevent-audit-source-type for the EHMI Messaging Infrastru
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #EUP "EUP (End-user Application)" "End-user display device, diagnostic device"
+* #EUA "EUA (End-user Application)" "End-user display device, diagnostic device"
+* #EUP "EUP (End-user Application)" "End-user display device, diagnostic device - should be deprecated"
 * #MSH "MSH (Application Server)" "ISO level 4-6 operating software."
 * #AP "AP (Access Point -Network Router)" "ISO level 4-6 operating software."
 * #ehmiEUAPPLICATION "End-user application" "End-user application"
