@@ -9,8 +9,8 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.system = $EHMIAuditEventTypes
 //* type.display = "EHMI message events"
-* subtype ^slicing.discriminator.type = #pattern
-* subtype ^slicing.discriminator.path = subtype
+* subtype ^slicing.discriminator.type = #value
+//* subtype ^slicing.discriminator.path = $this
 * subtype ^slicing.rules = #open //#closed eller #open 
 * subtype contains
     ehmiSubType 1..1
