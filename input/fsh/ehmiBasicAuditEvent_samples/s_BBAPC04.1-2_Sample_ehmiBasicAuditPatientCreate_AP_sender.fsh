@@ -1,8 +1,7 @@
-Instance: SampleEHMIBasicAuditPatientCreate-4.1-AP-Sender-msg-created
-//InstanceOf: EHMISampleAuditEvent
+Instance: SampleEHMIBasicAuditPatientCreate-04.1-AP-Sender-msg-received
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
-* id = "EBAPC4.1"
+* id = "EBAPC04.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
@@ -59,11 +58,10 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: SampleEHMIBasicAuditPatientCreate-4.2-AP-Sender-msg-sent
-//InstanceOf: EHMISampleAuditEvent
+Instance: SampleEHMIBasicAuditPatientCreate-04.2-AP-Sender-msg-sent
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
-* id = "EBAPC4.2"
+* id = "EBAPC04.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes

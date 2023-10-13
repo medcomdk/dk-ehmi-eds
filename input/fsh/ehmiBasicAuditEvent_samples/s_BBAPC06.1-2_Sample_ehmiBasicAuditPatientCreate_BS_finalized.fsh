@@ -1,18 +1,17 @@
-Instance: SampleEHMIBasicAuditPatientCreate-1.1-BS-Sender-msg-created
-//InstanceOf: EHMISampleAuditEvent
+Instance: SampleEHMIBasicAuditPatientCreate-06.1-BS-Receiver-msg-received
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
-* id = "EBAPC1.1"
+* id = "EBAPC06.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-created
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:01.000+02:00" 
+* recorded = "2023-10-01T00:00:11.000+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "Systematic Cura End User APPL"
+* agent[client].name = "Novax LPS"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "EUA12345"
+* agent[client].who.identifier.value = "LPS12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -35,7 +34,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
-* source.observer.identifier.value = "EUA12345"
+* source.observer.identifier.value = "LPS12345"
 * source.type.code = $EHMIAuditEventSourceType#EUA
 * source.type.system = $EHMIAuditEventSourceType
 // data
@@ -52,26 +51,23 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 
-Instance: SampleEHMIBasicAuditPatientCreate-1.2-BS-Sender-msg-sent
-//InstanceOf: EHMISampleAuditEvent
+Instance: SampleEHMIBasicAuditPatientCreate-06.2-BS-Receiver-msg-finalized
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
-* id = "EBAPC1.2"
-//* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* id = "EBAPC06.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-finalized
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:02.001+02:00" 
+* recorded = "2023-10-01T00:00:12.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "Systematic Cura End User APPL"
+* agent[client].name = "Novax LPS"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "EUA12345"
+* agent[client].who.identifier.value = "LPS12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
-//* agent[server].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
 * agent[server].name = "MedCom Messaging Shipping Status (MMSS)"
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
@@ -91,7 +87,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
-* source.observer.identifier.value = "EUA12345"
+* source.observer.identifier.value = "DEV12345"
 * source.type.code = $EHMIAuditEventSourceType#EUA
 * source.type.system = $EHMIAuditEventSourceType
 // data

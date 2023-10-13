@@ -1,17 +1,17 @@
-Instance: SampleEHMIBasicAuditCreate-7.1-SBDHAck-MSH-Sender-msg-created
+Instance: SampleEHMIBasicAuditCreate-08.1-SBDHAck-AP-Sender-msg-received
 InstanceOf: EHMIBasicAuditCreate
 Description: "An example of an EHMIBasicAuditCreate."
-* id = "EBAPC7.1"
+* id = "EBAPC08.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-created
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:09.500+02:00" 
+* recorded = "2023-10-01T00:00:11.500+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "MultiMed MSH"
+* agent[client].name = "MultiMed AP"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "MSH1234567"
+* agent[client].who.identifier.value = "AP123456"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -22,7 +22,7 @@ Description: "An example of an EHMIBasicAuditCreate."
 * agent[server].network.address = "http://shippingstatus.medcom.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
+* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
@@ -34,8 +34,8 @@ Description: "An example of an EHMIBasicAuditCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN1234"
 // source
-* source.observer.identifier.value = "MSH1234567"
-* source.type.code = $EHMIAuditEventSourceType#MSH
+* source.observer.identifier.value = "AP123456"
+* source.type.code = $EHMIAuditEventSourceType#AP
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
@@ -72,20 +72,20 @@ Description: "An example of an EHMIBasicAuditCreate."
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: SampleEHMIBasicAuditCreate-7.2-SBDHAck-MSH-Sender-msg-created
+Instance: SampleEHMIBasicAuditCreate-08.2-SBDHAck-AP-Sender-msg-sent
 InstanceOf: EHMIBasicAuditCreate
 Description: "An example of an EHMIBasicAuditCreate."
-* id = "EBAPC7.2"
+* id = "EBAPC08.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:10.501+02:00" 
+* recorded = "2023-10-01T00:00:12.501+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "MultiMed MSH"
+* agent[client].name = "MultiMed AP"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "MSH1234567"
+* agent[client].who.identifier.value = "AP123456"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -96,7 +96,7 @@ Description: "An example of an EHMIBasicAuditCreate."
 * agent[server].network.address = "http://shippingstatus.medcom.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender 
+* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
@@ -108,8 +108,8 @@ Description: "An example of an EHMIBasicAuditCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN1234"
 // source
-* source.observer.identifier.value = "MSH1234567"
-* source.type.code = $EHMIAuditEventSourceType#MSH
+* source.observer.identifier.value = "AP123456"
+* source.type.code = $EHMIAuditEventSourceType#AP
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"

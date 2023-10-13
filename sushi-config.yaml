@@ -29,7 +29,7 @@ dependencies:
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: current
 #  medcom.fhir.dk.messaging: current
-#  medcom.fhir.dk.terminology: current
+  medcom.fhir.dk.terminology: 1.4.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
