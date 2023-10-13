@@ -64,7 +64,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "Systematic Cura EUAPPL"
+* agent[client].name = "Systematic Cura End User APPL"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
 * agent[client].who.identifier.value = "EUA12345"
