@@ -86,7 +86,8 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //    ehmiPatient 1..1 and
     ehmiMessage 1..1 and
     ehmiEnvelope 0..1 and
-    ehmiOrigMessage 0..1 
+    ehmiOrigMessage 0..1 and
+    ehmiOrigEnvelope 0..1 
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.detail ^slicing.discriminator.type = #value
