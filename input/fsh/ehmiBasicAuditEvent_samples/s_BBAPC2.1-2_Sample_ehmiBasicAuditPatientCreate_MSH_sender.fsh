@@ -5,6 +5,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC2.1"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:03.000+02:00" 
@@ -68,6 +69,7 @@ InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC2.2"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
+* subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
 * recorded = "2023-10-01T00:00:04.001+02:00" 
