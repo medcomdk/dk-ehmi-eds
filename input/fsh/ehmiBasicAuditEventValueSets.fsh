@@ -83,7 +83,8 @@ Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventParticipationRoleType
-* include codes from system http://dicom.nema.org/resources/ontology/DCM
+* include #110152 from system http://dicom.nema.org/resources/ontology/DCM
+* include #110153 from system http://dicom.nema.org/resources/ontology/DCM
 
 CodeSystem: EHMIAuditEventAgentWhoIdentifierTypes
 Id: ehmi-auditevent-agent-who-identifier-types
@@ -95,7 +96,7 @@ Description: "ehmi-auditevent-agent.who.identifier for the EHMI Messaging Infras
 * ^experimental = false
 * ^caseSensitive = true
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
-* #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
+//* #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
 
 ValueSet: EHMIAuditEventAgentWhoIdentifierTypesValueset
 Id: ehmi-auditevent-agent-who-identifier-types-valueset
@@ -106,10 +107,11 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * include codes from system EHMIAuditEventAgentWhoIdentifierTypes
-* include codes from system $AuditEventAgentWhoTypes
-* include codes from system http://dicom.nema.org/resources/ontology/DCM
-* include codes from system http://hl7.org/fhir/R4/valueset-participation-role-type.html
-* include codes from system http://hl7.org/fhir/R5/valueset-resource-types.html
+//* include codes from system $AuditEventAgentWhoTypes
+* include #110152 from system http://dicom.nema.org/resources/ontology/DCM
+* include #110153 from system http://dicom.nema.org/resources/ontology/DCM
+//* include codes from system http://hl7.org/fhir/R4/valueset-participation-role-type.html
+//* include codes from system http://hl7.org/fhir/R5/valueset-resource-types.html
 /*
 CodeSystem: AuditEventAgentNetwork
 Id: ehmi-auditevent-network
