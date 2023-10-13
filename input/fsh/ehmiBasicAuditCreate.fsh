@@ -91,7 +91,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* entity.modifierExtension 0..0 
 * entity.type from ehmi-auditevent-entity-type-valueset
 * entity.detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+  //* ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
 * entity.detail contains
     ehmiMessageType 0..1 and
