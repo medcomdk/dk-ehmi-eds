@@ -39,7 +39,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
 * source.observer.identifier.value = "LPS12345"
-* source.type.code = $EHMIAuditEventSourceType#EUP
+* source.type.code = $EHMIAuditEventSourceType#EUA
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
@@ -94,7 +94,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
 * source.observer.identifier.value = "DEV12345"
-* source.type.code = $EHMIAuditEventSourceType#EUP
+* source.type.code = $EHMIAuditEventSourceType#EUA
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
