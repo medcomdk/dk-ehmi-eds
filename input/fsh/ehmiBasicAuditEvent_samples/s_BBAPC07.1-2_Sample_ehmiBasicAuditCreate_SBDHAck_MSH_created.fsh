@@ -39,10 +39,6 @@ Description: "An example of an EHMIBasicAuditCreate."
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
-//* entity[data].type = $AuditEventEntityType#4
-// Patient
-//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
@@ -113,7 +109,6 @@ Description: "An example of an EHMIBasicAuditCreate."
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
-//* entity[data].type = $AuditEventEntityType#4
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
