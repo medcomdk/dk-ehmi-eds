@@ -1,3 +1,4 @@
+/*
 Instance: EHMISampleAuditEvent-4.1-AP-Receiver-msg-received
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EHMIAuditEvent."
@@ -91,3 +92,4 @@ Description: "An example of an EHMIAuditEvent."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+*/
