@@ -45,7 +45,7 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
+//* entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
