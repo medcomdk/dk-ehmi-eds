@@ -93,6 +93,8 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity.detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
+  * ^short = "something short"
+  //* ^Description = "Description"
 * entity.detail contains
     ehmiMessageType 0..1 and
     ehmiMessageVersion 0..1 and 
@@ -102,12 +104,23 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 //* entity.type 0..1 
 //* entity.what only Reference(Patient, M essageHeader)
 //* entity.what.identifier 0..1 
-//* entity[Patient].modifierExtension 0..0 
-//* entity[Patient].what only Reference(Patient)
-/* entity[ehmiPatient].what.identifier 1..1 MS SU
-* entity[ehmiPatient].type 1..1 MS 
-* entity[ehmiPatient].type from ehmi-auditevent-entity-type-valueset
-* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
+/*
+* entity[Resource].detail[AccessLevel] ^short = "AccessLevel if subtype is Create or Update"
+* entity[Resource].detail[AccessLevel] ^definition = "The type of extra detail provided in the value."
+* entity[Resource].detail.type[AccessLevel] = "AccessLevel" (exactly)
+* entity[Resource].detail.type[AccessLevel] ^short = "The type of extra detail provided in the value"
+* entity[Resource].detail.value[AccessLevel] only base64Binary
+* entity[Resource].detail.value[AccessLevel] ^short = "one of urn:e-health-suisse:2015:policies:access-level: normal, restricted, delegation-and-restricted, delegation-and-normal or full"
+* entity[Resource].detail.value[AccessLevel] ^definition = "The details, base64 encoded. Used to carry bulk information."
+* entity[Resource].detail.value[AccessLevel] ^comment = "The value is base64 encoded to enable various encodings or binary content."
+* entity[Resource].detail[AccessLimitedToDate] ^short = "AccessLimitedToDate if subtype is Create or Update"
+* entity[Resource].detail.type[AccessLimitedToDate] = "AccessLimitedToDate" (exactly)
+* entity[Resource].detail.value[AccessLimitedToDate] only base64Binary
+* entity[Resource].detail.value[AccessLimitedToDate] ^short = "Date in property value"
+* entity[Resource].detail.value[AccessLimitedToDate] ^definition = "The details, base64 encoded. Used to carry bulk information."
+* entity[Resource].detail.value[AccessLimitedToDate] ^comment = "The value is base64 encoded to enable various encodings or binary content."
+* entity[Resource].detail[ProvideLevel] ^short = "ProvideLevel if subtype is ATC_POL_DEF_CONFLEVEL"
+* entity[Resource].detail.type[ProvideLevel] = "ProvideLevel" (exactly)
 */
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
@@ -116,7 +129,9 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiMessage].type from ehmi-auditevent-entity-type-valueset
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
+* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
+//* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion (exactly)
 //* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 //* entity[ehmiMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
