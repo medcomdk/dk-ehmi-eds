@@ -114,9 +114,6 @@ Description: "An example of an EHMIBasicAuditCreate."
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
-// Patient
-//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
@@ -127,21 +124,21 @@ Description: "An example of an EHMIBasicAuditCreate."
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+//* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+//* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+//* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
 * entity[ehmiOrigEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiOrigEnvelope].type = $EHMIAuditEventEntityType#ehmiOrigEnvelope
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+//* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+//* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
