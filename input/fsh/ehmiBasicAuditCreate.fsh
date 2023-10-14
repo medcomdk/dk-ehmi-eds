@@ -80,6 +80,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiMessage].detail contains
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
+* entity[ehmiMessage].detail 2..2
 * entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
@@ -98,6 +99,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiEnvelope].detail contains
     ehmiEnvelopeType 1..1 and
     ehmiEnvelopeVersion 1..1
+* entity[ehmiEnvelope].detail 2..2
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType (exactly)
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString 1..1
@@ -116,6 +118,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiOrigMessage].detail contains
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
+* entity[ehmiOrigMessage].detail 2..2
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
@@ -133,6 +136,7 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiOrigEnvelope].detail contains
     ehmiEnvelopeType 1..1 and
     ehmiEnvelopeVersion 1..1
+* entity[ehmiOrigEnvelope].detail 2..2
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType (exactly)
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString 1..1
