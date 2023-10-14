@@ -219,4 +219,24 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity Detail Type"
 * ^experimental = false
 * include codes from system EHMIAuditEventEntityDetailType
 
+CodeSystem: EHMIAuditEventEntityMessageType
+Id: ehmi-auditevent-entity-message-type
+Title: "EHMI AuditEvent Entity MessageType CS"
+Description: "Codesystem containing codes for EHMI AuditEvent Entity MessageType"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* ^caseSensitive = true
+* #MunicipalityObservations "MessageType: MunicipalityObservations" "MessageType: MunicipalityObservations"
 
+ValueSet: EHMIAuditEventEntityMessageTypeValueset
+Id: ehmi-auditevent-entity-message-type-valueset
+Title: "EHMI AuditEvent Entity MessageType Valueset"
+Description: "ValueSet containing codes for EHMI AuditEvent Entity MessageType"
+* ^version  =  "1.0.0"
+* ^status  =  #active
+* ^date  =  "2023-09-01"
+* ^experimental = false
+* include codes from system EHMIAuditEventEntityMessageType
+* include codes from system https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-eventCodes.html

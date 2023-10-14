@@ -15,6 +15,7 @@ Alias: $AuditEventSubTypes = http://hl7.org/fhir/restful-interaction
 Alias: $AuditEventSubTypesValueset = http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
 Alias: $AuditEventTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $AuditEventTypes2 = http://dicom.nema.org/resources/ontology/DCM
+Alias: $EHMIAuditEventEntityMessageType = http://medcomehmi.dk/ig/ehmi_balp/CodeSystem/ehmi-auditevent-entity-message-type
 
 /*
 Alias: $StatusCodes = http://hl7.org/fhir/encounter-status
