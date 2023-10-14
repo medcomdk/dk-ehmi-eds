@@ -127,7 +127,7 @@ Description: "An example of an EHMIBasicAuditCreate."
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
-* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
+* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = $EHMIAuditEventEntityMessageType#MunicipalityObservations
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope

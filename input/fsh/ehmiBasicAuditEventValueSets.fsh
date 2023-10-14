@@ -229,6 +229,9 @@ Description: "Codesystem containing codes for EHMI AuditEvent Entity MessageType
 * ^experimental = false
 * ^caseSensitive = true
 * #MunicipalityObservations "MessageType: MunicipalityObservations" "MessageType: MunicipalityObservations"
+* #SBDH "EnvelopeType: SBDH" "EnvelopeType: SBDH"
+* #SBDHAck "EnvelopeAckType: SBDHAck" "EnvelopeAckType: SBDHAck"
+* #SBDH_Ack "EnvelopeAckType: SBDH_Ack" "EnvelopeAckType: SBDH_Ack"
 
 ValueSet: EHMIAuditEventEntityMessageTypeValueset
 Id: ehmi-auditevent-entity-message-type-valueset
