@@ -78,12 +78,14 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiMessage].detail contains
-    ehmiMessageType 0..1 and
-    ehmiMessageVersion 0..1 
+    ehmiMessageType 1..1 and
+    ehmiMessageVersion 1..1 
 * entity[ehmiMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType (exactly)
+* entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiEnvelope]
 * entity[ehmiEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiEnvelope].type 1..1 MS
@@ -94,12 +96,14 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiEnvelope].detail contains
-    ehmiEnvelopeType 0..1 and
-    ehmiEnvelopeVersion 0..1
+    ehmiEnvelopeType 1..1 and
+    ehmiEnvelopeVersion 1..1
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType (exactly)
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString 1..1
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion (exactly)
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS
@@ -110,12 +114,13 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
   * ^slicing.rules = #open  
   * ^short = "something short"
 * entity[ehmiOrigMessage].detail contains
-    ehmiMessageType 0..1 and
-    ehmiMessageVersion 0..1 
+    ehmiMessageType 1..1 and
+    ehmiMessageVersion 1..1 
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType 
+* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiOrigEnvelope]
 * entity[ehmiOrigEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigEnvelope].type 1..1 MS
@@ -126,9 +131,11 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
   * ^slicing.rules = #open //#closed eller #open 
   * ^short = "something short"
 * entity[ehmiOrigEnvelope].detail contains
-    ehmiEnvelopeType 0..1 and
-    ehmiEnvelopeVersion 0..1
+    ehmiEnvelopeType 1..1 and
+    ehmiEnvelopeVersion 1..1
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType (exactly)
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString 1..1
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type from ehmi-auditevent-entity-detail-type-valueset
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion (exactly)
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
