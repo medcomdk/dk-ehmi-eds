@@ -1,7 +1,21 @@
 Profile: EHMIBasicAuditCreate
 Parent: IHE.BasicAudit.Create
 Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
-
+* ^url = "http://fhir.ch/ig/ch-atc/StructureDefinition/PolicyAuditEvent"
+* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the PolicyAuditEvent.</div>"
+* ^text.status = #additional
+* ^contact[0].name = "MedCom"
+* ^contact[=].telecom.value = "https://www.medcom.ch/"
+* ^contact[=].telecom.system = #url
+* ^contact[+].name = "OVI"
+* ^contact[=].telecom.value = "ovi@medcom.dk"
+* ^contact[=].telecom.system = #email
+//* ^jurisdiction = urn:iso:std:iso:3166#CH
+* ^status = #active
+* ^publisher = "MedCom"
+* ^date = "2024-01-01"
+* ^copyright = "CC0-1.0"
+* ^experimental = false
 * id 1..
 * id MS SU
 * type MS SU
