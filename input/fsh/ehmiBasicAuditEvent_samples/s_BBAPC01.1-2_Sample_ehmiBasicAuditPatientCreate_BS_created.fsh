@@ -1,4 +1,4 @@
-Instance: SampleEHMIBasicAuditPatientCreate-01.1-BS-Sender-msg-created
+Instance: EHMIBasicAuditPatientCreate-01.1-BS-Sender-msg-created
 InstanceOf: EHMIBasicAuditPatientCreate
 Description: "An example of an EHMIBasicAuditPatientCreate."
 * id = "EBAPC01.1"
