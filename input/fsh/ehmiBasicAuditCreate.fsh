@@ -1,7 +1,7 @@
 Profile: EHMIBasicAuditCreate
 Parent: IHE.BasicAudit.Create
 Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
-* ^url = "http://medcomehmi.dk/ig/ehmi_balp/StructureDefinition/EHMIBasicAuditCreate"
+* ^url = "http://medcomehmi.dk/ig/ehmi-balp/StructureDefinition/EHMIBasicAuditCreate"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EHMIBasicAuditCreate.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"

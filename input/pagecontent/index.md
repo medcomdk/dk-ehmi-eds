@@ -8,4 +8,4 @@ A focus is on enabling Privacy centric AuditEvent logs that hold well-formed ind
 
 ## Profiles
 
-[EHMIAuditEvent](https://build.fhir.org/ig/medcomdk/ehmi_balp/profiles.html)
+[EHMIAuditEvent](https://build.fhir.org/ig/medcomdk/ehmi-balp/profiles.html)
