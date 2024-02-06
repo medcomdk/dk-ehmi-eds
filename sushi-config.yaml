@@ -3,13 +3,13 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: medcom.ehmi.dk.balp
-canonical: http://medcomehmi.dk/ig/ehmi-balp
-name: EHMI BALP IG
-title: "DK MedCom EHMI BALP"
-description: The MedCom EHMI BALP IG
+id: dk.medcom.ehmi.eds
+canonical: http://medcomehmi.dk/ig/ehmi-eds
+name: EHMI eds IG
+title: "DK EHMI Delivery Status (EDS)"
+description: The EHMI Delivery Status (EDS)
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
