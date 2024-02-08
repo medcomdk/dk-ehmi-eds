@@ -11,7 +11,7 @@ description: The EHMI Delivery Status (EDS)
 status: draft # draft | active | retired | unknown
 version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2023+
+copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
@@ -30,6 +30,8 @@ dependencies:
   medcom.fhir.dk.core: 2.3.0
   medcom.fhir.dk.messaging: 2.0.0
   medcom.fhir.dk.terminology: 1.4.0
+  dk.medcom.ehmi.eer: current
+  dk.medcom.ehmi.terminology: current
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
