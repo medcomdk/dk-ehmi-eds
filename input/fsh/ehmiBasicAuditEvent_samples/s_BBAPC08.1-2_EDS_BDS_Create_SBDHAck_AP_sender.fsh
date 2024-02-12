@@ -1,6 +1,6 @@
-Instance: SampleEHMIBasicAuditCreate-08.1-SBDHAck-AP-Sender-msg-received
-InstanceOf: EHMIBasicAuditCreate
-Description: "An example of an EHMIBasicAuditCreate."
+Instance: EDS_BDS_Create-08.1-SBDHAck-AP-Sender-msg-received
+InstanceOf: EHMIBasicDeliveryStatusCreate
+Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP in a received status"
 * id = "EBAPC08.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
@@ -72,9 +72,9 @@ Description: "An example of an EHMIBasicAuditCreate."
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: SampleEHMIBasicAuditCreate-08.2-SBDHAck-AP-Sender-msg-sent
-InstanceOf: EHMIBasicAuditCreate
-Description: "An example of an EHMIBasicAuditCreate."
+Instance: EHMIBasicDeliveryStatusCreate-08.2-SBDHAck-AP-Sender-msg-sent
+InstanceOf: EHMIBasicDeliveryStatusCreate
+Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP in a sent status"
 * id = "EBAPC08.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent

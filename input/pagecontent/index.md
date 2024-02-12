@@ -9,5 +9,6 @@ A focus is on enabling Privacy centric AuditEvent logs that hold well-formed ind
 
 ## Profiles
 
-[EHMIAuditEvent (com-status)](https://build.fhir.org/ig/medcomdk/ehmi-com-status/profiles.html)
-[EHMIAuditEvent (EDS)](https://build.fhir.org/ig/medcomdk/ehmi-eds/profiles.html)
+[EHMIAuditEvent (com-status)](https://build.fhir.org/ig/medcomdk/dk-ehmi-com-status/profiles.html)
+
+[EHMIAuditEvent (EDS)](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/profiles.html)

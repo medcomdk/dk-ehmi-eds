@@ -1,8 +1,14 @@
-Profile: EHMIBasicAuditCreate
+Profile: EHMIBasicDeliveryStatusCreate
 Parent: IHE.BasicAudit.Create
-Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
-* ^url = "http://medcomehmi.dk/ig/ehmi-balp/StructureDefinition/EHMIBasicAuditCreate"
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EHMIBasicAuditCreate.</div>"
+Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION
+
+EHMIBasicDeliveryStatusCreate is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
+
+EHMIBasicDeliveryStatusCreate is used when a Patient entity is not required, for instance for reporting of Acknowledgments
+
+" 
+* ^url = "http://medcomehmi.dk/ig/ehmi-balp/StructureDefinition/EHMIBasicDeliveryStatusCreate"
+* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EHMIBasicDeliveryStatusCreate.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"
 * ^contact[=].telecom.value = "https://www.medcom.dk/"

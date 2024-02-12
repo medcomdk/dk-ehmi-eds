@@ -1,17 +1,17 @@
-Instance: SampleEHMIBasicAuditCreate-07.1-SBDHAck-MSH-Sender-msg-created
-InstanceOf: EHMIBasicAuditCreate
-Description: "An example of an EHMIBasicAuditCreate."
-* id = "EBAPC07.1"
+Instance: EDS_BDS_Create-10.1-SBDHAck-MSH-Receiver-msg-recieved
+InstanceOf: EHMIBasicDeliveryStatusCreate
+Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH Receiver in a received status"
+* id = "EBAPC10.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-created
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:09.500+02:00" 
+* recorded = "2023-10-01T00:00:15.500+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
-* agent[client].name = "MultiMed MSH"
+* agent[client].name = "Systematic Cura MSH"
 * agent[client].requestor = true
 * agent[client].who.type = $AuditEventAgentWhoTypes#110153
-* agent[client].who.identifier.value = "MSH1234567"
+* agent[client].who.identifier.value = "MSH12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -34,11 +34,15 @@ Description: "An example of an EHMIBasicAuditCreate."
 * agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN1234"
 // source
-* source.observer.identifier.value = "MSH1234567"
+* source.observer.identifier.value = "MSH12345"
 * source.type.code = $EHMIAuditEventSourceType#MSH
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
+//* entity[data].type = $AuditEventEntityType#4
+// Patient
+//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
+//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
@@ -68,14 +72,14 @@ Description: "An example of an EHMIBasicAuditCreate."
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: SampleEHMIBasicAuditCreate-07.2-SBDHAck-MSH-Sender-msg-sent
-InstanceOf: EHMIBasicAuditCreate
-Description: "An example of an EHMIBasicAuditCreate."
-* id = "EBAPC07.2"
+Instance: EDS_BDS_Create-10.2-SBDHAck-MSH-Receiver-msg-finalized
+InstanceOf: EHMIBasicDeliveryStatusCreate
+Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH Receiver in a finalized status"
+* id = "EBAPC10.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
+* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-finalized
 * subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
-* recorded = "2023-10-01T00:00:10.501+02:00" 
+* recorded = "2023-10-01T00:00:16.501+02:00" 
 * outcome = $EHMIAuditEventOutcome#0
 // Client
 * agent[client].name = "MultiMed MSH"
@@ -109,6 +113,10 @@ Description: "An example of an EHMIBasicAuditCreate."
 * source.type.system = $EHMIAuditEventSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
+//* entity[data].type = $AuditEventEntityType#4
+// Patient
+//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
+//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
@@ -127,7 +135,7 @@ Description: "An example of an EHMIBasicAuditCreate."
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
-* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = $EHMIAuditEventEntityMessageType#MunicipalityObservations
+* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
