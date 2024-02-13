@@ -1,3 +1,4 @@
+/*
 Profile: EHMISampleAuditEvent
 Parent: AuditEvent
 Description: "EHMI profile of the AuditEvent resource."
@@ -134,3 +135,4 @@ Description: "EHMI profile of the AuditEvent resource."
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type 1..1 MS SU
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 //* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type 1..1 MS SU
+*/

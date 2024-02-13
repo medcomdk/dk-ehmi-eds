@@ -7,7 +7,7 @@ EdsBasicDeliveryStatusCreate is used to define the basic status reporting for ED
 EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for instance for reporting of Acknowledgments
 
 " 
-* ^url = "http://medcomehmi.dk/ig/ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
+* ^url = "http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusCreate.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"

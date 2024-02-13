@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: dk.medcom.ehmi.eds
-canonical: http://medcomehmi.dk/ig/ehmi-eds
+canonical: http://medcomehmi.dk/ig/dk-medcom-ehmi-eds
 name: EHMI eds IG
 title: "DK EHMI Delivery Status (EDS)"
 description: The EHMI Delivery Status (EDS)
