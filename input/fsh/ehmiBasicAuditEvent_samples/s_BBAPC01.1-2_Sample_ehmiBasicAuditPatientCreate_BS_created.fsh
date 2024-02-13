@@ -1,6 +1,6 @@
-Instance: EHMIBasicAuditPatientCreate-01.1-BS-Sender-msg-created
-InstanceOf: EHMIBasicAuditPatientCreate
-Description: "An example of an EHMIBasicAuditPatientCreate."
+Instance: EDS_PDS_Create-01.1-BS-Sender-msg-created
+InstanceOf: EdsBasicDeliveryStatusPatientCreate
+Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC01.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-created
@@ -51,9 +51,9 @@ Description: "An example of an EHMIBasicAuditPatientCreate."
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 
-Instance: SampleEHMIBasicAuditPatientCreate-01.2-BS-Sender-msg-sent
-InstanceOf: EHMIBasicAuditPatientCreate
-Description: "An example of an EHMIBasicAuditPatientCreate."
+Instance: EDS_PDS_Create-01.2-BS-Sender-msg-sent
+InstanceOf: EdsBasicDeliveryStatusPatientCreate
+Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC01.2"
 //* type.code = $EHMIAuditEventTypes#ehmiMessaging
 * subtype[anyCreate].code = $AuditEventSubTypes#create

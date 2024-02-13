@@ -1,6 +1,6 @@
 Instance: EDS_BDS_Create-07.1-SBDHAck-MSH-Sender-msg-created
-InstanceOf: EHMIBasicDeliveryStatusCreate
-Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status"
+InstanceOf: EdsBasicDeliveryStatusCreate
+Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status"
 * id = "EBAPC07.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-created
@@ -69,8 +69,8 @@ Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH 
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
 Instance: EDS_BDS_Create-07.2-SBDHAck-MSH-Sender-msg-sent
-InstanceOf: EHMIBasicDeliveryStatusCreate
-Description: "An example of an EHMIBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a sent status"
+InstanceOf: EdsBasicDeliveryStatusCreate
+Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a sent status"
 * id = "EBAPC07.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
