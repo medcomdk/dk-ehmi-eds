@@ -25,8 +25,8 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * id 1..
 * id MS SU
 * type MS SU
-* type from $EhmiDeliveryStatusTypesValueset
-//* type.code = $EhmiDeliveryStatusTypesValueset#ehmiMessaging
+//* type from $EhmiDeliveryStatusTypesValueSet
+//* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
 //* type.system = $EhmiDeliveryStatusTypes
 //* type.display = "EHMI message events"
 * subtype ^slicing.discriminator.type = #value
@@ -35,13 +35,14 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * subtype contains
     ehmiSubType 1..1
 * subtype 2..3 MS SU
-* subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueset
+* subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueSet
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 //* subtype.system = $EhmiDeliveryStatusSubTypes
-* action 0..0
+* action 1..1
+* action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0
 * outcome 1..1 MS SU
-* outcome from $EhmiDeliveryStatusOutcome
+* outcome from $EhmiDeliveryStatusOutcomeValueSet
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 * agent ^slicing.discriminator.type = #pattern
@@ -52,8 +53,8 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
 * agent 4..6
-* agent.type from $EhmiDeliveryStatusParticipationRoleTypeValueset
-* agent.who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
+* agent.type from $EhmiDeliveryStatusParticipationRoleTypeValueSet
+* agent.who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 //* ^agent[ehmiSender]
 * agent[ehmiSender].name 1..1 MS
 * agent[ehmiSender].type 1..1 MS
@@ -75,7 +76,7 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
-* source.type from $EhmiDeliveryStatusSourceTypeValueset
+* source.type from $EhmiDeliveryStatusSourceTypeValueSet
 // entity
 * entity 2..
 * entity ^slicing.discriminator.type = #pattern
@@ -87,11 +88,11 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
     ehmiOrigEnvelope 0..1 
-* entity.type from $EhmiDeliveryStatusEntityTypeValueset
+* entity.type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessage]
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type 1..1 MS 
-* entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueset
+* entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -101,16 +102,16 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
 * entity[ehmiMessage].detail 2..2
-* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
-* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiEnvelope]
 * entity[ehmiEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiEnvelope].type 1..1 MS
-* entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueset
+* entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
 * entity[ehmiEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -120,16 +121,16 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiEnvelopeType 1..1 and
     ehmiEnvelopeVersion 1..1
 * entity[ehmiEnvelope].detail 2..2
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType (exactly)
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString 1..1
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS
-* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueset
+* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -139,16 +140,16 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
 * entity[ehmiOrigMessage].detail 2..2
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiOrigEnvelope]
 * entity[ehmiOrigEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigEnvelope].type 1..1 MS
-* entity[ehmiOrigEnvelope].type from $EhmiDeliveryStatusEntityTypeValueset
+* entity[ehmiOrigEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -158,9 +159,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
     ehmiEnvelopeType 1..1 and
     ehmiEnvelopeVersion 1..1
 * entity[ehmiOrigEnvelope].detail 2..2
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType (exactly)
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString 1..1
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueset
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1

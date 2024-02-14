@@ -3,10 +3,10 @@ InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC01.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueset#msg-created
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-created
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:01.000+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
 // Client
 * agent[client].name = "Systematic Cura End User APPL"
 * agent[client].requestor = true
@@ -19,7 +19,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
 * agent[server].who.identifier.value = "MMSS1234"
-* agent[server].network.address = "http://shippingstatus.medcom.dk/"
+* agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
@@ -55,9 +55,9 @@ Instance: EDS_PDS_Create-01.2-BS-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC01.2"
-//* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
+//* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueset#msg-sent
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -73,7 +73,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
 * agent[server].who.identifier.value = "MMSS1234"
-* agent[server].network.address = "http://shippingstatus.medcom.dk/"
+* agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 

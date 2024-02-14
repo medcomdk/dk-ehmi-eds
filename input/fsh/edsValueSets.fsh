@@ -1,4 +1,3 @@
-/*
 CodeSystem: EhmiDeliveryStatusTypes
 Id: ehmi-delivery-status-types
 Title: "EHMI AuditEvent Types CS"
@@ -10,9 +9,9 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * ^caseSensitive = true
 * #ehmiMessaging "EHMI message events"
 
-ValueSet: EhmiDeliveryStatusTypesValueset
-Id: $EhmiDeliveryStatusTypesValueset
-Title: "EHMI AuditEvent Types Valueset"
+ValueSet: EhmiDeliveryStatusTypesValueSet
+Id: ehmi-delivery-status-types-valueset
+Title: "EHMI AuditEvent Types ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEventTypes"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -37,9 +36,9 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * #msg-received "A new message has been recieved"
 * #msg-finalized "A message has reached its final reciever"
 
-ValueSet: EhmiDeliveryStatusSubTypesValueset
-Id: $EhmiDeliveryStatusSubTypesValueset
-Title: "EHMI AuditEvent SubTypes Valueset"
+ValueSet: EhmiDeliveryStatusSubTypesValueSet
+Id: ehmi-delivery-status-sub-types-valueset
+Title: "EHMI AuditEvent SubTypes ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -50,9 +49,9 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 //* include codes from system http://hl7.org/fhir/restful-interaction
 //* include codes from system http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
 
-ValueSet: EhmiDeliveryStatusOutcomeValueset
-Id: $EhmiDeliveryStatusOutcome
-Title: "EHMI AuditEvent Outcome Valueset"
+ValueSet: EhmiDeliveryStatusOutcomeValueSet
+Id: ehmi-delivery-status-outcome-valueset
+Title: "EHMI AuditEvent Outcome ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -76,9 +75,9 @@ Description: "ehmi-delivery-status-participationroletype for the EHMI Messaging 
 * #ehmiReceiver "Receiver" "The application that receives the new message"
 * #ehmiDevice "Device" "The Device that reports the AuditEvent"
 
-ValueSet: EhmiDeliveryStatusParticipationRoleTypeValueset
-Id: $EhmiDeliveryStatusParticipationRoleTypeValueset
-Title: "EHMI AuditEvent ParticipationRoleType Valueset"
+ValueSet: EhmiDeliveryStatusParticipationRoleTypeValueSet
+Id: ehmi-delivery-status-participationroletype-valueset
+Title: "EHMI AuditEvent ParticipationRoleType ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -100,9 +99,9 @@ Description: "ehmi-delivery-status-agent.who.identifier for the EHMI Messaging I
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
 * #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
 
-ValueSet: EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
-Id: $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
-Title: "EHMI AuditEvent AgentWhoIdentifier Types Valueset"
+ValueSet: EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
+Id: ehmi-delivery-status-agent-who-identifier-types-valueset
+Title: "EHMI AuditEvent AgentWhoIdentifier Types ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -124,11 +123,11 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 * ^experimental = false
 * ^caseSensitive = true
 * #1 "Machine Name" "The machine name, including DNS name"
+*/
 
-
-ValueSet: AuditEventAgentNetworkValueset
+ValueSet: AuditEventAgentNetworkValueSet
 Id: ehmi-delivery-status-network-valueset
-Title: "EHMI AuditEvent Network Valueset"
+Title: "EHMI AuditEvent Network ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent ehmi-delivery-status-network"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -159,10 +158,10 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 * include #4 from system http://terminology.hl7.org/CodeSystem/security-source-type
 * include #8 from system http://terminology.hl7.org/CodeSystem/security-source-type
 */
-/*
-ValueSet: EhmiDeliveryStatusSourceTypeValueset
-Id: $EhmiDeliveryStatusSourceTypeValueset
-Title: "EHMI AuditEvent Source Type Valueset"
+
+ValueSet: EhmiDeliveryStatusSourceTypeValueSet
+Id: ehmi-delivery-status-source-type-valueset
+Title: "EHMI AuditEvent Source Type ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -185,9 +184,9 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * #ehmiOrigMessage "Original Message" "Original Message"
 * #ehmiOrigEnvelope "Original Envelope" "Original Envelope"
 
-ValueSet: EhmiDeliveryStatusEntityTypeValueset
-Id: $EhmiDeliveryStatusEntityTypeValueset
-Title: "EHMI AuditEvent Entity Type Valueset"
+ValueSet: EhmiDeliveryStatusEntityTypeValueSet
+Id: ehmi-delivery-status-entity-type-valueset
+Title: "EHMI AuditEvent Entity Type ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -210,9 +209,9 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 * #ehmiMessageVersion "Message Version" "Message Version"
 * #ehmiEnvelopeVersion "Envelope Version" "Envelope Version"
 
-ValueSet: EhmiDeliveryStatusEntityDetailTypeValueset
-Id: $EhmiDeliveryStatusEntityDetailTypeValueset
-Title: "EHMI AuditEvent Entity Detail Type Valueset"
+ValueSet: EhmiDeliveryStatusEntityDetailTypeValueSet
+Id: ehmi-delivery-status-entity-detail-type-valueset
+Title: "EHMI AuditEvent Entity Detail Type ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent Entity Detail Type"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -234,9 +233,9 @@ Description: "Codesystem containing codes for EHMI AuditEvent Entity MessageType
 * #SBDHAck "EnvelopeAckType: SBDHAck" "EnvelopeAckType: SBDHAck"
 * #SBDH_Ack "EnvelopeAckType: SBDH_Ack" "EnvelopeAckType: SBDH_Ack"
 
-ValueSet: EhmiDeliveryStatusEntityMessageTypeValueset
+ValueSet: EhmiDeliveryStatusEntityMessageTypeValueSet
 Id: ehmi-delivery-status-entity-message-type-valueset
-Title: "EHMI AuditEvent Entity MessageType Valueset"
+Title: "EHMI AuditEvent Entity MessageType ValueSet"
 Description: "ValueSet containing codes for EHMI AuditEvent Entity MessageType"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -244,4 +243,3 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity MessageType"
 * ^experimental = false
 * include codes from system EhmiDeliveryStatusEntityMessageType
 * include codes from system https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-eventCodes.html
-*/

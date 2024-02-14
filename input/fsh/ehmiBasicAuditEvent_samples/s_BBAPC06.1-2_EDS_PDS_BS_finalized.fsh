@@ -6,7 +6,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:11.000+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
 // Client
 * agent[client].name = "Novax LPS"
 * agent[client].requestor = true
@@ -19,7 +19,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
 * agent[server].who.identifier.value = "MMSS1234"
-* agent[server].network.address = "http://shippingstatus.medcom.dk/"
+* agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
@@ -56,10 +56,10 @@ InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC06.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueset#msg-finalized
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-finalized
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:12.001+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
 // Client
 * agent[client].name = "Novax LPS"
 * agent[client].requestor = true
@@ -72,7 +72,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].requestor = false
 * agent[server].who.type = $AuditEventAgentWhoTypes#110153
 * agent[server].who.identifier.value = "MMSS1234"
-* agent[server].network.address = "http://shippingstatus.medcom.dk/"
+* agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 

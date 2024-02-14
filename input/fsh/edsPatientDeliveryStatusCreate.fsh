@@ -25,5 +25,5 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on 
 * entity 3..
 * entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
-* entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueset
+* entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient

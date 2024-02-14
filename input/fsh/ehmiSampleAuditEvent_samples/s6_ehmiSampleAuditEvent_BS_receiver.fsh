@@ -4,9 +4,9 @@ InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EhmiDeliveryStatus."
 * id = "6.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
-* subtype.code = $EhmiDeliveryStatusSubTypesValueset#msg-received
+* subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-received
 * recorded = "2023-10-01T00:00:00.000+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -44,9 +44,9 @@ InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EhmiDeliveryStatus."
 * id = "6.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
-* subtype.code = $EhmiDeliveryStatusSubTypesValueset#msg-finalized
+* subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-finalized
 * recorded = "2023-10-01T00:00:00.001+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
