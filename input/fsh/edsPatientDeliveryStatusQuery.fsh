@@ -1,4 +1,4 @@
-Profile: EHMIBasicAuditPatientQuery
+Profile: EdsPatientDeliveryStatusQuery
 Parent: EHMIBasicAuditQuery
 Description: "EHMI profile of the IHE.BasicAudit.PatientQuery profile. UNDER CONSTRUCTION" 
 /*
