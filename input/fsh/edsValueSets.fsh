@@ -1,7 +1,7 @@
 /*
 CodeSystem: EhmiDeliveryStatusTypes
 Id: ehmi-delivery-status-types
-Title: "EHMI AuditEvent Types CS"
+Title: "EHMI Delivery Status (EDS) Types CS"
 Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -12,8 +12,8 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiDeliveryStatusTypesValueSet
 Id: ehmi-delivery-status-types-valueset
-Title: "EHMI AuditEvent Types ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEventTypes"
+Title: "EHMI Delivery Status (EDS) Types ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS)Types"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -25,7 +25,7 @@ Description: "ValueSet containing codes for EHMI AuditEventTypes"
 
 CodeSystem: EhmiDeliveryStatusSubTypes
 Id: ehmi-delivery-status-sub-types
-Title: "EHMI AuditEvent SubTypes CS"
+Title: "EHMI Delivery Status (EDS) SubTypes CS"
 Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -39,8 +39,8 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiDeliveryStatusSubTypesValueSet
 Id: ehmi-delivery-status-sub-types-valueset
-Title: "EHMI AuditEvent SubTypes ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
+Title: "EHMI Delivery Status (EDS) SubTypes ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) SubTypes"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -52,8 +52,8 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 
 ValueSet: EhmiDeliveryStatusOutcomeValueSet
 Id: ehmi-delivery-status-outcome-valueset
-Title: "EHMI AuditEvent Outcome ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
+Title: "EHMI Delivery Status (EDS) Outcome ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) SubTypes"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -65,7 +65,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent SubTypes"
 
 CodeSystem: EhmiDeliveryStatusParticipationRoleType
 Id: ehmi-delivery-status-participationroletype
-Title: "EHMI AuditEvent ParticipationRoleType CS"
+Title: "EHMI Delivery Status (EDS) ParticipationRoleType CS"
 Description: "ehmi-delivery-status-participationroletype for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -78,8 +78,8 @@ Description: "ehmi-delivery-status-participationroletype for the EHMI Messaging 
 
 ValueSet: EhmiDeliveryStatusParticipationRoleTypeValueSet
 Id: ehmi-delivery-status-participationroletype-valueset
-Title: "EHMI AuditEvent ParticipationRoleType ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
+Title: "EHMI Delivery Status (EDS) ParticipationRoleType ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) ParticipationRole"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -90,7 +90,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ParticipationRole"
 
 CodeSystem: EhmiDeliveryStatusAgentWhoIdentifierTypes
 Id: ehmi-delivery-status-agent-who-identifier-types
-Title: "EHMI AuditEvent agent.who.identifier Types CS"
+Title: "EHMI Delivery Status (EDS) agent.who.identifier Types CS"
 Description: "ehmi-delivery-status-agent.who.identifier for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -102,8 +102,8 @@ Description: "ehmi-delivery-status-agent.who.identifier for the EHMI Messaging I
 
 ValueSet: EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 Id: ehmi-delivery-status-agent-who-identifier-types-valueset
-Title: "EHMI AuditEvent AgentWhoIdentifier Types ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
+Title: "EHMI Delivery Status (EDS) AgentWhoIdentifier Types ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -116,7 +116,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 /*
 CodeSystem: AuditEventAgentNetwork
 Id: ehmi-delivery-status-network
-Title: "EHMI AuditEvent audit-source-type CS"
+Title: "EHMI Delivery Status (EDS) audit-source-type CS"
 Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -128,8 +128,8 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 /*
 ValueSet: AuditEventAgentNetworkValueSet
 Id: ehmi-delivery-status-network-valueset
-Title: "EHMI AuditEvent Network ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent ehmi-delivery-status-network"
+Title: "EHMI Delivery Status (EDS) Network ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) ehmi-delivery-status-network"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -141,7 +141,7 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-delivery-status
 /*
 CodeSystem: EhmiDeliveryStatusSourceType
 Id: ehmi-delivery-status-source-type
-Title: "EHMI AuditEvent Source Type CS"
+Title: "EHMI Delivery Status (EDS) Source Type CS"
 Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -164,8 +164,8 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 /*
 ValueSet: EhmiDeliveryStatusSourceTypeValueSet
 Id: ehmi-delivery-status-source-type-valueset
-Title: "EHMI AuditEvent Source Type ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
+Title: "EHMI Delivery Status (EDS) Source Type ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) AgentWhoIdentifiers"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -174,8 +174,8 @@ Description: "ValueSet containing codes for EHMI AuditEvent AgentWhoIdentifiers"
 
 CodeSystem: EhmiDeliveryStatusEntityType
 Id: ehmi-delivery-status-entity-type
-Title: "EHMI AuditEvent Entity Type CS"
-Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
+Title: "EHMI Delivery Status (EDS) Entity Type CS"
+Description: "EHMI Delivery Status (EDS) Entity Type for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -189,8 +189,8 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiDeliveryStatusEntityTypeValueSet
 Id: ehmi-delivery-status-entity-type-valueset
-Title: "EHMI AuditEvent Entity Type ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
+Title: "EHMI Delivery Status (EDS) Entity Type ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) Entity Type"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -200,8 +200,8 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity Type"
 
 CodeSystem: EhmiDeliveryStatusEntityDetailType
 Id: ehmi-delivery-status-entity-detail-type
-Title: "EHMI AuditEvent Entity Type CS"
-Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
+Title: "EHMI Delivery Status (EDS) Entity Type CS"
+Description: "EHMI Delivery Status (EDS) Entity Type for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -214,8 +214,8 @@ Description: "EHMI AuditEvent Entity Type for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiDeliveryStatusEntityDetailTypeValueSet
 Id: ehmi-delivery-status-entity-detail-type-valueset
-Title: "EHMI AuditEvent Entity Detail Type ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent Entity Detail Type"
+Title: "EHMI Delivery Status (EDS) Entity Detail Type ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) Entity Detail Type"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -224,8 +224,8 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity Detail Type"
 
 CodeSystem: EhmiDeliveryStatusEntityMessageType
 Id: ehmi-delivery-status-entity-message-type
-Title: "EHMI AuditEvent Entity MessageType CS"
-Description: "Codesystem containing codes for EHMI AuditEvent Entity MessageType"
+Title: "EHMI Delivery Status (EDS) Entity MessageType CS"
+Description: "Codesystem containing codes for EHMI Delivery Status (EDS) Entity MessageType"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
@@ -238,8 +238,8 @@ Description: "Codesystem containing codes for EHMI AuditEvent Entity MessageType
 
 ValueSet: EhmiDeliveryStatusEntityMessageTypeValueSet
 Id: ehmi-delivery-status-entity-message-type-valueset
-Title: "EHMI AuditEvent Entity MessageType ValueSet"
-Description: "ValueSet containing codes for EHMI AuditEvent Entity MessageType"
+Title: "EHMI Delivery Status (EDS) Entity MessageType ValueSet"
+Description: "ValueSet containing codes for EHMI Delivery Status (EDS) Entity MessageType"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2023-09-01"
