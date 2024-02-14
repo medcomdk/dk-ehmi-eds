@@ -1,4 +1,4 @@
-Profile: EHMIBasicAuditQuery
+Profile: EdsBasicDeliveryStatusQuery
 Parent: IHE.BasicAudit.Query
 Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION" 
 
