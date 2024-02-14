@@ -1,3 +1,4 @@
+/*
 CodeSystem: EhmiDeliveryStatusTypes
 Id: ehmi-delivery-status-types
 Title: "EHMI AuditEvent Types CS"
@@ -124,7 +125,7 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 * ^caseSensitive = true
 * #1 "Machine Name" "The machine name, including DNS name"
 */
-
+/*
 ValueSet: AuditEventAgentNetworkValueSet
 Id: ehmi-delivery-status-network-valueset
 Title: "EHMI AuditEvent Network ValueSet"
@@ -133,10 +134,11 @@ Description: "ValueSet containing codes for EHMI AuditEvent ehmi-delivery-status
 * ^status  =  #active
 * ^date  =  "2023-09-01"
 * ^experimental = false
-//* include codes from system ehmi-delivery-status-network
 * include #1 from system http://hl7.org/fhir/network-type
+//* include codes from system ehmi-delivery-status-network
 //* include #2 from system http://hl7.org/fhir/network-type
-
+*/
+/*
 CodeSystem: EhmiDeliveryStatusSourceType
 Id: ehmi-delivery-status-source-type
 Title: "EHMI AuditEvent Source Type CS"
@@ -153,12 +155,13 @@ Description: "ehmi-delivery-status-audit-source-type for the EHMI Messaging Infr
 * #ehmiEUAPPLICATION "End-user application" "End-user application"
 * #ehmiMESSAGESERVICEHANDLER "MSH" "The Message Service Handler that passes the message on"
 * #ehmiEDELIVERY-AP "eDelivery AP" "The eDelivery Access Point that passes the message on"
+*/
 /*
 * include #1 from system http://terminology.hl7.org/CodeSystem/security-source-type
 * include #4 from system http://terminology.hl7.org/CodeSystem/security-source-type
 * include #8 from system http://terminology.hl7.org/CodeSystem/security-source-type
 */
-
+/*
 ValueSet: EhmiDeliveryStatusSourceTypeValueSet
 Id: ehmi-delivery-status-source-type-valueset
 Title: "EHMI AuditEvent Source Type ValueSet"
@@ -243,3 +246,4 @@ Description: "ValueSet containing codes for EHMI AuditEvent Entity MessageType"
 * ^experimental = false
 * include codes from system EhmiDeliveryStatusEntityMessageType
 * include codes from system https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-eventCodes.html
+*/
