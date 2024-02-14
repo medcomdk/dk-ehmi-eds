@@ -3,10 +3,10 @@ InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP Receiver in a received status"
 * id = "EBAPC09.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypes#msg-received
-* subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
+* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:13.500+02:00" 
-* outcome = $EHMIAuditEventOutcome#0
+* outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Municipality AP"
 * agent[client].requestor = true
@@ -22,54 +22,54 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.address = "http://shippingstatus.medcom.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender
+* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = false
-* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN12345"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EHMIAuditEventParticipationRoleType#ehmiReceiver
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN1234"
 // source
 * source.observer.identifier.value = "AP12345"
-* source.type.code = $EHMIAuditEventSourceType#AP
-* source.type.system = $EHMIAuditEventSourceType
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
+//* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
-* entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
-* entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
 * entity[ehmiOrigEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiOrigEnvelope].type = $EHMIAuditEventEntityType#ehmiOrigEnvelope
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
 Instance: EDS_BDS_Create-09.2-SBDHAck-AP-Receiver-msg-sent
@@ -77,10 +77,10 @@ InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP Receiver in a sent status"
 * id = "EBAPC09.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[ehmiSubType].code = $EHMIAuditEventSubTypesValueset#msg-sent
-* subtype[ehmiSubType].system = $EHMIAuditEventSubTypes
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueset#msg-sent
+* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * recorded = "2023-10-01T00:00:14.501+02:00" 
-* outcome = $EHMIAuditEventOutcome#0
+* outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Municipality AP"
 * agent[client].requestor = true
@@ -96,52 +96,52 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.address = "http://shippingstatus.medcom.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EHMIAuditEventParticipationRoleType#ehmiSender
+* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = false
-* agent[ehmiSender].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN12345"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EHMIAuditEventParticipationRoleType#ehmiReceiver
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EHMIAuditEventAgentWhoIdentifierTypes#GLN
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN1234"
 // source
 * source.observer.identifier.value = "AP12345"
-* source.type.code = $EHMIAuditEventSourceType#AP
-* source.type.system = $EHMIAuditEventSourceType
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 //* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EHMIAuditEventEntityType#ehmiPatient
+//* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
-* entity[ehmiMessage].type = $EHMIAuditEventEntityType#ehmiMessage
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
-* entity[ehmiEnvelope].type = $EHMIAuditEventEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiOrigMessage].type = $EHMIAuditEventEntityType#ehmiOrigMessage
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EHMIAuditEventEntityDetailType#ehmiMessageType
+* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EHMIAuditEventEntityDetailType#ehmiMessageVersion
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
 * entity[ehmiOrigEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiOrigEnvelope].type = $EHMIAuditEventEntityType#ehmiOrigEnvelope
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeType
+* entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EHMIAuditEventEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
