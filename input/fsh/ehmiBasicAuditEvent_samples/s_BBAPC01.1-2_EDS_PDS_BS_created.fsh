@@ -99,6 +99,8 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
 * agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
