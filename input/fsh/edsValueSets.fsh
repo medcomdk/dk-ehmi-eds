@@ -231,7 +231,7 @@ Description: "Codesystem containing codes for EHMI Delivery Status (EDS) Entity 
 * ^date  =  "2023-09-01"
 * ^experimental = false
 * ^caseSensitive = true
-* #MunicipalityObservations "MessageType: MunicipalityObservations" "MessageType: MunicipalityObservations"
+* #HomeCareObservation "MessageType: HomeCareObservation" "MessageType: HomeCareObservation"
 * #SBDH "EnvelopeType: SBDH" "EnvelopeType: SBDH"
 * #SBDHAck "EnvelopeAckType: SBDHAck" "EnvelopeAckType: SBDHAck"
 * #SBDH_Ack "EnvelopeAckType: SBDH_Ack" "EnvelopeAckType: SBDH_Ack"

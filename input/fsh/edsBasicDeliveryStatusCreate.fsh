@@ -25,19 +25,23 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * id 1..
 * id MS SU
 * type MS SU
+* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
+* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
+* type.display = "Restful Operation"
 //* type from $EhmiDeliveryStatusTypesValueSet
 //* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
 //* type.system = $EhmiDeliveryStatusTypes
 //* type.display = "EHMI message events"
-* subtype ^slicing.discriminator.type = #value
+//* subtype ^slicing.discriminator.type = #value
 //* subtype ^slicing.discriminator.path = $this
-* subtype ^slicing.rules = #open //#closed eller #open 
+//* subtype ^slicing.rules = #open //#closed eller #open 
 * subtype contains
     ehmiSubType 1..1
 * subtype 2..3 MS SU
+* subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueSet
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-//* subtype.system = $EhmiDeliveryStatusSubTypes
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0
@@ -45,33 +49,39 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * outcome from $EhmiDeliveryStatusOutcomeValueSet
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-* agent ^slicing.discriminator.type = #pattern
+/* agent ^slicing.discriminator.type = #pattern
 * agent ^slicing.discriminator.path = type
 * agent ^slicing.rules = #open //#closed eller #open 
 //* agent ^slicing.ordered = false
+*/
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
 * agent 4..6
-* agent.type from $EhmiDeliveryStatusParticipationRoleTypeValueSet
-* agent.who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 //* ^agent[ehmiSender]
 * agent[ehmiSender].name 1..1 MS
 * agent[ehmiSender].type 1..1 MS
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who 1..1 MS
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
 * agent[ehmiSender].who.type 1..1 MS SU
+* agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
 * agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who 1..1 MS
 * agent[ehmiReceiver].who only Reference(Organization)
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
 * agent[ehmiReceiver].who.type 1..1 MS SU
+* agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * source.observer 1..1 
 * source.observer only Reference(Device)

@@ -17,9 +17,10 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on 
 * ^copyright = "CC0-1.0"
 * ^experimental = false
 // entity
-* entity ^slicing.discriminator.type = #pattern
+/* entity ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
+*/
 * entity contains
     ehmiPatient 1..1 
 * entity 3..

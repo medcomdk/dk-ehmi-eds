@@ -6,7 +6,7 @@ Description: "An example of an EhmiDeliveryStatus."
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
 * subtype.code = $EhmiDeliveryStatusSubTypes#msg-created
 * recorded = "2023-10-01T00:00:00.000+02:00" 
-* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
+* outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -35,7 +35,7 @@ Description: "An example of an EhmiDeliveryStatus."
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
-* entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 
@@ -46,7 +46,7 @@ Description: "An example of an EhmiDeliveryStatus."
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
 * subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
 * recorded = "2023-10-01T00:00:00.001+02:00" 
-* outcome = $EhmiDeliveryStatusOutcomeValueSet#0
+* outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -75,7 +75,7 @@ Description: "An example of an EhmiDeliveryStatus."
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
-* entity[ehmiMessage].detail[ehmiMessageType].valueString = "MunicipalityObservations"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 */
