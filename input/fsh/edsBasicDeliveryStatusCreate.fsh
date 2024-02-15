@@ -28,13 +28,6 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * type.display = "Restful Operation"
-//* type from $EhmiDeliveryStatusTypesValueSet
-//* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
-//* type.system = $EhmiDeliveryStatusTypes
-//* type.display = "EHMI message events"
-//* subtype ^slicing.discriminator.type = #value
-//* subtype ^slicing.discriminator.path = $this
-//* subtype ^slicing.rules = #open //#closed eller #open 
 * subtype contains
     ehmiSubType 1..1
 * subtype 2..3 MS SU
@@ -53,11 +46,6 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * outcome from $EhmiDeliveryStatusOutcomeValueSet
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-/* agent ^slicing.discriminator.type = #pattern
-* agent ^slicing.discriminator.path = type
-* agent ^slicing.rules = #open //#closed eller #open 
-//* agent ^slicing.ordered = false
-*/
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
@@ -93,11 +81,10 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
 // entity
 * entity 2..
-* entity ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
+//* entity ^slicing.discriminator.type = #pattern
+//  * ^slicing.discriminator.path = type
+//  * ^slicing.rules = #open //#closed eller #open 
 * entity contains
-//    ehmiPatient 1..1 and
     ehmiMessage 1..1 and
     ehmiEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
