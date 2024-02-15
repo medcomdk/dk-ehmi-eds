@@ -10,7 +10,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 // Client
 * agent[client].name = "MultiMed AP"
 * agent[client].requestor = true
-* agent[client].who.type = $AuditEventAgentWhoTypes#110153
+* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
+* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
+* agent[client].type.coding.display = "Source Role ID"
 * agent[client].who.identifier.value = "AP123456"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
@@ -72,7 +74,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 // Client
 * agent[client].name = "MultiMed AP"
 * agent[client].requestor = true
-* agent[client].who.type = $AuditEventAgentWhoTypes#110153
+* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
+* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
+* agent[client].type.coding.display = "Source Role ID"
 * agent[client].who.identifier.value = "AP123456"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
