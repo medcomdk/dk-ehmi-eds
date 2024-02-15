@@ -56,7 +56,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
 * entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiPatient].type.display = "ehmiPatient"
+* entity[ehmiPatient].type.display = "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 //* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
