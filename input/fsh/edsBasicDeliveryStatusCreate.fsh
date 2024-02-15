@@ -40,6 +40,7 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * subtype 2..3 MS SU
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
 * subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueSet
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * action 1..1
