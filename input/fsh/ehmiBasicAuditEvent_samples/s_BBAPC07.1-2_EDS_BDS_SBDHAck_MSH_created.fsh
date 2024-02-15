@@ -43,6 +43,10 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
+* entity[data].type.code = $AuditEventEntityType#2
+* entity[data].type.system = $AuditEventEntityType
+* entity[data].type.display = "System Object"
+
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
@@ -117,6 +121,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
+* entity[data].type.code = $AuditEventEntityType#2
+* entity[data].type.system = $AuditEventEntityType
+* entity[data].type.display = "System Object"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage

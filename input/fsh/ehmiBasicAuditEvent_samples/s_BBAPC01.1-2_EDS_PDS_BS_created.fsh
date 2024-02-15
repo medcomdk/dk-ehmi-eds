@@ -109,7 +109,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
-* entity[data].type = $AuditEventEntityType#2
+* entity[data].type.code = $AuditEventEntityType#2
+* entity[data].type.system = $AuditEventEntityType
+* entity[data].type.display = "System Object"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
