@@ -3,8 +3,12 @@ InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP in a received status"
 * id = "EBAPC08.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
+
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+* subtype[ehmiSubType].display = "msg-received"
 * recorded = "2023-10-01T00:00:11.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
@@ -85,8 +89,12 @@ InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP in a sent status"
 * id = "EBAPC08.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
+
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+* subtype[ehmiSubType].display = "msg-sent"
 * recorded = "2023-10-01T00:00:12.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client

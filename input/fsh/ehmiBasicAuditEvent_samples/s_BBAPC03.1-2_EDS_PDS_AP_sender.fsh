@@ -3,8 +3,12 @@ InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC03.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
+
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+* subtype[ehmiSubType].display = "msg-received"
 * recorded = "2023-10-01T00:00:05.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
@@ -69,8 +73,12 @@ InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC03.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
+
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+* subtype[ehmiSubType].display = "msg-sent"
 * recorded = "2023-10-01T00:00:06.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
