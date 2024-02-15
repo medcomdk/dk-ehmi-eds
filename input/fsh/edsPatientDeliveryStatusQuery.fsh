@@ -1,5 +1,5 @@
 Profile: EdsPatientDeliveryStatusQuery
-Parent: EHMIBasicAuditQuery
+Parent: EdsBasicDeliveryStatusQuery
 Description: "EHMI profile of the IHE.BasicAudit.PatientQuery profile. UNDER CONSTRUCTION" 
 /*
 * id 1..
