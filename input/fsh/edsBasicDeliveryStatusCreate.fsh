@@ -99,6 +99,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
@@ -118,6 +121,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
@@ -137,6 +143,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiOrigMessage].type 1..1 MS
 * entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigMessage].type.display = "OrigMessage"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open  
@@ -156,6 +165,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiOrigEnvelope].type 1..1 MS
 * entity[ehmiOrigEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigEnvelope].type.display = "OrigEnvelope"
 * entity[ehmiOrigEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
