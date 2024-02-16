@@ -67,6 +67,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 //* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -136,6 +139,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion

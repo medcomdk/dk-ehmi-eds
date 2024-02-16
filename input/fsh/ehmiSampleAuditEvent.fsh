@@ -107,6 +107,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
@@ -119,6 +122,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
@@ -131,6 +137,9 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiOrigMessage].type 1..1 MS
 * entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigMessage].type.display = "OrigMessage"
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType 

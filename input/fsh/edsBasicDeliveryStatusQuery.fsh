@@ -109,6 +109,9 @@ Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCT
 * entity[ehmiMessage].type 1..1 MS 
 * entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType

@@ -62,6 +62,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -69,6 +72,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
@@ -76,6 +82,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigMessage].type.display = "OrigMessage"
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -83,6 +92,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // OrigEnvelope
 * entity[ehmiOrigEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigEnvelope].type.display = "OrigEnvelope"
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
@@ -152,6 +164,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -159,6 +174,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
@@ -166,6 +184,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigMessage].type.display = "OrigMessage"
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -173,6 +194,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // OrigEnvelope
 * entity[ehmiOrigEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
+* entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigEnvelope].type.display = "OrigEnvelope"
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion

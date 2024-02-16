@@ -118,6 +118,9 @@ Description: "EHMI profile of the IHE.BasicAudit.PatientQuery profile. UNDER CON
 * entity[ehmiEnvelope].type 1..1 MS
 * entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType

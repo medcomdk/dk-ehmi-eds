@@ -38,6 +38,9 @@ Description: "An example of an EhmiDeliveryStatus."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -45,6 +48,9 @@ Description: "An example of an EhmiDeliveryStatus."
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
@@ -89,6 +95,9 @@ Description: "An example of an EhmiDeliveryStatus."
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
@@ -96,6 +105,9 @@ Description: "An example of an EhmiDeliveryStatus."
 // Envelope
 * entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiEnvelope].type.display = "Envelope"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
