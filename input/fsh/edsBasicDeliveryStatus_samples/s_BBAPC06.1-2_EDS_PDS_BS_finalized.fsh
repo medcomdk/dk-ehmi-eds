@@ -49,6 +49,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * source.observer.identifier.value = "LPS12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "EUA (End-user Application)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2
@@ -119,6 +120,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "EUA (End-user Application)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2

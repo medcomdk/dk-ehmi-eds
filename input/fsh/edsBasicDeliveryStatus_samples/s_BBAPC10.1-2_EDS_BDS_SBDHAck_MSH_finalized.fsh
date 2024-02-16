@@ -49,6 +49,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.observer.identifier.value = "MSH12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "MSH (Application Server)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2
@@ -151,6 +152,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.observer.identifier.value = "MSH1234567"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "MSH (Application Server)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2

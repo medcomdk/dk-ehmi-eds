@@ -79,10 +79,13 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
+//source
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 // entity
 * entity 2..
 //* entity ^slicing.discriminator.type = #pattern

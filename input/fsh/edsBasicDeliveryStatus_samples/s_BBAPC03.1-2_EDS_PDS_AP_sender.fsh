@@ -47,8 +47,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
 * source.observer.identifier.value = "DEV12345"
-* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "AP (Access Point -Network Router)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2
@@ -127,8 +128,9 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
 * source.observer.identifier.value = "DEV12345"
-* source.type.code = $EhmiDeliveryStatusSourceType#EUP
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "AP (Access Point -Network Router)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2

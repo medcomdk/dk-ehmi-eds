@@ -47,6 +47,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.observer.identifier.value = "AP123456"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "AP (Access Point -Network Router)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2
@@ -147,6 +148,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.observer.identifier.value = "AP123456"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.type.display = "AP (Access Point -Network Router)"
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
 * entity[data].type.code = $AuditEventEntityType#2
