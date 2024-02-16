@@ -139,7 +139,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigMessage].type.display = "OrigMessage"
+* entity[ehmiOrigMessage].type.display = "Original Message"
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType 

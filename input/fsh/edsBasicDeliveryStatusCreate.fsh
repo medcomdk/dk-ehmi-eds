@@ -145,7 +145,7 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigMessage].type.display = "OrigMessage"
+* entity[ehmiOrigMessage].type.display = "Original Message"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open  
@@ -167,7 +167,7 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigEnvelope].type.display = "OrigEnvelope"
+* entity[ehmiOrigEnvelope].type.display = "Original Envelope"
 * entity[ehmiOrigEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
