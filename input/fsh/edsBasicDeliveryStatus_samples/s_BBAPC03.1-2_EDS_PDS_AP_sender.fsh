@@ -1,7 +1,7 @@
-Instance: EDS_PDS_Create-05.1-MSH-Sender-msg-received
+Instance: EDS_PDS_Create-03.1-AP-Sender-msg-received
 InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
-* id = "EBAPC05.1"
+* id = "EBAPC03.1"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
@@ -9,15 +9,15 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-received"
-* recorded = "2023-10-01T00:00:09.000+02:00" 
+* recorded = "2023-10-01T00:00:05.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
-* agent[client].name = "MultiMed MSH"
+* agent[client].name = "Municipality AP"
 * agent[client].requestor = true
 * agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
 * agent[client].type.coding.display = "Source Role ID"
-* agent[client].who.identifier.value = "MSH1234567"
+* agent[client].who.identifier.value = "AP12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -30,20 +30,24 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
-* source.observer.identifier.value = "MSH1234567"
-* source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.observer.identifier.value = "DEV12345"
+* source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"
@@ -68,10 +72,10 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: EDS_PDS_Create-05.2-MSH-Sender-msg-sent
+Instance: EDS_PDS_Create-03.2-AP-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
-* id = "EBAPC05.2"
+* id = "EBAPC03.2"
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
@@ -79,15 +83,15 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-sent"
-* recorded = "2023-10-01T00:00:10.001+02:00" 
+* recorded = "2023-10-01T00:00:06.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
-* agent[client].name = "MultiMed MSH"
+* agent[client].name = "Municipality AP"
 * agent[client].requestor = true
 * agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
 * agent[client].type.coding.display = "Source Role ID"
-* agent[client].who.identifier.value = "MSH1234567"
+* agent[client].who.identifier.value = "AP12345"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -100,20 +104,24 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
-* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
-* source.observer.identifier.value = "MSH123456"
-* source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.observer.identifier.value = "DEV12345"
+* source.type.code = $EhmiDeliveryStatusSourceType#EUP
 * source.type.system = $EhmiDeliveryStatusSourceType
 // data
 * entity[data].what.identifier.value = "PAT1234567890"

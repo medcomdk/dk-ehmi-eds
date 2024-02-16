@@ -1,22 +1,26 @@
 /*
-Instance: EHMISampleAuditEvent-1.1-BS-Sender-msg-created
+Instance: EHMISampleAuditEvent-2.1-MSH-Sender-msg-received
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EhmiDeliveryStatus."
-* id = "1.1"
+* id = "2.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
-* subtype.code = $EhmiDeliveryStatusSubTypes#msg-created
+* subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-received
 * recorded = "2023-10-01T00:00:00.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
@@ -38,25 +42,36 @@ Description: "An example of an EhmiDeliveryStatus."
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+// Envelope
+* entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: EHMISampleAuditEvent-1.2-BS-Sender-msg-sent
+Instance: EHMISampleAuditEvent-2.2-MSH-Sender-msg-sent
 InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EhmiDeliveryStatus."
-* id = "1.2"
+* id = "2.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
 * subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
 * recorded = "2023-10-01T00:00:00.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // Device
@@ -78,4 +93,11 @@ Description: "An example of an EhmiDeliveryStatus."
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+// Envelope
+* entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 */

@@ -28,17 +28,20 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * type.display = "Restful Operation"
-* subtype contains
-    ehmiSubType 1..1
-* subtype 2..3 MS SU
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[anyCreate].system = $AuditEventSubTypes
-* subtype[anyCreate].display = "create"
+* subtype contains
+    ehmiSubType 1..1
+* subtype 2..3 MS SU
+* subtype[ehmiSubType].code 1..1
+* subtype[ehmiSubType].system 1..1
+* subtype[ehmiSubType].display 1..1
 * subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueSet
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0
@@ -66,7 +69,9 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who 1..1 MS
