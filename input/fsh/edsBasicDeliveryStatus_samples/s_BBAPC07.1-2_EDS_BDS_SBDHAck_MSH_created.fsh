@@ -31,11 +31,11 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
+* agent[ehmiSender].name = "Løgten Lægehus"
+* agent[ehmiSender].requestor = false
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN12345"
 // ehmiReceiver
@@ -118,11 +118,11 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
+* agent[ehmiSender].name = "Løgten Lægehus"
+* agent[ehmiSender].requestor = false
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN12345"
 // ehmiReceiver

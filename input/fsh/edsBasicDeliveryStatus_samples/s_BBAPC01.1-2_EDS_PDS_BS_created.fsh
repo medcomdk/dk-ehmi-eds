@@ -7,6 +7,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
+* subtype[ehmiSubType] = $EhmiDeliveryStatusSubTypes#msg-created
 * subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-created
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-created"
@@ -43,6 +44,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"

@@ -69,9 +69,8 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
-* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who 1..1 MS
