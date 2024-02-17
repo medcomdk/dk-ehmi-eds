@@ -11,9 +11,11 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 
 A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a RESTful EdsBasicDeliveryStatus Create action happens successfully.
 
-And that resource does not have a Patient subject or is otherwise associated with a Patient
+It is used when 
 
-- when the resource is Patient specific then PatientCreate is used
+- the resource does not have a Patient subject or is otherwise associated with a Patient
+
+  - when the resource is Patient specific then PatientCreate is used
 
 - And the request is authorized
 
