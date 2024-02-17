@@ -1,7 +1,6 @@
 Profile: EdsBasicDeliveryStatusCreate
 Parent: IHE.BasicAudit.Create
-Description: "
-*** UNDER SPECIFICATION ***
+Description: "*** UNDER SPECIFICATION ***
 
 EHMI profile of the IHE.BasicAudit.Create profile. 
 
