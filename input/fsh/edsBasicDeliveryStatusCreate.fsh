@@ -1,11 +1,29 @@
 Profile: EdsBasicDeliveryStatusCreate
 Parent: IHE.BasicAudit.Create
-Description: "EHMI profile of the IHE.BasicAudit.Create profile. UNDER CONSTRUCTION
+Description: "
+*** UNDER SPECIFICATION ***
+
+EHMI profile of the IHE.BasicAudit.Create profile. 
 
 EdsBasicDeliveryStatusCreate is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
 
 EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for instance for reporting of Acknowledgments
 
+A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a RESTful EdsBasicDeliveryStatus Create action happens successfully.
+
+And that resource does not have a Patient subject or is otherwise associated with a Patient
+
+- when the resource is Patient specific then PatientCreate is used
+
+- And the request is authorized
+
+- Authorization failures should follow FHIR core Access Denied
+
+- When successful
+
+- Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
+
+- Then the EdsBasicDeliveryStatus recorded will conform
 " 
 * ^url = "http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusCreate.</div>"
@@ -85,7 +103,6 @@ EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for 
 * source.type 1..1 MS 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
 * source.type.system = $EhmiDeliveryStatusSourceType
-
 // entity
 * entity 2..
 //* entity ^slicing.discriminator.type = #pattern
