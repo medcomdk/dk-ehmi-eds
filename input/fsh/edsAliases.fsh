@@ -38,6 +38,8 @@ Alias: $EhmiDeliveryStatusEntityDetailType = http://medcomehmi.dk/ig/dk-ehmi-ter
 Alias: $EhmiDeliveryStatusEntityDetailTypeValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-entity-detail-type-valueset
 Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-valueSet
 Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-entity-message-type
+Alias: $EhmiDeliveryStatusEntityObjectRoles = http://terminology.hl7.org/CodeSystem/object-role
+Alias: $EhmiDeliveryStatusEntityObjectRolesVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/CodeSystem/ehmi-delivery-status-rest-object-roles-valueset
 
 Alias: $AuditEventAgentNetworkType = http://hl7.org/fhir/R4/valueset-network-type.html
 Alias: $AuditEventEntityType = http://terminology.hl7.org/CodeSystem/audit-entity-type

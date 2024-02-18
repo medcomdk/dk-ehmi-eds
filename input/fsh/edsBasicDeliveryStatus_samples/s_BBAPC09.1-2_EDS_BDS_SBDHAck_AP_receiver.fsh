@@ -1,4 +1,4 @@
-Instance: EDS_BDS_Create-09.1-SBDHAck-AP-Receiver-msg-recieved
+Instance: 09.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP Receiver in a received status"
 * id = "EBAPC09.1"
@@ -53,7 +53,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 
 //* entity[data].type = $AuditEventEntityType#4
 // Patient
@@ -100,7 +100,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: EDS_BDS_Create-09.2-SBDHAck-AP-Receiver-msg-sent
+Instance: 09.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP Receiver in a sent status"
 * id = "EBAPC09.2"
@@ -155,7 +155,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 
 //* entity[data].type = $AuditEventEntityType#4
 // Patient

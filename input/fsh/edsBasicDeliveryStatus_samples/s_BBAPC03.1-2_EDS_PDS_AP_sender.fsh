@@ -1,4 +1,4 @@
-Instance: EDS_PDS_Create-03.1-AP-Sender-msg-received
+Instance: 03.1-EDS_PDS_Create-AP-Sender-msg-received
 InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC03.1"
@@ -55,7 +55,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
@@ -80,7 +80,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: EDS_PDS_Create-03.2-AP-Sender-msg-sent
+Instance: 03.2-EDS_PDS_Create-AP-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusPatientCreate
 Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * id = "EBAPC03.2"
@@ -137,7 +137,7 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient

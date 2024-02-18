@@ -1,4 +1,4 @@
-Instance: EDS_BDS_Create-07.1-SBDHAck-MSH-Sender-msg-created
+Instance: 07.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status"
 * id = "EBAPC07.1"
@@ -56,7 +56,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
@@ -99,7 +99,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
 
-Instance: EDS_BDS_Create-07.2-SBDHAck-MSH-Sender-msg-sent
+Instance: 07.2-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a sent status"
 * id = "EBAPC07.2"
@@ -157,7 +157,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
