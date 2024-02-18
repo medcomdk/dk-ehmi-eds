@@ -1,4 +1,4 @@
-Profile: EdsBasicDeliveryStatusPatientCreate
+Profile: EdsPatientDeliveryStatusCreate
 Parent: EdsBasicDeliveryStatusCreate
 Description: "EHMI profile of the IHE.BasicAudit.PatientCreate profile based on the EHMI profile EdsBasicDeliveryStatusPatientCreate. UNDER CONSTRUCTION" 
 * ^url = "http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusPatientCreate"
