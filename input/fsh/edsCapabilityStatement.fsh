@@ -88,10 +88,12 @@ This CapabilityStatement replicates the requirements that would come from the AT
 
 
 
-Instance: IHE.BALP.ATNA.AuditRecordRepository
+Instance: EdsDeliveryStatus.AuditRecordRepository
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = """
+EdsDeliveryStatusCapabilityStatement for ATNA
+
 CapabilityStatement for [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Audit Record Repository Actor with the ATNA ATX:FHIR Feed Option and Retrieve Audit Message Option defined in [RESTful-ATNA Supplement](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf) that also has support for EdsDeliveryStatusContent.
 
 This Actor is derived off of the ATNA Audit Record Repository actor that is not yet defined fully in an IG. This CapabilityStatement does not represent a formal Actor, but rather a system that has grouped ATNA and BALP.
@@ -177,10 +179,12 @@ This Actor is derived off of the ATNA Audit Record Repository actor that is not 
 
 
 
-Instance: IHE.BALP.AuditCreator
+Instance: EdsDeliveryStatus.AuditCreator
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = """
+EdsDeliveryStatusCapabilityStatement for Audit Creator
+
 CapabilityStatement for [Audit Creator](volume-1.html#152111-audit-creator) Actor in [BALP](index.html).
 
 This Actor is derived off of the **ATNA Secure Application** or **Secure Node** actor with **ATNA ATX:FHIR Feed Option** using ITI-20. 
