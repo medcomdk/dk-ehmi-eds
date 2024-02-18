@@ -3,6 +3,8 @@ InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC01.1"
 
+* type.display = "RESTful operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
@@ -99,6 +101,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
 * agent[client].type.coding.display = "Source Role ID"
 * agent[client].who.identifier.value = "EUA12345"
+* agent[client].who.display = "Systematic Cura End User APPL"
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
@@ -108,6 +111,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
 * agent[server].type.coding.display = "Destination Role ID"
 * agent[server].who.identifier.value = "EDSS1234"
+* agent[server].who.display = "EHMI Delivery Status (EDS)"
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
@@ -116,6 +120,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].who.display = "Aarhus Kommune"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
@@ -124,10 +129,12 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].who.display = "Aarhus Kommune"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
 // source
 * source.observer.identifier.value = "EUA12345"
+* source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "EUA (End-user Application)"
