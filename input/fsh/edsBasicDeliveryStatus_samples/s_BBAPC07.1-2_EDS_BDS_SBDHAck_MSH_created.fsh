@@ -60,7 +60,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
@@ -115,7 +115,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesVS#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-sent"
 
@@ -165,7 +165,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage

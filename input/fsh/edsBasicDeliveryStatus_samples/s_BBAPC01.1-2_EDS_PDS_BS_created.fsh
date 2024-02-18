@@ -63,7 +63,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
@@ -149,7 +149,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"

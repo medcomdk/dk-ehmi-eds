@@ -57,7 +57,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 
 //* entity[data].type = $AuditEventEntityType#4
 // Patient
@@ -116,7 +116,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesVS#msg-sent
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-sent"
 * recorded = "2023-10-01T00:00:14.501+02:00" 
@@ -163,7 +163,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20
+* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 
 //* entity[data].type = $AuditEventEntityType#4
 // Patient

@@ -2,7 +2,7 @@
 Alias: $EhmiDeliveryStatusTypes = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-types
 Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusTypesValueSet
 Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-sub-types
-Alias: $EhmiDeliveryStatusSubTypesValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusSubTypesValueSet
+Alias: $EhmiDeliveryStatusSubTypesVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusSubTypesValueSet
 Alias: $EhmiDeliveryStatusOutcome = http://hl7.org/fhir/audit-event-outcome
 Alias: $EhmiDeliveryStatusOutcomeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/ehmi-delivery-status-outcome-valueset
 Alias: $EhmiDeliveryStatusSourceType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-source-type
@@ -23,7 +23,7 @@ Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-medcom-
 Alias: $EhmiDeliveryStatusTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-types-valueSet
 Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types
-Alias: $EhmiDeliveryStatusSubTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-subtypes-ValueSet
+Alias: $EhmiDeliveryStatusSubTypesVS = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-subtypes-ValueSet
 Alias: $EhmiDeliveryStatusOutcome = http://hl7.org/fhir/issue-severity
 Alias: $EhmiDeliveryStatusOutcomeValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-outcome-valueset
 Alias: $EhmiDeliveryStatusSourceType = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-source-type

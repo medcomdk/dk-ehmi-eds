@@ -58,7 +58,7 @@ It is used when
 * subtype[ehmiSubType].code 1..1
 * subtype[ehmiSubType].system 1..1
 * subtype[ehmiSubType].display 1..1
-* subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesValueSet
+* subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesVS
 * subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 
 * action 1..1

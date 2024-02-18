@@ -11,7 +11,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI message events"
 * subtype 1..1 MS SU
-* subtype from $EhmiDeliveryStatusSubTypesValueSet
+* subtype from $EhmiDeliveryStatusSubTypesVS
 * subtype.system = $EhmiDeliveryStatusSubTypes
 * action 0..0
 * period 0..0

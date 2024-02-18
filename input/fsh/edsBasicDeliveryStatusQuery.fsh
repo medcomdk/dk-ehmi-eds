@@ -6,14 +6,28 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 
 * id 1..
 * id MS SU
+
 * type MS SU
-* type from $EhmiDeliveryStatusTypesValueSet
-//* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
-//* type.system = $EhmiDeliveryStatusTypes
-//* type.display = "EHMI message events"
+* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
+* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
+* type.display = "Restful Operation"
+
+/*
 * subtype 1..1 MS SU
-* subtype from $EhmiDeliveryStatusSubTypesValueSet
-* subtype.system = $EhmiDeliveryStatusSubTypes
+
+* subtype[anyCreate].code = $AuditEventSubTypes#create
+* subtype[anyCreate].system = $AuditEventSubTypes
+* subtype[anyCreate].display = "create"
+
+* subtype contains
+    ehmiSubType 1..1
+* subtype[ehmiSubType].code 1..1
+* subtype[ehmiSubType].system 1..1
+* subtype[ehmiSubType].display 1..1
+* subtype[ehmiSubType].code from $EhmiDeliveryStatusSubTypesVS
+* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+*/
+
 * action 0..0
 * period 0..0
 * outcome 1..1 MS SU

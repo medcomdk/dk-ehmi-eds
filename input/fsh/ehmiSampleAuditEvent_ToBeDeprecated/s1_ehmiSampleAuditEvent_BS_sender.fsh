@@ -51,7 +51,7 @@ InstanceOf: EHMISampleAuditEvent
 Description: "An example of an EhmiDeliveryStatus."
 * id = "1.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging
-* subtype.code = $EhmiDeliveryStatusSubTypesValueSet#msg-sent
+* subtype.code = $EhmiDeliveryStatusSubTypesVS#msg-sent
 * recorded = "2023-10-01T00:00:00.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
