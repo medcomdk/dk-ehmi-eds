@@ -2,7 +2,8 @@ Profile:        EdsPatientDeliveryStatusRead
 Parent:         EdsBasicDeliveryStatusRead
 Id:             Eds.basic-delivery-status.PatientRead
 Title:          "EdsPatientDeliveryStatusRead with a Patient"
-Description:    """
+Description: """*** UNDER SPECIFICATION ***
+
 A basic AuditEvent profile for when a RESTful Read action happens successfully, and where there is an identifiable Patient subject associated with the read Resource.
 
 - Given a Resource Read is requested 
