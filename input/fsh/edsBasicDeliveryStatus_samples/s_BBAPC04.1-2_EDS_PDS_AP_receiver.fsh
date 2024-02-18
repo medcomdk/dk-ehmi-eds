@@ -51,10 +51,11 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point -Network Router)"
 // data
-* entity[data].what.identifier.value = "PAT1234567890"
+* entity[data].what.identifier.value = "EhmiDeliveryStatus"
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
@@ -132,10 +133,11 @@ Description: "An example of an EdsBasicDeliveryStatusPatientCreate."
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point -Network Router)"
 // data
-* entity[data].what.identifier.value = "PAT1234567890"
+* entity[data].what.identifier.value = "EhmiDeliveryStatus"
 * entity[data].type.code = $AuditEventEntityType#2
 * entity[data].type.system = $AuditEventEntityType
 * entity[data].type.display = "System Object"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
