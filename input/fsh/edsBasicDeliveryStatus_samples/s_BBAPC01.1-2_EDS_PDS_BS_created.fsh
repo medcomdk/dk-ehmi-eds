@@ -3,7 +3,8 @@ InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC01.1"
 
-* type.display = "RESTful operation"
+//* type.display = "Restful Operation"
+* type = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
@@ -15,7 +16,8 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * subtype[ehmiSubType].display = "msg-created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 
-* outcome = $EhmiDeliveryStatusOutcome#0
+//* outcome = $EhmiDeliveryStatusOutcome#0
+* outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 
 // Client
 * agent[client].name = "Systematic Cura End User APPL"
