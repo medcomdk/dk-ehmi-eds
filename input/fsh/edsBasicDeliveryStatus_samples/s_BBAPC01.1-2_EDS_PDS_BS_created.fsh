@@ -3,8 +3,7 @@ InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC01.1"
 
-//* type.display = "Restful Operation"
-* type = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "Restful Operation"
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
 * subtype[anyCreate].system = $AuditEventSubTypes
@@ -86,7 +85,11 @@ InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC01.2"
 //* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
+
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 

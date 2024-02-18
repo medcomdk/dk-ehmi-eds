@@ -2,7 +2,11 @@ Instance: 10.1-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH Receiver in a received status"
 * id = "EBAPC10.1"
+
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
@@ -106,7 +110,11 @@ Instance: 10.2-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-finalized
 InstanceOf: EdsBasicDeliveryStatusCreate
 Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH Receiver in a finalized status"
 * id = "EBAPC10.2"
+
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 

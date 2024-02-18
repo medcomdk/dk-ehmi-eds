@@ -2,7 +2,10 @@ Instance: 05.1-EDS_PDS_Create-MSH-Sender-msg-received
 InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC05.1"
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
@@ -84,7 +87,10 @@ Instance: 05.2-EDS_PDS_Create-MSH-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate."
 * id = "EBAPC05.2"
+* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+
 * subtype[anyCreate].code = $AuditEventSubTypes#create
+
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 

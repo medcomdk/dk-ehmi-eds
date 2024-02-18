@@ -20,7 +20,7 @@ Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-medcom-
 */
 
 // TO BE ENABLED WHEN EHMI TERMINOLOGY IG IS PUBLISHED
-Alias: $EhmiDeliveryStatusTypes = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-types
+Alias: $EhmiDeliveryStatusTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-types-valueSet
 Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types
 Alias: $EhmiDeliveryStatusSubTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-subtypes-ValueSet
