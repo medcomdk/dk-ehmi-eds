@@ -1,6 +1,18 @@
 Instance: 01.1-EDS_PDS_Create-BS-Sender-msg-created
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an EUA
+- ehmiSubType = msg-created
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+"
 * id = "EBAPC01.1"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
@@ -9,9 +21,9 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType] = $EhmiDeliveryStatusSubTypes#msg-created
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-created
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
+//* subtype[ehmiSubType] = $EhmiDeliveryStatusSubTypes#msg-created
+* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-created "msg-created"
+//* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
 * subtype[ehmiSubType].display = "msg-created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 
@@ -82,7 +94,20 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 
 Instance: 01.2-EDS_PDS_Create-BS-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an EUA
+- ehmiSubType = msg-sent
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+"
+
 * id = "EBAPC01.2"
 //* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
 
