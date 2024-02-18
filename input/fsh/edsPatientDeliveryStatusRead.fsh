@@ -25,7 +25,3 @@ A basic AuditEvent profile for when a RESTful Read action happens successfully, 
 * entity[patient].role 1..
 * entity[patient].what 1..1
 * entity[patient].what only Reference(Patient)
-
-
-
-
