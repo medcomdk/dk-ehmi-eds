@@ -1,5 +1,3 @@
-/*
-
 /////////////////////////////////////////////////////////////////////////////////////////
 Instance: ex-auditBasicCreateNoPatient
 InstanceOf: Create
@@ -334,4 +332,3 @@ Audit Example for a RESTful Create of a Job (document) resource with a patient s
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * entity[data].what = Reference(DocumentReference/ex-documentreference)
-*/

@@ -117,7 +117,7 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 /* entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
+* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 */
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)

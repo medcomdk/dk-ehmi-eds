@@ -100,7 +100,7 @@ Description: "EHMI profile of the AuditEvent resource."
 * entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
+* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 //* entity[Message].modifierExtension 0..0 
 //* entity[Message].what only Reference(MessageHeader)
 * entity[ehmiMessage].what.identifier 1..1 MS SU

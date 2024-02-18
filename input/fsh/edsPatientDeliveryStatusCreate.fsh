@@ -29,7 +29,7 @@ EHMI profile of the IHE.BasicAudit.PatientCreate profile based on the EHMI profi
 * entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient
+* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 * entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
 * entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiPatient].type.display = "Patient"
