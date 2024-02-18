@@ -2,7 +2,8 @@ Profile:        EdsBasicDeliveryStatusRead
 Parent:         IHE.BasicAudit.Read
 Id:             Eds.basic-delivery-status.Read
 Title:          "EdsBasicDeliveryStatusRead"
-Description:    """
+Description: """*** UNDER SPECIFICATION ***
+
 A basic AuditEvent profile for when a RESTful Read action happens successfully.
 
 - Given a Resource Read is requested 
