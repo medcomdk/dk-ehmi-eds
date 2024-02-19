@@ -24,6 +24,7 @@ Alias: $EhmiDeliveryStatusTypes = http://terminology.hl7.org/CodeSystem/audit-ev
 Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-types-valueSet
 Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types
 Alias: $EhmiDeliveryStatusSubTypesVS = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-subtypes-valueSet
+Alias: $EhmiDeliveryStatusSubTypesVS2 = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-subtypes-valueSet2
 Alias: $EhmiDeliveryStatusOutcome = http://hl7.org/fhir/issue-severity
 Alias: $EhmiDeliveryStatusOutcomeValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-outcome-valueset
 Alias: $EhmiDeliveryStatusSourceType = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-source-type

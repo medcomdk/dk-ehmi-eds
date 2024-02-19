@@ -22,7 +22,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[anyCreate].display = "create"
 
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
-//* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-created].display = "msg-created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 

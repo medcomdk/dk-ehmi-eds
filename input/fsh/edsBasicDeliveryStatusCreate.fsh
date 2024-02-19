@@ -48,10 +48,6 @@ It is used when
 * type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * type.display = "Restful Operation"
 
-* subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[anyCreate].system = $AuditEventSubTypes
-* subtype[anyCreate].display = "create"
-
 * subtype 2..2 MS SU
 * subtype contains
     msg-created 0..1 and
@@ -61,29 +57,29 @@ It is used when
 //* subtype[msg-created]
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
-* subtype[msg-created].display 1..1
-//* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS (required)
+//* subtype[msg-created].display 1..1
+//* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created (exactly)
 * subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
-* subtype[msg-sent].display 1..1
-* subtype[msg-sent].code from $EhmiDeliveryStatusSubTypesVS (required)
-* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent (exactly)
+//* subtype[msg-sent].display 1..1
+//* subtype[msg-sent].code from $EhmiDeliveryStatusSubTypesVS2 (required)
+* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypesVS2#msg-sent (exactly)
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-received]
 * subtype[msg-received].code 1..1
 * subtype[msg-received].system 1..1
-* subtype[msg-received].display 1..1
-* subtype[msg-received].code from $EhmiDeliveryStatusSubTypesVS (required)
+//* subtype[msg-received].display 1..1
+//* subtype[msg-received].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received (exactly)
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-finalized]
 * subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
-* subtype[msg-finalized].display 1..1
-* subtype[msg-finalized].code from $EhmiDeliveryStatusSubTypesVS (required)
+//* subtype[msg-finalized].display 1..1
+//* subtype[msg-finalized].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized (exactly)
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 

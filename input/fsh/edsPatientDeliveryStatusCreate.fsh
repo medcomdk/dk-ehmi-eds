@@ -18,11 +18,7 @@ EHMI profile of the IHE.BasicAudit.PatientCreate profile based on the EHMI profi
 * ^date = "2024-01-01"
 * ^copyright = "CC0-1.0"
 * ^experimental = false
-// entity
-/* entity ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
-*/
+
 * entity contains
     ehmiPatient 1..1 
 * entity 3..
@@ -30,6 +26,7 @@ EHMI profile of the IHE.BasicAudit.PatientCreate profile based on the EHMI profi
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
+* entity[ehmiPatient].role = http://terminology.hl7.org/CodeSystem/object-role#1 // "Patient"
 * entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
 * entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiPatient].type.display = "Patient"
