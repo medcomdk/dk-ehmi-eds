@@ -62,7 +62,7 @@ It is used when
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
 * subtype[msg-created].display 1..1
-* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS (required)
+//* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS (required)
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created (exactly)
 * subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-sent]
