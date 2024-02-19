@@ -1,6 +1,28 @@
 Instance: 07.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created
 InstanceOf: EdsBasicDeliveryStatusCreate
-Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status"
+Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an MSH
+- ehmiSubType = msg-created
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG3456789012
+    - ehmiMessageType = SBDHAck
+    - ehmiMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV3456789012
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+- ehmiOrigMessage = MSG1234567890
+    - ehmiOrigMessageType = HomeCareObservation
+    - ehmiOrigMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV1234567890
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+
+"
 * id = "EBAPC07.1"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
@@ -105,7 +127,30 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 Instance: 07.2-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusCreate
-Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a sent status"
+Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an MSH
+- ehmiSubType = msg-sent
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG3456789012
+    - ehmiMessageType = SBDHAck
+    - ehmiMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV3456789012
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+- ehmiOrigMessage = MSG1234567890
+    - ehmiOrigMessageType = HomeCareObservation
+    - ehmiOrigMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV1234567890
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+
+"
+
 * id = "EBAPC07.2"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"

@@ -49,6 +49,10 @@ Alias: $AuditEventSubTypesValueSet = http://hl7.org/fhir/R4/valueset-audit-event
 Alias: $AuditEventTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $AuditEventTypes2 = http://dicom.nema.org/resources/ontology/DCM
 
+// EER Aliases
+Alias: $MedComMessageDefinitionUri = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/CodeSystem/ehmi-medcom-message-definition-uri
+Alias: $MedComMessageDefinitionUriVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/ValueSet/ehmi-medcom-message-definition-uri-valueset
+
 /*
 Alias: $StatusCodes = http://hl7.org/fhir/encounter-status
 Alias: $ActCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode 

@@ -1,6 +1,29 @@
 Instance: 09.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatusCreate
-Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for an AP Receiver in a received status"
+Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an AP
+- ehmiSubType = msg-received
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG3456789012
+    - ehmiMessageType = SBDHAck
+    - ehmiMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV3456789012
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+- ehmiOrigMessage = MSG1234567890
+    - ehmiOrigMessageType = HomeCareObservation
+    - ehmiOrigMessageVersion = 1.0
+- ehmiOrigEnvelope = ENV1234567890
+    - ehmiOrigEnvelopeType = SBDH
+    - ehmiOrigEnvelopeVersion = 2.0
+
+"
+
 * id = "EBAPC09.1"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"

@@ -1,6 +1,19 @@
 Instance: 06.1-EDS_PDS_Create-BS-Receiver-msg-received
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an EUA
+- ehmiSubType = msg-received
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+
+"
 * id = "EBAPC06.1"
 
 
@@ -77,7 +90,21 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 
 Instance: 06.2-EDS_PDS_Create-BS-Receiver-msg-finalized
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an EUA
+- ehmiSubType = msg-finalized
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+
+"
+
 * id = "EBAPC06.2"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"

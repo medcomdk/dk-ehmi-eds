@@ -1,6 +1,23 @@
 Instance: 02.1-EDS_PDS_Create-MSH-Sender-msg-received
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an MSH
+- ehmiSubType = msg-received
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+- ehmiEnvelope = ENV1234567890
+- ehmiEnvelopeType = SBDH
+- ehmiEnvelopeVersion = 2.0
+
+"
+
 * id = "EBAPC02.1"
 
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
@@ -85,7 +102,23 @@ Description: "An example of an EdsPatientDeliveryStatusCreate."
 
 Instance: 02.2-EDS_PDS_Create-MSH-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatusCreate
-Description: "An example of an EdsPatientDeliveryStatusCreate."
+Description: "An example of an EdsPatientDeliveryStatusCreate.
+
+- recorded by the client
+- server is EHMI Delivery Status (EDS) FHIR application server 
+- client is an an MSH
+- ehmiSubType = msg-sent
+- ehmiSender = Aarhus Kommune
+- ehmiReceiver = Løgten Lægehus
+- ehmiPatient = PAT1234567890 
+- ehmiMessage = MSG1234567890
+- ehmiMessageType = HomeCareObservation
+- ehmiMessageVersion = 1.0
+- ehmiEnvelope = ENV1234567890
+- ehmiEnvelopeType = SBDH
+- ehmiEnvelopeVersion = 2.0
+
+"
 * id = "EBAPC02.2"
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 

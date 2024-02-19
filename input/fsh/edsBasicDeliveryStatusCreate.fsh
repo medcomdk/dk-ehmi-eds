@@ -133,6 +133,8 @@ It is used when
 * entity[ehmiMessage].detail 2..2
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+//* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
+//* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
