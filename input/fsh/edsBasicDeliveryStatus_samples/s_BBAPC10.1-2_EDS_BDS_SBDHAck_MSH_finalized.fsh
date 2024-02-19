@@ -4,7 +4,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -29,13 +29,13 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-received"
+* subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
+* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-received].display = "msg-received"
+
 * recorded = "2023-10-01T00:00:15.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
@@ -135,7 +135,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -160,13 +160,12 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-finalized"
+* subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
+* subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-finalized].display = "msg-finalized"
 * recorded = "2023-10-01T00:00:16.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client

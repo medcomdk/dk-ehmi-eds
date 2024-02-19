@@ -4,7 +4,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -26,9 +26,10 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-received
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-received"
+* subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
+* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-received].display = "msg-received"
+
 * recorded = "2023-10-01T00:00:03.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
@@ -106,7 +107,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -123,13 +124,13 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesVS#msg-sent
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-sent"
+* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
+* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-sent].display = "msg-sent"
+
 * recorded = "2023-10-01T00:00:04.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client

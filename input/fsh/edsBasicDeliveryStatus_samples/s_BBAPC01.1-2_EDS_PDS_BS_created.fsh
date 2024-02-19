@@ -4,7 +4,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an EUA
+- client is an EUA
 - ehmiSubType = msg-created
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -21,10 +21,9 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-//* subtype[ehmiSubType] = $EhmiDeliveryStatusSubTypes#msg-created
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-created "msg-created"
-//* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-created"
+* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
+//* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-created].display = "msg-created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
@@ -100,7 +99,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an EUA
+- client is an EUA
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -116,14 +115,14 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
-
 * subtype[anyCreate].system = $AuditEventSubTypes
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-sent
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-sent"
+
+* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
+* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-sent].display = "msg-sent"
+
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client

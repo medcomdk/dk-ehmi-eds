@@ -4,7 +4,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-created
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -28,13 +28,12 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypes#msg-created
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-created"
+* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
+* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-created].display = "msg-created"
 
 * recorded = "2023-10-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -131,7 +130,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an an MSH
+- client is an MSH
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -156,13 +155,13 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
 
 * subtype[anyCreate].code = $AuditEventSubTypes#create
-
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[ehmiSubType].code = $EhmiDeliveryStatusSubTypesVS#msg-sent
-* subtype[ehmiSubType].system = $EhmiDeliveryStatusSubTypes
-* subtype[ehmiSubType].display = "msg-sent"
+* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
+* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-sent].display = "msg-sent"
+
 
 * recorded = "2023-10-01T00:00:10.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
