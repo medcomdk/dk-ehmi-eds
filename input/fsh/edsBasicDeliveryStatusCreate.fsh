@@ -58,30 +58,22 @@ It is used when
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
 * subtype[msg-created].display 1..1
-//* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "A new message has been created" (exactly)
-//* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
 * subtype[msg-sent].display 1..1
-//* subtype[msg-sent].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-sent] = $EhmiDeliveryStatusSubTypes#msg-sent "A new message has been sent" (exactly)
-//* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-received]
 * subtype[msg-received].code 1..1
 * subtype[msg-received].system 1..1
 * subtype[msg-received].display 1..1
-//* subtype[msg-received].code from $EhmiDeliveryStatusSubTypesVS2 (required)
 * subtype[msg-received] = $EhmiDeliveryStatusSubTypes#msg-received "A new message has been received" (exactly)
-//* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-finalized]
 * subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
 * subtype[msg-finalized].display 1..1
-//* subtype[msg-finalized].code from $EhmiDeliveryStatusSubTypesVS2 (required)
-* subtype[msg-finalized] = $EhmiDeliveryStatusSubTypes#msg-finalized "A message has reached its final reciever" (exactly)
-//* subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-finalized] = $EhmiDeliveryStatusSubTypes#msg-finalized "A message has reached its final receiver" (exactly)
 
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
@@ -90,6 +82,7 @@ It is used when
 * outcome from $EhmiDeliveryStatusOutcomeValueSet
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
+
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
@@ -120,17 +113,16 @@ It is used when
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
+
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
 * source.type.system = $EhmiDeliveryStatusSourceType
+
 // entity
 * entity 2..
-//* entity ^slicing.discriminator.type = #pattern
-//  * ^slicing.discriminator.path = type
-//  * ^slicing.rules = #open //#closed eller #open 
 * entity contains
     ehmiMessage 1..1 and
     ehmiEnvelope 0..1 and

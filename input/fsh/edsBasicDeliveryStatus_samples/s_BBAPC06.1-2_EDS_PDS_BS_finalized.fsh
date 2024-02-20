@@ -115,7 +115,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-finalized].display = "A message has reached its final reciever"
+* subtype[msg-finalized].display = "A message has reached its final receiver"
 
 * recorded = "2023-10-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
