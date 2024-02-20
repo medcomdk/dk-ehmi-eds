@@ -21,9 +21,12 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
-* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-created].display = "msg-created"
+* subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "A new message has been created"
+
+
+//* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
+//* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
+//* subtype[msg-created].display = "A new message has been created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
@@ -121,7 +124,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-sent].display = "msg-sent"
+* subtype[msg-sent].display = "A new message has been sent"
 
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0

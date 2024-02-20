@@ -33,7 +33,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
 * subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-created].display = "msg-created"
+* subtype[msg-created].display = "A new message has been created"
 
 * recorded = "2023-10-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -160,7 +160,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-sent].display = "msg-sent"
+* subtype[msg-sent].display = "A new message has been sent"
 
 
 * recorded = "2023-10-01T00:00:10.501+02:00" 

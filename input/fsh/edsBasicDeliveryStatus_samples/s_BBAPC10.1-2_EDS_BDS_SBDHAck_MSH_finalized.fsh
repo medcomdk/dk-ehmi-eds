@@ -34,7 +34,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-received].display = "msg-received"
+* subtype[msg-received].display = "A new message has been received"
 
 * recorded = "2023-10-01T00:00:15.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -165,7 +165,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-finalized].display = "msg-finalized"
+* subtype[msg-finalized].display = "A message has reached its final reciever"
 * recorded = "2023-10-01T00:00:16.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client

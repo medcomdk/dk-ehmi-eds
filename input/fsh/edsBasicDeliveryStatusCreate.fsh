@@ -57,31 +57,31 @@ It is used when
 //* subtype[msg-created]
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
-//* subtype[msg-created].display 1..1
+* subtype[msg-created].display 1..1
 //* subtype[msg-created].code from $EhmiDeliveryStatusSubTypesVS2 (required)
-* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created (exactly)
-* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "A new message has been created" (exactly)
+//* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
-//* subtype[msg-sent].display 1..1
+* subtype[msg-sent].display 1..1
 //* subtype[msg-sent].code from $EhmiDeliveryStatusSubTypesVS2 (required)
-* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypesVS2#msg-sent (exactly)
-* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-sent] = $EhmiDeliveryStatusSubTypes#msg-sent "A new message has been sent" (exactly)
+//* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-received]
 * subtype[msg-received].code 1..1
 * subtype[msg-received].system 1..1
-//* subtype[msg-received].display 1..1
+* subtype[msg-received].display 1..1
 //* subtype[msg-received].code from $EhmiDeliveryStatusSubTypesVS2 (required)
-* subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received (exactly)
-* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-received] = $EhmiDeliveryStatusSubTypes#msg-received "A new message has been received" (exactly)
+//* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-finalized]
 * subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
-//* subtype[msg-finalized].display 1..1
+* subtype[msg-finalized].display 1..1
 //* subtype[msg-finalized].code from $EhmiDeliveryStatusSubTypesVS2 (required)
-* subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized (exactly)
-* subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-finalized] = $EhmiDeliveryStatusSubTypes#msg-finalized "A message has reached its final reciever" (exactly)
+//* subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
