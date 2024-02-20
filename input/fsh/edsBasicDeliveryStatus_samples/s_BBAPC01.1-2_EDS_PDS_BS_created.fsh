@@ -56,7 +56,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who = Reference(Organization/1027201000016001)
+* agent[ehmiSender].who = Reference(Organization/dk.ehmi.eer:EHMI.SOR.OU-AAR-Kommune.1027201000016001)
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].who.identifier.value = "GLN1234"
 // ehmiReceiver
