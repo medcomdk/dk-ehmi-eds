@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: dk.medcom.ehmi.eds
-canonical: http://medcomehmi.dk/ig/dk-medcom-ehmi-eds
+id: dk.ehmi.eds
+canonical: http://medcomehmi.dk/ig/dk-ehmi-eds
 name: EHMI eds IG
 title: "DK EHMI Delivery Status (EDS)"
 description: The EHMI Delivery Status (EDS)

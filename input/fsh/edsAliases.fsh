@@ -1,22 +1,22 @@
 /*
-Alias: $EhmiDeliveryStatusTypes = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-types
-Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusTypesValueSet
-Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-sub-types
-Alias: $EhmiDeliveryStatusSubTypesVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusSubTypesValueSet
+Alias: $EhmiDeliveryStatusTypes = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-types
+Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusTypesValueSet
+Alias: $EhmiDeliveryStatusSubTypes = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-sub-types
+Alias: $EhmiDeliveryStatusSubTypesVS = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusSubTypesValueSet
 Alias: $EhmiDeliveryStatusOutcome = http://hl7.org/fhir/audit-event-outcome
-Alias: $EhmiDeliveryStatusOutcomeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/ehmi-delivery-status-outcome-valueset
-Alias: $EhmiDeliveryStatusSourceType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-source-type
-Alias: $EhmiDeliveryStatusSourceTypeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusSourceTypeValueSet
-Alias: $EhmiDeliveryStatusParticipationRoleType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-participationroletype
-Alias: $EhmiDeliveryStatusParticipationRoleTypeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusParticipationRoleTypeValueSet
-Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypes = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-agent-who-identifier-types
-Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
-Alias: $EhmiDeliveryStatusEntityType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-type
-Alias: $EhmiDeliveryStatusEntityTypeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusEntityTypeValueSet
-Alias: $EhmiDeliveryStatusEntityDetailType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-detail-type
-Alias: $EhmiDeliveryStatusEntityDetailTypeValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/EhmiDeliveryStatusEntityDetailTypeValueSet
-Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/ValueSet/ehmi-delivery-status-valueSet
-Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-message-type
+Alias: $EhmiDeliveryStatusOutcomeValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/ehmi-delivery-status-outcome-valueset
+Alias: $EhmiDeliveryStatusSourceType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-source-type
+Alias: $EhmiDeliveryStatusSourceTypeValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusSourceTypeValueSet
+Alias: $EhmiDeliveryStatusParticipationRoleType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-participationroletype
+Alias: $EhmiDeliveryStatusParticipationRoleTypeValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusParticipationRoleTypeValueSet
+Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypes = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-agent-who-identifier-types
+Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
+Alias: $EhmiDeliveryStatusEntityType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-type
+Alias: $EhmiDeliveryStatusEntityTypeValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusEntityTypeValueSet
+Alias: $EhmiDeliveryStatusEntityDetailType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-detail-type
+Alias: $EhmiDeliveryStatusEntityDetailTypeValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/EhmiDeliveryStatusEntityDetailTypeValueSet
+Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/ehmi-delivery-status-valueSet
+Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-message-type
 */
 
 // TO BE ENABLED WHEN EHMI TERMINOLOGY IG IS PUBLISHED

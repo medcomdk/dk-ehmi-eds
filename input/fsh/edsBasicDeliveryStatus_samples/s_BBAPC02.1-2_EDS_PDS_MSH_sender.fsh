@@ -167,11 +167,14 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.identifier.id = "SOR:12345"
+* agent[ehmiReceiver].altId = "AltId-SOR:12345"
 // source
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
+* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice "Device"
 // data
 * entity[data].what.identifier.value = "EhmiDeliveryStatus"
 * entity[data].type.code = $AuditEventEntityType#2

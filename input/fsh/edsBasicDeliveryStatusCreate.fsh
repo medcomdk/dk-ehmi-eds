@@ -26,7 +26,7 @@ It is used when
 
 - Then the EdsBasicDeliveryStatus recorded will conform
 " 
-* ^url = "http://medcomehmi.dk/ig/dk-medcom-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
+* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusCreate.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"
@@ -112,14 +112,15 @@ It is used when
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
 * source.type.system = $EhmiDeliveryStatusSourceType
+* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice
+* source.observer.identifier 0..1 MS SU
 
 // entity
 * entity 2..
