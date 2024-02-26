@@ -52,7 +52,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
 * agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDSS1234"
+* agent[server].who.identifier.value = "EDS1234"
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
@@ -184,7 +184,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
 * agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDSS1234"
+* agent[server].who.identifier.value = "EDS1234"
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender

@@ -46,7 +46,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM" // Always
 * agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152 // Always
 * agent[server].type.coding.display = "Destination Role ID" // Always
-* agent[server].who.identifier.value = "EDSS1234" // Always - DeviceID for eds server
+* agent[server].who.identifier.value = "EDS1234" // Always - DeviceID for eds server
 * agent[server].network.address = "http://eds.ehmi.dk/" // Always
 * agent[server].network.type = $AuditEventAgentNetworkType#5 // Always
 // ehmiSender
@@ -148,7 +148,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
 * agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDSS1234"
+* agent[server].who.identifier.value = "EDS1234"
 * agent[server].who.display = "EHMI Delivery Status (EDS)"
 * agent[server].network.address = "http://eds.ehmi.dk/"
 * agent[server].network.type = $AuditEventAgentNetworkType#5
