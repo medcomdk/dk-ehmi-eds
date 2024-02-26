@@ -13,22 +13,26 @@ Description: "An example of an EhmiDeliveryStatus."
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
 // Device
 * agent[ehmiDevice].type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice 
 * agent[ehmiDevice].name = "Systematic Cura EUAPPL"
 * agent[ehmiDevice].requestor = true
 * agent[ehmiDevice].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#ehmiDEVICEID
 * agent[ehmiDevice].who.identifier.value = "DEV12345"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUP
@@ -60,22 +64,26 @@ Description: "An example of an EhmiDeliveryStatus."
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
 // Device
 * agent[ehmiDevice].type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice 
 * agent[ehmiDevice].name = "Systematic Cura MSH"
 * agent[ehmiDevice].requestor = true
 * agent[ehmiDevice].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#ehmiDEVICEID
 * agent[ehmiDevice].who.identifier.value = "DEV123456"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "DEV123456"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH

@@ -18,7 +18,7 @@ Description: "ValueSet of the Authorization AuditEvent types"
 Profile:        AuthZconsent
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.AuthZconsent
-Title:          "Basic AuditEvent pattern for when an Authorization permit is decided"
+Title:          "IHE Basic AuditEvent pattern for when an Authorization permit is decided"
 Description:    """
 An AduitEvent recording a permit authorization decision by a Consent Decision Service, 
 

@@ -95,7 +95,7 @@ Often this agent also has a type coding that is more specific to the transaction
 Profile:        SAMLaccessTokenUseMinimal
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.SAMLaccessTokenUse.Minimal
-Title:          "Basic AuditEvent pattern for when an activity was authorized by an SAML access token Minimal"
+Title:          "IHE Basic AuditEvent pattern for when an activity was authorized by an SAML access token Minimal"
 Description:    """
 A basic AuditEvent profile for when an activity was authorized by an SAML access token. This profile is expected to be used with some other detail that explains the activity. This profile only covers the SAML access token.
 
@@ -151,7 +151,7 @@ Profile:        SAMLaccessTokenUseComprehensive
 //Parent:         IHE.BasicAudit.SAMLaccessTokenUse.Minimal
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.SAMLaccessTokenUse.Comprehensive
-Title:          "Basic AuditEvent pattern for when an activity was authorized by an SAML access token Comprehensive"
+Title:          "IHE Basic AuditEvent pattern for when an activity was authorized by an SAML access token Comprehensive"
 Description:    """
 A basic AuditEvent profile for when an activity was authorized by an SAML access token. This profile is expected to be used with some other detail that explains the activity. This profile only covers the SAML access token. 
 

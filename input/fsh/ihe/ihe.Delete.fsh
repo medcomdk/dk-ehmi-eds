@@ -2,7 +2,7 @@
 Profile:        Delete
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.Delete
-Title:          "Basic AuditEvent for a successful Delete"
+Title:          "IHE Basic AuditEvent for a successful Delete"
 Description:    """
 A basic AuditEvent profile for when a RESTful Delete action happens successfully.
 
@@ -73,7 +73,7 @@ A basic AuditEvent profile for when a RESTful Delete action happens successfully
 Profile:        PatientDelete
 Parent:         Delete
 Id:             IHE.BasicAudit.PatientDelete
-Title:          "Basic AuditEvent for a successful Delete with Patient"
+Title:          "IHE Basic AuditEvent for a successful Delete with Patient"
 Description:    """
 A basic AuditEvent profile for when a RESTful Delete action happens successfully, and where there is an identifiable Patient subject associated with the Resource being deleted.
 

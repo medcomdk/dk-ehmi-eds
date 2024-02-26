@@ -10,7 +10,7 @@ Description: "ValueSet of the restful-interaction updates"
 Profile:        Update
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.Update
-Title:          "Basic AuditEvent for a successful Update"
+Title:          "IHE Basic AuditEvent for a successful Update"
 Description:    """
 A basic AuditEvent profile for when a RESTful Update action happens successfully.
 
@@ -82,7 +82,7 @@ A basic AuditEvent profile for when a RESTful Update action happens successfully
 Profile:        PatientUpdate
 Parent:         Update
 Id:             IHE.BasicAudit.PatientUpdate
-Title:          "Basic AuditEvent for a successful Update with a Patient subject"
+Title:          "IHE Basic AuditEvent for a successful Update with a Patient subject"
 Description:    """
 A basic AuditEvent profile for when a RESTful Update action happens successfully, and where there is an identifiable Patient subject associated with the Update of the Resource.
 

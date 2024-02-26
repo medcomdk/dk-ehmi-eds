@@ -1,33 +1,12 @@
-Profile: EdsBasicDeliveryStatusCreate
-Parent: IHE.BasicAudit.Create
+Profile: EdsBasicDeliveryStatusUpdate
+Parent: IHE.BasicAudit.Update
 Description: "*** UNDER SPECIFICATION ***
 
-EHMI profile of the IHE.BasicAudit.Create profile. 
+EHMI profile of the IHE.BasicAudit.Update profile. 
 
-EdsBasicDeliveryStatusCreate is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
-
-EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for instance for reporting of Acknowledgments
-
-A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a RESTful EdsBasicDeliveryStatus Create action happens successfully.
-
-It is used when 
-
-- the resource does not have a Patient subject or is otherwise associated with a Patient
-
-  - when the resource is Patient specific then PatientCreate is used
-
-- And the request is authorized
-
-- Authorization failures should follow FHIR core Access Denied
-
-- When successful
-
-- Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
-
-- Then the EdsBasicDeliveryStatus recorded will conform
 " 
-* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusCreate.</div>"
+* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusUpdate"
+* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusUpdate.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"
 * ^contact[=].telecom.value = "https://www.medcom.dk/"
@@ -41,7 +20,7 @@ It is used when
 * ^date = "2024-01-01"
 * ^copyright = "CC0-1.0"
 * ^experimental = false
-* id 1..
+/* id 1..
 * id MS SU
 * type MS SU
 * type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
@@ -83,16 +62,11 @@ It is used when
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 
-* agent.extension contains OtherId named otherId 0..* MS
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
 * agent 4..6
 //* ^agent[ehmiSender]
-* agent[ehmiSender].extension ^slicing.discriminator[1].type = #value
-* agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiSender].extension[otherId] contains 
-	  gln-id 0..* 
 * agent[ehmiSender].name 1..1 MS
 * agent[ehmiSender].type 1..1 MS
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
@@ -105,13 +79,7 @@ It is used when
 * agent[ehmiSender].who.type 1..1 MS SU
 * agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value 1..1 MS
 //* agent[ehmiReceiver]
-* agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
-* agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiReceiver].extension[otherId] contains 
-	  gln-id 0..* 
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
 * agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
@@ -124,8 +92,6 @@ It is used when
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR 
-* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value 1..1 MS
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
@@ -233,14 +199,4 @@ It is used when
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
 * entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
-
-/*
-Extension: GLNId
-Id: ihe-otherId
-Title: "AuditEvent.agent other identifiers"
-Description: "Carries other identifiers are known for an agent."
-* ^context[+].type = #element
-* ^context[=].expression = "AuditEvent.agent"
-* value[x] only Identifier
-* valueIdentifier 1..1
 */

@@ -2,7 +2,7 @@
 Profile: OAUTHaccessTokenUseOpaque
 Parent: AuditEvent
 Id: IHE.BasicAudit.OAUTHaccessTokenUse.Opaque
-Title: "Basic AuditEvent pattern for oAuth Opaque"
+Title: "IHE Basic AuditEvent pattern for oAuth Opaque"
 Description: """
 Used when:
 - only have an opaque oAuth token (e.g. clients).
@@ -29,7 +29,7 @@ Used when:
 Profile: OAUTHaccessTokenUseMinimal
 Parent: AuditEvent
 Id: IHE.BasicAudit.OAUTHaccessTokenUse.Minimal
-Title: "Basic AuditEvent pattern for oAuth Opaque"
+Title: "IHE Basic AuditEvent pattern for oAuth Opaque"
 Description: """
 Used when access to the oAuth token, but want to log minimal details.
 
@@ -52,7 +52,7 @@ Used when access to the oAuth token, but want to log minimal details.
 Profile: OAUTHaccessTokenUseComprehensive
 Parent: AuditEvent
 Id: IHE.BasicAudit.OAUTHaccessTokenUse.Comprehensive
-Title:          "Basic AuditEvent pattern for when an activity was authorized by an IUA access token"
+Title:          "IHE Basic AuditEvent pattern for when an activity was authorized by an IUA access token"
 Description:    """
 A basic AuditEvent profile for when an activity was authorized by an IUA access token. This profile is expected to be used with some other detail that explains the activity. This profile only covers the IUA access token.
 

@@ -25,7 +25,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-received].display = "A new message has been received"
+* subtype[msg-received].display = "Message received"
 
 * recorded = "2023-10-01T00:00:11.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -53,16 +53,20 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "LPS12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
@@ -115,7 +119,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-finalized].display = "A message has reached its final receiver"
+* subtype[msg-finalized].display = "Message finalized"
 
 * recorded = "2023-10-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -143,16 +147,20 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "DEV12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA

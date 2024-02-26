@@ -62,7 +62,7 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
 * agent[ehmiSender].who.type 1..1 MS SU
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 //* ^agent[ehmiSender].requestor = true
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
@@ -73,7 +73,7 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 * agent[ehmiReceiver].who only Reference(Organization)
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
 * agent[ehmiReceiver].who.type 1..1 MS SU
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 // ^agent[Receiver].requestor = false
 * agent[ehmiDevice].name 1..1 MS
 * agent[ehmiDevice].type 1..1 MS

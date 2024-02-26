@@ -21,35 +21,34 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[anyCreate].system = $AuditEventSubTypes
 * subtype[anyCreate].display = "create"
 
-* subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "A new message has been created"
-
+* subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created"
 
 //* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
 //* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
-//* subtype[msg-created].display = "A new message has been created"
+//* subtype[msg-created].display = "Message created"
 
 * recorded = "2023-10-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 
 // Client
-* agent[client].name = "Systematic Cura End User APPL"
-* agent[client].requestor = true
-* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-* agent[client].type.coding.display = "Source Role ID"
-* agent[client].who.identifier.value = "EUA12345"
+* agent[client].name = "Systematic Cura End User APPL" // Device name
+* agent[client].requestor = true // Always
+* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM" // Always
+* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153 // Always
+* agent[client].type.coding.display = "Source Role ID" // Always
+* agent[client].who.identifier.value = "EUA12345" // DeviceId for the client
 * agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 * agent[client].network.type = $AuditEventAgentNetworkType#2
 // server
-* agent[server].name = "EHMI Delivery Status (EDS)"
-* agent[server].requestor = false
-* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-* agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDSS1234"
-* agent[server].network.address = "http://eds.ehmi.dk/"
-* agent[server].network.type = $AuditEventAgentNetworkType#5
+* agent[server].name = "EHMI Delivery Status (EDS)"  // Always
+* agent[server].requestor = false // Always
+* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM" // Always
+* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152 // Always
+* agent[server].type.coding.display = "Destination Role ID" // Always
+* agent[server].who.identifier.value = "EDSS1234" // Always - DeviceID for eds server
+* agent[server].network.address = "http://eds.ehmi.dk/" // Always
+* agent[server].network.type = $AuditEventAgentNetworkType#5 // Always
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = false
@@ -57,8 +56,10 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 //* agent[ehmiSender].who = Reference(Organization/EHMI.SOR.OU-AAR-Kommune.1027201000016001)
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
@@ -66,8 +67,10 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "EUA12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
@@ -125,7 +128,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-sent].display = "A new message has been sent"
+* subtype[msg-sent].display = "Message sent"
 
 * recorded = "2023-10-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -156,8 +159,10 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who.display = "Aarhus Kommune"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiSender].who.identifier.value = "GLN1234"
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
@@ -165,8 +170,10 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.display = "Aarhus Kommune"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
-* agent[ehmiReceiver].who.identifier.value = "GLN12345"
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "EUA12345"
 * source.observer.display = "EUA (End-user Application)"

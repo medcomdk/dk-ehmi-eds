@@ -1,9 +1,9 @@
-/*
+ /*
 
 Profile:        Create
 Parent:         AuditEvent
 Id:             IHE.BasicAudit.Create
-Title:          "Basic AuditEvent for a successful Create not related to a Patient"
+Title:          "IHE Basic AuditEvent for a successful Create not related to a Patient"
 Description:    """
 A basic AuditEvent profile for when a RESTful Create action happens successfully.
 
@@ -73,7 +73,7 @@ A basic AuditEvent profile for when a RESTful Create action happens successfully
 Profile:        PatientCreate
 Parent:         Create
 Id:             IHE.BasicAudit.PatientCreate
-Title:          "Basic AuditEvent for a successful Create with known Patient subject"
+Title:          "IHE Basic AuditEvent for a successful Create with known Patient subject"
 Description:    """
 A basic AuditEvent profile for when a RESTful Create action happens successfully, and where there is an identifiable Patient subject associated with the create of the Resource.
 
