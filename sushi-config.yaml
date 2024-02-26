@@ -28,8 +28,8 @@ dependencies:
   ihe.iti.balp: 1.1.3
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: 2.3.0
-  medcom.fhir.dk.messaging: 2.0.0
-  medcom.fhir.dk.terminology: 1.4.0
+  medcom.fhir.dk.messaging: 2.1.0
+  medcom.fhir.dk.terminology: 1.5.0
   dk.ehmi.terminology: current
   dk.ehmi.eer: current
 #
