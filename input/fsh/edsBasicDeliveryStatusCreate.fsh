@@ -50,10 +50,10 @@ It is used when
 
 * subtype 2..2 MS SU
 * subtype contains
-    msg-created 0..1 and
-    msg-sent 0..1 and
-    msg-received 0..1 and
-    msg-finalized 0..1
+    msg-created 0..1 and 
+    msg-sent 0..1 and 
+    msg-received 0..1 and 
+    msg-finalized 0..1 
 //* subtype[msg-created]
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
