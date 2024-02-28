@@ -93,20 +93,25 @@ It is used when
 * agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
 * agent[ehmiSender].extension[otherId] contains 
 	  gln-id 0..* 
-* agent[ehmiSender].name 1..1 MS
-* agent[ehmiSender].type 1..1 MS
+* agent[ehmiSender].name 0..1 MS 
+* agent[ehmiSender].type 1..1 MS 
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiSender].type ^short = "$EhmiDeliveryStatusParticipationRoleType#ehmiSender"
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who 1..1 MS
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
+* agent[ehmiSender].who.identifier ^short = "equals SBDH/BusinessScope/Scope[Type=Sender]/InstanceIdentifier"
 * agent[ehmiSender].who.type 1..1 MS SU
 * agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.type ^short = "$EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR"
 * agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type ^short = "GLN"
 * agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value 1..1 MS
+* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
@@ -164,9 +169,11 @@ It is used when
 //* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
 //* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
+* entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. urn:dk:healthcare:medcom:fhir:structuredefinition:carecommunication"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 3.0"
 //* entity[ehmiEnvelope]
 * entity[ehmiEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiEnvelope].type 1..1 MS
@@ -186,9 +193,11 @@ It is used when
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType (exactly)
 * entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString 1..1
+* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString ^short = "= 'SBDH'"
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
 * entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
+* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS
