@@ -183,9 +183,9 @@ Description: "EHMI Delivery Status (EDS) Entity Type for the EHMI Messaging Infr
 * ^caseSensitive = true
 * #ehmiPatient "Patient" "Patient"
 * #ehmiMessage "Message" "Message"
-* #ehmiTransportEnvelope "Transport Envelope " "Transport Envelope "
+* #ehmiTransportEnvelope "Transport Envelope" "Transport Envelope"
 * #ehmiOrigMessage "Original Message" "Original Message"
-* #ehmiOrigTransportEnvelope "Original Transport Envelope " "Original Transport Envelope "
+* #ehmiOrigTransportEnvelope "Original Transport Envelope" "Original Transport Envelope"
 
 ValueSet: EhmiDeliveryStatusEntityTypeValueSet
 Id: ehmi-delivery-status-entity-type-valueset
