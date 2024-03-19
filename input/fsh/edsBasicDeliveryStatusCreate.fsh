@@ -92,7 +92,7 @@ It is used when
 * agent[ehmiSender].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
 * agent[ehmiSender].extension[otherId] contains 
-	  gln-id 0..* 
+	  gln 0..* 
 * agent[ehmiSender].name 0..1 MS 
 * agent[ehmiSender].type 1..1 MS 
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
@@ -108,15 +108,15 @@ It is used when
 * agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.type ^short = "$EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR"
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.type ^short = "GLN"
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value 1..1 MS
-* agent[ehmiSender].extension[otherId][gln-id].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
+* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type ^short = "GLN"
+* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value 1..1 MS
+* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
 * agent[ehmiReceiver].extension[otherId] contains 
-	  gln-id 0..* 
+	  gln 0..* 
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
 * agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
@@ -129,8 +129,10 @@ It is used when
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR 
-* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[otherId][gln-id].valueIdentifier.value 1..1 MS
+* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type ^short = "GLN"
+* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value 1..1 MS
+* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
