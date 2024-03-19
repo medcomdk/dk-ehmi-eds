@@ -146,7 +146,7 @@ It is used when
 * entity 2..
 * entity contains
     ehmiMessage 1..1 and
-    ehmiMessageEnvelope 1..1 and
+    ehmiMessageEnvelope 0..1 and
     ehmiEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
     ehmiOrigEnvelope 0..1 
