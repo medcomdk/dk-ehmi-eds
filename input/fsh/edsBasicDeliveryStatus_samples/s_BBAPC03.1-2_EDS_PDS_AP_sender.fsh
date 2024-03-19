@@ -12,9 +12,9 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
-- ehmiEnvelope = ENV1234567890
-- ehmiEnvelopeType = SBDH
-- ehmiEnvelopeVersion = 2.0
+- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelopeType = SBDH
+- ehmiTransportEnvelopeVersion = 2.0
 
 "
 * id = "EBAPC03.1"
@@ -93,15 +93,15 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
-* entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiEnvelope].type.display = "Envelope"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiTransportEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
 Instance: 03.2-EDS_PDS_Create-AP-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatusCreate
@@ -117,9 +117,9 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
-- ehmiEnvelope = ENV1234567890
-- ehmiEnvelopeType = SBDH
-- ehmiEnvelopeVersion = 2.0
+- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelopeType = SBDH
+- ehmiTransportEnvelopeVersion = 2.0
 
 "
 * id = "EBAPC03.2"
@@ -198,12 +198,12 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
-* entity[ehmiEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiEnvelope].type.display = "Envelope"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiTransportEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"

@@ -101,15 +101,15 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
-* entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiEnvelope].type.display = "Envelope"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
@@ -126,10 +126,10 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigEnvelope].type.display = "Original Envelope"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
 Instance: 08.2-EDS_BDS_Create-SBDHAck-AP-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatusCreate
@@ -234,15 +234,15 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Envelope
-* entity[ehmiEnvelope].what.identifier.value = "ENV3456789012"
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiEnvelope].type.display = "Envelope"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 // OrigMessage
 * entity[ehmiOrigMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
@@ -259,7 +259,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigEnvelope].type.display = "Original Envelope"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString = "2.0"
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"

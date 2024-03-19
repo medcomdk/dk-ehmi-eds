@@ -96,7 +96,7 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 * entity contains
 //    ehmiPatient 1..1 and
     ehmiMessage 1..1 and
-    ehmiEnvelope 0..1 and
+    ehmiTransportEnvelope 0..1 and
     ehmiOrigMessage 0..1 
 //* entity.modifierExtension 0..0 
 * entity.type from $EhmiDeliveryStatusEntityTypeValueSet
@@ -106,8 +106,8 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 * entity.detail contains
     ehmiMessageType 0..1 and
     ehmiMessageVersion 0..1 and 
-    ehmiEnvelopeType 0..1 and
-    ehmiEnvelopeVersion 0..1
+    ehmiTransportEnvelopeType 0..1 and
+    ehmiTransportEnvelopeVersion 0..1
 * entity.detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity.type 0..1 
 //* entity.what only Reference(Patient, M essageHeader)
@@ -136,16 +136,16 @@ EHMI profile of the IHE.BasicAudit.Query profile."
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type 1..1 MS SU
 //* entity[Envelope].modifierExtension 0..0 
 //* entity[Envelope].what only Reference(MessageHeader)
-* entity[ehmiEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiEnvelope].type 1..1 MS
-* entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-//* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType
-//* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type 1..1 MS SU
-//* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion
-//* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type 1..1 MS SU
+* entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
+* entity[ehmiTransportEnvelope].type 1..1 MS
+* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+//* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+//* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type 1..1 MS SU
+//* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+//* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type 1..1 MS SU
 //* entity[OrigMessage].modifierExtension 0..0 
 //* entity[OrigMessage].what only Reference(MessageHeader)
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU

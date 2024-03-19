@@ -147,7 +147,7 @@ It is used when
 * entity contains
     ehmiMessage 1..1 and
     ehmiMessageEnvelope 0..1 and
-    ehmiEnvelope 0..1 and
+    ehmiTransportEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
     ehmiOrigEnvelope 0..1 
 * entity.type from $EhmiDeliveryStatusEntityTypeValueSet
@@ -203,30 +203,30 @@ It is used when
 * entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
-//* entity[ehmiEnvelope]
-* entity[ehmiEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiEnvelope].type 1..1 MS
-* entity[ehmiEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiEnvelope
-* entity[ehmiEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiEnvelope].type.display = "Envelope"
-* entity[ehmiEnvelope].detail ^slicing.discriminator.type = #value
+//* entity[ehmiTransportEnvelope]
+* entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
+* entity[ehmiTransportEnvelope].type 1..1 MS
+* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
   * ^short = "something short"
-* entity[ehmiEnvelope].detail contains
-    ehmiEnvelopeType 1..1 and
-    ehmiEnvelopeVersion 1..1
-* entity[ehmiEnvelope].detail 2..2
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType (exactly)
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString 1..1
-* entity[ehmiEnvelope].detail[ehmiEnvelopeType].valueString ^short = "= 'SBDH'"
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
-* entity[ehmiEnvelope].detail[ehmiEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
+* entity[ehmiTransportEnvelope].detail contains
+    ehmiTransportEnvelopeType 1..1 and
+    ehmiTransportEnvelopeVersion 1..1
+* entity[ehmiTransportEnvelope].detail 2..2
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString ^short = "= 'SBDH'"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type 1..1 MS
@@ -262,15 +262,15 @@ It is used when
   * ^slicing.rules = #open //#closed eller #open 
   * ^short = "something short"
 * entity[ehmiOrigEnvelope].detail contains
-    ehmiEnvelopeType 1..1 and
-    ehmiEnvelopeVersion 1..1
+    ehmiTransportEnvelopeType 1..1 and
+    ehmiTransportEnvelopeVersion 1..1
 * entity[ehmiOrigEnvelope].detail 2..2
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeType (exactly)
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeType].valueString 1..1
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiEnvelopeVersion (exactly)
-* entity[ehmiOrigEnvelope].detail[ehmiEnvelopeVersion].valueString 1..1
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
 /*
 Extension: GLNId
