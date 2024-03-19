@@ -100,6 +100,19 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 
+// MessageEnvelope (Bundle)
+* entity[ehmiMessage].what.identifier.value = "MSG1234567890"
+//* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiMessage].type.display = "Bundle"
+* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
+//* entity[ehmiMessage].detail[ehmiMessageType].type.code = $MedComMessageDefinitionUri#urn:dk:healthcare:medcom:messaging:fhir:structuredefinition:homecareobservation:1.0
+//* entity[ehmiMessage].detail[ehmiMessageType].type.detail = "HomeCareObservation 1.0"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+
 Instance: 01.2-EDS_PDS_Create-BS-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatusCreate
 Description: "An example of an EdsPatientDeliveryStatusCreate.
