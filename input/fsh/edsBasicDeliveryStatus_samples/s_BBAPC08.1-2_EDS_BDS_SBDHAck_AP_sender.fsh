@@ -100,12 +100,12 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
-// Envelope
+// Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].type.display = "Transport Envelope "
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
@@ -125,7 +125,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigEnvelope].type.display = "Original Envelope"
+* entity[ehmiOrigEnvelope].type.display = "Original Transport Envelope "
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
@@ -233,12 +233,12 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
-// Envelope
+// Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].type.display = "Transport Envelope "
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
@@ -258,7 +258,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigEnvelope].type.display = "Original Envelope"
+* entity[ehmiOrigEnvelope].type.display = "Original Transport Envelope "
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion

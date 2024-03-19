@@ -210,7 +210,7 @@ It is used when
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Envelope"
+* entity[ehmiTransportEnvelope].type.display = "Transport Transport Envelope      "
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
@@ -256,7 +256,7 @@ It is used when
 * entity[ehmiOrigEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigEnvelope
 * entity[ehmiOrigEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigEnvelope].type.display = "Original Envelope"
+* entity[ehmiOrigEnvelope].type.display = "Original Transport Envelope "
 * entity[ehmiOrigEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open //#closed eller #open 
