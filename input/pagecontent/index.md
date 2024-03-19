@@ -7,6 +7,9 @@ This includes basic audit log profiles for FHIR RESTful operations.
 
 A focus is on enabling Privacy centric AuditEvent logs that hold well-formed indication of message communication around a Patient, when they are the subject of messaging being recorded on the EHMI Delivery Status Server. 
 
+[EHMI Delivery Status (EDS) (DA)](/input/pagecontent/eds1.png)
+
 ## Profiles
 
-[EhmiDeliveryStatus (EDS)](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/profiles.html)
+[EHMI Delivery Status (EDS)](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/profiles.html)
+
