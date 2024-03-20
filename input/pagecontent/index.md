@@ -1,5 +1,9 @@
 # EHMI Delivery Status (EDS)
 
+![EHMI Delivery Status (EDS) (DA)](./eds1_1100x551.png "EHMI Delivery Status (EDS) (DA)")
+
+<p/>
+
 The EHMI Delivery Status (EDS) Implementation Guide is a Content Profile that defines some basic and reusable logging patterns based on the FHIR AuditEvent Resource, that is used between an EDS device client and the EDS server. 
 EDS is based upon and inspired by IHE Basic Audit Log Patterns (IHE BALP) Implementation Guide, which is a Content Profile that defines some basic and reusable AuditEvent patterns. 
 
@@ -13,10 +17,11 @@ EDS is using some basic abbreviations throughout the specification, the most com
 
 - AP = Access Point (eDelivery)
 
+EDS is used in the EHMI messaging flow like above
 
-EDS is used in different scenarios basically as shown below.
+EDS is producsed in different scenarios basically as shown below.
 
-1. When a message is created in an EUA (The user has hit the "sent button")
+1. When a message is created in an EUA (The user has hit the "sent button") or a SBDH_Ack has been initiated in a MSH
 
 2. When the message is actually sent by the EUA
 
@@ -28,11 +33,17 @@ EDS is used in different scenarios basically as shown below.
 
 6. When the message is actually sent again by the sending AP
 
+7. When the message is received by the receiving AP
 
+8. When the message is actually sent again by the receiving AP
 
-![EHMI Delivery Status (EDS) (DA)](/input/pagecontent/eds1.png "EHMI Delivery Status (EDS) (DA)")
+9. When the message is received by the receiving MSH
 
-## Profiles
+10. When the message is actually sent again by the receiving MSH
 
-[EHMI Delivery Status (EDS)](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/profiles.html)
+11. When the message is received by the receiving EUA
+
+12. When the message is actually finalized by the receiving EUA
+
+As the EUA, MSH and AP can be built and hosted together in various ways, this is just the maximum possible scenarios, and the real scenarios will most likely by less than shown here.
 
