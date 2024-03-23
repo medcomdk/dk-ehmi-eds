@@ -27,7 +27,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 //* subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 //* subtype[msg-created].display = "Message created"
 
-* recorded = "2023-10-01T00:00:01.000+02:00" 
+* recorded = "2024-04-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 
@@ -51,7 +51,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].network.type = $AuditEventAgentNetworkType#5 // Always
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
@@ -161,7 +161,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
 
-* recorded = "2023-10-01T00:00:02.001+02:00" 
+* recorded = "2024-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Systematic Cura End User APPL"
@@ -185,7 +185,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
@@ -200,7 +200,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.display = "Aarhus Kommune"
+* agent[ehmiReceiver].who.display = "Løgten Lægehus"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR12345"
 * agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 

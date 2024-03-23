@@ -1,12 +1,13 @@
-Profile: EdsBasicDeliveryStatusCreate
-Parent: IHE.BasicAudit.Create
+Profile: EdsBasicDeliveryStatus
+Parent: AuditEvent
+//Parent: IHE.BasicAudit.Create
 Description: "*** UNDER SPECIFICATION ***
 
 EHMI profile of the IHE.BasicAudit.Create profile. 
 
-EdsBasicDeliveryStatusCreate is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
+EdsBasicDeliveryStatus is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
 
-EdsBasicDeliveryStatusCreate is used when a Patient entity is not required, for instance for reporting of Acknowledgments
+EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for reporting of Acknowledgments
 
 A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a RESTful EdsBasicDeliveryStatus Create action happens successfully.
 
@@ -26,8 +27,8 @@ It is used when
 
 - Then the EdsBasicDeliveryStatus recorded will conform
 " 
-* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatusCreate"
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatusCreate.</div>"
+* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatus"
+* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"
 * ^contact[=].telecom.value = "https://www.medcom.dk/"
@@ -44,11 +45,16 @@ It is used when
 * id 1..
 * id MS SU
 * type MS SU
-* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
-* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
-* type.display = "Restful Operation"
+//* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
+//* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#object
+* type.system = $EhmiDeliveryStatusTypes
+* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.display = "EHMI messaging event"
 
-* subtype 2..2 MS SU
+* subtype 1..1 MS SU
+* subtype ^slicing.discriminator.type = #value
+* subtype ^slicing.discriminator.path = "$this"
+* subtype ^slicing.rules = #open // allow other codes
 * subtype contains
     msg-created 0..1 and 
     msg-sent 0..1 and 
@@ -84,10 +90,13 @@ It is used when
 * purposeOfEvent 0..0
 
 * agent.extension contains OtherId named otherId 0..* MS
+* agent ^slicing.discriminator.type = #pattern
+* agent ^slicing.discriminator.path = "type"
+* agent ^slicing.rules = #open
 * agent contains
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
-* agent 4..6
+* agent 2..4
 //* ^agent[ehmiSender]
 * agent[ehmiSender].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
@@ -141,9 +150,12 @@ It is used when
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice
 * source.observer.identifier 0..1 MS SU
-
+* contained.id
 // entity
 * entity 2..
+* entity ^slicing.discriminator.type = #pattern
+* entity ^slicing.discriminator.path = "type"
+* entity ^slicing.rules = #open
 * entity contains
     ehmiMessage 1..1 and
     ehmiMessageEnvelope 0..1 and
@@ -282,3 +294,9 @@ Description: "Carries other identifiers are known for an agent."
 * value[x] only Identifier
 * valueIdentifier 1..1
 */
+
+Invariant: uuid
+Description: "General UUID expression"
+Severity: #error
+Expression: "value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
+

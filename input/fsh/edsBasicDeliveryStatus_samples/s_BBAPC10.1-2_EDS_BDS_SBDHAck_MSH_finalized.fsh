@@ -36,7 +36,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
 
-* recorded = "2023-10-01T00:00:15.500+02:00" 
+* recorded = "2024-04-01T00:00:15.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Systematic Cura MSH"
@@ -58,7 +58,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
@@ -178,7 +178,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-finalized].display = "Message finalized"
-* recorded = "2023-10-01T00:00:16.501+02:00" 
+* recorded = "2024-04-01T00:00:16.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "MultiMed MSH"
@@ -200,7 +200,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"

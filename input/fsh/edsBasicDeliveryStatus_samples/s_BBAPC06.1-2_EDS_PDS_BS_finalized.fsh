@@ -27,7 +27,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
 
-* recorded = "2023-10-01T00:00:11.000+02:00" 
+* recorded = "2024-04-01T00:00:11.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Novax LPS"
@@ -49,7 +49,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
@@ -121,7 +121,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-finalized].display = "Message finalized"
 
-* recorded = "2023-10-01T00:00:12.001+02:00" 
+* recorded = "2024-04-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Novax LPS"
@@ -143,7 +143,7 @@ Description: "An example of an EdsPatientDeliveryStatusCreate.
 * agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"

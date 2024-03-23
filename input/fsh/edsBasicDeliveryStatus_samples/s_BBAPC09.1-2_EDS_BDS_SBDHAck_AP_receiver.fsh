@@ -36,7 +36,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
 
-* recorded = "2023-10-01T00:00:13.500+02:00" 
+* recorded = "2024-04-01T00:00:13.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Municipality AP"
@@ -59,7 +59,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR12345"
 * agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
@@ -146,7 +146,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
 
-* recorded = "2023-10-01T00:00:14.501+02:00" 
+* recorded = "2024-04-01T00:00:14.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // Client
 * agent[client].name = "Municipality AP"
@@ -169,7 +169,7 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR12345"
 * agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 

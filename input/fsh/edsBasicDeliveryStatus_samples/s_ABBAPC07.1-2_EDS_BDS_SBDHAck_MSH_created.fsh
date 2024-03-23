@@ -1,6 +1,6 @@
-Instance: 07.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created
-InstanceOf: EdsBasicDeliveryStatusCreate
-Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status
+Instance: 007.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created
+InstanceOf: EdsBasicDeliveryStatus
+Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
@@ -23,13 +23,14 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
     - ehmiOrigEnvelopeVersion = 2.0
 
 "
-* id = "EBAPC07.1"
+* id = "ABAPC07.1"
 
-* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.display = "EHMI messaging event"
 
-* subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[anyCreate].system = $AuditEventSubTypes
-* subtype[anyCreate].display = "create"
+//* subtype[anyCreate].code = $AuditEventSubTypes#create
+//* subtype[anyCreate].system = $AuditEventSubTypes
+//* subtype[anyCreate].display = "create"
 
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
 * subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
@@ -37,24 +38,6 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * recorded = "2024-04-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-// Client
-* agent[client].name = "MultiMed MSH"
-* agent[client].requestor = true
-* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-* agent[client].type.coding.display = "Source Role ID"
-* agent[client].who.identifier.value = "MSH1234567"
-* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-* agent[client].network.type = $AuditEventAgentNetworkType#2
-// server
-* agent[server].name = "EHMI Delivery Status (EDS)"
-* agent[server].requestor = false
-* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-* agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDS1234"
-* agent[server].network.address = "http://eds.ehmi.dk/"
-* agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = true
@@ -81,11 +64,11 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
 // data
-* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-* entity[data].type.code = $AuditEventEntityType#2
-* entity[data].type.system = $AuditEventEntityType
-* entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
+//* entity[data].what.identifier.value = "EhmiDeliveryStatus"
+//* entity[data].type.code = $AuditEventEntityType#2
+//* entity[data].type.system = $AuditEventEntityType
+//* entity[data].type.display = "System Object"
+//* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
@@ -128,9 +111,9 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
-Instance: 07.2-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-sent
-InstanceOf: EdsBasicDeliveryStatusCreate
-Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH Acknowledgment for a MSH in a create status
+Instance: 007.2-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-sent
+InstanceOf: EdsBasicDeliveryStatus
+Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
@@ -154,13 +137,14 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 "
 
-* id = "EBAPC07.2"
+* id = "ABAPC07.2"
 
-* type = $EhmiDeliveryStatusTypes#rest "Restful Operation"
+* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.display = "EHMI messaging event"
 
-* subtype[anyCreate].code = $AuditEventSubTypes#create
-* subtype[anyCreate].system = $AuditEventSubTypes
-* subtype[anyCreate].display = "create"
+//* subtype[anyCreate].code = $AuditEventSubTypes#create
+//* subtype[anyCreate].system = $AuditEventSubTypes
+//* subtype[anyCreate].display = "create"
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
@@ -169,24 +153,6 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 
 * recorded = "2024-04-01T00:00:10.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-// Client
-* agent[client].name = "MultiMed MSH"
-* agent[client].requestor = true
-* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-* agent[client].type.coding.display = "Source Role ID"
-* agent[client].who.identifier.value = "MSH1234567"
-* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-* agent[client].network.type = $AuditEventAgentNetworkType#2
-// server
-* agent[server].name = "EHMI Delivery Status (EDS)"
-* agent[server].requestor = false
-* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-* agent[server].type.coding.display = "Destination Role ID"
-* agent[server].who.identifier.value = "EDS1234"
-* agent[server].network.address = "http://eds.ehmi.dk/"
-* agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = true
@@ -213,11 +179,11 @@ Description: "An example of an EdsBasicDeliveryStatusCreate containing an SBDH A
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
 // data
-* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-* entity[data].type.code = $AuditEventEntityType#2
-* entity[data].type.system = $AuditEventEntityType
-* entity[data].type.display = "System Object"
-* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
+//* entity[data].what.identifier.value = "EhmiDeliveryStatus"
+//* entity[data].type.code = $AuditEventEntityType#2
+//* entity[data].type.system = $AuditEventEntityType
+//* entity[data].type.display = "System Object"
+//* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
