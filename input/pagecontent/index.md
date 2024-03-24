@@ -1,6 +1,6 @@
 # EHMI Delivery Status (EDS)
 
-![EHMI Delivery Status (EDS) (DA)](./eds1_1100x551.png "EHMI Delivery Status (EDS) (DA)")
+![EHMI Delivery Status (EDS) (DA)](./eds1.svg "EHMI Delivery Status (EDS) (DA)")
 
 <p/>
 
