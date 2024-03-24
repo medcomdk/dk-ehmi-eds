@@ -3,29 +3,27 @@ Parent: AuditEvent
 //Parent: IHE.BasicAudit.Create
 Description: "*** UNDER SPECIFICATION ***
 
-EHMI profile of the IHE.BasicAudit.Create profile. 
+EHMI profile inspired by the IHE.BasicAudit.Create profile. 
 
 EdsBasicDeliveryStatus is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
 
-EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for reporting of Acknowledgments
+EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for status reporting of Acknowledgments.
 
-A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a RESTful EdsBasicDeliveryStatus Create action happens successfully.
+A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a EHMI Basic Delivery Status Messaging action happens successfully.
 
 It is used when 
 
 - the resource does not have a Patient subject or is otherwise associated with a Patient
 
-  - when the resource is Patient specific then PatientCreate is used
+  - when the resource is Patient specific then EdsPatientDeliveryStatus is used
 
 - And the request is authorized
 
-- Authorization failures should follow FHIR core Access Denied
-
 - When successful
 
-- Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
+  - Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
 
-- Then the EdsBasicDeliveryStatus recorded will conform
+  - Then the EdsBasicDeliveryStatus recorded will conform
 " 
 * ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatus"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
@@ -57,14 +55,21 @@ It is used when
 * subtype ^slicing.rules = #open // allow other codes
 * subtype contains
     msg-created 0..1 and 
+    msg-created-and-sent 0..1 and 
     msg-sent 0..1 and 
     msg-received 0..1 and 
+    msg-received-and-finalized 0..1 and 
     msg-finalized 0..1 
 //* subtype[msg-created]
 * subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
 * subtype[msg-created].display 1..1
 * subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created" (exactly)
+//* subtype[msg-created-and-sent]
+* subtype[msg-created-and-sent].code 1..1
+* subtype[msg-created-and-sent].system 1..1
+* subtype[msg-created-and-sent].display 1..1
+* subtype[msg-created-and-sent] = $EhmiDeliveryStatusSubTypes#msg-created "Message created and sent" (exactly)
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
@@ -75,6 +80,11 @@ It is used when
 * subtype[msg-received].system 1..1
 * subtype[msg-received].display 1..1
 * subtype[msg-received] = $EhmiDeliveryStatusSubTypes#msg-received "Message received" (exactly)
+//* subtype[msg-received-and-finalized]
+* subtype[msg-received-and-finalized].code 1..1
+* subtype[msg-received-and-finalized].system 1..1
+* subtype[msg-received-and-finalized].display 1..1
+* subtype[msg-received-and-finalized] = $EhmiDeliveryStatusSubTypes#msg-received "Message received and finalized" (exactly)
 //* subtype[msg-finalized]
 * subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
@@ -89,7 +99,7 @@ It is used when
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 
-* agent.extension contains OtherId named otherId 0..* MS
+* agent.extension contains eds-otherId named GLNId 0..* MS
 * agent ^slicing.discriminator.type = #pattern
 * agent ^slicing.discriminator.path = "type"
 * agent ^slicing.rules = #open
@@ -100,7 +110,7 @@ It is used when
 //* ^agent[ehmiSender]
 * agent[ehmiSender].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiSender].extension[otherId] contains 
+* agent[ehmiSender].extension[GLNId] contains 
 	  gln 0..* 
 * agent[ehmiSender].name 0..1 MS 
 * agent[ehmiSender].type 1..1 MS 
@@ -117,14 +127,14 @@ It is used when
 * agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.type ^short = "$EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR"
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type ^short = "GLN"
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value 1..1 MS
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiReceiver].extension[otherId] contains 
+* agent[ehmiReceiver].extension[GLNId] contains 
 	  gln 0..* 
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
@@ -138,10 +148,10 @@ It is used when
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR 
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type ^short = "GLN"
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value 1..1 MS
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
@@ -284,16 +294,16 @@ It is used when
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
-/*
-Extension: GLNId
-Id: ihe-otherId
+
+Extension: EdsOtherId
+Id: eds-otherId
 Title: "AuditEvent.agent other identifiers"
-Description: "Carries other identifiers are known for an agent."
+Description: "Carries other identifiers that are known for an agent."
 * ^context[+].type = #element
 * ^context[=].expression = "AuditEvent.agent"
 * value[x] only Identifier
 * valueIdentifier 1..1
-*/
+
 
 Invariant: uuid
 Description: "General UUID expression"

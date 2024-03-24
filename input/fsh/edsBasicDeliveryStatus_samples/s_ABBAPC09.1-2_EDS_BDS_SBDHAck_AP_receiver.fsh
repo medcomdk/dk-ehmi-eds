@@ -63,8 +63,8 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR12345"
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value = "GLN-1234"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
@@ -73,8 +73,8 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "AP12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
@@ -174,8 +174,8 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR12345"
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[otherId][gln].valueIdentifier.value = "GLN-1234"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
@@ -184,8 +184,8 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[otherId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "AP12345"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
