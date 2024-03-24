@@ -69,7 +69,7 @@ It is used when
 * subtype[msg-created-and-sent].code 1..1
 * subtype[msg-created-and-sent].system 1..1
 * subtype[msg-created-and-sent].display 1..1
-* subtype[msg-created-and-sent] = $EhmiDeliveryStatusSubTypes#msg-created "Message created and sent" (exactly)
+* subtype[msg-created-and-sent] = $EhmiDeliveryStatusSubTypes#msg-created-and-sent "Message created and sent" (exactly)
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
@@ -84,7 +84,7 @@ It is used when
 * subtype[msg-received-and-finalized].code 1..1
 * subtype[msg-received-and-finalized].system 1..1
 * subtype[msg-received-and-finalized].display 1..1
-* subtype[msg-received-and-finalized] = $EhmiDeliveryStatusSubTypes#msg-received "Message received and finalized" (exactly)
+* subtype[msg-received-and-finalized] = $EhmiDeliveryStatusSubTypes#msg-received-and-finalized "Message received and finalized" (exactly)
 //* subtype[msg-finalized]
 * subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
