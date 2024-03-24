@@ -18,7 +18,6 @@ Alias: $EhmiDeliveryStatusEntityDetailTypeValueSet = http://medcomehmi.dk/ig/dk-
 Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/dk-ehmi-eds/ValueSet/ehmi-delivery-status-valueSet
 Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-ehmi-eds/CodeSystem/ehmi-delivery-status-entity-message-type
 */
-
 // TO BE ENABLED WHEN EHMI TERMINOLOGY IG IS PUBLISHED
 Alias: $EhmiDeliveryStatusTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $EhmiDeliveryStatusTypesValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology/ValueSet/ehmi-delivery-status-types-valueSet
@@ -41,7 +40,6 @@ Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/dk-ehmi-terminology
 Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-entity-message-type
 Alias: $EhmiDeliveryStatusEntityObjectRoles = http://terminology.hl7.org/CodeSystem/object-role
 Alias: $EhmiDeliveryStatusEntityObjectRolesVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/CodeSystem/ehmi-delivery-status-rest-object-roles-valueset
-
 Alias: $AuditEventAgentNetworkType = http://hl7.org/fhir/R4/valueset-network-type.html
 Alias: $AuditEventEntityType = http://terminology.hl7.org/CodeSystem/audit-entity-type
 Alias: $AuditEventAgentWhoTypes = http://hl7.org/fhir/R4/valueset-participation-role-type.html
@@ -49,11 +47,9 @@ Alias: $AuditEventSubTypes = http://hl7.org/fhir/restful-interaction
 Alias: $AuditEventSubTypesValueSet = http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
 Alias: $AuditEventTypes = http://terminology.hl7.org/CodeSystem/audit-event-type
 Alias: $AuditEventTypes2 = http://dicom.nema.org/resources/ontology/DCM
-
 // EER Aliases
 Alias: $MedComMessageDefinitionUri = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/CodeSystem/ehmi-medcom-message-definition-uri
 Alias: $MedComMessageDefinitionUriVS = http://medcomehmi.dk/ig/dk-medcom-ehmi-terminology/ValueSet/ehmi-medcom-message-definition-uri-valueset
-
 /*
 Alias: $StatusCodes = http://hl7.org/fhir/encounter-status
 Alias: $ActCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode 

@@ -1,7 +1,6 @@
 Instance: 001.1-EDS_PDS_Create-EUA-Sender-msg-created
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
@@ -13,17 +12,14 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
+* contained[+] = s-01-EUA-Sender
 * id = "ABAPC01.1"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
 * subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created"
-
 * recorded = "2024-04-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
-
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
@@ -47,7 +43,9 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "EUA12345"
+* source.observer.identifier.value = "s-01-EUA-Sender"
+* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "EUA (End-user Application)"
@@ -77,7 +75,6 @@ Description: "An example of an EdsPatientDeliveryStatus.
 Instance: 001.2-EDS_PDS_Create-EUA-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
@@ -89,25 +86,16 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
+* contained[+] = s-01-EUA-Sender
 
 * id = "ABAPC01.2"
-//* type.code = $EhmiDeliveryStatusTypesValueSet#ehmiMessaging
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
-////* subtype[anyCreate].code = $AuditEventSubTypes#create
-////* subtype[anyCreate].system = $AuditEventSubTypes
-////* subtype[anyCreate].display = "create"
-////* subtype[anyCreate].system = $AuditEventSubTypes
-
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
-
 * recorded = "2024-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
@@ -131,7 +119,8 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "EUA12345"
+* source.observer.identifier.value = "s-01-EUA-Sender"
+* source.observer.reference = "Device/s-01-EUA-Sender"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType

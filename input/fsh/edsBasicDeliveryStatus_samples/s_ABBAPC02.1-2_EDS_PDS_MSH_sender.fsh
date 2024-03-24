@@ -1,7 +1,6 @@
 Instance: 002.1-EDS_PDS_Create-MSH-Sender-msg-received
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -15,43 +14,17 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelope = ENV1234567890
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
-
 "
-
+* contained[+] = s-02-MSH-Sender
 * id = "ABAPC02.1"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
-
-////* subtype[anyCreate].code = $AuditEventSubTypes#create
-////* subtype[anyCreate].system = $AuditEventSubTypes
-////* subtype[anyCreate].display = "create"
 
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
-
 * recorded = "2024-04-01T00:00:03.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-// Client
-////* agent[client].name = "Systematic Cura MSH"
-////* agent[client].requestor = true
-////* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-////* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-////* agent[client].type.coding.display = "Source Role ID"
-////* agent[client].who.identifier.value = "MSH12345"
-////* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-////* agent[client].network.type = $AuditEventAgentNetworkType#2
-// server
-////* agent[server].name = "EHMI Delivery Status (EDS)"
-////* agent[server].requestor = false
-////* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-////* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-////* agent[server].type.coding.display = "Destination Role ID"
-////* agent[server].who.identifier.value = "EDS1234"
-////* agent[server].network.address = "http://eds.ehmi.dk/"
-////* agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
@@ -73,16 +46,12 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "DEV12345"
+* source.observer.identifier.value = "s-02-MSH-Sender"
+* source.observer.reference = "Device/s-02-MSH-Sender"
+* source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
-// data
-////* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-////* entity[data].type.code = $AuditEventEntityType#2
-////* entity[data].type.system = $AuditEventEntityType
-////* entity[data].type.display = "System Object"
-////* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -118,7 +87,6 @@ Description: "An example of an EdsPatientDeliveryStatus.
 Instance: 002.2-EDS_PDS_Create-MSH-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -132,41 +100,17 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelope = ENV1234567890
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
-
 "
+* contained[+] = s-02-MSH-Sender
 * id = "ABAPC02.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 
-
-////* subtype[anyCreate].code = $AuditEventSubTypes#create
-////* subtype[anyCreate].system = $AuditEventSubTypes
-////* subtype[anyCreate].display = "create"
-
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
-
 * recorded = "2024-04-01T00:00:04.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-// Client
-////* agent[client].name = "Systematic Cura MSH"
-////* agent[client].requestor = true
-////* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-////* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-////* agent[client].type.coding.display = "Source Role ID"
-////* agent[client].who.identifier.value = "MSH12345"
-////* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-////* agent[client].network.type = $AuditEventAgentNetworkType#2
-// server
-////* agent[server].name = "EHMI Delivery Status (EDS)"
-////* agent[server].requestor = false
-////* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-////* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-////* agent[server].type.coding.display = "Destination Role ID"
-////* agent[server].who.identifier.value = "EDS1234"
-////* agent[server].network.address = "http://eds.ehmi.dk/"
-////* agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
@@ -190,17 +134,13 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "DEV12345"
+* source.observer.identifier.value = "s-02-MSH-Sender"
+* source.observer.reference = "Device/s-02-MSH-Sender"
+* source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
-* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice "Device"
-// data
-////* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-////* entity[data].type.code = $AuditEventEntityType#2
-////* entity[data].type.system = $AuditEventEntityType
-////* entity[data].type.display = "System Object"
-////* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
+//* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice "Device"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"

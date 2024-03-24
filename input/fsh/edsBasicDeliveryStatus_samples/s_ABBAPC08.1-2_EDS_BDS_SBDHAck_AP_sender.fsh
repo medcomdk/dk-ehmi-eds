@@ -1,7 +1,7 @@
+
 Instance: 008.1-EDS_BDS_Create-SBDHAck-AP-Sender-msg-received
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP
@@ -21,21 +21,16 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-
 "
-
+* contained[+] = s-04-AP-Receiver
 * id = "ABAPC08.1"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
-
 * recorded = "2024-04-01T00:00:11.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
@@ -55,17 +50,12 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "AP123456"
+* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer.reference = "Device/s-04-AP-Receiver"
+* source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
-* source.type.display = "AP (Access Point -Network Router)"
-// data
-//* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-//* entity[data].type.code = $AuditEventEntityType#2
-//* entity[data].type.system = $AuditEventEntityType
-//* entity[data].type.display = "System Object"
-//* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
-
+* source.type.display = "AP (Access Point)"
 ////* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
@@ -114,7 +104,6 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 Instance: 008.2-EDS_BDS_Create-SBDHAck-AP-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP
@@ -134,42 +123,16 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-
 "
-
+* contained[+] = s-04-AP-Receiver
 * id = "ABAPC08.2"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
-//* subtype[anyCreate].code = $AuditEventSubTypes#create
-//* subtype[anyCreate].system = $AuditEventSubTypes
-//* subtype[anyCreate].display = "create"
-
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
-
 * recorded = "2024-04-01T00:00:12.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-// Client
-//* agent[client].name = "MultiMed AP"
-//* agent[client].requestor = true
-//* agent[client].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-//* agent[client].type.coding.code = $AuditEventAgentWhoTypes#110153
-//* agent[client].type.coding.display = "Source Role ID"
-//* agent[client].who.identifier.value = "AP123456"
-//* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-//* agent[client].network.type = $AuditEventAgentNetworkType#2
-// server
-//* agent[server].name = "EHMI Delivery Status (EDS)"
-//* agent[server].requestor = false
-//* agent[server].type.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-//* agent[server].type.coding.code = $AuditEventAgentWhoTypes#110152
-//* agent[server].type.coding.display = "Destination Role ID"
-//* agent[server].who.identifier.value = "EDS1234"
-//* agent[server].network.address = "http://eds.ehmi.dk/"
-//* agent[server].network.type = $AuditEventAgentNetworkType#5
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
@@ -189,17 +152,12 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "AP123456"
+* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer.reference = "Device/s-04-AP-Receiver"
+* source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
-* source.type.display = "AP (Access Point -Network Router)"
-// data
-//* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-//* entity[data].type.code = $AuditEventEntityType#2
-//* entity[data].type.system = $AuditEventEntityType
-//* entity[data].type.display = "System Object"
-//* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
-
+* source.type.display = "AP (Access Point)"
 ////* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"

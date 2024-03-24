@@ -2,27 +2,16 @@ Profile: EdsBasicDeliveryStatus
 Parent: AuditEvent
 //Parent: IHE.BasicAudit.Create
 Description: "*** UNDER SPECIFICATION ***
-
 EHMI profile inspired by the IHE.BasicAudit.Create profile. 
-
 EdsBasicDeliveryStatus is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
-
 EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for status reporting of Acknowledgments.
-
 A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a EHMI Basic Delivery Status Messaging action happens successfully.
-
 It is used when 
-
 - the resource does not have a Patient subject or is otherwise associated with a Patient
-
   - when the resource is Patient specific then EdsPatientDeliveryStatus is used
-
 - And the request is authorized
-
 - When successful
-
   - Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
-
   - Then the EdsBasicDeliveryStatus recorded will conform
 " 
 * ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatus"
@@ -48,7 +37,6 @@ It is used when
 * type.system = $EhmiDeliveryStatusTypes
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
 * subtype 1..1 MS SU
 * subtype ^slicing.discriminator.type = #pattern
 * subtype ^slicing.discriminator.path = "$this"
@@ -90,7 +78,6 @@ It is used when
 * subtype[msg-finalized].system 1..1
 * subtype[msg-finalized].display 1..1
 * subtype[msg-finalized] = $EhmiDeliveryStatusSubTypes#msg-finalized "Message finalized" (exactly)
-
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0
@@ -98,7 +85,6 @@ It is used when
 * outcome from $EhmiDeliveryStatusOutcomeValueSet
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
-
 * agent.extension contains eds-otherId named GLNId 0..* MS
 * agent ^slicing.discriminator.type = #pattern
 * agent ^slicing.discriminator.path = "type"
@@ -294,7 +280,6 @@ It is used when
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
-
 Extension: EdsOtherId
 Id: eds-otherId
 Title: "AuditEvent.agent other identifiers"
@@ -304,9 +289,7 @@ Description: "Carries other identifiers that are known for an agent."
 * value[x] only Identifier
 * valueIdentifier 1..1
 
-
 Invariant: uuid
 Description: "General UUID expression"
 Severity: #error
 Expression: "value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
-

@@ -1,7 +1,6 @@
 Instance: 010.1-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -21,25 +20,15 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-
 "
-
 * id = "ABAPC10.1"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
-//* subtype[anyCreate].code = $AuditEventSubTypes#create
-//* subtype[anyCreate].system = $AuditEventSubTypes
-//* subtype[anyCreate].display = "create"
-
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
-
 * recorded = "2024-04-01T00:00:15.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-
 // ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = true
@@ -61,11 +50,12 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "MSH12345"
+* source.observer.identifier.value = "s-02-MSH-Sender"
+* source.observer.reference = "Device/s-02-MSH-Sender"
+* source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
-
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
@@ -118,7 +108,6 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 Instance: 010.2-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-finalized
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
-
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -138,18 +127,11 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-
 "
-
+* contained[+] = s-02-MSH-Sender
 * id = "ABAPC10.2"
-
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-
-//* subtype[anyCreate].code = $AuditEventSubTypes#create
-//* subtype[anyCreate].system = $AuditEventSubTypes
-//* subtype[anyCreate].display = "create"
-
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-finalized].display = "Message finalized"
@@ -176,21 +158,12 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "MSH1234567"
+* source.observer.identifier.value = "s-02-MSH-Sender"
+* source.observer.reference = "Device/s-02-MSH-Sender"
+* source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
-// data
-//* entity[data].what.identifier.value = "EhmiDeliveryStatus"
-//* entity[data].type.code = $AuditEventEntityType#2
-//* entity[data].type.system = $AuditEventEntityType
-//* entity[data].type.display = "System Object"
-//* entity[data].role = $EhmiDeliveryStatusEntityObjectRoles#20 "Job"
-
-////* entity[data].type = $AuditEventEntityType#4
-// Patient
-//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
