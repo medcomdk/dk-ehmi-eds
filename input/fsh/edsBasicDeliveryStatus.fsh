@@ -50,7 +50,7 @@ It is used when
 * type.display = "EHMI messaging event"
 
 * subtype 1..1 MS SU
-* subtype ^slicing.discriminator.type = #value
+* subtype ^slicing.discriminator.type = #pattern
 * subtype ^slicing.discriminator.path = "$this"
 * subtype ^slicing.rules = #open // allow other codes
 * subtype contains
