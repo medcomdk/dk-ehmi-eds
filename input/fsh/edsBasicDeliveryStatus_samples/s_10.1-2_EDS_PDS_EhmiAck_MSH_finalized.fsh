@@ -1,6 +1,6 @@
 Instance: 010.1-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -107,7 +107,7 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 
 Instance: 010.2-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-finalized
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH

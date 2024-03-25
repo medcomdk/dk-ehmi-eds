@@ -1,7 +1,7 @@
 
 Instance: 009.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP
@@ -98,7 +98,7 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 
 Instance: 009.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for an AP Receiver in a sent status"
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for an AP Receiver in a sent status"
 * contained[+] = s-03-AP-Sender
 * id = "EDS-PDS-09.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"

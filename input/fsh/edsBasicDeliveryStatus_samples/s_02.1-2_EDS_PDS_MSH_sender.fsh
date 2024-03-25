@@ -1,6 +1,6 @@
 Instance: 002.1-EDS_PDS_Create-MSH-Sender-msg-received
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
@@ -86,7 +86,7 @@ Description: "An example of an EdsPatientDeliveryStatus.
 
 Instance: 002.2-EDS_PDS_Create-MSH-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH

@@ -1,6 +1,6 @@
 Instance: 001.1-EDS_PDS_Create-EUA-Sender-msg-created
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
@@ -74,7 +74,7 @@ Description: "An example of an EdsPatientDeliveryStatus.
 
 Instance: 001.2-EDS_PDS_Create-EUA-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA

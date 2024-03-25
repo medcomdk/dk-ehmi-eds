@@ -1,7 +1,7 @@
 
 Instance: 004.1-EDS_PDS_Create-AP-Receiver-msg-received
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP
@@ -79,7 +79,7 @@ Description: "An example of an EdsPatientDeliveryStatus.
 
 Instance: 004.2-EDS_PDS_Create-AP-Receiver-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
-Description: "An example of an EdsPatientDeliveryStatus.
+Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP

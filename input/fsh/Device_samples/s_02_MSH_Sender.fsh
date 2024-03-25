@@ -1,7 +1,7 @@
 
 Instance: s_02_MSH_Sender
 InstanceOf: Device
-Description: "An example of a MSH_Sender Device"
+Description: "An instance of a MSH_Sender Device"
 * id = "s-02-MSH-Sender"
 * identifier.value = "s_02_MSH_Sender"
 * status = #active
