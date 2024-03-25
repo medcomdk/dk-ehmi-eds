@@ -9,7 +9,7 @@ A focus is on enabling Privacy centric AuditEvent logs that hold well-formed ind
 ![EHMI Delivery Status (EDS) (DA)](./eds1_1100x551.png "EHMI Delivery Status (EDS) (DA)")
 <p/>
 
-EDS is using some basic abbreviations throughout the specification, the most common is:
+EDS is using some basic abbreviations throughout the specification, the most common are:
 
 - EUA = End USer Application
 - MSH = Message Service Handler
