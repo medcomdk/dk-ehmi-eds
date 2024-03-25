@@ -22,7 +22,7 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
     - ehmiOrigEnvelopeVersion = 2.0
 "
 * contained[+] = s-05-MSH-Receiver
-* id = "ABAPC07.1"
+* id = "EDS-PDS-07.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 * subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
@@ -122,7 +122,7 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
     - ehmiOrigEnvelopeVersion = 2.0
 "
 * contained[+] = s-05-MSH-Receiver
-* id = "ABAPC07.2"
+* id = "EDS-PDS-07.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent

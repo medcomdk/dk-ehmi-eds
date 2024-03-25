@@ -1,10 +1,10 @@
 
-Instance: 005.1-EDS_PDS_Create-MSH-Receiver-msg-received
+Instance: 004.1-EDS_PDS_Create-AP-Receiver-msg-received
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an MSH
+- client is an AP
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -16,15 +16,15 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
-* id = "ABAPC05.1"
+* contained[+] = s-04-AP-Receiver
+* id = "EDS-PDS-04.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
-* recorded = "2024-04-01T00:00:09.000+02:00" 
+* recorded = "2024-04-01T00:00:07.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -47,12 +47,12 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-05-MSH-Receiver"
-* source.observer.reference = "Device/s-05-MSH-Receiver"
-* source.observer.display = "MSH (Message Service Handler)"
-* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer.reference = "Device/s-04-AP-Receiver"
+* source.observer.display = "AP (Access Point)"
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
-* source.type.display = "MSH (Application Server)"
+* source.type.display = "AP (Access Point)"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -77,12 +77,12 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
-Instance: 005.2-EDS_PDS_Create-MSH-Receiver-msg-sent
+Instance: 004.2-EDS_PDS_Create-AP-Receiver-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an MSH
+- client is an AP
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
@@ -94,15 +94,15 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
-* id = "ABAPC05.2"
+* contained[+] = s-04-AP-Receiver
+* id = "EDS-PDS-04.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:10.001+02:00" 
+* recorded = "2024-04-01T00:00:08.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -125,12 +125,12 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-05-MSH-Receiver"
-* source.observer.reference = "Device/s-05-MSH-Receiver"
-* source.observer.display = "MSH (Message Service Handler)"
-* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer.reference = "Device/s-04-AP-Receiver"
+* source.observer.display = "AP (Access Point)"
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
-* source.type.display = "MSH (Application Server)"
+* source.type.display = "AP (Access Point)"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"

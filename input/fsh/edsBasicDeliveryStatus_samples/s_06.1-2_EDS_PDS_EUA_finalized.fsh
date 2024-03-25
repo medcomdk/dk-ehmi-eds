@@ -1,10 +1,11 @@
-Instance: 001.1-EDS_PDS_Create-EUA-Sender-msg-created
+
+Instance: 006.1-EDS_PDS_Create-BS-Receiver-msg-received
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
-- ehmiSubType = msg-created
+- ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
 - ehmiPatient = PAT1234567890 
@@ -12,21 +13,21 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
-* id = "ABAPC01.1"
+* contained[+] = s-06-EUA-Receiver
+* id = "EDS-PDS-06.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-* subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created"
-* recorded = "2024-04-01T00:00:01.000+02:00" 
-//* outcome = $EhmiDeliveryStatusOutcome#0
-* outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
+* subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-received].display = "Message received"
+* recorded = "2024-04-01T00:00:11.000+02:00" 
+* outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-//* agent[ehmiSender].who = Reference(Organization/EHMI.SOR.OU-AAR-Kommune.1027201000016001)
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR1234"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
@@ -34,7 +35,6 @@ Description: "An example of an EdsPatientDeliveryStatus.
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
@@ -43,19 +43,18 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "EUA (End-user Application)"
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-* entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
-* entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiPatient].type.display = "Patient"
+* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
@@ -63,7 +62,7 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
-// MessageEnvelope (Bundle)
+// Message Envelope (Bundle)
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
@@ -72,13 +71,13 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 
-Instance: 001.2-EDS_PDS_Create-EUA-Sender-msg-sent
+Instance: 006.2-EDS_PDS_Create-BS-Receiver-msg-finalized
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An example of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
-- ehmiSubType = msg-sent
+- ehmiSubType = msg-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
 - ehmiPatient = PAT1234567890 
@@ -86,15 +85,14 @@ Description: "An example of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
-
-* id = "ABAPC01.2"
+* contained[+] = s-06-EUA-Receiver
+* id = "EDS-PDS-06.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
-* subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
-* subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:02.001+02:00" 
+* subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized
+* subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
+* subtype[msg-finalized].display = "Message finalized"
+* recorded = "2024-04-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -102,7 +100,6 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.display = "Aarhus Kommune"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR1234"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
@@ -113,14 +110,13 @@ Description: "An example of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.display = "Løgten Lægehus"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR12345"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType

@@ -1,5 +1,5 @@
 
-Instance: 008.1-EDS_BDS_Create-SBDHAck-AP-Sender-msg-received
+Instance: 009.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
@@ -22,14 +22,14 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
-* contained[+] = s-04-AP-Receiver
-* id = "ABAPC08.1"
+* contained[+] = s-03-AP-Sender
+* id = "EDS-PDS-09.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-received].display = "Message received"
-* recorded = "2024-04-01T00:00:11.500+02:00" 
+* recorded = "2024-04-01T00:00:13.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
@@ -50,16 +50,11 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-04-AP-Receiver"
-* source.observer.reference = "Device/s-04-AP-Receiver"
-* source.observer.display = "AP (Access Point)"
+* source.observer.identifier.value = "s-03-AP-Sender"
+* source.observer.reference = "Device/s-03-AP-Sender"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
-////* entity[data].type = $AuditEventEntityType#4
-// Patient
-//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
@@ -101,37 +96,17 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
-Instance: 008.2-EDS_BDS_Create-SBDHAck-AP-Sender-msg-sent
+Instance: 009.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
-- recorded by the client
-- server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an AP
-- ehmiSubType = msg-sent
-- ehmiSender = Aarhus Kommune
-- ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
-- ehmiMessage = MSG3456789012
-    - ehmiMessageType = SBDHAck
-    - ehmiMessageVersion = 1.0
-- ehmiOrigTransportEnvelope = ENV3456789012
-    - ehmiOrigEnvelopeType = SBDH
-    - ehmiOrigEnvelopeVersion = 2.0
-- ehmiOrigMessage = MSG1234567890
-    - ehmiOrigMessageType = HomeCareObservation
-    - ehmiOrigMessageVersion = 1.0
-- ehmiOrigTransportEnvelope = ENV1234567890
-    - ehmiOrigEnvelopeType = SBDH
-    - ehmiOrigEnvelopeVersion = 2.0
-"
-* contained[+] = s-04-AP-Receiver
-* id = "ABAPC08.2"
+Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for an AP Receiver in a sent status"
+* contained[+] = s-03-AP-Sender
+* id = "EDS-PDS-09.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.display = "EHMI messaging event"
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:12.501+02:00" 
+* recorded = "2024-04-01T00:00:14.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
@@ -152,16 +127,11 @@ Description: "An example of an EdsBasicDeliveryStatus containing an SBDH Acknowl
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-04-AP-Receiver"
-* source.observer.reference = "Device/s-04-AP-Receiver"
-* source.observer.display = "AP (Access Point)"
+* source.observer.identifier.value = "s-03-AP-Sender"
+* source.observer.reference = "Device/s-03-AP-Sender"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
-////* entity[data].type = $AuditEventEntityType#4
-// Patient
-//* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
-//* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
