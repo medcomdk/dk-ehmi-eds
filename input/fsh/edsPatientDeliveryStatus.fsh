@@ -1,7 +1,7 @@
 Profile: EdsPatientDeliveryStatus
 Parent: EdsBasicDeliveryStatus
-Description: "*** UNDER SPECIFICATION ***
-EHMI profile inspired by the IHE.BasicAudit.PatientCreate profile based on the EHMI profile EdsBasicDeliveryStatus.
+Description: "
+EHMI profile based on the EHMI profile EdsBasicDeliveryStatus.
 EdsPatientDeliveryStatus is used to define the status reporting for EDS from a EDS Client to the EDS Server.
 EdsPatientDeliveryStatus is used when a Patient entity is required, for instance for status reporting of MedCom FHIR Messages.
 A EdsPatientDeliveryStatus based on the AuditEvent profile for when a EHMI Patient Delivery Status Messaging action happens successfully.
