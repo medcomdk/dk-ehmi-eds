@@ -1,8 +1,7 @@
 Profile: EdsBasicDeliveryStatus
 Parent: AuditEvent
 //Parent: IHE.BasicAudit.Create
-Description: "*** UNDER SPECIFICATION ***
-EHMI profile inspired by the IHE.BasicAudit.Create profile. 
+Description: "
 EdsBasicDeliveryStatus is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
 EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for status reporting of Acknowledgments.
 A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a EHMI Basic Delivery Status Messaging action happens successfully.
