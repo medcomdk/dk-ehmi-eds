@@ -33,6 +33,7 @@ dependencies:
   dk.ehmi.terminology: current
   dk.ehmi.eer: current
   medcom.fhir.dk.ihe.xds.metadata: current
+
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
