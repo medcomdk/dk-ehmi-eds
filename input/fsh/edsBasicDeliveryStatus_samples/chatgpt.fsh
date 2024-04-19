@@ -14,6 +14,7 @@ It is used when
   - Then the EdsBasicDeliveryStatus recorded will conform
 " 
 
+
 * ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatus"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
 * ^text.status = #additional
