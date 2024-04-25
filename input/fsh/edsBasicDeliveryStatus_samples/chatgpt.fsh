@@ -1,7 +1,8 @@
 Instance: msgCreatedInstance
 InstanceOf: EdsBasicDeliveryStatus
 // Description of the instance
-Description: "Example instance for the Message Created subtype of EdsBasicDeliveryStatus"
+Description: """Example instance for the Message Created subtype of EdsBasicDeliveryStatus
+- ChatGPT generated"""
 // Unique identifier for the instance
 * id = "msg-created-instance"
 
