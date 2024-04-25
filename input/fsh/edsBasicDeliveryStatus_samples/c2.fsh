@@ -1,6 +1,6 @@
 Instance: EdsBasicDeliveryStatusInstance
 InstanceOf: EdsBasicDeliveryStatus
-
+Description: "ChatGPT generated"
 * id = "eds-basic-delivery-instance"
 * recorded = "2024-04-19T12:00:00Z"
 
