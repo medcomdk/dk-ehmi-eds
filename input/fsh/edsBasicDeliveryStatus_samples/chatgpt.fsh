@@ -21,8 +21,8 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
 // Action performed (in this case, Creation)
 * action = #C
 
-// Outcome of the event (success or failure)
-* outcome = #success
+// Outcome of the event (Success or failure)
+* outcome = #Success
 
 // Sender Agent details
 * agent[ehmiSender]
