@@ -22,7 +22,7 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
 * action = #C
 
 // Outcome of the event (Success or failure)
-* outcome = #Success
+* outcome = #0
 
 // Sender Agent details
 * agent[ehmiSender]
