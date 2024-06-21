@@ -12,7 +12,7 @@ Description: "ChatGPT generated"
   * system = $EhmiDeliveryStatusSubTypes
   * display = "Message created"
 * action = #C
-* outcome = #Success
+* outcome = #0
 * agent[ehmiSender]
   * type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
   * who
