@@ -10,7 +10,7 @@ A focus is on enabling Privacy centric AuditEvent logs that hold well-formed ind
 
 <br/>
 
-![EHMI Delivery Status (EDS) (DA)](./eds1_1100x551.png "EHMI Delivery Status (EDS) (DA)")
+![EHMI Delivery Status (EDS)](./EHMI Pixi - Message delivery.png "EHMI Delivery Status (EDS)")
 
 <br/>
 
