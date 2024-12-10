@@ -172,7 +172,8 @@ It is used when
   * ^short = "something short"
 * entity[ehmiMessage].detail contains
     ehmiMessageType 1..1 and
-    ehmiMessageVersion 1..1 
+    ehmiMessageVersion 1..1 and
+    ehmiStatisticalInfo 0..1 
 * entity[ehmiMessage].detail 2..2
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
@@ -184,6 +185,11 @@ It is used when
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
+
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].type = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
 //* entity[ehmiMessageEnvelope]
 * entity[ehmiMessageEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiMessageEnvelope].type 1..1 MS 
