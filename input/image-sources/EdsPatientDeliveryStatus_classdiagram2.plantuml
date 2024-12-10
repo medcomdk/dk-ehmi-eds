@@ -1,0 +1,36 @@
+@startuml
+
+class EdsBasicDeliveryStatus {
+<<EHMI Delivery Status for ikke patientrelaterede meddelelser>>
+}
+
+class EdsPatientDeliveryStatus {
+<<EHMI Delivery Status for patientrelaterede meddelelser>>
+===
+    + Agent ehmiSender
+    + Agent ehmiReceiver
+---
+    + Observer eerDevice
+---
+    + Entity Patient
+---
+    + Entity ehmiMessage
+        + EntityDetail ehmiMessageType
+        + EntityDetail ehmiMessageVersion
+---
+    + Entity ehmiTransportEnvelope
+        + EntityDetail ehmiTransportEnvelopeType
+        + EntityDetail ehmiTransportEnvelopeVersion
+---
+    + Entity ehmiOrigMessage
+        + EntityDetail ehmiMessageType
+        + EntityDetail ehmiMessageVersion
+---
+    + Entity ehmiOrigTransportEnvelope
+        + EntityDetail ehmiTransportEnvelopeType
+        + EntityDetail ehmiTransportEnvelopeVersion
+}
+
+AuditEvent <-- EdsBasicDeliveryStatus
+EdsBasicDeliveryStatus <-- EdsPatientDeliveryStatus
+@enduml
