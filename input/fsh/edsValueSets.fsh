@@ -9,6 +9,7 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * ^experimental = false
 * ^caseSensitive = true
 * #ehmiMessaging "EHMI message events"
+
 ValueSet: EhmiDeliveryStatusTypesValueSet
 Id: ehmi-delivery-status-types-valueset
 Title: "EHMI Delivery Status (EDS) Types ValueSet"
@@ -21,6 +22,7 @@ Description: "ValueSet containing codes for EHMI Delivery Status (EDS)Types"
 * include codes from system $AuditEventTypes
 * include codes from system http://hl7.org/fhir/restful-interaction
 * include codes from system http://terminology.hl7.org/CodeSystem/audit-entity-type
+
 CodeSystem: EhmiDeliveryStatusSubTypes
 Id: ehmi-delivery-status-sub-types
 Title: "EHMI Delivery Status (EDS) SubTypes CS"
@@ -34,6 +36,7 @@ Description: "ehmi-delivery-status-types for the EHMI Messaging Infrastructure"
 * #msg-sent "Message sent"
 * #msg-received "Message recieved"
 * #msg-finalized "Message finalized"
+
 ValueSet: EhmiDeliveryStatusSubTypesValueSet
 Id: ehmi-delivery-status-sub-types-valueset
 Title: "EHMI Delivery Status (EDS) SubTypes ValueSet"
@@ -46,6 +49,7 @@ Description: "ValueSet containing codes for EHMI Delivery Status (EDS) SubTypes"
 //* include codes from system $AuditEventSubTypes
 //* include codes from system http://hl7.org/fhir/restful-interaction
 //* include codes from system http://hl7.org/fhir/R4/valueset-audit-event-sub-type.html
+
 ValueSet: EhmiDeliveryStatusOutcomeValueSet
 Id: ehmi-delivery-status-outcome-valueset
 Title: "EHMI Delivery Status (EDS) Outcome ValueSet"
@@ -58,6 +62,7 @@ Description: "ValueSet containing codes for EHMI Delivery Status (EDS) SubTypes"
 * include #8 from system http://hl7.org/fhir/audit-event-outcome
 * exclude #4 from system http://hl7.org/fhir/audit-event-outcome
 * exclude #12 from system http://hl7.org/fhir/audit-event-outcome
+
 CodeSystem: EhmiDeliveryStatusParticipationRoleType
 Id: ehmi-delivery-status-participationroletype
 Title: "EHMI Delivery Status (EDS) ParticipationRoleType CS"
@@ -70,6 +75,7 @@ Description: "ehmi-delivery-status-participationroletype for the EHMI Messaging 
 * #ehmiSender "Sender" "The application that creates a new message"
 * #ehmiReceiver "Receiver" "The application that receives the new message"
 * #ehmiDevice "Device" "The Device that reports the AuditEvent"
+
 ValueSet: EhmiDeliveryStatusParticipationRoleTypeValueSet
 Id: ehmi-delivery-status-participationroletype-valueset
 Title: "EHMI Delivery Status (EDS) ParticipationRoleType ValueSet"
@@ -81,6 +87,7 @@ Description: "ValueSet containing codes for EHMI Delivery Status (EDS) Participa
 * include codes from system EhmiDeliveryStatusParticipationRoleType
 * include #110152 from system http://dicom.nema.org/resources/ontology/DCM
 * include #110153 from system http://dicom.nema.org/resources/ontology/DCM
+
 CodeSystem: EhmiDeliveryStatusAgentWhoIdentifierTypes
 Id: ehmi-delivery-status-agent-who-identifier-types
 Title: "EHMI Delivery Status (EDS) agent.who.identifier Types CS"
@@ -92,6 +99,7 @@ Description: "ehmi-delivery-status-agent.who.identifier for the EHMI Messaging I
 * ^caseSensitive = true
 * #GLN "GLN" "GLN representing either the sender or the receiver organization"
 * #ehmiDEVICEID "DeviceId" "The recorded deviceid of a device used in EHMI"
+
 ValueSet: EhmiDeliveryStatusAgentWhoIdentifierTypesValueSet
 Id: ehmi-delivery-status-agent-who-identifier-types-valueset
 Title: "EHMI Delivery Status (EDS) AgentWhoIdentifier Types ValueSet"
@@ -106,6 +114,7 @@ Description: "ValueSet containing codes for EHMI Delivery Status (EDS) AgentWhoI
 //* include codes from system http://hl7.org/fhir/R4/valueset-participation-role-type.html
 //* include codes from system http://hl7.org/fhir/R5/valueset-resource-types.html
 /*
+
 CodeSystem: AuditEventAgentNetwork
 Id: ehmi-delivery-status-network
 Title: "EHMI Delivery Status (EDS) audit-source-type CS"
