@@ -1,31 +1,31 @@
 ## 7.1	EHMI Delivery Status (EDS) 
 
-I [EHMI] er der følgende stationer som indgår i punkt-til-punkt meddelelsesforsendelser: Fagsystemer, message-service-handlere og access-points. 
+In [EHMI], the following stations are included in point-to-point message-delivery: End User Applications (EUAs), message-service-handlers (MSHs) and access-points (APs). 
 
-Alle stationer der indgår i en EHMI meddelelsesforsendelse skal registrere deres meddelelses-håndteringer i forsendelsesstatusservicen EDS, som beskrevet i FHIR implementation guiden på https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/. 
+All stations involved in EHMI message-delivery must register their message-handling in EHMI Delivery Status (EDS) as described in [FHIR Implementation Guide](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/). 
 
-Stationerne oprettes i EHMI Endpoint registeret (EER) og tildeles i forbindelse med oprettelsen et unikt device_id.
+The stations are created in EHMI Endpoint Register (EER) and are assigned a unique device_id.
 
-Som det fremgår af FHIR implementation guiden realiseres forsendelsesstatus som en profilering af FHIR AuditEvent ressourcen.
+As stated in FHIR Implementation Guide, the delivery status is a profilering/profiling of the FHIR AuditEvent ressource.
 
-Forsendelsesstatus indeholder personfølsomme oplysninger (i form at behandlingsstedet som indgår som afsender eller modtager af en meddelelse), og brugeradgange forudsætter derfor et NSIS-niveau ’Betydelig’.
+Delivery status contains sensitive personal information/personfølsomme oplysninger (being the place of treatment/behandlingsstedet either as the sender or receiver of a message), and therefore the user access require a NSIS level ’Significant’.
 
-### 7.1.1	EDS usecases
-Der er to overordnende usecases for anvendelsen af forsendelsesstatusservicen EDS.
+### 7.1.1	EDS use cases
+There are two main use cases regarding the use of delivery status service, EDS.
 
-1.	Stationerne i en EHMI forsendelse foretager hver især en registrering af forsendelsesstatus i EDS. Registrering sker på systemniveau, og de enkelte stationer kan oprette forsendelsesstatus for de organisationskontekster (kombinationer af GLN numre og SOR koder) som de er whitelistet til (se nedenstående).
+1.	Each station in EHMI message-delivery registers the delivery status in EDS. The registration happens on system level, and the individual stations can create a delivery status for the organizational contexts/organisationskontekster (combination of GLN numbers and SOR codes) for which they are whitelisted (see below).
 
-2.	EDS stiller en grænseflade til søgning og opslag til rådighed, som kan benyttes til track’n’trace af meddelelsesforsendelser eller til fejlsøgning.  
-Søgning og opslag kan enten foregå  :
-    a.	På systemniveau for stationerne på deres eget device_id. (Derved kan der eksempelvis fra fagsystemer etableres funktionalitet hvor brugere kan fremsøge status for meddelelser de selv har sendt.)
-    b.	På borgerniveau på eget CPR  
-    c.	På superbruger/leverandør(supporter)-niveau på CVR nummer for brugerens organisation og hvor brugeren får adgang via en særlig rettighed (som tildeles gennem SEB brugerkataloget)
+2.	EDS provides an interface for searching and lookup/opslag, which can be used for track'n'trace of messages or for troubleshooting.
+Searching and lookup can take place either at:
+    1. System level for stations using their own device_id. (This way, for example, functionality can be established from end user applications, where users can search for the status of messages sent by themselves.)
+    2.	Citizen level using CPR  
+    3.	Super user/vendor (supporter) level using the CVR number of the users organization, and where the user is granted access via a special right (granted by SEB user catalogue)
 
-### 7.1.2	Indrullering/whitelisting af systemklienter i EDS (til registrering, søgning og opslag)
-Stationer som registrerer forsendelsesstatus og kan søge og læse egne registreringer indrulleres som systemklienter.
-Udover de i afsnit 3.3 Indrullering af klienter beskrevne elementer skal der under indrullering af systemklienter angives følgende:
-    - Det device_id som stationen er registreret med i EER
-    - En liste af organisationskontekster som stationen sender/modtager meddelelser for i form af SOR kode og GLN lokationsnummer
+### 7.1.2	Enrollment/whitelisting of system clients in EDS (for registration, search, and lookup)
+Stations that register delivery status, and can search and read their own registrations, are registered as system clients.
+In addition to the elements described in section 3.3 Enrollment of clients, the following must be specified when enrolling system clients: 
+- The device_id which the station is registered with in EER
+- A list of organizational contexts/organisationskontekster, for which the station sends/receives messages in the form of SOR code and GLN location number
 
 Under indrullering angives følgende som scope element:
  
