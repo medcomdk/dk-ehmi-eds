@@ -27,24 +27,24 @@ In addition to the elements described in section 3.3 Enrollment of clients, the 
 - The device_id which the station is registered with in EER
 - A list of organizational contexts/organisationskontekster, for which the station sends/receives messages in the form of SOR code and GLN location number
 
-Under indrullering angives følgende som scope element:
+During enrollment, the following is specified as a scope element:
  
-(Ovenstående system/AuditEvent.crs syntaks er baseret på definitionen af scopes for FHIR ressourcer i [SMART].)
-Metadata for en EDS systemklient
+(The abovementioned system/AuditEvent.crs syntax is based on the definition of scopes for FHIR ressources in [SMART].)
+Metadata for an EDS system client *(NOGET GALT MED SÆTNINGEN. ER DET EN OVERSKRIFT?)*
 
-Udover de i afsnit 3.3.1 Metadata for klienter beskrevne metadata elementer skal følgende metadata elementer angives for systemklienter.
+In addition to the metadata elements described in section 3.3.1 Metadata for clients, the following metadata elements must be specified for system clients. 
 
-Metadata element	Beskrivelse
-ehmi:eer:device_id	En angivelse af det device_id som stationen er registreret med i EER.
-ehmi:org_context	Et array af JSON objekter bestående af name (organisationsnavn), sor (SOR kode) og gln (lokationsnummer) som stationen sender/modtager meddelelser for.
+Metadata element	Description
+ehmi:eer:device_id	A specification of the device_id which the station is registered with in EER.
+ehmi:org_context	An array of JSON objects consisting of name (organization name), sor (SOR code) and gln (location number) for which the station sends/receives messages.
 
-Bemærk, at det er hensigten, at Authorization Server efter produktionspiloten i stedet laver opslag på en stations organisationskontekster i EER postkasseregisteret og den eksplicit whitelisting dermed bortfalder  .
-Eksempel metadata dokument for en EDS systemklient:
+Note that the intention is, that after the production pilot, the Authorization Server will instead make a post on a station's organizational contexts in EER Endpoint register and the explicit whitelisting will therefore cease to exist.
+Example of a metadata document for an EDS system client:*(MANGLER EKSEMPEL)*
 
-### 7.1.3	Indrullering/whitelisting af brugerklienter (til søgning og opslag)
-Brugerklienter som anvendes af borgere eller superbrugere/supportere til at søge og læse forsendelsesstatus-registreringer indrulleres alene med de i afsnit 3.3 Indrullering af klienter beskrevne elementer. 
+### 7.1.3	Enrollment/whitelisting of user clients (for search and lookup)
+User clients, which are used by citizens or super-users/supporters to search and read delivery-status registrations, are enroled only with the described elements in section 3.3 Enrollment of clients. 
 
-Under indrullering angives følgende scope element:
+During enrollment, the following is specified as a scope element:
  
 Metadata for en EDS brugerklient til søgning og opslag
 For EDS brugerklienter skal der kun angives de i afsnit 3.3.1 Metadata for klienter beskrevne metadata.
