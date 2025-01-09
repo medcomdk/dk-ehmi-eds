@@ -229,7 +229,7 @@ It is used when
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type.value
+  * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiTransportEnvelope].detail contains
