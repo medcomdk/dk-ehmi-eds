@@ -189,7 +189,7 @@ It is used when
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiStatisticalInfo].type = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
 //* entity[ehmiMessageEnvelope]
@@ -263,10 +263,10 @@ It is used when
     ehmiMessageVersion 1..1 
 * entity[ehmiOrigMessage].detail 2..2
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiOrigTransportEnvelope]
 * entity[ehmiOrigTransportEnvelope].what.identifier 1..1 MS SU
@@ -287,10 +287,10 @@ It is used when
     ehmiTransportEnvelopeVersion 0..1
 * entity[ehmiOrigTransportEnvelope].detail 0..2
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
 Extension: EdsOtherId
