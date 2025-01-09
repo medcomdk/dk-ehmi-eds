@@ -1,3 +1,4 @@
+/*
 Instance: msgCreatedInstance
 InstanceOf: EdsBasicDeliveryStatus
 // Description of the instance
@@ -95,3 +96,4 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
   * detail[ehmiTransportEnvelopeVersion]
     * type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
     * valueString = "1.2"
+*/
