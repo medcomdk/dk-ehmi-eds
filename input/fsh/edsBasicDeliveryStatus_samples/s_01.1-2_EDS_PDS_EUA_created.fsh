@@ -15,6 +15,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * contained[+] = s-01-EUA-Sender
 * id = "EDS-PDS-01.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created"
 * recorded = "2024-04-01T00:00:01.000+02:00" 
@@ -90,6 +91,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 
 * id = "EDS-PDS-01.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent
 * subtype[msg-sent].system = $EhmiDeliveryStatusSubTypes

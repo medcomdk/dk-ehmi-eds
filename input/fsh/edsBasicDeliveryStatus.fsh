@@ -35,6 +35,7 @@ It is used when
 //* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#object
 * type.system = $EhmiDeliveryStatusTypes
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype 1..1 MS SU
 * subtype ^slicing.discriminator.type = #pattern

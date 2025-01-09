@@ -19,6 +19,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * contained[+] = s-05-MSH-Receiver
 * id = "EDS-PDS-05.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
@@ -97,6 +98,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * contained[+] = s-05-MSH-Receiver
 * id = "EDS-PDS-05.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 
 * subtype[msg-sent].code = $EhmiDeliveryStatusSubTypes#msg-sent

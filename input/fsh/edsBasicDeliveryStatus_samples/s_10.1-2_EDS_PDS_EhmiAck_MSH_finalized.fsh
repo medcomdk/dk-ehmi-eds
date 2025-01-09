@@ -23,6 +23,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 "
 * id = "EDS-PDS-10.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-received].code = $EhmiDeliveryStatusSubTypes#msg-received
 * subtype[msg-received].system = $EhmiDeliveryStatusSubTypes
@@ -131,6 +132,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * contained[+] = s-02-MSH-Sender
 * id = "EDS-PDS-10.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
