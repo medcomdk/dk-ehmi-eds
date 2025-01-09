@@ -169,8 +169,8 @@ It is used when
 * entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage (exactly)
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
-* entity[ehmiMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+* entity[ehmiMessage].detail ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiMessage].detail contains
@@ -179,7 +179,7 @@ It is used when
     ehmiStatisticalInfo 0..1 
 * entity[ehmiMessage].detail 2..2
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 //* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
 //* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
@@ -201,8 +201,8 @@ It is used when
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope (exactly)
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
-* entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+* entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiMessageEnvelope].detail contains
@@ -229,8 +229,8 @@ It is used when
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope (exactly)
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
-* entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+* entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiTransportEnvelope].detail contains
@@ -255,8 +255,8 @@ It is used when
 * entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage (exactly)
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigMessage].type.display = "Original Message"
-* entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+* entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open  
   * ^short = "something short"
 * entity[ehmiOrigMessage].detail contains
@@ -279,8 +279,8 @@ It is used when
 * entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope (exactly)
 * entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigTransportEnvelope].type.display = "Original Transport Envelope"
-* entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+* entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open //#closed eller #open 
   * ^short = "something short"
 * entity[ehmiOrigTransportEnvelope].detail contains
