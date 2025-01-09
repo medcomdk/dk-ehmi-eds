@@ -160,10 +160,10 @@ It is used when
 * entity.type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessage]
 * entity[ehmiMessage].what.identifier 1..1 MS SU
-* entity[ehmiMessage].type 1..1 MS 
-* entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
-* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code 1..1 MS 
+//* entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
+* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage (exactly)
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
@@ -192,9 +192,9 @@ It is used when
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
 //* entity[ehmiMessageEnvelope]
 * entity[ehmiMessageEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiMessageEnvelope].type 1..1 MS 
-* entity[ehmiMessageEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
+* entity[ehmiMessageEnvelope].type.code 1..1 MS 
+//* entity[ehmiMessageEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
@@ -218,9 +218,9 @@ It is used when
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 //* entity[ehmiTransportEnvelope]
 * entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiTransportEnvelope].type 1..1 MS
-* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code 1..1 MS
+//* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
@@ -242,10 +242,10 @@ It is used when
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
-* entity[ehmiOrigMessage].type 1..1 MS
-* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
-* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code 1..1 MS
+//* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage (exactly)
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigMessage].type.display = "Original Message"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
@@ -264,10 +264,10 @@ It is used when
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiOrigTransportEnvelope]
 * entity[ehmiOrigTransportEnvelope].what.identifier 1..1 MS SU
-* entity[ehmiOrigTransportEnvelope].type 1..1 MS
-* entity[ehmiOrigTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
-* entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
+* entity[ehmiOrigTransportEnvelope].type.code 1..1 MS
+//* entity[ehmiOrigTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
+* entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope (exactly)
 * entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigTransportEnvelope].type.display = "Original Transport Envelope"
 * entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #value
