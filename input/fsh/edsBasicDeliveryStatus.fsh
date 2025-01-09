@@ -161,6 +161,8 @@ It is used when
 //* entity[ehmiMessage]
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type.code 1..1 MS 
+* entity[ehmiMessage].type.system 1..1 MS 
+* entity[ehmiMessage].type.display 1..1 MS
 //* entity[ehmiMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage (exactly)
@@ -193,8 +195,8 @@ It is used when
 //* entity[ehmiMessageEnvelope]
 * entity[ehmiMessageEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiMessageEnvelope].type.code 1..1 MS 
-//* entity[ehmiMessageEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
+* entity[ehmiMessageEnvelope].type.system 1..1 MS 
+* entity[ehmiMessageEnvelope].type.display 1..1 MS
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope (exactly)
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
@@ -219,6 +221,8 @@ It is used when
 //* entity[ehmiTransportEnvelope]
 * entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiTransportEnvelope].type.code 1..1 MS
+* entity[ehmiTransportEnvelope].type.system 1..1 MS 
+* entity[ehmiTransportEnvelope].type.display 1..1 MS
 //* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope (exactly)
@@ -243,6 +247,8 @@ It is used when
 //* entity[ehmiOrigMessage]
 * entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type.code 1..1 MS
+* entity[ehmiOrigMessage].type.system 1..1 MS 
+* entity[ehmiOrigMessage].type.display 1..1 MS
 //* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
 * entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage (exactly)
@@ -265,6 +271,8 @@ It is used when
 //* entity[ehmiOrigTransportEnvelope]
 * entity[ehmiOrigTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigTransportEnvelope].type.code 1..1 MS
+* entity[ehmiOrigTransportEnvelope].type.system 1..1 MS 
+* entity[ehmiOrigTransportEnvelope].type.display 1..1 MS
 //* entity[ehmiOrigTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope (exactly)
