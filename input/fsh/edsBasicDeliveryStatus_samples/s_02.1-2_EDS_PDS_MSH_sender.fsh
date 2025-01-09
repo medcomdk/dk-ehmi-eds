@@ -53,10 +53,10 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
-// Patient
+// Patient[0]
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
-// Message
+// Message[1]
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
 * entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
@@ -66,7 +66,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
-// Message Envelope
+// Message Envelope[2]
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
@@ -74,7 +74,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
-// Transport Envelope    
+// Transport Envelope[3]    
 * entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
