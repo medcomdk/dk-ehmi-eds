@@ -149,7 +149,7 @@ It is used when
 // entity
 * entity 2..
 * entity ^slicing.discriminator.type = #pattern
-* entity ^slicing.discriminator.path = "type"
+* entity ^slicing.discriminator.path = "type.code"
 * entity ^slicing.rules = #open
 * entity contains
     ehmiMessage 1..1 and
