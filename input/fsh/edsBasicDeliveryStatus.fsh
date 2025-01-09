@@ -178,13 +178,13 @@ It is used when
     ehmiStatisticalInfo 0..1 
 * entity[ehmiMessage].detail 2..3
 * entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 //* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
 //* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 
@@ -210,10 +210,10 @@ It is used when
 * entity[ehmiMessageEnvelope].detail 0..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType (exactly)
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString 1..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString ^short = "equals 'SBDH/DocumentIdentification/Type/[value]' e.g. Bundle"
+//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
+//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString 1..1
