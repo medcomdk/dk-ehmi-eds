@@ -184,7 +184,7 @@ It is used when
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 
@@ -201,7 +201,7 @@ It is used when
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
 * entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type.value
+  * ^slicing.discriminator.path = type
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiMessageEnvelope].detail contains
@@ -209,7 +209,7 @@ It is used when
 //    ehmiMessageVersion 0..1 
 * entity[ehmiMessageEnvelope].detail 0..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType (exactly)
+* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType (exactly)
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
 //* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString 1..1
@@ -237,11 +237,11 @@ It is used when
     ehmiTransportEnvelopeVersion 0..1
 * entity[ehmiTransportEnvelope].detail 0..2
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString ^short = "= 'SBDH'"
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 //* entity[ehmiOrigMessage]
