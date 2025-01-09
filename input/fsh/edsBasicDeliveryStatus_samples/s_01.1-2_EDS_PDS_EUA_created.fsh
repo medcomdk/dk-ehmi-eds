@@ -61,8 +61,10 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
+// AuditEvent​.entity[1]​.detail[0]​.type (l164​/c39)	error	The property 'value' is invalid
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
+// AuditEvent​.entity[1]​.detail[1]​.type (l171​/c42)	error	The property 'value' is invalid
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // MessageEnvelope (Bundle)
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
