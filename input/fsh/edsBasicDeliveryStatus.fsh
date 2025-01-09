@@ -195,7 +195,7 @@ It is used when
 * entity[ehmiMessageEnvelope].type.code 1..1 MS 
 //* entity[ehmiMessageEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
-* entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
+* entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope (exactly)
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
 * entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
@@ -221,7 +221,7 @@ It is used when
 * entity[ehmiTransportEnvelope].type.code 1..1 MS
 //* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope (exactly)
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
