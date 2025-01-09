@@ -1,3 +1,4 @@
+/*
 Instance: EdsBasicDeliveryStatusInstance
 InstanceOf: EdsBasicDeliveryStatus
 Description: "ChatGPT generated"
@@ -73,3 +74,4 @@ Description: "ChatGPT generated"
   * detail[ehmiTransportEnvelopeVersion]
     * type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
     * valueString = "1.2"
+*/
