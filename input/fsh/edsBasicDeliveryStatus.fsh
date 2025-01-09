@@ -158,13 +158,13 @@ It is used when
     ehmiTransportEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
     ehmiOrigTransportEnvelope 0..1 
-* entity.type from $EhmiDeliveryStatusEntityTypeValueSet
+* entity.type.code from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessage]
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type.code 1..1 MS 
 * entity[ehmiMessage].type.system 1..1 MS 
 * entity[ehmiMessage].type.display 1..1 MS
-* entity[ehmiMessage].type.code from $EhmiDeliveryStatusEntityTypeValueSet
+//* entity[ehmiMessage].type.code from $EhmiDeliveryStatusEntityTypeValueSet
 * entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage (exactly)
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
@@ -177,18 +177,20 @@ It is used when
     ehmiMessageVersion 1..1 and
     ehmiStatisticalInfo 0..1 
 * entity[ehmiMessage].detail 2..3
-* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+
+//* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
-//* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
-//* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+//* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
+//* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
+
+//* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 
-* entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
+//* entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
@@ -212,12 +214,6 @@ It is used when
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType (exactly)
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString 1..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString ^short = "equals 'SBDH/DocumentIdentification/Type/[value]' e.g. Bundle"
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString 1..1
-//* entity[ehmiMessageEnvelope].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 //* entity[ehmiTransportEnvelope]
 * entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiTransportEnvelope].type.code 1..1 MS
