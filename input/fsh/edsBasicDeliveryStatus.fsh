@@ -255,7 +255,7 @@ It is used when
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigMessage].type.display = "Original Message"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type.value
+  * ^slicing.discriminator.path = type
   * ^slicing.rules = #open  
   * ^short = "something short"
 * entity[ehmiOrigMessage].detail contains
