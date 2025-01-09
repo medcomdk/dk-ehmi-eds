@@ -169,7 +169,7 @@ It is used when
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+  * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open 
   * ^short = "something short"
 * entity[ehmiMessage].detail contains
