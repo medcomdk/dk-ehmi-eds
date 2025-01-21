@@ -25,9 +25,9 @@ There are two primary use cases for the EHMI delivery status service:
 
 These searches can be conducted:
 
-    1.  At the system level for the station’s own device_id (e.g., allowing professional systems to enable users to view the status of messages sent from their organization).
-    2.  At the citizen level for their own CPR number.
-    3.  At the superuser/supporter level for the CVR number of the user’s organization. Access at this level requires a specific role, assigned via the SEB User Catalog.
+1.  At the system level for the station’s own device_id (e.g., allowing professional systems to enable users to view the status of messages sent from their organization).
+2.  At the citizen level for their own CPR number.
+3.  At the superuser/supporter level for the CVR number of the user’s organization. Access at this level requires a specific role, assigned via the SEB User Catalog.
 
 ### Enrollment/Whitelisting of System Clients in EDS (For Registration, Search, and Lookup)
 
