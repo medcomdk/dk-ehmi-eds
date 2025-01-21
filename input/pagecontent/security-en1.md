@@ -1,6 +1,6 @@
-## 7.1	EHMI Delivery Status (EDS) 
+## 7.1 EHMI Delivery Status (EDS) 
 
-In [EHMI], the following stations are involved in point-to-point message transmissions: Business systems, message service handlers and access points.
+In EHMI, the following stations are involved in point-to-point message transmissions: Business systems, message service handlers and access points.
 
 All stations participating in an EHMI message transmission must register their message handling in the transmission status service EDS, as described in the FHIR implementation guide at https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/.
 
@@ -10,7 +10,7 @@ As stated in the FHIR implementation guide, shipment status is realized as a pro
 
 The shipping status contains sensitive personal information (in the form of the processing site that is included as the sender or recipient of a message), and user access therefore requires an NSIS level of 'Significant'.
 
-### 7.1.1	EDS use cases
+### 7.1.1 EDS use cases
 
 There are two main use cases for the use of the EDS shipment status service.
 
@@ -20,7 +20,7 @@ EDS provides an interface for searching and posting, which can be used for track
 Searching and posting can either take place: a. At the system level for the stations on their own device_id. (This allows, for example, functionality to be established from professional systems where users can search for the status of messages they have sent themselves.) b. At the citizen level on their own CPR
 c. At the super user/supplier (supporter) level on the CVR number for the user's organization and where the user is granted access via a special right (which is granted through the SEB user directory)
 
-### 7.1.2	Enrollment/whitelisting of system clients in EDS (for registration, search and lookup)
+### 7.1.2 Enrollment/whitelisting of system clients in EDS (for registration, search and lookup)
 Stations that register shipment status and can search and read their own registrations are enrolled as system clients. In addition to the elements described in section 3.3 Enrolling clients, the following must be specified when enrolling system clients: - The device_id with which the station is registered in EER - A list of organizational contexts for which the station sends/receives messages in the form of SOR code and GLN location number
 
 During enrollment, the following is specified as a scope element:
@@ -33,14 +33,14 @@ Metadata element Description ehmi:eer:device_id A specification of the device_id
 
 Note that the intention is that after the production pilot, the Authorization Server will instead look up a station's organizational contexts in the EER mailbox registry, and the explicit whitelisting will thus be eliminated. Example metadata document for an EDS system client:
 
-### 7.1.3	Enrollment/whitelisting of user clients (for search and posting)
+### 7.1.3 Enrollment/whitelisting of user clients (for search and posting)
 User clients used by citizens or super users/supporters to search and read shipment status records are enrolled only with the elements described in section 3.3 Enrollment of clients.
 
 During enrollment, the following scope element is specified:
 
 Metadata for an EDS user client for search and lookup For EDS user clients, only the metadata described in section 3.3.1 Metadata for clients must be specified. Example metadata document for an EDS user client:
 
-### 7.1.4	Call to Token Endpoint
+### 7.1.4 Call to Token Endpoint
 
 In the access to EDS, registrations are operated with organization-specific tokens, meaning that the individual stations' system clients that appear in multiple organizational contexts must obtain a separate token from the Authorization Server for each SOR/GLN context. In order to be issued an access token to access EDS, the following scopes are specified: scope Description
 
@@ -64,7 +64,7 @@ Claim               Description
 ehmi:eer:device_id  A specification of the device_id with which the station is registered in EER. 
 ehmi:org_context    The current organizational context for the station, specified as a JSON object consisting of name (organization name), sor (SOR code) and gln (location number).
 
-### 7.1.5	Call to EDS
+### 7.1.5 Call to EDS
 Calls to EDS are made as described in the general security model as REST calls over two-way TLS, with the access token (which is sender-constrained) in an HTTP header.
 
 Example of a system client's 'create' call to EDS with the AuditEvent resource specified as a JSON object:
