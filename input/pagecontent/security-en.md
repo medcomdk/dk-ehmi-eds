@@ -40,8 +40,15 @@ In addition to the elements described in section 3.3 (Client Enrollment) of the 
 
 The following is used as the scope element during enrollment:
 
-**Metadata for an EDS System Client  
-**In addition to the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’, the following metadata elements must be specified for system clients:
+<table border="1">
+    <tr>
+        <td>EDS system/AuditEvent.crs</td>
+    </tr>
+</table>
+
+**Metadata for an EDS System Client**
+
+In addition to the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’, the following metadata elements must be specified for system clients:
 
 <table border="1">
     <tr>
@@ -56,6 +63,29 @@ The following is used as the scope element during enrollment:
 </table>
 
 Example metadata document for an EDS system client:
+
+        {
+        "token_endpoint_auth_method": "tls_client_auth",
+        "grant_types": [
+            "client_credentials"
+        ],
+        "client_name": "Lægesystem XYZ - Frederiksbjerg Lægehus",
+        "scope": "EDS system/AuditEvent.crs",
+        "contacts": [
+            "døgnsupport@lægesystem-xyz.dk",
+            "+45 1234 5678"
+        ],
+        "tls_client_auth_subject_dn": "subject=CN=Lægesystem XYZ’s systemcertifikat, serialNumber=UI:DK-O:G:a262681f-2e94-45c5-aaea-aad4e9bc5768, O=Leverandør af Lægesystem XYZ, organizationIdentifier=NTRDK-12345678, C=DK",
+        "ehmi:eer:device_id": "c4b8d3ea-b187-426b-be77-bffd9f593d84",
+        "ehmi:org_context": [
+            {
+            "name": "Frederiksbjerg Lægehus",
+            "sor": "1216891000016007",
+            "gln": "5790000135912"
+            }
+        ]
+        }
+
 
 ### Enrollment/Whitelisting of User Clients in EDS (For Search and Lookup)
 
