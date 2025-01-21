@@ -1,6 +1,6 @@
 ## EHMI Delivery Status (EDS)
 
-In EHMI, the following *stations* participate in point-to-point message transmissions: professional systems, message-service handlers, and access points.
+In EHMI, the following *stations* participate in point-to-point message transmissions: professional systems (EUA), message-service handlers (MSH), and access points (AP).
 
 All stations involved in an EHMI message transmission must register their message handling in the EHMI Selivery Status service (EDS) as described in the FHIR implementation guide at https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/.
 
@@ -22,11 +22,12 @@ There are two primary use cases for the EHMI delivery status service:
 
     EDS provides an interface for searching and looking up message transmission statuses, either for track-and-trace purposes or troubleshooting.
 
-    These searches can be conducted:
 
-3.  At the system level for the station’s own device_id (e.g., allowing professional systems to enable users to view the status of messages sent from their organization).
-4.  At the citizen level for their own CPR number.
-5.  At the superuser/supporter level for the CVR number of the user’s organization. Access at this level requires a specific role, assigned via the SEB User Catalog.
+These searches can be conducted:
+
+    1.  At the system level for the station’s own device_id (e.g., allowing professional systems to enable users to view the status of messages sent from their organization).
+    2.  At the citizen level for their own CPR number.
+    3.  At the superuser/supporter level for the CVR number of the user’s organization. Access at this level requires a specific role, assigned via the SEB User Catalog.
 
 ### Enrollment/Whitelisting of System Clients in EDS (For Registration, Search, and Lookup)
 
