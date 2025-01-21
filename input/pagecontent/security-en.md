@@ -42,10 +42,17 @@ The following is used as the scope element during enrollment:
 **Metadata for an EDS System Client  
 **In addition to the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’, the following metadata elements must be specified for system clients:
 
-| **Metadata Element** </td><td>**Description**                                                                                                                                               |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ehmi:eer:device_id   </td><td>Specifies the device_id the station is registered with in the EER.                                                                                            |
-| ehmi:org_context     </td><td>An array of JSON objects consisting of name (organization name), sor (SOR code), and gln (location number) for the which the station sends/receives messages. |
+<table border="1">
+    <tr>
+        <th> Metadata Element </th> <th> Description </th>
+    </tr>
+    <tr>
+        <td>ehmi:eer:device_id   </td><td>Specifies the device_id the station is registered with in the EER.                                                                                           </td>
+    </tr>                                                                                                   </td>
+    <tr>
+        <td>ehmi:org_context     </td><td>An array of JSON objects consisting of name (organization name), sor (SOR code), and gln (location number) for the which the station sends/receives messages.</td>
+    </tr>
+</table>
 
 Example metadata document for an EDS system client:
 
@@ -67,13 +74,26 @@ When calling EDS, organization-specific tokens are utilized for registrations. T
 
 To obtain an access token for EDS, the following scopes are used:
 
-| **Scope**             </td><td>**Description**                                                                                                    |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------|
-| EDS                   </td><td>Indicates that the client is requesting an access token for EDS.                                                   |
-| system/AuditEvent.crs </td><td>(For system clients only) Specifies that the token will be used to register/read/search delivery status resources. |
-| user/AuditEvent.rs    </td><td>(For user clients only) Specifies that the token will be used to read/search delivery status resources.            |
-| SOR:\<XXXXX\>         </td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.                             |
-| GLN:\<YYYYY\>         </td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.                  |
+<table border="1">
+    <tr>
+        <th> Scope </th> <th> Description </th>
+    </tr>
+    <tr>
+        <td>EDS                   </td><td>Indicates that the client is requesting an access token for EDS.                                                  </td>
+    </tr>                                                                                                   </td>
+    <tr>
+        <td>system/AuditEvent.crs </td><td>(For system clients only) Specifies that the token will be used to register/read/search delivery status resources.</td>
+    </tr>                                                                                                   </td>
+    <tr>
+        <td>user/AuditEvent.rs    </td><td>(For user clients only) Specifies that the token will be used to read/search delivery status resources.           </td>
+    </tr>                                                                                                   </td>
+    <tr>
+        <td>SOR:\<XXXXX\>         </td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.                            </td>
+    </tr>                                                                                                   </td>
+    <tr>
+        <td>GLN:\<YYYYY\>         </td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.                 </td>
+    </tr>
+</table>
 
 Example scope for a system client:   
   
@@ -96,6 +116,8 @@ For access tokens issued to system clients performing *registrations* in EDS, th
     </tr>
     <tr>
         <td>ehmi:eer:device_id </td><td>An indication of the device_id with which the station is registered in the EER.</td>
+    </tr>
+    <tr>
         <td>ehmi:org_context   </td><td>The current organizational context of the station, specified as a JSON object consisting of name (organization name), sor (SOR code), and gln (location number). </td>
     </tr>
 </table>
