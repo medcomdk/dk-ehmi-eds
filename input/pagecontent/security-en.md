@@ -1,86 +1,174 @@
-## 7.1	EHMI Delivery Status (EDS) 
+## EHMI Delivery Status (EDS)
 
-In [EHMI], the following stations are involved in point-to-point message transmissions: Business systems, message service handlers and access points.
+In EHMI, the following *stations* participate in point-to-point message transmissions: professional systems, message-service handlers, and access points.
 
-All stations participating in an EHMI message transmission must register their message handling in the transmission status service EDS, as described in the FHIR implementation guide at https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/.
+All stations involved in an EHMI message transmission must register their message handling in the EHMI Selivery Status service (EDS) as described in the FHIR implementation guide at https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/.
 
-The stations are created in the EHMI Endpoint register (EER) and are assigned a unique device_id during creation.
+Stations are registered in the EHMI Endpoint Register (EER) and are assigned a unique *device_id* during this process.
 
-As stated in the FHIR implementation guide, shipment status is realized as a profiling of the FHIR AuditEvent resource.
+As outlined in the FHIR implementation guide, delivery status is implemented as a profiling of the FHIR AuditEvent resource.
 
-The shipping status contains sensitive personal information (in the form of the processing site that is included as the sender or recipient of a message), and user access therefore requires an NSIS level of 'Significant'.
+Delivery status contains sensitive personal information (such as the sender or recipient organization involved in the message transmission), and user access therefore requires an NSIS level of “Substantial.”
 
-### 7.1.1	EDS use cases
+### EDS usecases
 
-There are two main use cases for the use of the EDS shipment status service.
+There are two primary use cases for the EHMI delivery status service:
 
-The stations in an EHMI shipment each record the shipment status in EDS. Registration is done at system level, and the individual stations can create shipment status for the organizational contexts (combinations of GLN numbers and SOR codes) for which they are whitelisted (see below).
+1.  **Registration of delivery status:**
 
-EDS provides an interface for searching and posting, which can be used for track'n'trace of message sending or for troubleshooting.
-Searching and posting can either take place: a. At the system level for the stations on their own device_id. (This allows, for example, functionality to be established from professional systems where users can search for the status of messages they have sent themselves.) b. At the citizen level on their own CPR
-c. At the super user/supplier (supporter) level on the CVR number for the user's organization and where the user is granted access via a special right (which is granted through the SEB user directory)
+    Stations in an EHMI transmission individually *register delivery status* in EDS. Registration occurs at the system level, and stations can create delivery statuses for the organizational contexts (combinations of GLN numbers and SOR codes) they are whitelisted for.
 
-### 7.1.2	Enrollment/whitelisting of system clients in EDS (for registration, search and lookup)
-Stations that register shipment status and can search and read their own registrations are enrolled as system clients. In addition to the elements described in section 3.3 Enrolling clients, the following must be specified when enrolling system clients: - The device_id with which the station is registered in EER - A list of organizational contexts for which the station sends/receives messages in the form of SOR code and GLN location number
+2.  **Search and lookup functionality:**
 
-During enrollment, the following is specified as a scope element:
+    EDS provides an interface for searching and looking up message transmission statuses, either for track-and-trace purposes or troubleshooting.
 
-(The above system/AuditEvent.crs syntax is based on the definition of scopes for FHIR resources in [SMART].) Metadata for an EDS system client
+    These searches can be conducted:
 
-In addition to the metadata elements described in section 3.3.1 Metadata for clients, the following metadata elements must be specified for system clients.
+3.  At the system level for the station’s own device_id (e.g., allowing professional systems to enable users to view the status of messages sent from their organization).
+4.  At the citizen level for their own CPR number.
+5.  At the superuser/supporter level for the CVR number of the user’s organization. Access at this level requires a specific role, assigned via the SEB User Catalog.
 
-Metadata element Description ehmi:eer:device_id A specification of the device_id with which the station is registered in EER. ehmi:org_context An array of JSON objects consisting of name (organization name), sor (SOR code) and gln (location number) for which the station sends/receives messages.
+### Enrollment/Whitelisting of System Clients in EDS (For Registration, Search, and Lookup)
 
-Note that the intention is that after the production pilot, the Authorization Server will instead look up a station's organizational contexts in the EER mailbox registry, and the explicit whitelisting will thus be eliminated. Example metadata document for an EDS system client:
+Stations registering delivery statuses and searching or reading their own registrations are enrolled as system clients.
 
-### 7.1.3	Enrollment/whitelisting of user clients (for search and posting)
-User clients used by citizens or super users/supporters to search and read shipment status records are enrolled only with the elements described in section 3.3 Enrollment of clients.
+In addition to the elements described in section 3.3 (Client Enrollment) of the general ‘Sikkerhedsmodel’, the following must be specified during the enrollment of system clients:
 
-During enrollment, the following scope element is specified:
+-   The *device_id* with which the station is registered in the EER.
+-   A list of *organizational contexts* the station sends/receives messages for, specified as SOR code and GLN location number.
 
-Metadata for an EDS user client for search and lookup For EDS user clients, only the metadata described in section 3.3.1 Metadata for clients must be specified. Example metadata document for an EDS user client:
+The following is used as the scope element during enrollment:
 
-### 7.1.4	Call to Token Endpoint
+**Metadata for an EDS System Client  
+**In addition to the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’, the following metadata elements must be specified for system clients:
 
-In the access to EDS, registrations are operated with organization-specific tokens, meaning that the individual stations' system clients that appear in multiple organizational contexts must obtain a separate token from the Authorization Server for each SOR/GLN context. In order to be issued an access token to access EDS, the following scopes are specified: scope Description
+| **Metadata Element** | **Description**                                                                                                                                               |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ehmi:eer:device_id   | Specifies the device_id the station is registered with in the EER.                                                                                            |
+| ehmi:org_context     | An array of JSON objects consisting of name (organization name), sor (SOR code), and gln (location number) for the which the station sends/receives messages. |
 
-EDS An indication to EDS that the client wants an access token. system/AuditEvent.crs (for system clients only) An indication that the token should be able to register/read/search shipment status resources (which are profiles of FHIR's AuditEvent resource). user/AuditEvent.rs (for user clients only) An indication that the token should be able to read and search shipment status resources (which are profiles of FHIR's AuditEvent resource). SOR: (only for system clients and only for registrations) A statement of the organization's SOR code, where is added to the code itself.
+Example metadata document for an EDS system client:
 
-GLN: (only for system clients and only for registrations) A statement of the organization's GLN location number, where is set to the location number itself.
+### Enrollment/Whitelisting of User Clients in EDS (For Search and Lookup)
 
-Example of a combined scope included in the call for a system client:
+User clients used by citizens or superusers/supporters for searching and reading delivery status registrations are only enrolled with the elements described in section 3.3 (Client Enrollment) of the general ‘Sikkerhedsmodel’.
 
-The example of a call to Token Endpoint with the above example scope (note that the call is made via 2-way TLS):
+The following is used as the scope element during enrollment:
 
-**Validations of the call at Authorization Server**
+**Metadata for an EDS User Client for Search and Lookup**  
+  
+For EDS user clients, only the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’ are specified.
 
-The call to the Token Endpoint is validated at the Authorization Server, which validates the client's TLS client certificate and checks that the client is enrolled/whitelisted with the specified scopes.
+Example metadata document for an EDS user client:
 
-For system clients requesting a token to make registrations, the Authorization Server thus maps the client_id from the call to the registered device_id and validates that the client is whitelisted for both the EDS service, the specified 'create' operation for the AuditEvent resource, and the specified organizational context in the form of SOR code and GLN location number.
+### Calls to the Token Endpoint
 
-For access tokens issued to system clients that make registrations in EDS, the Authorization Server embeds the device_id and the organizational context as additional claims in the token in the following form:
+When calling EDS, organization-specific tokens are utilized for registrations. This means that the individual stations’ system clients, which operate in multiple organizational contexts, must retrieve a separate token from the Authorization Server for each SOR/GLN context.
 
-Claim               Description 
-ehmi:eer:device_id  A specification of the device_id with which the station is registered in EER. 
-ehmi:org_context    The current organizational context for the station, specified as a JSON object consisting of name (organization name), sor (SOR code) and gln (location number).
+To obtain an access token for EDS, the following scopes are used:
 
-### 7.1.5	Call to EDS
-Calls to EDS are made as described in the general security model as REST calls over two-way TLS, with the access token (which is sender-constrained) in an HTTP header.
+| **Scope**             | **Description**                                                                                                    |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------|
+| EDS                   | Indicates that the client is requesting an access token for EDS.                                                   |
+| system/AuditEvent.crs | (For system clients only) Specifies that the token will be used to register/read/search delivery status resources. |
+| user/AuditEvent.rs    | (For user clients only) Specifies that the token will be used to read/search delivery status resources.            |
+| SOR:\<XXXXX\>         | (For system clients and for registrations only) Specifies the organization’s SOR code.                             |
+| GLN:\<YYYYY\>         | (For system clients and for registrations only) Specifies the organization’s GLN location number.                  |
 
-Example of a system client's 'create' call to EDS with the AuditEvent resource specified as a JSON object:
+Example scope for a system client:   
+  
+Example call to the Token Endpoint using the above scope:
 
-**EDS access control**
+**Validation at the Authorization Server  
+**The call to the Token Endpoint is validated by the Authorization Server, which verifies the client’s TLS client certificate and checks that the client is enrolled/whitelisted with the specified scopes.
 
-The sending status service checks that the access token is both valid and issued to EDS and validates the 'sender-contrained' property, that is, validates that the TLS client certificate used by the client matches the certificate that was embedded in the access token.
+For system clients requesting a token to perform *registrations*, the Authorization Server maps the client_id from the call to the registered device_id and verifies that the client is whitelisted for:
 
-When registering a shipment status, the service also checks that the token contains the necessary scopes for the client to make registrations in EDS. EDS also checks whether the SOR code, GLN location number and device_id that it can extract from the access token match the information in the accompanying AuditEvent resource. When searching and reading, the EDS service limits the access:
+-   The EDS service,
+-   The specified “create” operation for the AuditEvent resource, and
+-   The specified organizational context, in the form of the SOR code and GLN location number.
 
-1. For system clients representing a station in a message flow: To registrations made by the station's own device_id. EDS thus restricts access to shipping status registrations that include the same device_id as stated in the access token's ehmi:eer:device_id claim.
+For access tokens issued to system clients performing *registrations* in EDS, the Authorization Server embeds the device_id and the organizational context as additional claims in the token in the following format:
 
-2. For citizens who access EDS via a user client: For registrations made using the citizen's own CPR number.
+| **Claim**          | **Beskrivelse**                                                                                                                                                  |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ehmi:eer:device_id | An indication of the device_id with which the station is registered in the EER.                                                                                  |
+| ehmi:org_context   | The current organizational context of the station, specified as a JSON object consisting of name (organization name), sor (SOR code), and gln (location number). |
 
-EDS thus restricts access to shipment status records that include the same patient CPR number as appears from the access token's CPR claim.
+### Calls to EDS
 
-1. For super users/supporters who access EDS via a user client: For registrations regarding their own organization at CVR level.
+Calls to EDS are made as described in the general security model, using REST calls over mutual TLS (two-way TLS), with the access token (which is sender-constrained) included in an HTTP header.
 
-EDS first validates that the access-granting role assigned to superusers/supporters is reflected in the access token's role structure in the priv claim. EDS then restricts access to shipment status records that include the same organization's CVR number as reflected in the access token's CVR claim.
+An example of a system client’s create call to EDS with the AuditEvent resource provided as a JSON object:
+
+**Access Control in EDS  
+**The delivery status service (EDS) validates the following:
+
+1.  That the access token is valid and issued for EDS.
+2.  The “sender-constrained” property is verified, meaning the TLS client certificate used by the client matches the certificate embedded in the access token.
+
+For *registrations*, EDS also checks that:
+
+1.  The access token contains the necessary scopes for the client to perform registrations in EDS.
+2.  The SOR code, GLN location number, and device_id extracted from the access token match the information in the accompanying AuditEvent resource.**  
+    **
+
+For *searches and lookups*, EDS restricts access based on the following:
+
+1.  *System clients representing a station in a message flow*: Access is limited to delivery status registrations created by the station’s own device_id.   
+      
+    EDS restricts access to delivery status registrations where the device_id matches the ehmi:eer:device_id claim in the access token.
+2.  *Citizens accessing EDS via a user client*: Access is limited to delivery status registrations for the citizen’s own CPR number.  
+      
+    EDS restricts access to delivery status registrations where the patient’s CPR number matches the cpr claim in the access token.
+3.  *Superusers/supporters accessing EDS via a user client*: Access is limited to registrations concerning their own organization at the CVR level.  
+      
+    EDS first verifies that the granting role assigned to the superuser/supporter is included in the role structure (priv claim) of the access token. EDS then restricts access to delivery status registrations where the organization’s CVR number matches the cvr claim in the access token.
+
+# Referencer
+
+-   [BCP195] ”BCP 195”, <https://www.rfc-editor.org/info/bcp195>
+-   [CORS.Protocol] ”CORS Protocol”, [https://fetch.spec.whatwg.org/\#http-cors-protocol](https://fetch.spec.whatwg.org/#http-cors-protocol)
+-   [EHMI] ”Ny infrastruktur (EHMI)”, https://medcom.dk/projekter/kommunale-proevesvar-paa-ny-infrastruktur/kommunale-proevesvar-ny-infrastruktur-ehmi/
+-   [FAPI] ”FAPI 2.0 Security Profile”, <https://openid.net/specs/fapi-security-profile-2_0-04.html>
+-   [HEART] ”Health Relationship Trust Profile for OAuth 2.0”, <https://openid.net/specs/openid-heart-oauth2-1_0.html>
+-   [IETF-RFC] ”The Internet Engineering Task Force (IETF) - RFCs”, <https://www.ietf.org/standards/rfcs/>
+
+    [IDWS] “OIO Identity Based Web Services 1.2 (OIO IDWS)”, <https://digst.dk/it-loesninger/standarder/oio-identity-based-web-services-12-oio-idws/>
+
+-   [I-D.ietf-oauth-security-topics], “OAuth 2.0 Security Best Current Practice”, <https://www.ietf.org/archive/id/draft-ietf-oauth-security-topics-21.txt>
+-   [iGOV-OAuth] “International Government Assurance Profile (iGov) for OAuth 2.0”, <https://openid.net/specs/openid-igov-oauth2-1_0.html>
+-   [iGOV-OIDC] “International Government Assurance Profile (iGov) for OpenID Connect 1.0”, <https://openid.net/specs/openid-igov-openid-connect-1_0.html>
+-   [JTP-H] “JWT Token Profile for Healthcare (JTP-H)”
+
+    [JWKS] “JSON Web Key (JWK)”, <https://datatracker.ietf.org/doc/html/rfc7517>
+
+-   [JWT] “JSON Web Token (JWT)”, <https://datatracker.ietf.org/doc/html/rfc7519>
+-   [NSIS] “National Standard for Identiteters Sikringsniveauer”, <https://digst.dk/it-loesninger/standarder/nsis/>
+-   [OAuth] “The OAuth 2.0 Authorization Framework”, <https://datatracker.ietf.org/doc/html/rfc6749>
+-   [OAuth-DCR] ”OAuth 2.0 Dynamic Client Registration Protocol”, <https://datatracker.ietf.org/doc/html/rfc7591>
+
+    [OAuth-DPOP] “OAuth 2.0 Demonstrating Proof of Possession (DPoP)”, <https://datatracker.ietf.org/doc/html/rfc9449>
+
+    [OAuth-MTLS] “OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens”, <https://datatracker.ietf.org/doc/html/rfc8705>
+
+-   [OAuth-PAR] ”OAuth 2.0 Pushed Authorization Requests”, <https://datatracker.ietf.org/doc/html/rfc9126>
+
+    [OAuth-PKCE] “Proof Key for Code Exchange by OAuth Public Clients”, <https://datatracker.ietf.org/doc/html/rfc7636>
+
+-   [OAuth-TKEX] ”OAuth 2.0 Token Exchange”, <https://www.rfc-editor.org/rfc/rfc8693>
+-   [OCES] “OCES (Offentlige certifikater til Elektronisk Service)”, <https://certifikat.gov.dk/politikker.for.tillidstjenester/> og <https://mitid-erhverv.dk/avanceret/certifikater/>
+-   [OIDC] ”OpenID Connect Core 1.0”, <https://openid.net/specs/openid-connect-core-1_0.html>
+-   [OIO-OIDC] “OIO Open ID Connect Profiles Version 0.91”, <https://digst.dk/media/24669/oio-oidc-profiles-v091.pdf>
+
+    [preload] “HSTS Preload List Submission”, <https://hstspreload.org/>
+
+-   [RFC6797] “HTTP Strict Transport Security (HSTS)”, <https://datatracker.ietf.org/doc/html/rfc6797>
+-   [RFC8414] “OAuth 2.0 Authorization Server Metadata”, <https://datatracker.ietf.org/doc/html/rfc8414>
+-   [RFC8659] “DNS Certification Authority Authorization (CAA) Resource Record”, <https://datatracker.ietf.org/doc/html/rfc8659>
+-   [RFC8725] “JSON Web Token Best Current Practices”, <https://datatracker.ietf.org/doc/html/rfc8725>
+-   [RFC9207] “OAuth 2.0 Authorization Server Issuer Identification”, <https://datatracker.ietf.org/doc/html/rfc9207>
+-   [RFC9525] “Service Identity in TLS”, <https://datatracker.ietf.org/doc/html/rfc9525>
+-   [PSD 2] ”PSD 2 Direktiv”, <https://www.finanstilsynet.dk/Lovgivning/Ny_EU_lovsamling/PSD-2>
+-   [SMART] ”SMART App Launch 2.2.0”, <http://hl7.org/fhir/smart-app-launch/index.html>
+-   [WS-Trust] “WS-Trust 1.4”, <https://docs.oasis-open.org/ws-sx/ws-trust/v1.4/errata01/os/ws-trust-1.4-errata01-os-complete.html>
