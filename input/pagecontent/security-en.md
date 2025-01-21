@@ -62,7 +62,7 @@ In addition to the metadata elements described in section 3.3.1 of the general �
     </tr>
 </table>
 
-Example metadata document for an EDS system client:
+__*Example metadata document for an EDS system client:*__
 
         {
         "token_endpoint_auth_method": "tls_client_auth",
@@ -143,7 +143,7 @@ For access tokens issued to system clients performing *registrations* in EDS, th
 
 <table border="1">
     <tr>
-        <th> <b>Claim</b> </th> <th> **Beskrivelse** </th>
+        <th> <b>Claim</b> </th> <th> Description </th>
     </tr>
     <tr>
         <td>ehmi:eer:device_id</td><td>An indication of the device_id with which the station is registered in the EER.</td>
@@ -159,8 +159,9 @@ Calls to EDS are made as described in the general security model, using REST cal
 
 An example of a system client’s create call to EDS with the AuditEvent resource provided as a JSON object:
 
-**Access Control in EDS  
-**The delivery status service (EDS) validates the following:
+**Access Control in EDS**
+
+The delivery status service (EDS) validates the following:
 
 1.  That the access token is valid and issued for EDS.
 2.  The “sender-constrained” property is verified, meaning the TLS client certificate used by the client matches the certificate embedded in the access token.
