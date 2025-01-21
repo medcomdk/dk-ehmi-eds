@@ -33,7 +33,7 @@ These searches can be conducted:
 
 Stations registering delivery statuses and searching or reading their own registrations are enrolled as system clients.
 
-In addition to the elements described in section 3.3 (Client Enrollment) of the general ‘Sikkerhedsmodel’, the following must be specified during the enrollment of system clients:
+In addition to the elements described in section 3.3 (Client Enrollment) __*of the general ‘Sikkerhedsmodel’*__, the following must be specified during the enrollment of system clients:
 
 -   The *device_id* with which the station is registered in the EER.
 -   A list of *organizational contexts* the station sends/receives messages for, specified as SOR code and GLN location number.
@@ -48,7 +48,7 @@ The following is used as the scope element during enrollment:
 
 **Metadata for an EDS System Client**
 
-In addition to the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’, the following metadata elements must be specified for system clients:
+In addition to the metadata elements described in section 3.3.1 __*of the general ‘Sikkerhedsmodel’*__, the following metadata elements must be specified for system clients:
 
 <table border="1">
     <tr>
@@ -89,13 +89,13 @@ __*Example metadata document for an EDS system client:*__
 
 ### Enrollment/Whitelisting of User Clients in EDS (For Search and Lookup)
 
-User clients used by citizens or superusers/supporters for searching and reading delivery status registrations are only enrolled with the elements described in section 3.3 (Client Enrollment) of the general ‘Sikkerhedsmodel’.
+User clients used by citizens or superusers/supporters for searching and reading delivery status registrations are only enrolled with the elements described in section 3.3 (Client Enrollment) __*of the general ‘Sikkerhedsmodel’*__.
 
 The following is used as the scope element during enrollment:
 
 **Metadata for an EDS User Client for Search and Lookup**  
   
-For EDS user clients, only the metadata elements described in section 3.3.1 of the general ‘Sikkerhedsmodel’ are specified.
+For EDS user clients, only the metadata elements described in section 3.3.1 __*of the general ‘Sikkerhedsmodel’*__ are specified.
 
 Example metadata document for an EDS user client:
 
