@@ -45,13 +45,13 @@ The following is used as the scope element during enrollment:
 
 <table border="1">
     <tr>
-        <th> Metadata Element </th> <th> Description </th>
+        <th>Metadata Element</th> <th> Description </th>
     </tr>
     <tr>
-        <td>ehmi:eer:device_id   </td><td>Specifies the device_id the station is registered with in the EER.                                                                                           </td>
-    </tr>                                                                                                   </td>
+        <td>ehmi:eer:device_id</td><td>Specifies the device_id the station is registered with in the EER.</td>
+    </tr>
     <tr>
-        <td>ehmi:org_context     </td><td>An array of JSON objects consisting of name (organization name), sor (SOR code), and gln (location number) for the which the station sends/receives messages.</td>
+        <td>ehmi:org_context</td><td>An array of JSON objects consisting of name (organization name), sor (SOR code), and gln (location number) for the which the station sends/receives messages.</td>
     </tr>
 </table>
 
@@ -80,19 +80,19 @@ To obtain an access token for EDS, the following scopes are used:
         <th> Scope </th> <th> Description </th>
     </tr>
     <tr>
-        <td>EDS                   </td><td>Indicates that the client is requesting an access token for EDS.                                                  </td>
-    </tr>                                                                                                   </td>
+        <td>EDS</td><td>Indicates that the client is requesting an access token for EDS.</td>
+    </tr>
     <tr>
-        <td>system/AuditEvent.crs </td><td>(For system clients only) Specifies that the token will be used to register/read/search delivery status resources.</td>
-    </tr>                                                                                                   </td>
+        <td>system/AuditEvent.crs</td><td>(For system clients only) Specifies that the token will be used to register/read/search delivery status resources.</td>
+    </tr>
     <tr>
-        <td>user/AuditEvent.rs    </td><td>(For user clients only) Specifies that the token will be used to read/search delivery status resources.           </td>
-    </tr>                                                                                                   </td>
+        <td>user/AuditEvent.rs</td><td>(For user clients only) Specifies that the token will be used to read/search delivery status resources.</td>
+    </tr>
     <tr>
-        <td>SOR:\<XXXXX\>         </td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.                            </td>
-    </tr>                                                                                                   </td>
+        <td>SOR:\<XXXXX\></td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.</td>
+    </tr>
     <tr>
-        <td>GLN:\<YYYYY\>         </td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.                 </td>
+        <td>GLN:\<YYYYY\></td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.</td>
     </tr>
 </table>
 
@@ -116,10 +116,10 @@ For access tokens issued to system clients performing *registrations* in EDS, th
         <th> <b>Claim</b> </th> <th> **Beskrivelse** </th>
     </tr>
     <tr>
-        <td>ehmi:eer:device_id </td><td>An indication of the device_id with which the station is registered in the EER.</td>
+        <td>ehmi:eer:device_id</td><td>An indication of the device_id with which the station is registered in the EER.</td>
     </tr>
     <tr>
-        <td>ehmi:org_context   </td><td>The current organizational context of the station, specified as a JSON object consisting of name (organization name), sor (SOR code), and gln (location number). </td>
+        <td>ehmi:org_context</td><td>The current organizational context of the station, specified as a JSON object consisting of name (organization name), sor (SOR code), and gln (location number).</td>
     </tr>
 </table>
 
