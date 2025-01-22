@@ -1,12 +1,12 @@
-## EHMI Delivery Status (EDS)
+## Security for EHMI Delivery Status (EDS)
 
 In EHMI, the following *stations* participate in point-to-point message transmissions: professional systems (EUA), message-service handlers (MSH), and access points (AP).
 
 All stations involved in an EHMI message transmission must register their message handling in the EHMI Selivery Status service (EDS) as described in this FHIR implementation guide.
 
-Stations are registered in the EHMI Endpoint Register (EER) and are assigned a unique *device_id* during this process.
+Stations are registered in the EHMI Endpoint Register (EER) as devices and are assigned a unique *device_id* during this process.
 
-As outlined in the FHIR implementation guide, delivery status is implemented as a profiling of the FHIR AuditEvent resource.
+As outlined in this FHIR implementation guide, delivery status is implemented as a profiling of the FHIR AuditEvent resource.
 
 Delivery status contains sensitive personal information (such as the sender or recipient organization involved in the message transmission), and user access therefore requires an NSIS level of “Substantial.”
 
