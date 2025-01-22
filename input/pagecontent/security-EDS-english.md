@@ -163,7 +163,7 @@ To obtain an access token for EDS, the following scopes are used:
         <td>SOR:&lt;XXXXX&gt;</td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.</td>
     </tr>
     <tr>
-        <td>GLN&lt;YYYYY&gt;</td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.</td>
+        <td>GLN:&lt;YYYYY&gt;</td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.</td>
     </tr>
 </table>
 
