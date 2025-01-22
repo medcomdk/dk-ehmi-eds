@@ -93,11 +93,37 @@ User clients used by citizens or superusers/supporters for searching and reading
 
 The following is used as the scope element during enrollment:
 
+<table border="1">
+    <tr>
+        <td>EDS user/AuditEvent.rs</td>
+    </tr>
+</table>
+
 **Metadata for an EDS User Client for Search and Lookup**  
   
 For EDS user clients, only the metadata elements described in section 3.3.1 __*of the general ‘Sikkerhedsmodel’*__ are specified.
 
 Example metadata document for an EDS user client:
+
+    {
+    "token_endpoint_auth_method": "tls_client_auth",
+    "grant_types": [
+        "authorization_code",
+        "refresh_token"
+    ],
+    "client_name": "Lægesystem XYZ - Frederiksbjerg Lægehus",
+    "scope": "EDS user/AuditEvent.rs",
+    "contacts": [
+        "døgnsupport@lægesystem-xyz.dk",
+        "+45 1234 5678"
+    ],
+    "tls_client_auth_subject_dn": "subject=CN=Lægesystem XYZ’s systemcertifikat, serialNumber=UI:DK-O:G:a262681f-2e94-45c5-aaea-aad4e9bc5768, 
+    O=Leverandør af Lægesystem XYZ, organizationIdentifier=NTRDK-12345678, C=DK",
+    "redirect_uris": [
+        "https://www.lægesystem-xyz.dk/lps-system/frederiksbjerg-lægehus"
+    ]
+    }
+
 
 ### Calls to the Token Endpoint
 
@@ -119,19 +145,35 @@ To obtain an access token for EDS, the following scopes are used:
         <td>user/AuditEvent.rs</td><td>(For user clients only) Specifies that the token will be used to read/search delivery status resources.</td>
     </tr>
     <tr>
-        <td>SOR:\<XXXXX\></td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.</td>
+        <td>SOR:&lt;XXXXX&gt;</td><td>(For system clients and for registrations only) Specifies the organization’s SOR code.</td>
     </tr>
     <tr>
-        <td>GLN:\<YYYYY\></td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.</td>
+        <td>GLN&lt;YYYYY&gt;</td><td>(For system clients and for registrations only) Specifies the organization’s GLN location number.</td>
     </tr>
 </table>
 
 Example scope for a system client:   
   
+<table border="1">
+    <tr>
+        <td>EDS system/AuditEvent.crs SOR:306861000016006 GLN:5790000173372</td>
+    </tr>
+</table>
+
 Example call to the Token Endpoint using the above scope:
 
-**Validation at the Authorization Server  
-**The call to the Token Endpoint is validated by the Authorization Server, which verifies the client’s TLS client certificate and checks that the client is enrolled/whitelisted with the specified scopes.
+        POST /token HTTP/1.1
+        Host: authorization.sundhedsdatastyrelsen.dk
+        Accept: */*
+        Content-Type: application/x-www-form-urlencoded
+        Content-Length: 156
+
+        grant_type=client_credentials&scope=EDS%20system%2FAuditEvent.crs%20SOR%3A306861000016006%20GLN%3A5790000173372&client_id=0ba284d1-8974-4241-bce1-0498bc2d48ea
+
+
+**Validation at the Authorization Server**
+
+The call to the Token Endpoint is validated by the Authorization Server, which verifies the client’s TLS client certificate and checks that the client is enrolled/whitelisted with the specified scopes.
 
 For system clients requesting a token to perform *registrations*, the Authorization Server maps the client_id from the call to the registered device_id and verifies that the client is whitelisted for:
 
@@ -158,6 +200,26 @@ For access tokens issued to system clients performing *registrations* in EDS, th
 Calls to EDS are made as described in the general security model, using REST calls over mutual TLS (two-way TLS), with the access token (which is sender-constrained) included in an HTTP header.
 
 An example of a system client’s create call to EDS with the AuditEvent resource provided as a JSON object:
+
+        POST /base/AuditEvent HTTP/1.1
+        Host: ehmi.medcom.dk
+        Accept: application/fhir+json
+        Content-Type: application/fhir+json
+        Content-Length: 11996
+        Authorization: Bearer eyJhb ... Dhi6g
+
+        {
+        "resourceType" : "AuditEvent",
+        "id" : " cbcb0de9-105e-470a-8754-ffad3b581ed4",
+        "meta" : {
+            "profile" : [
+            "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
+            ]
+        },
+
+        ...
+
+        }
 
 **Access Control in EDS**
 
