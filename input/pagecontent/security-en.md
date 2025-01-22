@@ -2,7 +2,7 @@
 
 In EHMI, the following *stations* participate in point-to-point message transmissions: professional systems (EUA), message-service handlers (MSH), and access points (AP).
 
-All stations involved in an EHMI message transmission must register their message handling in the EHMI Selivery Status service (EDS) as described in the FHIR implementation guide at https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/.
+All stations involved in an EHMI message transmission must register their message handling in the EHMI Selivery Status service (EDS) as described in this FHIR implementation guide.
 
 Stations are registered in the EHMI Endpoint Register (EER) and are assigned a unique *device_id* during this process.
 
