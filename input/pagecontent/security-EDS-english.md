@@ -1,12 +1,16 @@
 **Disclaimer:**
 
-        The security architecture is described in Danish in this document: "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98"
+        The security architecture is described in Danish in this document: 
+        "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98"*
 
-        For developmenters parts of the security architecture is described in english and is outlined here on this page for EHMI Delivery Status (EDS). 
+        For developmenters parts of the security architecture is described in english
+         and is outlined here on this page for EHMI Delivery Status (EDS). 
 
-        However - when it comes to discussion of the true interpretation of the security architecture, the Danish original is the true source of this interpretation. In other words the Danish original and the meaning in Danish will be the foundation of the interpretation.
+        However - when it comes to discussion of the true interpretation of the security architecture, 
+        the Danish original is the true source of this interpretation. 
+        In other words the Danish original and the meaning in Danish will be the foundation of the interpretation.
 
-[The document "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98" can be found here:](https://medcomdk.github.io/ehmi/assets/documents/security/media/Sikkerhedsarkitektur%20EHMI%20services%20v098.pdf)
+<a href="https://medcomdk.github.io/ehmi/assets/documents/security/media/Sikkerhedsarkitektur%20EHMI%20services%20v098.pdf" target=_blank>*The document "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98" can be found here (opens a new window)</a>
 
 ## Security for EHMI Delivery Status (EDS)
 
@@ -74,27 +78,27 @@ In addition to the metadata elements described in section 3.3.1 __*of the genera
 
 __*Example metadata document for an EDS system client:*__
 
+    {
+    "token_endpoint_auth_method": "tls_client_auth",
+    "grant_types": [
+        "client_credentials"
+    ],
+    "client_name": "Lægesystem XYZ - Frederiksbjerg Lægehus",
+    "scope": "EDS system/AuditEvent.crs",
+    "contacts": [
+        "døgnsupport@lægesystem-xyz.dk",
+        "+45 1234 5678"
+    ],
+    "tls_client_auth_subject_dn": "subject=CN=Lægesystem XYZ’s systemcertifikat, serialNumber=UI:DK-O:G:a262681f-2e94-45c5-aaea-aad4e9bc5768, O=Leverandør af Lægesystem XYZ, organizationIdentifier=NTRDK-12345678, C=DK",
+    "ehmi:eer:device_id": "c4b8d3ea-b187-426b-be77-bffd9f593d84",
+    "ehmi:org_context": [
         {
-        "token_endpoint_auth_method": "tls_client_auth",
-        "grant_types": [
-            "client_credentials"
-        ],
-        "client_name": "Lægesystem XYZ - Frederiksbjerg Lægehus",
-        "scope": "EDS system/AuditEvent.crs",
-        "contacts": [
-            "døgnsupport@lægesystem-xyz.dk",
-            "+45 1234 5678"
-        ],
-        "tls_client_auth_subject_dn": "subject=CN=Lægesystem XYZ’s systemcertifikat, serialNumber=UI:DK-O:G:a262681f-2e94-45c5-aaea-aad4e9bc5768, O=Leverandør af Lægesystem XYZ, organizationIdentifier=NTRDK-12345678, C=DK",
-        "ehmi:eer:device_id": "c4b8d3ea-b187-426b-be77-bffd9f593d84",
-        "ehmi:org_context": [
-            {
-            "name": "Frederiksbjerg Lægehus",
-            "sor": "1216891000016007",
-            "gln": "5790000135912"
-            }
-        ]
+        "name": "Frederiksbjerg Lægehus",
+        "sor": "1216891000016007",
+        "gln": "5790000135912"
         }
+    ]
+    }
 
 
 ### Enrollment/Whitelisting of User Clients in EDS (For Search and Lookup)
@@ -172,13 +176,13 @@ Example scope for a system client:
 
 Example call to the Token Endpoint using the above scope:
 
-        POST /token HTTP/1.1
-        Host: authorization.sundhedsdatastyrelsen.dk
-        Accept: */*
-        Content-Type: application/x-www-form-urlencoded
-        Content-Length: 156
+    POST /token HTTP/1.1
+    Host: authorization.sundhedsdatastyrelsen.dk
+    Accept: */*
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 156
 
-        grant_type=client_credentials&scope=EDS%20system%2FAuditEvent.crs%20SOR%3A306861000016006%20GLN%3A5790000173372&client_id=0ba284d1-8974-4241-bce1-0498bc2d48ea
+    grant_type=client_credentials&scope=EDS%20system%2FAuditEvent.crs%20SOR%3A306861000016006%20GLN%3A5790000173372&client_id=0ba284d1-8974-4241-bce1-0498bc2d48ea
 
 
 **Validation at the Authorization Server**
@@ -211,25 +215,25 @@ Calls to EDS are made as described in the general security model, using REST cal
 
 An example of a system client’s create call to EDS with the AuditEvent resource provided as a JSON object:
 
-        POST /base/AuditEvent HTTP/1.1
-        Host: ehmi.medcom.dk
-        Accept: application/fhir+json
-        Content-Type: application/fhir+json
-        Content-Length: 11996
-        Authorization: Bearer eyJhb ... Dhi6g
+    POST /base/AuditEvent HTTP/1.1
+    Host: ehmi.medcom.dk
+    Accept: application/fhir+json
+    Content-Type: application/fhir+json
+    Content-Length: 11996
+    Authorization: Bearer eyJhb ... Dhi6g
 
-        {
-        "resourceType" : "AuditEvent",
-        "id" : " cbcb0de9-105e-470a-8754-ffad3b581ed4",
-        "meta" : {
-            "profile" : [
-            "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
-            ]
-        },
+    {
+    "resourceType" : "AuditEvent",
+    "id" : " cbcb0de9-105e-470a-8754-ffad3b581ed4",
+    "meta" : {
+        "profile" : [
+        "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
+        ]
+    },
 
-        ...
+    ...
 
-        }
+    }
 
 **Access Control in EDS**
 
@@ -241,8 +245,7 @@ The delivery status service (EDS) validates the following:
 For *registrations*, EDS also checks that:
 
 1.  The access token contains the necessary scopes for the client to perform registrations in EDS.
-2.  The SOR code, GLN location number, and device_id extracted from the access token match the information in the accompanying AuditEvent resource.**  
-    **
+2.  The SOR code, GLN location number, and device_id extracted from the access token match the information in the accompanying AuditEvent resource.
 
 For *searches and lookups*, EDS restricts access based on the following:
 
