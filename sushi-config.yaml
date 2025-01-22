@@ -86,8 +86,8 @@ menu:
 #  Extensions: extensions.html
   Artifacts: artifacts.html
   Security: 
-    Security-en: security-en.html
-    Security-da: security-dk.html
+    Security-en: security-EDS-english.html
+    Security-da: security-EDS-danish.html
   Terminology: terminology.html
   Downloads: downloads.html
   xhtml-fragments: xhtml-fragments.html
