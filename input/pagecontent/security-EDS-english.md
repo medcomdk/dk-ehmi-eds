@@ -1,14 +1,15 @@
 **Disclaimer:**
 
         The security architecture is described in Danish in this document: 
-        "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98"*
+        "Sikkerhedsarkitektur EHMI services v 0.98"*
 
         For developmenters parts of the security architecture is described in english
          and is outlined here on this page for EHMI Delivery Status (EDS). 
 
         However - when it comes to discussion of the true interpretation of the security architecture, 
         the Danish original is the true source of this interpretation. 
-        In other words the Danish original and the meaning in Danish will be the foundation of the interpretation.
+        In other words the Danish original and the meaning in Danish will 
+        be the foundation of the interpretation.
 
 <a href="https://medcomdk.github.io/ehmi/assets/documents/security/media/Sikkerhedsarkitektur%20EHMI%20services%20v098.pdf" target=_blank>*The document "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98" can be found here (opens a new window)</a>
 
