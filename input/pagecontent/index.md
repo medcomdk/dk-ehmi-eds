@@ -22,7 +22,7 @@ EDS is used in the EHMI messaging flow like above
 
 Calls to EDS is produced in different scenarios basically as shown below:
 
-**Scenarios for the primary MedCom message and the corresponding MedCom Acknowledgement message in EHMI**
+**1. Scenarios for the primary MedCom message and the corresponding MedCom Acknowledgement message in EHMI**
 
 1. When a message is created in an EUA (The user has hit the "sent button") or an ehmiSBDH_Ack has been initiated in a MSH
 2. When the message is actually sent by the EUA
@@ -39,7 +39,7 @@ Calls to EDS is produced in different scenarios basically as shown below:
 
 <br/>
 
-**Scenarios for the ehmiSBDH Acknowledgement in EHMI**
+**2. Scenarios for the ehmiSBDH Acknowledgement in EHMI**
 
 1. When an ehmiSBDH envelope has been received in the receiving MSH (at 9. in the above use case) and the Receiving MSH creates an ehmiSBDH Acknowledgement
 2. When the ehmiSBDH Acknowledgement is received by the sending AP
