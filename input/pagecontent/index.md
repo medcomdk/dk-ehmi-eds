@@ -20,7 +20,7 @@ EDS is using some basic abbreviations throughout the specification, the most com
 
 EDS is used in the EHMI messaging flow like above
 
-Calls to EDS is produced in different scenarios basically as shown below:
+Calls to EDS is produced in different scenarios basically as shown below. For each scenario there is an example which opens in a newwindow. Please be aware that it can take a while, as it calls an external server to render the fhir examples.
 
 **1. Scenarios for the primary MedCom message and the corresponding MedCom Acknowledgement message in EHMI**
 
