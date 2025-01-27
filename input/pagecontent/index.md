@@ -8,8 +8,6 @@ EDS is inspired by IHE Basic Audit Log Patterns (IHE BALP) Implementation Guide,
 
 A focus is on enabling Privacy centric AuditEvent logs that hold well-formed indication of message communication around a Patient, when they are the subject of messaging being recorded on the EDS Server. 
 
-<br/>
-
 <img src="./EHMI_Pixi_EDS.jpg" alt="EHMI Delivery Status (EDS)" style="width:100%;height:auto;border=1;margin: 20px 20px 20px 0px">
 
 <br/>
@@ -22,9 +20,7 @@ EDS is using some basic abbreviations throughout the specification, the most com
 
 EDS is used in the EHMI messaging flow like above
 
-EDS is producsed in different scenarios basically as shown below.
-
-<br/>
+Calls to EDS is produced in different scenarios basically as shown below:
 
 1. When a message is created in an EUA (The user has hit the "sent button") or a SBDH_Ack has been initiated in a MSH
 2. When the message is actually sent by the EUA
@@ -40,6 +36,11 @@ EDS is producsed in different scenarios basically as shown below.
 12. When the message is actually finalized by the receiving EUA
 
 <br/>
+
+Security for the calls are described in generel in this paper in Danish: <a href="https://medcomdk.github.io/ehmi/assets/documents/security/media/Sikkerhedsarkitektur%20EHMI%20services%20v098.pdf" target=_blank>*The document "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98" can be found here (opens a new window)</a>
+
+[Specifically, the calls for EDS are described here](security-EDS-english.md)
+
 
 As the EUA, MSH and AP can be built and hosted together in various ways, this is just the maximum possible scenarios, and the real scenarios will most likely by less than shown here.
 
