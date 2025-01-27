@@ -1,4 +1,4 @@
-# EHMI Delivery Status (EDS)
+## EHMI Delivery Status (EDS)
 
 <br/>
 
@@ -22,7 +22,9 @@ EDS is used in the EHMI messaging flow like above
 
 Calls to EDS is produced in different scenarios basically as shown below:
 
-1. When a message is created in an EUA (The user has hit the "sent button") or a SBDH_Ack has been initiated in a MSH
+**Scenarios for the primary message and the corresponding Acknowledgement message in EHMI**
+
+1. When a message is created in an EUA (The user has hit the "sent button") or an ehmiSBDH_Ack has been initiated in a MSH
 2. When the message is actually sent by the EUA
 3. When the message is received by the sending MSH
 4. When the message is actually sent again by the sending MSH
@@ -35,9 +37,18 @@ Calls to EDS is produced in different scenarios basically as shown below:
 11. When the message is received by the receiving EUA
 12. When the message is actually finalized by the receiving EUA
 
-<br/>
-As the EUA, MSH and AP can be built and hosted together in various ways, this is just the maximum possible scenarios, and the real scenarios will most likely by less than shown here.
+**Scenarios for the ehmiSBDH Acknowledgement in EHMI**
 
-## Security for the calls to EDS
+1. When an ehmiSBDH envelope has been received in the receiving MSH (at 9. in the above use case) and the Receiving MSH creates an ehmiSBDH Acknowledgement
+2. When the ehmiSBDH Acknowledgement is received by the sending AP
+3. When the ehmiSBDH Acknowledgement is actually sent again by the sending AP
+4. When the ehmiSBDH Acknowledgement is received by the receiving AP
+5. When the ehmiSBDH Acknowledgement is actually sent again by the receiving AP
+6. When the ehmiSBDH Acknowledgement is received by the receiving MSH
+
+<br/>
+As the EUA, MSH and AP can be built and hosted together in various ways, this is just the maximum possible scenarios, and the real scenarios will most likely be less than shown here.
+
+### Security for the calls to EDS
 
 [The calls for EDS are described here](security-EDS-english.md)
