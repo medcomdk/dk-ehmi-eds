@@ -1,0 +1,14 @@
+{
+    "package-id": "dk.ehmi.eds",
+    "version": "1.0.0",
+    "path": "http://medcomfhir.dk/ig/dk.ehmi.eds",
+    "status": "release",
+    "sequence": "Release",
+    "first" : true,
+    "ci-build" : "https://build.fhir.org/ig/medcomdk/dk.ehmi.eds",
+    "milestone" : true,
+    "title": "EHMI Delivery Status (EDS)",
+    "category": "EHMI",
+    "introduction": "EHMI Delivery Status (EDS)",
+    "descmd": "@release-notes.md"
+}
