@@ -36,12 +36,8 @@ Calls to EDS is produced in different scenarios basically as shown below:
 12. When the message is actually finalized by the receiving EUA
 
 <br/>
-
-Security for the calls are described in generel in this paper in Danish: <a href="https://medcomdk.github.io/ehmi/assets/documents/security/media/Sikkerhedsarkitektur%20EHMI%20services%20v098.pdf" target=_blank>*The document "Sikkerhedsarkitektur EHMI services v 0.98/Security architechture regarding EHMI central services v 0.98" can be found here (opens a new window)</a>
-
-[Specifically, the calls for EDS are described here](security-EDS-english.md)
-
-
 As the EUA, MSH and AP can be built and hosted together in various ways, this is just the maximum possible scenarios, and the real scenarios will most likely by less than shown here.
 
-<br/>
+## Security for the calls to EDS
+
+[The calls for EDS are described here](security-EDS-english.md)
