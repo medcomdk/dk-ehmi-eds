@@ -88,7 +88,7 @@ menu:
   Security: 
     Security-en: security-EDS-english.html
     Security-da: security-EDS-danish.html
-  Terminology: terminology.html
+#  Terminology: terminology.html
   Dependencies: dependencies.html
   Downloads: downloads.html
 #  Volume-1: volume1.html
