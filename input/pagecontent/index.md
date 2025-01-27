@@ -14,7 +14,7 @@ A focus is on enabling Privacy centric AuditEvent logs that hold well-formed ind
 
 EDS is using some basic abbreviations throughout the specification, the most common are:
 
-- EUA = End USer Application
+- EUA = End User Application
 - MSH = Message Service Handler
 - AP = Access Point (eDelivery)
 
