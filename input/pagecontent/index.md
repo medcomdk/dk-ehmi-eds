@@ -18,7 +18,13 @@ EDS is using some basic abbreviations throughout the specification, the most com
 - MSH = Message Service Handler
 - AP = Access Point (eDelivery)
 
-EDS is used in the EHMI messaging flow like above
+EDS is used in the EHMI messaging flow like above.
+
+In a more technical outline of the above, it is presented here in a sequence diagram:
+
+<img src="./ehmi-EDS-FlowCalls.png" alt="EHMI Delivery Status (EDS) - sequence diagram" style="width:100%;height:auto;border=1;margin: 20px 20px 20px 0px">
+
+<br/>
 
 Calls to EDS are produced in different scenarios basically as shown below. 
 For each scenario there is an example which opens in a new window. Please be aware that it can take a while to open, as it calls an external server to render the fhir examples.
@@ -59,4 +65,4 @@ As the EUA, MSH and AP can be built and hosted together in various ways, this is
 
 The calls for EDS are always produced in a security context. 
 
-[The calls for EDS are described here](security-EDS-english.md)
+[The calls for EDS are described here](security-EDS-english.html)
