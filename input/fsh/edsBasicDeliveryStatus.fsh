@@ -8,7 +8,6 @@ A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a EHMI B
 It is used when 
 - the resource does not have a Patient subject or is otherwise associated with a Patient
   - when the resource is Patient specific then EdsPatientDeliveryStatus is used
-- And the request is authorized
 - When successful
   - Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
   - Then the EdsBasicDeliveryStatus recorded will conform
