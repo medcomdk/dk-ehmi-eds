@@ -136,7 +136,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.display = "EHMI messaging event"
 * subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypesVS#msg-received-and-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
-* subtype[msg-finalized].display = "Message finalized"
+* subtype[msg-finalized].display = "Message received and finalized"
 * recorded = "2024-04-01T00:00:16.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
