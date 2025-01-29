@@ -68,9 +68,9 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
-* entity[ehmiMessage].detail[ehmiMessageType].valueString.value = "SBDH_Ack"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString.value = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
