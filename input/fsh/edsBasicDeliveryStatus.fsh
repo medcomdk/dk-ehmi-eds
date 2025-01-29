@@ -53,33 +53,33 @@ It is used when
 /* subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
 * subtype[msg-created].display 1..1
-* subtype[msg-created] = $EdsSubtypesVS#msg-created "Message created" (exactly)
+* subtype[msg-created] = $EdsSubtypes#msg-created "Message created" (exactly)
 */
 //* subtype[msg-created-and-sent]
 * subtype[msg-created-and-sent].code 1..1
 * subtype[msg-created-and-sent].system 1..1
 * subtype[msg-created-and-sent].display 1..1
-* subtype[msg-created-and-sent] = $EdsSubtypesVS#msg-created-and-sent "Message created and sent" (exactly)
+* subtype[msg-created-and-sent] = $EdsSubtypes#msg-created-and-sent "Message created and sent" (exactly)
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
 * subtype[msg-sent].display 1..1
-* subtype[msg-sent] = $EdsSubtypesVS#msg-sent "Message sent" (exactly)
+* subtype[msg-sent] = $EdsSubtypes#msg-sent "Message sent" (exactly)
 //* subtype[msg-received]
 * subtype[msg-received].code 1..1
 * subtype[msg-received].system 1..1
 * subtype[msg-received].display 1..1
-* subtype[msg-received] = $EdsSubtypesVS#msg-received "Message received" (exactly)
+* subtype[msg-received] = $EdsSubtypes#msg-received "Message received" (exactly)
 //* subtype[msg-received-and-finalized]
 * subtype[msg-received-and-finalized].code 1..1
 * subtype[msg-received-and-finalized].system 1..1
 * subtype[msg-received-and-finalized].display 1..1
-* subtype[msg-received-and-finalized] = $EdsSubtypesVS#msg-received-and-finalized "Message received and finalized" (exactly)
+* subtype[msg-received-and-finalized] = $EdsSubtypes#msg-received-and-finalized "Message received and finalized" (exactly)
 //* subtype[msg-finalized]
 /* subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
 * subtype[msg-finalized].display 1..1
-* subtype[msg-finalized] = $EdsSubtypesVS#msg-finalized "Message finalized" (exactly)
+* subtype[msg-finalized] = $EdsSubtypes#msg-finalized "Message finalized" (exactly)
 */
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
