@@ -19,7 +19,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-received].code = $EdsSubtypes#msg-received
-* subtype[msg-received].system = $EdsSubtypesVS
+* subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
 * recorded = "2024-04-01T00:00:11.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0

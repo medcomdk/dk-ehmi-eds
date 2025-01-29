@@ -28,7 +28,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-received].code = $EdsSubtypes#msg-received
-* subtype[msg-received].system = $EdsSubtypesVS
+* subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
 * recorded = "2024-04-01T00:00:11.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
@@ -131,7 +131,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-sent].code = $EdsSubtypes#msg-sent
-* subtype[msg-sent].system = $EdsSubtypesVS
+* subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
 * recorded = "2024-04-01T00:00:12.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
