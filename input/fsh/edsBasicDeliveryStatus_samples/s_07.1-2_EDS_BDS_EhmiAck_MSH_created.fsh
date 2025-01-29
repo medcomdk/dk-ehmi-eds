@@ -26,7 +26,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created
+* subtype[msg-created].code = $EhmiDeliveryStatusSubTypes#msg-created-and-sent
 * subtype[msg-created].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-created].display = "Message created"
 * recorded = "2024-04-01T00:00:09.500+02:00" 
