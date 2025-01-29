@@ -29,7 +29,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.display = "EHMI messaging event"
 * subtype[msg-received].code = #msg-received
 * subtype[msg-received].system = $EdsSubtypes
-* subtype[msg-received].display = "Message received"
+//* subtype[msg-received].display = "Message received"
 * recorded = "2024-04-01T00:00:11.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
@@ -68,9 +68,9 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
 * entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
-* entity[ehmiMessage].detail[ehmiMessageType].valueString = "SBDH_Ack"
+* entity[ehmiMessage].detail[ehmiMessageType].valueString.value = "SBDH_Ack"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString.value = "1.0"
 // Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
