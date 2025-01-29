@@ -108,13 +108,13 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 */
 
-Instance: 010.2-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-finalized
+Instance: 010.1-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-recieved-and-finalized
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
-- ehmiSubType = msg-finalized
+- ehmiSubType = msg-recieved-and-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
 - ehmiPatient = PAT1234567890 
