@@ -1,10 +1,10 @@
-Instance: 007.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created
+Instance: 007.1-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-created-and-sent
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an MSH
-- ehmiSubType = msg-created
+- ehmiSubType = msg-created-and-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
 - ehmiPatient = PAT1234567890 
@@ -99,6 +99,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
+/*
 Instance: 007.2-EDS_BDS_Create-SBDHAck-MSH-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
@@ -200,3 +201,4 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
+*/

@@ -132,7 +132,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
     - ehmiOrigEnvelopeVersion = 2.0
 "
 * contained[+] = s-02-MSH-Sender
-* id = "EDS-PDS-10.2"
+* id = "EDS-PDS-10.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"

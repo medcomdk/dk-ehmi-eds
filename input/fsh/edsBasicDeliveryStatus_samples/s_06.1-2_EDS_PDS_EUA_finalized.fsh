@@ -1,4 +1,5 @@
 
+/*
 Instance: 006.1-EDS_PDS_Create-BS-Receiver-msg-received
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An instance of an EdsPatientDeliveryStatus.
@@ -71,14 +72,15 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
+*/
 
-Instance: 006.2-EDS_PDS_Create-BS-Receiver-msg-finalized
+Instance: 006.1-EDS_PDS_Create-BS-Receiver-msg-received-and-finalized
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
-- ehmiSubType = msg-finalized
+- ehmiSubType = msg-received-and-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
 - ehmiPatient = PAT1234567890 
@@ -87,7 +89,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiMessageVersion = 1.0
 "
 * contained[+] = s-06-EUA-Receiver
-* id = "EDS-PDS-06.2"
+* id = "EDS-PDS-06.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
