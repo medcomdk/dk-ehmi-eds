@@ -91,7 +91,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-finalized
+* subtype[msg-finalized].code = $EhmiDeliveryStatusSubTypes#msg-received-and-finalized
 * subtype[msg-finalized].system = $EhmiDeliveryStatusSubTypes
 * subtype[msg-finalized].display = "Message finalized"
 * recorded = "2024-04-01T00:00:12.001+02:00" 

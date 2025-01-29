@@ -50,10 +50,11 @@ It is used when
     msg-received-and-finalized 0..1 and 
     msg-finalized 0..1 
 //* subtype[msg-created]
-* subtype[msg-created].code 1..1
+/* subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1
 * subtype[msg-created].display 1..1
 * subtype[msg-created] = $EhmiDeliveryStatusSubTypes#msg-created "Message created" (exactly)
+*/
 //* subtype[msg-created-and-sent]
 * subtype[msg-created-and-sent].code 1..1
 * subtype[msg-created-and-sent].system 1..1
@@ -75,10 +76,11 @@ It is used when
 * subtype[msg-received-and-finalized].display 1..1
 * subtype[msg-received-and-finalized] = $EhmiDeliveryStatusSubTypes#msg-received-and-finalized "Message received and finalized" (exactly)
 //* subtype[msg-finalized]
-* subtype[msg-finalized].code 1..1
+/* subtype[msg-finalized].code 1..1
 * subtype[msg-finalized].system 1..1
 * subtype[msg-finalized].display 1..1
 * subtype[msg-finalized] = $EhmiDeliveryStatusSubTypes#msg-finalized "Message finalized" (exactly)
+*/
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0
