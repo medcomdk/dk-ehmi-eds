@@ -1,4 +1,4 @@
-Instance: 001.1-EDS_PDS_Create-EUA-Sender-msg-created
+Instance: 001.1-EDS_PDS_Create-EUA-Sender-msg-created-and-sent
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
