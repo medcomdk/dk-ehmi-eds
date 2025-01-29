@@ -3,10 +3,10 @@
         The security architecture is described in Danish in this document: 
         "Sikkerhedsarkitektur EHMI services v 0.98"*
 
-        For developmenters parts of the security architecture is described in english
+        For developers, parts of the security architecture is described in english
          and is outlined here on this page for EHMI Delivery Status (EDS). 
 
-        However - when it comes to discussion of the true interpretation of the security architecture, 
+        However - if the true interpretation of the security architecture comes to discussion, 
         the Danish original is the true source of this interpretation. 
         In other words the Danish original and the meaning in Danish will 
         be the foundation of the interpretation.
