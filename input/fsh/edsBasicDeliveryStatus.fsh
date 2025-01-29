@@ -41,15 +41,15 @@ It is used when
 * subtype.code from $EdsSubtypesVS
 * subtype.system = $EdsSubtypes
 * subtype ^slicing.discriminator.type = #value
-* subtype ^slicing.discriminator.path = "$this"
+* subtype ^slicing.discriminator.path = code //"$this"
 * subtype ^slicing.rules = #open // allow other codes
 * subtype contains
-    msg-created 0..1 and 
+//    msg-created 0..1 and 
     msg-created-and-sent 0..1 and 
     msg-sent 0..1 and 
     msg-received 0..1 and 
-    msg-received-and-finalized 0..1 and 
-    msg-finalized 0..1 
+    msg-received-and-finalized 0..1 
+//    and msg-finalized 0..1 
 //* subtype[msg-created]
 /* subtype[msg-created].code 1..1
 * subtype[msg-created].system 1..1

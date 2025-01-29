@@ -1,3 +1,4 @@
+/*
 Instance: 010.1-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
@@ -105,6 +106,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
+*/
 
 Instance: 010.2-EDS_BDS_Create-SBDHAck-MSH-Receiver-msg-finalized
 InstanceOf: EdsBasicDeliveryStatus
@@ -134,9 +136,9 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-finalized].code = $EdsSubtypesVS#msg-received-and-finalized
-* subtype[msg-finalized].system = $EdsSubtypes
-* subtype[msg-finalized].display = "Message received and finalized"
+* subtype[msg-received-and-finalized].code = $EdsSubtypesVS#msg-received-and-finalized
+* subtype[msg-received-and-finalized].system = $EdsSubtypes
+* subtype[msg-received-and-finalized].display = "Message received and finalized"
 * recorded = "2024-04-01T00:00:16.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
