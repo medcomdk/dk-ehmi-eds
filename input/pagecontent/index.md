@@ -34,49 +34,49 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 
 **1. Scenarios for the primary MedCom message and the corresponding MedCom Acknowledgement message in EHMI**
 
-1. 
+1 <br/>
   - 1.1 When a message is created and sent in an EUA (The user has hit the "sent button") <br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-01.1" target="_blank">"Graphical view" example: EDS-PDS-01.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-01.1" target="_blank">"Raw server view" example: EDS-PDS-01.1</a> ¤ <a href="AuditEvent-EDS-PDS-01.1.html">"Raw IG view" example: EDS-PDS-01.1</a>
   <!--
   - 1.2. When the message is actually sent by the EUA <br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-01.2" target="_blank">"Graphical view" example: EDS-PDS-01.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-01.2" target="_blank">"Raw server view" example: EDS-PDS-01.2</a> ¤ <a href="AuditEvent-EDS-PDS-01.2.html">"Raw IG view" example: EDS-PDS-01.2</a>
   -->
-2. 
+2 <br/>
   - 2.1 When the message is received by the sending MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-02.1" target="_blank">"Graphical view" example: EDS-PDS-02.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-02.1" target="_blank">"Raw server view" example: EDS-PDS-02.1</a> ¤ <a href="AuditEvent-EDS-PDS-02.1.html">"Raw IG view" example: EDS-PDS-02.1</a>
   - 2.2 When the message is actually sent again by the sending MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-02.2" target="_blank">"Graphical view" example: EDS-PDS-02.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-02.2" target="_blank">"Raw server view" example: EDS-PDS-02.2</a> ¤ <a href="AuditEvent-EDS-PDS-02.2.html">"Raw IG view" example: EDS-PDS-02.2</a>
-3. 
+3 <br/>
   - 3.1 When the message is received by the sending AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-03.1" target="_blank">"Graphical view" example: EDS-PDS-03.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-03.1" target="_blank">"Raw server view" example: EDS-PDS-03.1</a> ¤ <a href="AuditEvent-EDS-PDS-03.1.html">"Raw IG view" example: EDS-PDS-03.1</a>
   - 3.2 When the message is actually sent again by the sending AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-03.2" target="_blank">"Graphical view" example: EDS-PDS-03.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-03.2" target="_blank">"Raw server view" example: EDS-PDS-03.2</a> ¤ <a href="AuditEvent-EDS-PDS-03.2.html">"Raw IG view" example: EDS-PDS-03.2</a>
-4. 
+4 <br/>
   - 4.1 When the message is received by the receiving AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-04.1" target="_blank">"Graphical view" example: EDS-PDS-04.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-04.1" target="_blank">"Raw server view" example: EDS-PDS-04.1</a> ¤ <a href="AuditEvent-EDS-PDS-04.1.html">"Raw IG view" example: EDS-PDS-04.1</a>
   - 4.2 When the message is actually sent again by the receiving AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-04.2" target="_blank">"Graphical view" example: EDS-PDS-04.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-04.2" target="_blank">"Raw server view" example: EDS-PDS-04.2</a> ¤ <a href="AuditEvent-EDS-PDS-04.2.html">"Raw IG view" example: EDS-PDS-04.2</a>
-5. 
+5 <br/>
   - 5.1 When the message is received by the receiving MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-05.1" target="_blank">"Graphical view" example: EDS-PDS-05.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-05.1" target="_blank">"Raw server view" example: EDS-PDS-05.1</a> ¤ <a href="AuditEvent-EDS-PDS-05.1.html">"Raw IG view" example: EDS-PDS-05.1</a>
   - 5.2 When the message is actually sent again by the receiving MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-05.2" target="_blank">"Graphical view" example: EDS-PDS-05.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-05.2" target="_blank">"Raw server view" example: EDS-PDS-05.2</a> ¤ <a href="AuditEvent-EDS-PDS-05.2.html">"Raw IG view" example: EDS-PDS-05.2</a>
-6. 
+6 <br/>
 <!--
   - 6.1 When the message is received by the receiving EUA<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.1" target="_blank">"Graphical view" example: EDS-PDS-06.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.1" target="_blank">"Raw server view" example: EDS-PDS-06.1</a> ¤ <a href="AuditEvent-EDS-PDS-06.1.html">"Raw IG view" example: EDS-PDS-06.1</a>
   -->
-  - 6.2 When the message is actually received and finalized by the receiving EUA<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.2" target="_blank">"Graphical view" example: EDS-PDS-06.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.2" target="_blank">"Raw server view" example: EDS-PDS-06.2</a> ¤ <a href="AuditEvent-EDS-PDS-06.2.html">"Raw IG view" example: EDS-PDS-06.2</a>
+  - 6.1 When the message is actually received and finalized by the receiving EUA<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.2" target="_blank">"Graphical view" example: EDS-PDS-06.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-06.2" target="_blank">"Raw server view" example: EDS-PDS-06.2</a> ¤ <a href="AuditEvent-EDS-PDS-06.2.html">"Raw IG view" example: EDS-PDS-06.2</a>
 
 <br/>
 
 **2. Scenarios for the ehmiSBDH Acknowledgement in EHMI**
 
-7. 
+7 <br/>
   - 7.1 When an ehmiSBDH envelope has been received in the receiving MSH (at 5.1 in the above use case) and the Receiving MSH creates and sends an ehmiSBDH Acknowledgement<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-07.1" target="_blank">"Graphical view" example: EDS-PDS-07.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-07.1" target="_blank">"Raw server view" example: EDS-PDS-07.1</a> ¤ <a href="AuditEvent-EDS-PDS-07.1.html">"Raw IG view" example: EDS-PDS-07.1</a>
   <!--
   - 7.2 When an ehmiSBDH envelope has been sent in the receiving MSH <br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-07.2" target="_blank">"Graphical view" example: EDS-PDS-07.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-7.2" target="_blank">"Raw server view" example: EDS-PDS-07.2</a> ¤ <a href="AuditEvent-EDS-PDS-07.2.html">"Raw IG view" example: EDS-PDS-07.2</a>
   -->
-8. 
+8 <br/>
   - 8.1 When the ehmiSBDH Acknowledgement is received by the sending AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-08.1" target="_blank">"Graphical view" example: EDS-PDS-08.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-08.1" target="_blank">"Raw server view" example: EDS-PDS-08.1</a> ¤ <a href="AuditEvent-EDS-PDS-08.1.html">"Raw IG view" example: EDS-PDS-08.1</a>
   - 8.2 When the ehmiSBDH Acknowledgement is actually sent again by the sending AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-08.2" target="_blank">"Graphical view" example: EDS-PDS-08.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-08.2" target="_blank">"Raw server view" example: EDS-PDS-08.2</a> ¤ <a href="AuditEvent-EDS-PDS-08.2.html">"Raw IG view" example: EDS-PDS-08.2</a>
-9. 
+9 <br/>
   - 9.1 When the ehmiSBDH Acknowledgement is received by the receiving AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-09.1" target="_blank">"Graphical view" example: EDS-PDS-09.1</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-09.1" target="_blank">"Raw server view" example: EDS-PDS-09.1</a> ¤ <a href="AuditEvent-EDS-PDS-09.1.html">"Raw IG view" example: EDS-PDS-09.1</a>
   - 9.2 When the ehmiSBDH Acknowledgement is actually sent again by the receiving AP<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-09.2" target="_blank">"Graphical view" example: EDS-PDS-09.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-09.2" target="_blank">"Raw server view" example: EDS-PDS-09.2</a> ¤ <a href="AuditEvent-EDS-PDS-09.2.html">"Raw IG view" example: EDS-PDS-09.2</a>
-10. 
+10 <br/>
 <!--
   - 10.1 When the ehmiSBDH Acknowledgement is received by the receiving MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-10.2" target="_blank">"Graphical view" example: EDS-PDS-10.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-01.1" target="_blank">"Raw server view" example: EDS-PDS-01.1</a> ¤ <a href="AuditEvent-EDS-PDS-10.1.html">"Raw IG view" example: EDS-PDS-10.1</a>
 -->
-  - 10.2 When the ehmiSBDH Acknowledgement is received and finalized by the receiving MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-10.2" target="_blank">"Graphical view" example: EDS-PDS-10.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-10.2" target="_blank">"Raw server view" example: EDS-PDS-10.2</a> ¤ <a href="AuditEvent-EDS-PDS-10.2.html">"Raw IG view" example: EDS-PDS-10.2</a>
+  - 10.1 When the ehmiSBDH Acknowledgement is received and finalized by the receiving MSH<br/><a href="https://vhewer.com/display-product?url=https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-10.2" target="_blank">"Graphical view" example: EDS-PDS-10.2</a> ¤ <br/> <a href="https://hapifhir.ehmi.medcom.t0.hosting.kitkube.dk/fhir/AuditEvent/EDS-PDS-10.2" target="_blank">"Raw server view" example: EDS-PDS-10.2</a> ¤ <a href="AuditEvent-EDS-PDS-10.2.html">"Raw IG view" example: EDS-PDS-10.2</a>
 
 
 <br/>
