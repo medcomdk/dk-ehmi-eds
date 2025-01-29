@@ -16,7 +16,7 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
 // Subtype details for Message Created
 * subtype[msg-created]
   * code = #msg-created-and-sent
-  * system = $EhmiDeliveryStatusSubTypes
+  * system = $EdsSubtypesVS
   * display = "Message created"
 
 // Action performed (in this case, Creation)

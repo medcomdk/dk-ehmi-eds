@@ -10,7 +10,7 @@ Description: "ChatGPT generated"
 // Message Created Subtype
 * subtype[msg-created]
   * code = #msg-created-and-sent
-  * system = $EhmiDeliveryStatusSubTypes
+  * system = $EdsSubtypesVS
   * display = "Message created"
 * action = #C
 * outcome = #0
