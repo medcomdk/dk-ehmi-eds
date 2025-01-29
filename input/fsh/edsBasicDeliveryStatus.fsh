@@ -59,21 +59,25 @@ It is used when
 //* subtype[msg-created-and-sent]
 * subtype[msg-created-and-sent].code 1..1
 * subtype[msg-created-and-sent].system 1..1
+* subtype[msg-created-and-sent].system = $EdsSubtypes
 * subtype[msg-created-and-sent].display 1..1
 * subtype[msg-created-and-sent] = $EdsSubtypes#msg-created-and-sent "Message created and sent" (exactly)
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
 * subtype[msg-sent].system 1..1
+* subtype[msg-sent].system = $EdsSubtypes
 * subtype[msg-sent].display 1..1
 * subtype[msg-sent] = $EdsSubtypes#msg-sent "Message sent" (exactly)
 //* subtype[msg-received]
 * subtype[msg-received].code 1..1
 * subtype[msg-received].system 1..1
+* subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display 1..1
 * subtype[msg-received] = $EdsSubtypes#msg-received "Message received" (exactly)
 //* subtype[msg-received-and-finalized]
 * subtype[msg-received-and-finalized].code 1..1
 * subtype[msg-received-and-finalized].system 1..1
+* subtype[msg-received-and-finalized].system = $EdsSubtypes
 * subtype[msg-received-and-finalized].display 1..1
 * subtype[msg-received-and-finalized] = $EdsSubtypes#msg-received-and-finalized "Message received and finalized" (exactly)
 //* subtype[msg-finalized]
