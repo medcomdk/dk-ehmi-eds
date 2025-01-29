@@ -17,7 +17,9 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-created] = $EdsSubtypes#msg-created-and-sent "Message created and sent"
+* subtype[msg-created].code = #msg-created-and-sent 
+* subtype[msg-created].display = "Message created and sent"
+//* subtype[msg-created] = $EdsSubtypes#msg-created-and-sent "Message created and sent"
 * recorded = "2024-04-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
@@ -90,13 +92,13 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiMessageVersion = 1.0
 "
 * contained[+] = s-01-EUA-Sender
-
 * id = "EDS-PDS-01.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-sent].code = $EdsSubtypes#msg-sent
-* subtype[msg-received].system = $EdsSubtypes
+//* subtype[msg-sent] = $EdsSubtypes#msg-sent "Message sent"
+//* subtype[msg-sent].system = $EdsSubtypes
+* subtype[msg-sent].code = #msg-sent
 * subtype[msg-sent].display = "Message sent"
 * recorded = "2024-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0

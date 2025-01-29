@@ -22,7 +22,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 
-* subtype[msg-received].code = $EdsSubtypes#msg-received
+* subtype[msg-received].code = #msg-received
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
 * recorded = "2024-04-01T00:00:07.000+02:00" 
@@ -101,7 +101,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 
-* subtype[msg-sent].code = $EdsSubtypes#msg-sent
+* subtype[msg-sent].code = #msg-sent
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
 * recorded = "2024-04-01T00:00:08.001+02:00" 
