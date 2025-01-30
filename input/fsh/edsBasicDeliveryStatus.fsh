@@ -2,19 +2,17 @@ Profile: EdsBasicDeliveryStatus
 Parent: AuditEvent
 //Parent: IHE.BasicAudit.Create
 Description: "
-EdsBasicDeliveryStatus is used to define the basic status reporting for EDS from the EDS Client to the EDS Server.
+EdsBasicDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
 
-EdsBasicDeliveryStatus is used when a Patient entity is not required, for instance for delivery status reporting of Acknowledgments.
+A basic EdsBasicDeliveryStatus is based on the AuditEvent profile for and is submitted when a EHMI Core Messaging transaction 
+from one station in the messageflow to another station happens successfully.
 
-A basic EdsBasicDeliveryStatus based on the AuditEvent profile for when a EHMI Basic Delivery Status Messaging action happens successfully.
+EdsBasicDeliveryStatus is only used when a Patient entity is not required, for instance for delivery status reporting of Acknowledgments. 
+The EdsBasicDeliveryStatus does not have a Patient subject or is otherwise associated with a Patient. 
+When the resource is Patient specific then EdsPatientDeliveryStatus is used
 
-It is used when 
-- the resource does not have a Patient subject or is otherwise associated with a Patient
-  - when the resource is Patient specific then EdsPatientDeliveryStatus is used
-
-- When successful
-  - Note a failure EdsBasicDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
-  - Then the EdsBasicDeliveryStatus recorded will conform
+When successfully submitted from an EDS Client to the EDS Server then the recorded EdsBasicDeliveryStatus has conformed to the profile otherwise it would 
+not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
 * ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsBasicDeliveryStatus"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
