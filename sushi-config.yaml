@@ -81,17 +81,17 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-#  Table of Contents: toc.html
   Profiles: profiles.html
-#  Extensions: extensions.html
+  Use-cases: 
+    EDS Use case 1: eds-use-case-1.html
   Artifacts: artifacts.html
   Security: 
     Security-en: security-EDS-english.html
     Security-da: security-EDS-danish.html
-#  Terminology: terminology.html
-  Dependencies: dependencies.html
-  Downloads: downloads.html
-#  Volume-1: volume1.html
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
 #
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
