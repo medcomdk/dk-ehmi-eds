@@ -1,16 +1,17 @@
 Profile: EdsPatientDeliveryStatus
 Parent: EdsBasicDeliveryStatus
 Description: "
-EHMI profile based on the EHMI profile EdsBasicDeliveryStatus.
-EdsPatientDeliveryStatus is used to define the status reporting for EDS from a EDS Client to the EDS Server.
+EdsPatientDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
+
+The EdsPatientDeliveryStatus is an enhancement of the basic EdsBasicDeliveryStatus and is submitted when a EHMI Core Messaging transaction 
+from one station in the messageflow to another station happens successfully.
+
 EdsPatientDeliveryStatus is used when a Patient entity is required, for instance for status reporting of MedCom FHIR Messages.
-A EdsPatientDeliveryStatus based on the AuditEvent profile for when a EHMI Patient Delivery Status Messaging action happens successfully.
-It is used when 
-- the resource has a Patient subject or is otherwise associated with a Patient
-  - when the resource is not Patient related then EdsBasicDeliveryStatus is used
-- When successful
-  - Note a failure EdsPatientDeliveryStatus may follow this pattern, but would not be a successful outcome and should have an OperationOutcome
-  - Then the EdsPatientDeliveryStatus recorded will conform
+The EdsPatientDeliveryStatus has a Patient subject entity and is thereby associated with a Patient. 
+When the message transaction is not Patient specific then EdsBasicDeliveryStatus is used.
+
+When successfully submitted from an EDS Client to the EDS Server then the recorded EdsPatientDeliveryStatus has conformed to the profile otherwise it would 
+not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
 * ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsPatientDeliveryStatus.</div>"
