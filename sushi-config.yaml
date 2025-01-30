@@ -84,6 +84,7 @@ menu:
   Profiles: profiles.html
   Use-cases: 
     EDS Use case 1: eds-use-case-1.html
+    EDS Use case 2: eds-use-case-2.html
   Artifacts: artifacts.html
   Security: 
     Security-en: security-EDS-english.html
