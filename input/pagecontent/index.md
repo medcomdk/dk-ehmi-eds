@@ -26,7 +26,8 @@ In a more technical outline of the above, it is presented here in a sequence dia
 
 <br/>
 
-Calls to EDS are produced in different scenarios basically as shown below. 
+Calls to EDS are produced in different scenarios basically as shown graphically above and in example instances below. 
+
 For each scenario there are 2 examples which opens in a new window,"Graphical view" and "Raw server view". Please be aware that it can take a while to open, as it calls an external server to render the fhir examples. The last view, "Raw IG view" opens the page in this IG, where the example is shown in ordinary IG-manner.
 - "Raw IG view" is as explained above the raw IG manner look of an example
 - "Raw server view" opens a call to a HAPI FHIR server, which produces the get operation on the server for that particular instance
