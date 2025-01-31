@@ -88,8 +88,8 @@ menu:
     EDS Use case 2: eds-use-case-2.html
   Artifacts: artifacts.html
   Security: 
-    Security-en: security-EDS-english.html
-    Security-da: security-EDS-danish.html
+    Security-en: security-eds-english.html
+    Security-da: security-eds-danish.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html
