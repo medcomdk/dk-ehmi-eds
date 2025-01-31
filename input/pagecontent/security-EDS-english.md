@@ -250,7 +250,7 @@ For *registrations*, EDS also checks that:
 
 For *searches and lookups*, EDS restricts access based on the following:
 
-1.  *System clients representing a station in a message flow*: Access is limited to delivery status registrations for messages which include registrations created by the station’s own device_id.   
+1.  *System clients representing a station in a message flow*: For stations, EDS Clients, involved in message flows, access to delivery status registrations in EDS is limited to events regarding messages they are handling (on the sender and/or receiver end of a message flow).
       
     EDS restricts access to delivery status registrations where the device_id matches the ehmi:eer:device_id claim in the access token.
 2.  *Citizens accessing EDS via a user client*: Access is limited to delivery status registrations for the citizen’s own CPR number.  
