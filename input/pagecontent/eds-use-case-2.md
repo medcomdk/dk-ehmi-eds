@@ -13,7 +13,7 @@ This use case is conforming to this OperationDefinition:
 
     Input parameters Profile:
 
-    http://medcomehmi.dk/ig/dk-ehmi-eds/EdsPatientDeliveryStatus
+    http://medcomehmi.dk/ig/eds/EdsPatientDeliveryStatus
 
     Output parameters Profile: HTTP 200 OK
     

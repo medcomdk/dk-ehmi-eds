@@ -228,7 +228,7 @@ An example of a system client’s create call to EDS with the AuditEvent resourc
     "id" : " cbcb0de9-105e-470a-8754-ffad3b581ed4",
     "meta" : {
         "profile" : [
-        "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
+        "http://medcomehmi.dk/ig/eds/StructureDefinition/EdsPatientDeliveryStatus"
         ]
     },
 

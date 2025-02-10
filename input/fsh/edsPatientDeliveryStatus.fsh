@@ -13,7 +13,7 @@ When the message transaction is not Patient specific then EdsBasicDeliveryStatus
 When successfully submitted from an EDS Client to the EDS Server then the recorded EdsPatientDeliveryStatus has conformed to the profile otherwise it would 
 not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
-* ^url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EdsPatientDeliveryStatus"
+* ^url = "http://medcomehmi.dk/ig/eds/StructureDefinition/EdsPatientDeliveryStatus"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsPatientDeliveryStatus.</div>"
 * ^text.status = #additional
 * ^contact[0].name = "MedCom"
