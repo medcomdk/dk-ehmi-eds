@@ -35,8 +35,8 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 //* entity[ehmiPatient].what.identifier obeys uuid
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
+* entity[ehmiPatient].type = #ehmiPatient "Patient"
 * entity[ehmiPatient].role = http://terminology.hl7.org/CodeSystem/object-role#1 // "Patient"
-* entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
+* entity[ehmiPatient].type.code = #ehmiPatient
 * entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiPatient].type.display = "Patient"

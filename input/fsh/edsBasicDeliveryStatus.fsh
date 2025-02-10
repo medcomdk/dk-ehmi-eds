@@ -165,22 +165,23 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity ^slicing.discriminator.type = #value
 * entity ^slicing.discriminator.path = "type.code"
 * entity ^slicing.rules = #open
+* entity.type.code from $EhmiDeliveryStatusEntityTypeValueSet
 * entity contains
     ehmiMessage 1..1 and
     ehmiMessageEnvelope 0..1 and
     ehmiTransportEnvelope 0..1 and
     ehmiOrigMessage 0..1 and
     ehmiOrigTransportEnvelope 0..1 
-* entity.type.code from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiMessage]
 * entity[ehmiMessage].what.identifier 1..1 MS SU
 * entity[ehmiMessage].type.code 1..1 MS 
 * entity[ehmiMessage].type.system 1..1 MS 
 * entity[ehmiMessage].type.display 1..1 MS
 //* entity[ehmiMessage].type.code from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage (exactly)
+* entity[ehmiMessage].type.code = #ehmiMessage (exactly)
 * entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessage].type.display = "Message"
+* entity[ehmiMessage].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type.value
   * ^slicing.rules = #open 
@@ -192,19 +193,22 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiMessage].detail 2..3
 
 //* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+//* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+* entity[ehmiMessage].detail[ehmiMessageType].type.value = #ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
 //* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
 //* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
 
 //* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+//* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = #ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
 
 //* entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
+//* entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
+* entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = #ehmiStatisticalInfo (exactly)
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
 //* entity[ehmiMessageEnvelope]
@@ -212,7 +216,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiMessageEnvelope].type.code 1..1 MS 
 * entity[ehmiMessageEnvelope].type.system 1..1 MS 
 * entity[ehmiMessageEnvelope].type.display 1..1 MS
-* entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope (exactly)
+* entity[ehmiMessageEnvelope].type.code = #ehmiMessageEnvelope (exactly)
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiMessageEnvelope].type.display = "Message Envelope"
 * entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
@@ -233,8 +237,8 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiTransportEnvelope].type.system 1..1 MS 
 * entity[ehmiTransportEnvelope].type.display 1..1 MS
 //* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope (exactly)
+//* entity[ehmiTransportEnvelope].type = #ehmiTransportEnvelope
+* entity[ehmiTransportEnvelope].type.code = #ehmiTransportEnvelope (exactly)
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
@@ -259,8 +263,8 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiOrigMessage].type.system 1..1 MS 
 * entity[ehmiOrigMessage].type.display 1..1 MS
 //* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage
-* entity[ehmiOrigMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigMessage (exactly)
+//* entity[ehmiOrigMessage].type = #ehmiOrigMessage
+* entity[ehmiOrigMessage].type.code = #ehmiOrigMessage (exactly)
 * entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigMessage].type.display = "Original Message"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
@@ -283,8 +287,8 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiOrigTransportEnvelope].type.system 1..1 MS 
 * entity[ehmiOrigTransportEnvelope].type.display 1..1 MS
 //* entity[ehmiOrigTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
-* entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope (exactly)
+//* entity[ehmiOrigTransportEnvelope].type = #ehmiOrigTransportEnvelope
+* entity[ehmiOrigTransportEnvelope].type.code = #ehmiOrigTransportEnvelope (exactly)
 * entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
 * entity[ehmiOrigTransportEnvelope].type.display = "Original Transport Envelope"
 * entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #value
