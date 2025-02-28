@@ -1,105 +1,121 @@
 ## 7.1	EHMI Delivery Status (EDS) 
 
-I [EHMI] er der følgende stationer som indgår i punkt-til-punkt meddelelsesforsendelser: Fagsystemer, message-service-handlere og access-points. 
+In [EHMI], the following *stations* are included in point-to-point message-delivery: End User Applications (EUAs), message-service-handlers (MSHs) and access-points (APs). 
 
-Alle stationer der indgår i en EHMI meddelelsesforsendelse skal registrere deres meddelelses-håndteringer i forsendelsesstatusservicen EDS, som beskrevet i FHIR implementation guiden på https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/. 
+All stations involved in EHMI message-delivery must register their message-handling in EHMI Delivery Status (EDS) as described in [FHIR Implementation Guide](https://build.fhir.org/ig/medcomdk/dk-ehmi-eds/). 
 
-Stationerne oprettes i EHMI Endpoint registeret (EER) og tildeles i forbindelse med oprettelsen et unikt device_id.
+The stations are created in EHMI Endpoint Register (EER) and are assigned a unique *device_id*.
 
-Som det fremgår af FHIR implementation guiden realiseres forsendelsesstatus som en profilering af FHIR AuditEvent ressourcen.
+As stated in FHIR Implementation Guide, the delivery status is a profilering/profiling of the FHIR AuditEvent (*FORMATERING*) ressource.
 
-Forsendelsesstatus indeholder personfølsomme oplysninger (i form at behandlingsstedet som indgår som afsender eller modtager af en meddelelse), og brugeradgange forudsætter derfor et NSIS-niveau ’Betydelig’.
+Delivery status contains sensitive personal information/personfølsomme oplysninger (being the place of treatment/behandlingsstedet either as the sender or receiver of a message), and therefore the user access require a NSIS level ’Significant’.
 
-### 7.1.1	EDS usecases
-Der er to overordnende usecases for anvendelsen af forsendelsesstatusservicen EDS.
+### 7.1.1	EDS use cases
+There are two main use cases regarding the use of delivery status service, EDS.
 
-1.	Stationerne i en EHMI forsendelse foretager hver især en registrering af forsendelsesstatus i EDS. Registrering sker på systemniveau, og de enkelte stationer kan oprette forsendelsesstatus for de organisationskontekster (kombinationer af GLN numre og SOR koder) som de er whitelistet til (se nedenstående).
+1.	Each station in EHMI message-delivery registers the delivery status in EDS. The registration happens on system level, and the individual stations can create a delivery status for the organizational contexts/organisationskontekster (combination of GLN numbers and SOR codes) for which they are whitelisted (see below).
 
-2.	EDS stiller en grænseflade til søgning og opslag til rådighed, som kan benyttes til track’n’trace af meddelelsesforsendelser eller til fejlsøgning.  
-Søgning og opslag kan enten foregå  :
-    a.	På systemniveau for stationerne på deres eget device_id. (Derved kan der eksempelvis fra fagsystemer etableres funktionalitet hvor brugere kan fremsøge status for meddelelser de selv har sendt.)
-    b.	På borgerniveau på eget CPR  
-    c.	På superbruger/leverandør(supporter)-niveau på CVR nummer for brugerens organisation og hvor brugeren får adgang via en særlig rettighed (som tildeles gennem SEB brugerkataloget)
+2.	EDS provides an interface for searching and lookup/opslag, which can be used for track'n'trace of messages or for troubleshooting.
+Searching and lookup can take place either at:
+    1. System level for stations using their own device_id. (This way, for example, functionality can be established from end user applications, where users can search for the status of messages sent by themselves.)
+    2.	Citizen level using CPR  
+    3.	Super user/vendor (supporter) level using the CVR number of the users organization, and where the user is granted access via a special right (granted by SEB user catalogue)
 
-### 7.1.2	Indrullering/whitelisting af systemklienter i EDS (til registrering, søgning og opslag)
-Stationer som registrerer forsendelsesstatus og kan søge og læse egne registreringer indrulleres som systemklienter.
-Udover de i afsnit 3.3 Indrullering af klienter beskrevne elementer skal der under indrullering af systemklienter angives følgende:
-    - Det device_id som stationen er registreret med i EER
-    - En liste af organisationskontekster som stationen sender/modtager meddelelser for i form af SOR kode og GLN lokationsnummer
+### 7.1.2	Enrollment/whitelisting of system clients in EDS (for registration, search, and lookup)
+Stations that register delivery status, and can search and read own registrations, are registered as system clients.
+In addition to the elements described in section 3.3 Enrollment of clients, the following must be specified when enrolling system clients: 
+- The *device_id* which the station is registered with in EER
+- A list of *organizational contexts*, for which the station sends/receives messages in the form of SOR code and GLN location number
 
-Under indrullering angives følgende som scope element:
+During enrollment, the following is specified as a scope element:
+
+EDS system/AuditEvent.crs (*FORMATERING*)
  
-(Ovenstående system/AuditEvent.crs syntaks er baseret på definitionen af scopes for FHIR ressourcer i [SMART].)
-Metadata for en EDS systemklient
+(The abovementioned system/AuditEvent.crs (*FORMATERING*) syntax is based on the definition of scopes for FHIR ressources in [SMART].)
+__Metadata for an EDS system client__
 
-Udover de i afsnit 3.3.1 Metadata for klienter beskrevne metadata elementer skal følgende metadata elementer angives for systemklienter.
+In addition to the metadata elements described in section 3.3.1 Metadata for clients, the following metadata elements must be specified for system clients. 
 
-Metadata element	Beskrivelse
-ehmi:eer:device_id	En angivelse af det device_id som stationen er registreret med i EER.
-ehmi:org_context	Et array af JSON objekter bestående af name (organisationsnavn), sor (SOR kode) og gln (lokationsnummer) som stationen sender/modtager meddelelser for.
+Metadata element | Description
+-----------------|-------------
+ehmi:eer:device_id|A specification of the device_id which the station is registered with in EER.
+ehmi:org_context|An array of JSON objects consisting of name (organization name), sor (SOR code) and gln (location number) for which the station sends/receives messages.
 
-Bemærk, at det er hensigten, at Authorization Server efter produktionspiloten i stedet laver opslag på en stations organisationskontekster i EER postkasseregisteret og den eksplicit whitelisting dermed bortfalder  .
-Eksempel metadata dokument for en EDS systemklient:
+Note that the intention is, that after the production pilot, the Authorization Server will instead make a post on a station's organizational contexts in EER Endpoint register and the explicit whitelisting will therefore cease to exist.
 
-### 7.1.3	Indrullering/whitelisting af brugerklienter (til søgning og opslag)
-Brugerklienter som anvendes af borgere eller superbrugere/supportere til at søge og læse forsendelsesstatus-registreringer indrulleres alene med de i afsnit 3.3 Indrullering af klienter beskrevne elementer. 
+Example of a metadata document for an EDS system client:*(MANGLER EKSEMPEL)*
 
-Under indrullering angives følgende scope element:
+### 7.1.3	Enrollment/whitelisting of user clients (for search and lookup)
+User clients, which are used by citizens or super-users/supporters to search for and read delivery-status registrations, are enroled only with the described elements in section 3.3 Enrollment of clients. 
+
+During enrollment, the following is specified as a scope element:
+
+EDS user//AuditEvent.rs (*FORMATERING*)
  
-Metadata for en EDS brugerklient til søgning og opslag
-For EDS brugerklienter skal der kun angives de i afsnit 3.3.1 Metadata for klienter beskrevne metadata.
-Eksempel metadata dokument for en EDS brugerklient:
+__Metadata for search and lookup for an EDS user client__
 
-### 7.1.4	Kald til Token Endpoint
+For EDS user clients, only the metadata described in section 3.3.1 Metadata for clients must be specified.
 
-I tilgangen til EDS opereres der for registreringer med organisations-specifikke tokens, det vil sige at de enkelte stationers systemklienter som optræder i flere organisatoriske kontekster skal trække et særskilt token hos Authorization Server for hver SOR/GLN kontekst.
-For at få udstedt et access token til at kunne tilgå EDS angives følgende scopes:
-scope 	Beskrivelse
+Example of a metadata document for an EDS user client: *(MANGLER EKSEMPEL)*
 
-EDS	En angivelse af det er for EDS, at klienten ønsker et access token.
-system/AuditEvent.crs	(kun for systemklienter) En angivelse af at tokenet skal kunne registrere/læse/fremsøge forsendelsesstatus ressourcer (som er profileringer af FHIR’s AuditEvent ressource).
-user/AuditEvent.rs	(kun for brugerklienter) En angivelse af at tokenet skal kunne læse og fremsøge forsendelsesstatus ressourcer (som er profileringer af FHIR’s AuditEvent ressource).
-SOR:<XXXXX>	(kun for systemklienter og kun ved registreringer) En angivelse af organisationens SOR kode, hvor <XXXXX> sættes til selve koden.
+### 7.1.4	Token Endpoint call
 
-GLN:<YYYYY>	(kun for systemklienter og kun ved registreringer) En angivelse af organisationens GLN lokationsnummer, hvor <YYYYY> sættes til selve lokationsnummeret.
+In the approach to EDS, *registrations* are operated with organisation-specific tokens, i.e. the system clients of the individual stations which appear in several organizational contexts must pull a separate token from the Authorization Server for each SOR/GLN context.
 
-Eksempel på en samlet scope som indgår i kaldet for en systemklient: 
+In order to have an access token issued to access EDS, the following scopes are specified:
+scope |	Beskrivelse
+------|-------------
+EDS|An indication of this is that the client wants an access token
+system/AuditEvent.crs|(only for system clients) An indication that the token must be able to register/read/search delivery status resources (which are profiles of FHIR’s AuditEvent resource).
+user/AuditEvent.rs|(only for user clients) An indication that the token must be able to read and search delivery status resources (which are profiles of FHIR’s AuditEvent resource).
+SOR:'XXXXX'|(only for system clients and only for registrations) An indication of the organization's SOR code, where 'XXXXX' is set to the code.
+GLN:'YYYYY'|(only for system clients and only for registrations) An indication of the organization's GLN location number, where 'YYYYY' is set to the location number.
 
-Eksemplet på et kald til Token Endpoint med ovenstående eksempel scope (bemærk at kaldet foretages via 2-vejs TLS):
+(*FORMATERING BILLEDE*)
+
+Example of a combined scope that is included in the call for a system client:
+
+The example of a call to Token Endpoint with the above example scope (note that the call is made via 2-way TLS):
+
+(*FORMATERING BILLEDE*)
  
 **Valideringer af kaldet hos Authorization Server**
 
-Kaldet til Token Endpoint valideres hos Authorization Server, som validerer klientens TLS-klientcertifikat og tjekker, at klienten er indrulleret/whitelistet med de angivne scopes. 
+The call to the Token Endpoint is validated at the Authorization Server, which validates the client's TLS-client certificate and checks that the client is enrolled/whitelisted with the specified scopes. 
 
-For systemklienter, der anmoder om et token til at foretage registreringer, mapper Authorization Serveren således client_id fra kaldet til det registrerede device_id og validerer, at klienten er whitelistet til såvel EDS servicen, den angivne ’create’ operation for AuditEvent ressourcen og den angivne organisatoriske kontekst i form af SOR kode og GLN lokationsnummer. 
+For system clients, who request a token to make *registrations*, the Authorization Serveren maps the *client_id* from the call to the registered device_id and validates that the client is whitelisted for both the EDS service, the specified ’create’ operation for the *AuditEvent* resource and the specified organizational context in the form of SOR code and GLN location number. 
 
-For access tokens udstedt til systemklienter, der laver registreringer i EDS indlejrer Authorization Server device_id og den organisatoriske kontekst som yderligere claims i tokenet på følgende form:
+For access tokens issued to system clients that make *registrations* in EDS, the Authorization Server embeds the device_id and the organizational context as additional claims in tokenet in the following form:
 
-Claim	Beskrivelse
-ehmi:eer:device_id	En angivelse af device_id som stationen er registreret med i EER.
-ehmi:org_context	Den aktuelle organisationskontekst for stationen, angivet som JSON objekt bestående af name (organisationsnavn), sor (SOR kode) og gln (lokationsnummer).
+Claim|Description
+-----|-----------
+ehmi:eer:device_id|An indication of the device_id with which the station is registered in EER.
+ehmi:org_context|The current organizational context for the station, specified as a JSON object consisting of *name* (organization name), *sor* (SOR code) and *GLN* (location number).
 
-### 7.1.5	Kald til EDS
+### 7.1.5	EDS call
 
-Kald til EDS foretages som beskrevet i den generelle sikkerhedsmodel som REST-kald over tovejs TLS, med access token (som er sender-constrained) i en HTTP header.
+Call to EDS is made as described in the general security model as a REST call over two-way TLS, with the access token (which is sender-constrained) i a HTTP header.
 
-Eksempel på en systemklients ’create’ kald til EDS med AuditEvent  ressourcen angivet som JSON objekt:
+Example of a system client's ’create’ call to EDS with the AuditEvent resource specified as a JSON object:
+
+(*FORMATERING BILLEDE*)
  
-**EDS adgangskontrol**
+**EDS access control**
 
-Forsendelsesstatusservicen tjekker at access tokenet både er gyldigt og udstedt til EDS og validerer ’sender-contrained’ egenskaben, det vil sige validerer, at det af klientens anvendte TLS-klientcertifikat matcher certifikatet, som blev indlejret i access tokenet. 
+The delivery status service checks that the access token is both valid and issued to the EDS and validates the ’sender-contrained’ ability, i.e. validates that the TLS client certificate used by the client matches the certificate that was embedded in the access token. 
 
-Ved registrering af en forsendelsesstatus tjekker servicen desuden, at tokenet indeholder de nødvendige scopes til at klienten må foretage registreringer i EDS. EDS tjekker endvidere hvorvidt SOR koden, GLN lokationsnummeret og device_id som den kan uddrage af access tokenet, matcher oplysningerne i den medsendte AuditEvent ressource.
- 
-Ved søgning og læsning afgrænser EDS servicen tilgangen:
+When *registering* delivery status, the service also checks that the token contains the necessary scopes for the client to make registrations in the EDS. EDS also checks wether the SOR code, GLN location number and device_id, which it can extract from the access token, match the information in the accompanying AuditEvent resource.
 
-1.	For systemklienter som repræsenter en station i et meddelelses-flow: Til registreringer foretaget af stationens eget device_id.
-EDS begrænser således adgangen til forsendelsesstatusregistreringer hvori der indgår samme device_id, som fremgår af access tokenets ehmi:eer:device_id claim.
+When *searching and reading*, the EDS service limits the approach:
 
-2.	For borgere som tilgår EDS via en brugerklient: Til registreringer foretaget på borgerens eget CPR nummer.
+1.	*For system clients who represent a station in a message flow*: For registrations made by the station's own device_id.
 
-EDS begrænser således adgangen til forsendelsesstatusregistreringer hvori der indgår samme patient CPR nummer, som fremgår af access tokenets cpr claim.
+EDS limits the access to delivery status registrations that include the same device_id as shown in the access token's ehmi:eer:device_id claim.
 
-3.	For superbrugere/supportere som tilgår EDS via en brugerklient: Til registreringer vedrørende egen organisation på CVR niveau.
+2.	*For citizens who access EDS via a user client*: For registrations made on the citizen's own CPR number.
 
-EDS validerer først, at den adgangsgivende rolle  som tildeles superbrugere/supporter fremgår af access tokenets rolle-struktur i priv claim’et. EDS begrænser derefter adgangen til forsendelsesstatusregistreringer, hvori der indgår samme organisations CVR-nummer, som fremgår af access tokenets cvr claim.
+EDS limits the access to delivery status registrations that include the same patient CPR number as shown in the access token's cpr claim.
+
+3.	*For super users/supporters who access EDS via a user client*: For registrations regarding own organization at CVR level.
+
+First, EDS validates that the access-granting role that is assigned to super users/supporters appears from the access token's role structure in the priv claim. EDS then limits access to delivery status registrations that include the same organization's CVR number as shown in the access token's cvr claim.
