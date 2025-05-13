@@ -45,8 +45,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
@@ -123,8 +123,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
