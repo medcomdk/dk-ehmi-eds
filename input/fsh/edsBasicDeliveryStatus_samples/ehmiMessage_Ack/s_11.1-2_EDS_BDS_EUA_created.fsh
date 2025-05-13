@@ -89,7 +89,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiMessageType = Acknowledgement
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
+* contained[+] = s-06-EUA-Receiver
 * id = "EDS-BDS-11.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
