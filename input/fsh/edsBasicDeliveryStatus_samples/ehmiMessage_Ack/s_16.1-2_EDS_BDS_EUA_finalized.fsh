@@ -9,7 +9,6 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0

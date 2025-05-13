@@ -8,7 +8,6 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
 - ehmiMessage = MSG3456789012
     - ehmiMessageType = SBDHAck
     - ehmiMessageVersion = 1.0
@@ -117,7 +116,6 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiSubType = msg-recieved-and-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
 - ehmiMessage = MSG3456789012
     - ehmiMessageType = SBDHAck
     - ehmiMessageVersion = 1.0
