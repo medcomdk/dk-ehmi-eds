@@ -32,7 +32,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * recorded = "2024-04-01T00:00:11.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
@@ -134,7 +134,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * recorded = "2024-04-01T00:00:12.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].name = "Løgten Lægehus"
 * agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
