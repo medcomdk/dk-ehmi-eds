@@ -21,7 +21,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
-* id = "EDS-PDS-20.1"
+* id = "EDS-BDS-20.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
@@ -130,7 +130,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
     - ehmiOrigEnvelopeVersion = 2.0
 "
 * contained[+] = s-02-MSH-Sender
-* id = "EDS-PDS-20.1"
+* id = "EDS-BDS-20.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"

@@ -13,8 +13,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-06-EUA-Receiver
-* id = "EDS-PDS-16.1"
+* contained[+] = s_01_EUA_Sender
+* id = "EDS-BDS-16.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
@@ -44,8 +44,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-06-EUA-Receiver"
-* source.observer.reference = "Device/s-06-EUA-Receiver"
+* source.observer.identifier.value = "s_01_EUA_Sender"
+* source.observer.reference = "Device/s_01_EUA_Sender"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
@@ -87,7 +87,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiMessageVersion = 1.0
 "
 * contained[+] = s-01-EUA-Sender
-* id = "EDS-PDS-16.1"
+* id = "EDS-BDS-16.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
@@ -117,8 +117,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-06-EUA-Receiver"
-* source.observer.reference = "Device/s-06-EUA-Receiver"
+* source.observer.identifier.value = "s_01_EUA_Sender"
+* source.observer.reference = "Device/s_01_EUA_Sender"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType

@@ -16,7 +16,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeVersion = 2.0
 "
 * contained[+] = s-03-AP-Sender
-* id = "EDS-PDS-13.1"
+* id = "EDS-BDS-13.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
@@ -111,7 +111,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeVersion = 2.0
 "
 * contained[+] = s-03-AP-Sender
-* id = "EDS-PDS-13.2"
+* id = "EDS-BDS-13.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"

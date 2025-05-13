@@ -22,7 +22,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
     - ehmiOrigEnvelopeVersion = 2.0
 "
 * contained[+] = s-03-AP-Sender
-* id = "EDS-PDS-19.1"
+* id = "EDS-BDS-19.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
@@ -100,7 +100,7 @@ Instance: 019.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for an AP Receiver in a sent status"
 * contained[+] = s-03-AP-Sender
-* id = "EDS-PDS-19.2"
+* id = "EDS-BDS-19.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
