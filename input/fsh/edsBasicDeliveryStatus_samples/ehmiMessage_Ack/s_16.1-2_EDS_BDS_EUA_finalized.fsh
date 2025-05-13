@@ -83,12 +83,11 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiSubType = msg-received-and-finalized
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-06-EUA-Receiver
+* contained[+] = s-01-EUA-Sender
 * id = "EDS-PDS-16.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
