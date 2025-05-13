@@ -31,25 +31,25 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * recorded = "2024-04-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR12345"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
-// ehmiReceiver
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].name = "Løgten Lægehus"
+* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.display = "Sender"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR1234"
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+// ehmiReceiver
+* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiSender]type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender]type.coding.display = "Receiver"
+* agent[ehmiSender]name = "Aarhus Kommune"
+* agent[ehmiSender]requestor = false
+* agent[ehmiSender]who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender]who.identifier.value = "SOR1234"
+* agent[ehmiSender]extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender]extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "s-05-MSH-Receiver"
 * source.observer.reference = "Device/s-05-MSH-Receiver"
@@ -133,25 +133,25 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * recorded = "2024-04-01T00:00:10.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR12345"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
-// ehmiReceiver
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].name = "Løgten Lægehus"
+* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.display = "Sender"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR1234"
+* agent[ehmiReceiver].who.identifier.value = "SOR12345"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+// ehmiReceiver
+* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiSender]type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender]type.coding.display = "Receiver"
+* agent[ehmiSender]name = "Aarhus Kommune"
+* agent[ehmiSender]requestor = false
+* agent[ehmiSender]who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender]who.identifier.value = "SOR1234"
+* agent[ehmiSender]extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender]extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "s-05-MSH-Receiver"
 * source.observer.reference = "Device/s-05-MSH-Receiver"
