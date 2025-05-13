@@ -64,7 +64,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope (Bundle)
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -137,7 +137,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope (Bundle)
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType

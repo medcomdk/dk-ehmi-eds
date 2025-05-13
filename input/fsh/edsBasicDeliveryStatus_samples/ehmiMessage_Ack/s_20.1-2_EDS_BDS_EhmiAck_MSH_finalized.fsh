@@ -17,7 +17,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiOrigMessage = MSG1234567890
     - ehmiOrigMessageType = HomeCareObservation
     - ehmiOrigMessageVersion = 1.0
-- ehmiOrigTransportEnvelope = ENV1234567890
+- ehmiOrigTransportEnvelope = ENV2345678901
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
@@ -68,7 +68,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -96,7 +96,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
-* entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -125,7 +125,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiOrigMessage = MSG1234567890
     - ehmiOrigMessageType = HomeCareObservation
     - ehmiOrigMessageVersion = 1.0
-- ehmiOrigTransportEnvelope = ENV1234567890
+- ehmiOrigTransportEnvelope = ENV2345678901
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
@@ -177,7 +177,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -205,7 +205,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // OrigEnvelope
-* entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType

@@ -10,7 +10,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiMessage = Ack1234567890
 - ehmiMessageType = Acknowledgement
 - ehmiMessageVersion = 1.0
-- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelope = ENV2345678901
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
@@ -64,7 +64,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope[2]
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -72,7 +72,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 // Transport Envelope[3]    
-* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -94,7 +94,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiMessage = Ack1234567890
 - ehmiMessageType = Acknowledgement
 - ehmiMessageVersion = 1.0
-- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelope = ENV2345678901
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
@@ -153,7 +153,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -161,7 +161,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 // Transport Envelope 
-* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
