@@ -28,7 +28,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * subtype[msg-created-and-sent].code = #msg-created-and-sent
 * subtype[msg-created-and-sent].system = $EdsSubtypes
 * subtype[msg-created-and-sent].display = "Message created and sent"
-* recorded = "2024-04-01T00:00:09.500+02:00" 
+* recorded = "2025-04-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Løgten Lægehus"
@@ -130,7 +130,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
 
-* recorded = "2024-04-01T00:00:10.501+02:00" 
+* recorded = "2025-04-01T00:00:10.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Løgten Lægehus"

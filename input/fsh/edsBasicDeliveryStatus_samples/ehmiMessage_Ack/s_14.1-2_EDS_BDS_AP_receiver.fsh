@@ -24,7 +24,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * subtype[msg-received].code = #msg-received
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
-* recorded = "2024-04-01T00:00:07.000+02:00" 
+* recorded = "2025-04-01T00:00:07.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Aarhus Kommune"
@@ -102,7 +102,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * subtype[msg-sent].code = #msg-sent
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:08.001+02:00" 
+* recorded = "2025-04-01T00:00:08.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Aarhus Kommune"

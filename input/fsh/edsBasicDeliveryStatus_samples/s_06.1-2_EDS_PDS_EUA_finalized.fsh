@@ -22,7 +22,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * subtype[msg-received].code = #msg-received
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
-* recorded = "2024-04-01T00:00:11.000+02:00" 
+* recorded = "2025-04-01T00:00:11.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
@@ -96,7 +96,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * subtype[msg-received-and-finalized].code = #msg-received-and-finalized
 * subtype[msg-received-and-finalized].system = $EdsSubtypes
 * subtype[msg-received-and-finalized].display = "Message received and finalized"
-* recorded = "2024-04-01T00:00:12.001+02:00" 
+* recorded = "2025-04-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune"
