@@ -1,6 +1,6 @@
 
 /*
-Instance: 016.1-EDS_PDS_Create-BS-Receiver-msg-received
+Instance: 016.1-EDS_BDS_Create-BS-Receiver-msg-received
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus.
 - recorded by the client
@@ -74,7 +74,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 */
 
-Instance: 016.1-EDS_PDS_Create-BS-Receiver-msg-received-and-finalized
+Instance: 016.1-EDS_BDS_Create-BS-Receiver-msg-received-and-finalized
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus.
 - recorded by the client
