@@ -25,7 +25,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
@@ -111,7 +111,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"

@@ -25,20 +25,20 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Sender"
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiSender]name = "Løgten Lægehus"
-* agent[ehmiSender]requestor = false
-* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiSender]requestor = true
+* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender]type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender]type.coding.display = "Receiver"
+* agent[ehmiSender]type.coding.display = "Sender"
 * agent[ehmiSender]who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender]who.identifier.value = "SOR12345"
 * agent[ehmiSender]extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
@@ -98,20 +98,20 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
+* agent[ehmiReceiver].requestor = false
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Sender"
+* agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiSender]name = "Løgten Lægehus"
-* agent[ehmiSender]requestor = false
-* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiSender]requestor = true
+* agent[ehmiSender]type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender]type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender]type.coding.display = "Receiver"
+* agent[ehmiSender]type.coding.display = "Sender"
 * agent[ehmiSender]who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender]who.identifier.value = "SOR12345"
 * agent[ehmiSender]extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
