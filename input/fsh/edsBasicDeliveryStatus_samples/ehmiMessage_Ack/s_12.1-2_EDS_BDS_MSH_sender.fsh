@@ -14,7 +14,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-02-MSH-Sender
+* contained[+] = s-05-MSH-Receiver
 * id = "EDS-BDS-12.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
@@ -98,7 +98,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-02-MSH-Sender
+* contained[+] = s-05-MSH-Receiver
 * id = "EDS-BDS-12.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
