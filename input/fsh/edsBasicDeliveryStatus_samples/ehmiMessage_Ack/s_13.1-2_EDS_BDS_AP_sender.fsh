@@ -56,12 +56,15 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-03-AP-Sender"
+* source.observer = Reference(Device/s-03-AP-Sender)
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+/* source.observer.identifier.value = "s-03-AP-Sender"
 * source.observer.reference = "Device/s-03-AP-Sender"
 * source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -141,12 +144,15 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-03-AP-Sender"
+* source.observer = Reference(Device/s-03-AP-Sender)
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+/* source.observer.identifier.value = "s-03-AP-Sender"
 * source.observer.reference = "Device/s-03-AP-Sender"
 * source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
