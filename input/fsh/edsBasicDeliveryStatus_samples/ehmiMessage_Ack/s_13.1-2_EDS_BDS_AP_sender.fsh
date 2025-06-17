@@ -116,7 +116,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
 * subtype[msg-sent].code = #msg-sent
-* subtype[msg-received].system = $EdsSubtypes
+* subtype[msg-sent].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
 * recorded = "2025-04-01T00:00:06.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
