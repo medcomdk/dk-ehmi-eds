@@ -50,13 +50,16 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer = Reference(Device/s-04-AP-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+/* source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
 * source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
-////* entity[data].type = $AuditEventEntityType#4
+*/
+//* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -152,13 +155,16 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer = Reference(Device/s-04-AP-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+/* source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
 * source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
-////* entity[data].type = $AuditEventEntityType#4
+*/
+//* entity[data].type = $AuditEventEntityType#4
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
