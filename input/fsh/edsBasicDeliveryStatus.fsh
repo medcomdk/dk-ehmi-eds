@@ -47,9 +47,9 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * subtype contains
 //    msg-created 0..1 and 
     msg-created-and-sent 0..1 MS and 
-    msg-sent 0..1 and 
-    msg-received 0..1 and 
-    msg-received-and-finalized 0..1 
+    msg-sent 0..1 MS and 
+    msg-received 0..1 MS and 
+    msg-received-and-finalized 0..1 MS 
 //    and msg-finalized 0..1 
 //* subtype[msg-created]
 /* subtype[msg-created].code 1..1
