@@ -165,6 +165,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity ^slicing.discriminator.type = #value
 * entity ^slicing.discriminator.path = "type.code"
 * entity ^slicing.rules = #open
+* entity.type.system = $EhmiDeliveryStatusEntityType
 * entity.type.code from $EhmiDeliveryStatusEntityTypeValueSet
 * entity contains
     ehmiMessage 1..1 and
