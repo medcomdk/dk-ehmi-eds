@@ -65,4 +65,4 @@ As the EUA, MSH and AP can be built and hosted together in various ways, this is
 
 The calls for EDS are always produced in a security context. 
 
-[The calls for EDS are described here](security-EDS-english.html)
+[The calls for EDS are described here](security-english.html)
