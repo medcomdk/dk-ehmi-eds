@@ -195,7 +195,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 
 //* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 //* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
-* entity[ehmiMessage].detail[ehmiMessageType].type.value = #ehmiMessageType (exactly)
+* entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
 //* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
