@@ -48,12 +48,15 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-05-MSH-Receiver"
+* source.observer = Reference(Device/s-05-MSH-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+/* source.observer.identifier.value = "s-05-MSH-Receiver"
 * source.observer.reference = "Device/s-05-MSH-Receiver"
 * source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
+*/
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -127,12 +130,15 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-05-MSH-Receiver"
+* source.observer = Reference(Device/s-05-MSH-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+/* source.observer.identifier.value = "s-05-MSH-Receiver"
 * source.observer.reference = "Device/s-05-MSH-Receiver"
 * source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
+*/
 // Patient
 * entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
