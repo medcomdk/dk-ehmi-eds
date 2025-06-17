@@ -45,12 +45,15 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer = Reference(Device/s-06-EUA-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#EUA
+/* source.observer.identifier.value = "s-06-EUA-Receiver"
 * source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "EUA (End-user Application)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
