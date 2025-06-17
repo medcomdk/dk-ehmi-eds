@@ -133,6 +133,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
