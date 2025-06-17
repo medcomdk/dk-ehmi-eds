@@ -32,7 +32,7 @@ dependencies:
   medcom.fhir.dk.messaging: 3.0.0
   medcom.fhir.dk.terminology: 1.8.0
   dk.ehmi.terminology: current #1.0.0 
-  dk.ehmi.eer: dev #1.0.0 #current
+  dk.ehmi.eer: current #1.0.0 #current
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
