@@ -46,7 +46,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * subtype ^slicing.rules = #open // allow other codes
 * subtype contains
 //    msg-created 0..1 and 
-    msg-created-and-sent 0..1 and 
+    msg-created-and-sent 0..1 MS and 
     msg-sent 0..1 and 
     msg-received 0..1 and 
     msg-received-and-finalized 0..1 
@@ -129,7 +129,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
 //* agent[ehmiReceiver]
 * agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
 * agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
@@ -150,7 +150,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
@@ -313,7 +313,8 @@ Description: "Carries other identifiers that are known for an agent."
 * ^context[+].type = #element
 * ^context[=].expression = "AuditEvent.agent"
 * value[x] only Identifier
-* valueIdentifier 1..1
+* valueIdentifier.type 1..1
+* valueIdentifier.value 1..1
 
 Invariant: uuid
 Description: "General UUID expression"
