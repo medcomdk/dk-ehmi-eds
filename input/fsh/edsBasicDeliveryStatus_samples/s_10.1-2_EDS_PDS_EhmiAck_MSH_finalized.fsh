@@ -162,12 +162,15 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-02-MSH-Sender"
+* source.observer = Reference(Device/s-02-MSH-Sender)
+* source.type.code = $EhmiDeliveryStatusSourceType#MSH
+/* source.observer.identifier.value = "s-02-MSH-Sender"
 * source.observer.reference = "Device/s-02-MSH-Sender"
 * source.observer.display = "MSH (Message Service Handler)"
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "MSH (Application Server)"
+*/
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG3456789012"
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
