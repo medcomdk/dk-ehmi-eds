@@ -10,9 +10,9 @@ Alias: $EhmiDeliveryStatusParticipationRoleTypeValueSet = http://medcomehmi.dk/i
 Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypes = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-delivery-status-agent-who-identifier-types
 Alias: $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-agent-who-identifier-types-valueset
 Alias: $EhmiDeliveryStatusEntityType = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-delivery-status-entity-type
-Alias: $EhmiDeliveryStatusEntityTypeValueset = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-entity-type-valueset
+Alias: $EhmiDeliveryStatusEntityTypeValueSet = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-entity-type-valueset
 Alias: $EhmiDeliveryStatusEntityDetailType = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-delivery-status-entity-detail-type
-Alias: $EhmiDeliveryStatusEntityDetailTypeValueset = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-entity-detail-type-valueset
+Alias: $EhmiDeliveryStatusEntityDetailTypeValueSet = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-entity-detail-type-valueset
 Alias: $EhmiDeliveryStatusValueSet = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-valueSet
 Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-delivery-status-entity-message-type
 
