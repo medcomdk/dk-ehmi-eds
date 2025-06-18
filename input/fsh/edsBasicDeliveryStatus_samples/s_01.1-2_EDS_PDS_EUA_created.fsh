@@ -112,6 +112,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
 * agent[ehmiSender].who.display = "Aarhus Kommune"
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiSender].who.identifier.value = "SOR1234"
@@ -123,6 +124,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].who = Reference(Organization/Eer.Sor.OU-AAR-Kommune.533301000016002)
 * agent[ehmiReceiver].who.display = "Løgten Lægehus"
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 * agent[ehmiReceiver].who.identifier.value = "SOR12345"
