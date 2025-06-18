@@ -125,7 +125,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiSender].who.type 1..1 MS SU
 * agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.type ^short = "$EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR"
+* agent[ehmiSender].who.type ^short = "SOR"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value 1..1 MS
@@ -147,6 +147,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiReceiver].who.type 1..1 MS SU
 * agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
 * agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR 
+* agent[ehmiReceiver].who.type  ^short = "SOR"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value 1..1 MS
