@@ -46,7 +46,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer = Reference(Device/s_01_EUA_Sender)
+* source.observer = Reference(Device/s-01-EUA-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 /* source.observer.identifier.value = "s-01-EUA-Sender"
 * source.observer.reference = "Device/s-01-EUA-Sender"
@@ -128,7 +128,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer = Reference(Device/s_01_EUA_Sender)
+* source.observer = Reference(Device/s-01-EUA-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 /* source.observer.identifier.value = "s-01-EUA-Sender"
 * source.observer.reference = "Device/s-01-EUA-Sender"
