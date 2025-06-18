@@ -18,7 +18,7 @@ Description: "ChatGPT generated"
   * type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
   * who
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "SenderOrgID"
   * name = "Sender Organization Name"
   * extension[eds-otherId]
@@ -30,7 +30,7 @@ Description: "ChatGPT generated"
   * type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
   * who
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "ReceiverOrgID"
   * name = "Receiver Organization Name"
   * extension[eds-otherId]
@@ -41,7 +41,7 @@ Description: "ChatGPT generated"
 * source
   * observer
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "EDSClientDeviceID"
   * type
     * code = $EhmiDeliveryStatusSourceType#EUA

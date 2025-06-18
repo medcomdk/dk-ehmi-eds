@@ -36,7 +36,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = true
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
 * agent[ehmiSender].who.identifier.value = "SOR12345"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
@@ -46,7 +46,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
@@ -119,7 +119,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].name = "Løgten Lægehus"
 * agent[ehmiSender].requestor = true
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
 * agent[ehmiSender].who.identifier.value = "SOR12345"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
@@ -129,7 +129,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
 * agent[ehmiReceiver].who.identifier.value = "SOR1234"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"

@@ -30,7 +30,7 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
   * type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
   * who
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "SenderOrgID"
   * name = "Sender Organization Name"
   * extension[eds-otherId]
@@ -44,7 +44,7 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
   * type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
   * who
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "ReceiverOrgID"
   * name = "Receiver Organization Name"
   * extension[eds-otherId]
@@ -61,7 +61,7 @@ Description: """Example instance for the Message Created subtype of EdsBasicDeli
     * display = "EUA (End-user Application)"
   * observer
     * identifier
-      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+      * type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SORT
       * value = "EDSClientDeviceID"
 
 // Entity details for the message
