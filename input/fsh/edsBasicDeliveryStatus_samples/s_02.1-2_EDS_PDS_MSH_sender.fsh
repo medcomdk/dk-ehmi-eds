@@ -25,14 +25,14 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * recorded = "2025-04-01T00:00:03.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Aarhus Kommune"
+* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who = Reference(EER.SOR.HI-AAR-Kommune.937961000016000)
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].who.identifier.value = "698141000016008"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
@@ -119,14 +119,14 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * recorded = "2025-04-01T00:00:04.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Aarhus Kommune"
+* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who = Reference(EER.SOR.HI-AAR-Kommune.937961000016000)
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
 * agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR1234"
+* agent[ehmiSender].who.identifier.value = "698141000016008"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
