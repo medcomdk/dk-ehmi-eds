@@ -1,4 +1,4 @@
-Instance: s_01_EUA_Sender
+Instance: s_11_EUA_Sender
 InstanceOf: Device
 Description: "An instance of a EUA_Sender Device"
 * id = "s-01-EUA-Sender"
@@ -8,3 +8,4 @@ Description: "An instance of a EUA_Sender Device"
 * deviceName.name = "Columna Cura"
 * deviceName.type = #manufacturer-name
 * type = $EhmiDeliveryStatusSourceType#EUA
+
