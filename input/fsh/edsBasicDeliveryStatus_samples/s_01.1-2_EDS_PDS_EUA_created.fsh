@@ -48,6 +48,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-01-EUA-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
+* source.type.system = $EhmiDeliveryStatusSourceType
 /* source.observer.identifier.value = "s-01-EUA-Sender"
 * source.observer.reference = "Device/s-01-EUA-Sender"
 * source.observer.display = "EUA (End-user Application)"
@@ -130,6 +131,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-01-EUA-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
+* source.type.system = $EhmiDeliveryStatusSourceType
 /* source.observer.identifier.value = "s-01-EUA-Sender"
 * source.observer.reference = "Device/s-01-EUA-Sender"
 * source.observer.display = "EUA (End-user Application)"

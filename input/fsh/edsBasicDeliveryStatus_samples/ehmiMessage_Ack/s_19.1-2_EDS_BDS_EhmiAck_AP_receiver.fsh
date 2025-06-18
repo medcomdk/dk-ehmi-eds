@@ -130,6 +130,8 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 // source
 * source.observer = Reference(Device/s-03-AP-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-03-AP-Sender"
 * source.observer.reference = "Device/s-03-AP-Sender"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP

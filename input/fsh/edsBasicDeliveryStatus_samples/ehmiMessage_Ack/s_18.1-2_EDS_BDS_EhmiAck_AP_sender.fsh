@@ -52,6 +52,8 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 // source
 * source.observer = Reference(Device/s-04-AP-Receiver)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
 * source.observer.display = "AP (Access Point)"
@@ -157,6 +159,8 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 // source
 * source.observer = Reference(Device/s-04-AP-Receiver)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
 * source.observer.display = "AP (Access Point)"

@@ -59,6 +59,8 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-03-AP-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-03-AP-Sender"
 * source.observer.reference = "Device/s-03-AP-Sender"
 * source.observer.display = "AP (Access Point)"
@@ -148,6 +150,8 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-03-AP-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-03-AP-Sender"
 * source.observer.reference = "Device/s-03-AP-Sender"
 * source.observer.display = "AP (Access Point)"

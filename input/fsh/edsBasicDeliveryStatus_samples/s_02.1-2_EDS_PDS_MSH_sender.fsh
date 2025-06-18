@@ -47,6 +47,8 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-02-MSH-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-02-MSH-Sender"
 * source.observer.reference = "Device/s-02-MSH-Sender"
 * source.observer.display = "MSH (Message Service Handler)"
@@ -139,6 +141,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-02-MSH-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#MSH
+* source.type.system = $EhmiDeliveryStatusSourceType
 /* source.observer.identifier.value = "s-02-MSH-Sender"
 * source.observer.reference = "Device/s-02-MSH-Sender"
 * source.observer.display = "MSH (Message Service Handler)"

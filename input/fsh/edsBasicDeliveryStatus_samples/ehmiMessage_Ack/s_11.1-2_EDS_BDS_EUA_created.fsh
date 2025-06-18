@@ -47,6 +47,8 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 // source
 * source.observer = Reference(Device/s-06-EUA-Receiver)
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
+* source.type.system = $EhmiDeliveryStatusSourceType
+
 /* source.observer.identifier.value = "s-06-EUA-Receiver"
 * source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
