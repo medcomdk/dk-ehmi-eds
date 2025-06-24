@@ -1,6 +1,6 @@
 {
     "package-id": "dk.ehmi.eds",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "path": "http://medcomehmi.dk/ig/eds",
     "status": "release",
     "sequence": "Release",
