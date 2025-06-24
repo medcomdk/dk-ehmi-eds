@@ -36,7 +36,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
@@ -130,7 +130,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
