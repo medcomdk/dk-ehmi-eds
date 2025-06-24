@@ -95,7 +95,16 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString = "1.0"
-// OrigEnvelope
+// OrigMessageEnvelope
+/* entity[ehmiOrigMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiOrigMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
+* entity[ehmiOrigMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
+* entity[ehmiOrigMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
+* entity[ehmiOrigMessageEnvelope].type.display = "Message Envelope"
+* entity[ehmiOrigMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
+* entity[ehmiOrigMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
+*/
+// OrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH1234567890"
 * entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
 * entity[ehmiOrigTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope
