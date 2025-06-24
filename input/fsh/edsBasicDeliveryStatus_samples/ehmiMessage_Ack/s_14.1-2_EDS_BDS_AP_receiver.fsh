@@ -1,4 +1,3 @@
-
 Instance: 014.1-EDS_BDS_Create-AP-Receiver-msg-received
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus.
@@ -7,12 +6,11 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - client is an AP
 - ehmiSubType = msg-received
 - ehmiSender = Aarhus Kommune
-- ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
+- ehmiReceiver = Lægerne Stjernepladsen I/S
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
-- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelope = ENV2345678901
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
@@ -25,28 +23,30 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * subtype[msg-received].code = #msg-received
 * subtype[msg-received].system = $EdsSubtypes
 * subtype[msg-received].display = "Message received"
-* recorded = "2024-04-01T00:00:07.000+02:00" 
+* recorded = "2025-04-01T00:00:07.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR1234"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
-// ehmiReceiver
-* agent[ehmiReceiver].name = "Løgten Lægehus"
+* agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
+//* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+// ehmiReceiver
+* agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
+* agent[ehmiSender].requestor = true
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
+//* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "937961000016000"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
@@ -68,7 +68,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Transport Envelope 
-* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -86,12 +86,11 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - client is an AP
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
-- ehmiReceiver = Løgten Lægehus
-- ehmiPatient = PAT1234567890 
+- ehmiReceiver = Lægerne Stjernepladsen I/S
 - ehmiMessage = MSG1234567890
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
-- ehmiTransportEnvelope = ENV1234567890
+- ehmiTransportEnvelope = ENV2345678901
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
@@ -102,37 +101,44 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * type.display = "EHMI messaging event"
 
 * subtype[msg-sent].code = #msg-sent
-* subtype[msg-received].system = $EdsSubtypes
+* subtype[msg-sent].system = $EdsSubtypes
 * subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:08.001+02:00" 
+* recorded = "2025-04-01T00:00:08.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Aarhus Kommune"
-* agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR1234"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
-// ehmiReceiver
-* agent[ehmiReceiver].name = "Løgten Lægehus"
+* agent[ehmiReceiver].name = "Aarhus Kommune"
 * agent[ehmiReceiver].requestor = false
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver 
+* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
+//* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+// ehmiReceiver
+* agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
+* agent[ehmiSender].requestor = true
+* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
+* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
+* agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
+//* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "937961000016000"
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-04-AP-Receiver"
+* source.observer = Reference(Device/s-04-AP-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#AP
+* source.type.system = $EhmiDeliveryStatusSourceType
+
+/* source.observer.identifier.value = "s-04-AP-Receiver"
 * source.observer.reference = "Device/s-04-AP-Receiver"
 * source.observer.display = "AP (Access Point)"
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "AP (Access Point)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
@@ -147,7 +153,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Transport Envelope 
-* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
+* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType

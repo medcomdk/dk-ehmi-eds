@@ -6,12 +6,12 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - client is an EUA
 - ehmiSubType = msg-created
 - ehmiSender = Aarhus Kommune
-- ehmiReceiver = Løgten Lægehus
+- ehmiReceiver = Lægerne Stjernepladsen I/S
 - ehmiMessage = Ack1234567890
 - ehmiMessageType = Acknowledgement
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
+* contained[+] = s-06-EUA-Receiver
 * id = "EDS-BDS-11.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
@@ -19,38 +19,45 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * subtype[msg-created-and-sent].code = #msg-created-and-sent 
 * subtype[msg-created-and-sent].display = "Message created and sent"
 //* subtype[msg-created] = $EdsSubtypes#msg-created-and-sent "Message created and sent"
-* recorded = "2024-04-01T00:00:01.000+02:00" 
+* recorded = "2025-04-01T00:00:01.000+02:00" 
 //* outcome = $EhmiDeliveryStatusOutcome#0
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 // ehmiSender
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
 //* agent[ehmiReceiver].who = Reference(Organization/EHMI.SOR.OU-AAR-Kommune.1027201000016001)
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR1234"
+//* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR12345"
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
+//* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "937961000016000"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer = Reference(Device/s-06-EUA-Receiver)
+* source.type.code = $EhmiDeliveryStatusSourceType#EUA
+* source.type.system = $EhmiDeliveryStatusSourceType
+
+/* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
 * source.type.display = "EUA (End-user Application)"
+*/
 // Patient
 //* entity[ehmiPatient].what.identifier.value = "PAT1234567890"
 //* entity[ehmiPatient].type.code = $EhmiDeliveryStatusEntityType#ehmiPatient
@@ -68,7 +75,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 // AuditEvent​.entity[1]​.detail[1]​.type (l171​/c42)	error	The property 'value' is invalid
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // MessageEnvelope (Bundle)
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -84,12 +91,12 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - client is an EUA
 - ehmiSubType = msg-sent
 - ehmiSender = Aarhus Kommune
-- ehmiReceiver = Løgten Lægehus
+- ehmiReceiver = Lægerne Stjernepladsen I/S
 - ehmiMessage = Ack1234567890
 - ehmiMessageType = Acknowledgement
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
+* contained[+] = s-06-EUA-Receiver
 * id = "EDS-BDS-11.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
@@ -98,33 +105,35 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 //* subtype[msg-sent].system = $EdsSubtypes
 * subtype[msg-sent].code = #msg-sent
 * subtype[msg-sent].display = "Message sent"
-* recorded = "2024-04-01T00:00:02.001+02:00" 
+* recorded = "2025-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Aarhus Kommune"
-* agent[ehmiReceiver].requestor = true
+* agent[ehmiReceiver].requestor = false
 * agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
 * agent[ehmiReceiver].who.display = "Aarhus Kommune"
-* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiReceiver].who.identifier.value = "SOR1234"
+//* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiSender
-* agent[ehmiSender].name = "Løgten Lægehus"
-* agent[ehmiSender].requestor = false
+* agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
+* agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender 
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
-* agent[ehmiSender].who.display = "Løgten Lægehus"
-* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
-* agent[ehmiSender].who.identifier.value = "SOR12345"
+* agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
+* agent[ehmiSender].who.display = "Lægerne Stjernepladsen I/S"
+//* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
+* agent[ehmiSender].who.identifier.value = "937961000016000"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
-* source.observer.identifier.value = "s-01-EUA-Sender"
-* source.observer.reference = "Device/s-01-EUA-Sender"
+* source.observer.identifier.value = "s-06-EUA-Receiver"
+* source.observer.reference = "Device/s-06-EUA-Receiver"
 * source.observer.display = "EUA (End-user Application)"
 * source.type.code = $EhmiDeliveryStatusSourceType#EUA
 * source.type.system = $EhmiDeliveryStatusSourceType
@@ -143,7 +152,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope (Bundle)
-* entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
+* entity[ehmiMessageEnvelope].what.identifier.value = "ENV2345678901"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
 * entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType

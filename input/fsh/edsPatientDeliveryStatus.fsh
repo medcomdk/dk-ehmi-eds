@@ -25,7 +25,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 //* ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^status = #active
 * ^publisher = "MedCom"
-* ^date = "2024-04-01"
+* ^date = "2025-04-01"
 * ^copyright = "CC0-1.0"
 * ^experimental = false
 * entity contains

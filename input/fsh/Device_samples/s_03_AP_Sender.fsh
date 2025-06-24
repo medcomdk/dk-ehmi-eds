@@ -5,7 +5,7 @@ Description: "An instance of a AP_Sender Device"
 * id = "s-03-AP-Sender"
 * identifier.value = "s_03_AP_Sender"
 * status = #active
-* manufacturer = "XYZ"
-* deviceName.name = "XYZ AP"
+* manufacturer = "KvalitetsIt"
+* deviceName.name = "KIT AP"
 * deviceName.type = #manufacturer-name
 * type = $EhmiDeliveryStatusSourceType#AP
