@@ -124,7 +124,6 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiSender].who.identifier ^short = "equals SBDH/BusinessScope/Scope[Type=Sender]/InstanceIdentifier"
 //* agent[ehmiSender].who.type 0..1 MS SU
 //* agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
-//* agent[ehmiSender].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR
 //* agent[ehmiSender].who.type ^short = "SOR"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
