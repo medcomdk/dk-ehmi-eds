@@ -37,7 +37,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 ////* agent[client].network.address = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 ////* agent[client].network.type = $AuditEventAgentNetworkType#2
 // ehmiSender
-* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
+* agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
@@ -130,7 +130,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * recorded = "2025-04-01T00:00:06.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
+* agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType

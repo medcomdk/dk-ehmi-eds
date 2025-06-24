@@ -25,7 +25,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * recorded = "2025-04-01T00:00:11.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
+* agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
@@ -101,7 +101,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * recorded = "2025-04-01T00:00:12.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
-* agent[ehmiSender].name = "Lægerne Stjernepladsen I/S"
+* agent[ehmiSender].name = "Aarhus Kommune"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
