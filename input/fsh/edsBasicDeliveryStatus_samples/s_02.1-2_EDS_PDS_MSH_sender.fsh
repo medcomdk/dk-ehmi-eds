@@ -31,7 +31,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
-* agent[ehmiSender].who.identifier.value = "698141000016008"
+* agent[ehmiSender].who.identifier.value = "937961000016000"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
@@ -41,7 +41,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
-* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
 // source
@@ -124,7 +124,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
-* agent[ehmiSender].who.identifier.value = "698141000016008"
+* agent[ehmiSender].who.identifier.value = "937961000016000"
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
 * agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
@@ -134,7 +134,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiReceiver].type.coding.display = "Receiver"
 * agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
-* agent[ehmiReceiver].who.identifier.value = "SOR12345"
+* agent[ehmiReceiver].who.identifier.value = "698141000016008"
 * agent[ehmiReceiver].who.identifier.id = "SOR:12345"
 * agent[ehmiReceiver].altId = "AltId-SOR:12345"
 * agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
