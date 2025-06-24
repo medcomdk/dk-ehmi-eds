@@ -80,7 +80,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 // Transport Envelope[3]    
-* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
+/* entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
 * entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
@@ -89,6 +89,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
+*/
 
 Instance: 002.2-EDS_PDS_Create-MSH-Sender-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
