@@ -4,10 +4,10 @@ name: EHMI EDS IG
 title: "EHMI Delivery Status (EDS)"
 description: The EHMI Delivery Status (EDS)
 status: active # draft | active | retired | unknown
-version: 1.0.1-draft
+version: 1.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2025+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher:
   name: MedCom
@@ -43,6 +43,11 @@ menu:
     Downloads: downloads.html
     Dependencies: dependencies.html
 
-instanceOptions:
-  manualSliceOrdering: true # true | false
+parameters:
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  pin-canonicals: pin-multiples
+  excludettl: true
 
