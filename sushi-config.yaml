@@ -22,10 +22,6 @@ dependencies:
   dk.ehmi.terminology: 1.0.0-draft
   dk.ehmi.eer: 1.0.0-draft
 
-parameters:
-  apply-contact: true
-  apply-publisher: true
-
 menu:
   Home: index.html
   Profiles: profiles.html
@@ -42,10 +38,10 @@ menu:
     Dependencies: dependencies.html
 
 parameters:
+  apply-contact: true
+  apply-publisher: true
   apply-version: false
   default-version: true
-  apply-publisher: false
-  default-publisher: true
   pin-canonicals: pin-multiples
   excludettl: true
 
