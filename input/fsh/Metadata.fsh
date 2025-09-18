@@ -1,6 +1,4 @@
 RuleSet: Metadata
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
-* ^text.status = #additional
 * ^contact[0].name = "MedCom"
 * ^contact[=].telecom.value = "https://www.medcom.dk/"
 * ^contact[=].telecom.system = #url
