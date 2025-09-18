@@ -14,7 +14,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * contained[+] = s-06-EUA-Receiver
 * id = "EDS-BDS-11.1"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* subtype[msg-created-and-sent] = $EdsSubtypesCS#msg-created-and-sent "Message created and sent"
+* subtype = $EdsSubtypesCS#msg-created-and-sent "Message created and sent"
 * recorded = "2025-04-01T00:00:01.000+02:00" 
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 // ehmiSender
@@ -77,7 +77,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * contained[+] = s-06-EUA-Receiver
 * id = "EDS-BDS-11.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* subtype[msg-sent] = $EdsSubtypesCS#msg-sent "Message sent"
+* subtype = $EdsSubtypesCS#msg-sent "Message sent"
 * recorded = "2025-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender

@@ -24,7 +24,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * contained[+] = s-05-MSH-Receiver
 * id = "EDS-BDS-07.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* subtype[msg-created-and-sent] = $EdsSubtypesCS#msg-created-and-sent "Message created and sent"
+* subtype = $EdsSubtypesCS#msg-created-and-sent "Message created and sent"
 * recorded = "2025-04-01T00:00:09.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
@@ -119,7 +119,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * contained[+] = s-05-MSH-Receiver
 * id = "EDS-BDS-07.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* subtype[msg-sent] = $EdsSubtypesCS#msg-sent "Message sent"
+* subtype = $EdsSubtypesCS#msg-sent "Message sent"
 
 * recorded = "2025-04-01T00:00:10.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0

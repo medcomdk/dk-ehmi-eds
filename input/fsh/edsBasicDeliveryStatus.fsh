@@ -20,60 +20,12 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * type MS SU
 //* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 //* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#object
-* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype 1..1 MS SU
-* subtype.code from $EdsSubtypesVS
-// * subtype.system = $EdsSubtypes // TODO: AT - this is incorrect, as it is a ValueSet, not a CodeSystem uri
-* subtype ^slicing.discriminator.type = #value
-* subtype ^slicing.discriminator.path = "$this"
-* subtype ^slicing.rules = #open // allow other codes
-* subtype contains
-//    msg-created 0..1 and 
-    msg-created-and-sent 0..1 MS and 
-    msg-sent 0..1 MS and 
-    msg-received 0..1 MS and 
-    msg-received-and-finalized 0..1 MS 
-//    and msg-finalized 0..1 
-//* subtype[msg-created]
-/* subtype[msg-created].code 1..1
-* subtype[msg-created].system 1..1
-* subtype[msg-created].display 1..1
-* subtype[msg-created] = $EdsSubtypes#msg-created "Message created" (exactly)
-*/
-//* subtype[msg-created-and-sent]
-* subtype[msg-created-and-sent].code 1..1
-* subtype[msg-created-and-sent].system 1..1
-//* subtype[msg-created-and-sent].system = $EdsSubtypes
-//* subtype[msg-created-and-sent].display 1..1
-* subtype[msg-created-and-sent] from $EdsSubtypesVS
-* subtype[msg-created-and-sent].code = #msg-created-and-sent "Message created and sent" (exactly)
-//* subtype[msg-sent]
-* subtype[msg-sent].code 1..1
-* subtype[msg-sent].system 1..1
-//* subtype[msg-sent].system = $EdsSubtypes
-//* subtype[msg-sent].display 1..1
-* subtype[msg-sent].code from $EdsSubtypesVS
-* subtype[msg-sent].code = #msg-sent "Message sent" (exactly)
-//* subtype[msg-received]
-* subtype[msg-received].code 1..1
-* subtype[msg-received].system 1..1
-//* subtype[msg-received].system = $EdsSubtypes
-//* subtype[msg-received].display 1..1
-* subtype[msg-received].code from $EdsSubtypesVS
-* subtype[msg-received].code = #msg-received "Message received" (exactly)
-//* subtype[msg-received-and-finalized]
-* subtype[msg-received-and-finalized].code 1..1
-* subtype[msg-received-and-finalized].system 1..1
-//* subtype[msg-received-and-finalized].system = $EdsSubtypes
-//* subtype[msg-received-and-finalized].display 1..1
-* subtype[msg-received-and-finalized].code from $EdsSubtypesVS
-* subtype[msg-received-and-finalized].code = #msg-received-and-finalized "Message received and finalized" (exactly)
-//* subtype[msg-finalized]
-/* subtype[msg-finalized].code 1..1
-* subtype[msg-finalized].system 1..1
-* subtype[msg-finalized].display 1..1
-* subtype[msg-finalized] = $EdsSubtypes#msg-finalized "Message finalized" (exactly)
-*/
+* subtype.code 1..1
+* subtype.system 1..1
+* subtype from ehmi-delivery-status-sub-types-valueset (extensible) 
+* subtype ^definition = "From the 6 codes in the EdsSubtypesVS the following 4 are used: _msg-created-and-sent_, _msg-sent_, _msg-received_, _msg-received-and-finalized_" //TODO needs to be refined! Just a proposal now.
 * action 1..1
 * action = http://hl7.org/fhir/audit-event-action#C
 * period 0..0

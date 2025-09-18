@@ -20,7 +20,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * id = "EDS-PDS-04.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 
-* subtype[msg-received] = $EdsSubtypesCS#msg-received "Message received"
+* subtype = $EdsSubtypesCS#msg-received "Message received"
 * recorded = "2025-04-01T00:00:07.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
@@ -100,7 +100,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * id = "EDS-PDS-04.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 
-* subtype[msg-sent] = $EdsSubtypesCS#msg-sent "Message sent"
+* subtype = $EdsSubtypesCS#msg-sent "Message sent"
 * recorded = "2025-04-01T00:00:08.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
