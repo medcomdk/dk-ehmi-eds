@@ -24,10 +24,6 @@ dependencies:
   dk.ehmi.terminology: current #1.0.0 
   dk.ehmi.eer: current #1.0.0 #current
 
-parameters:
-  apply-contact: true
-  apply-publisher: true
-
 menu:
   Home: index.html
   Profiles: profiles.html
@@ -44,6 +40,7 @@ menu:
     Dependencies: dependencies.html
 
 parameters:
+  apply-contact: true
   apply-version: false
   default-version: true
   apply-publisher: false
