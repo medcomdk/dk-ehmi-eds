@@ -14,35 +14,18 @@ When the message transaction is Patient specific then EdsPatientDeliveryStatus i
 When successfully submitted from an EDS Client to the EDS Server then the recorded EdsBasicDeliveryStatus has conformed to the profile otherwise it would 
 not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
-* ^url = "http://medcomehmi.dk/ig/eds/StructureDefinition/EdsBasicDeliveryStatus"
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsBasicDeliveryStatus.</div>"
-* ^text.status = #additional
-* ^contact[0].name = "MedCom"
-* ^contact[=].telecom.value = "https://www.medcom.dk/"
-* ^contact[=].telecom.system = #url
-* ^contact[+].name = "OVI"
-* ^contact[=].telecom.value = "ovi@medcom.dk"
-* ^contact[=].telecom.system = #email
-//* ^jurisdiction = urn:iso:std:iso:3166#CH
-* ^status = #active
-* ^publisher = "MedCom"
-* ^date = "2025-04-01"
-* ^copyright = "CC0-1.0"
-* ^experimental = false
+insert Metadata
 * id 1..
 * id MS SU
 * type MS SU
 //* type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 //* type.code = http://terminology.hl7.org/CodeSystem/audit-event-type#object
-* type.system = $EhmiDeliveryStatusTypes
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* type.system = $EhmiDeliveryStatusTypes
-* type.display = "EHMI messaging event"
 * subtype 1..1 MS SU
 * subtype.code from $EdsSubtypesVS
 * subtype.system = $EdsSubtypes
 * subtype ^slicing.discriminator.type = #value
-* subtype ^slicing.discriminator.path = code //"$this"
+* subtype ^slicing.discriminator.path = "$this"
 * subtype ^slicing.rules = #open // allow other codes
 * subtype contains
 //    msg-created 0..1 and 
@@ -62,7 +45,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * subtype[msg-created-and-sent].system 1..1
 //* subtype[msg-created-and-sent].system = $EdsSubtypes
 //* subtype[msg-created-and-sent].display 1..1
-* subtype[msg-created-and-sent].code from $EdsSubtypesVS
+* subtype[msg-created-and-sent] from $EdsSubtypesVS
 * subtype[msg-created-and-sent].code = #msg-created-and-sent "Message created and sent" (exactly)
 //* subtype[msg-sent]
 * subtype[msg-sent].code 1..1
@@ -107,16 +90,10 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
     ehmiReceiver 1..1 
 * agent 2..4
 //* ^agent[ehmiSender]
-* agent[ehmiSender].extension ^slicing.discriminator[1].type = #value
-* agent[ehmiSender].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiSender].extension[GLNId] contains 
-	  gln 0..* 
+* agent[ehmiSender].extension contains GLNId named gln 0..* 
 * agent[ehmiSender].name 0..1 MS 
 * agent[ehmiSender].type 1..1 MS 
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type ^short = "$EhmiDeliveryStatusParticipationRoleType#ehmiSender"
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
 * agent[ehmiSender].type.coding.display = "Sender"
 * agent[ehmiSender].who 1..1 MS
 * agent[ehmiSender].who only Reference(Organization)
