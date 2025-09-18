@@ -4,7 +4,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an EUA
-- ehmiSubType = msg-created
+- ehmiSubType = msg-created-and-sent
 - ehmiSender = Aarhus Kommune
 - ehmiReceiver = Lægerne Stjernepladsen I/S
 - ehmiPatient = PAT1234567890 
@@ -17,13 +17,10 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-created-and-sent].code = #msg-created-and-sent 
-* subtype[msg-created-and-sent].display = "Message created and sent"
-//* subtype[msg-created] = $EdsSubtypes#msg-created-and-sent "Message created and sent"
+* subtype = $EdsSubtypes#msg-created-and-sent "Message created and sent"
 * recorded = "2025-04-01T00:00:01.000+02:00" 
-//* outcome = $EhmiDeliveryStatusOutcome#0
-* outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
-// ehmiSender
+* outcome = $EhmiDeliveryStatusOutcome#0 "Success"
+
 * agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
 * agent[ehmiSender].requestor = true
 * agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
@@ -100,10 +97,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-//* subtype[msg-sent] = $EdsSubtypes#msg-sent "Message sent"
-//* subtype[msg-sent].system = $EdsSubtypes
-* subtype[msg-sent].code = #msg-sent
-* subtype[msg-sent].display = "Message sent"
+* subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-04-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender

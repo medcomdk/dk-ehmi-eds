@@ -1,7 +1,7 @@
 
 Instance: 019.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgement for a MSH in a create status
 - recorded by the client
 - server is EHMI Delivery Status (EDS) FHIR application server 
 - client is an AP
@@ -26,9 +26,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-received].code = #msg-received
-* subtype[msg-received].system = $EdsSubtypes
-* subtype[msg-received].display = "Message received"
+* subtype = $EdsSubtypes#msg-received "Message received"
 * recorded = "2025-04-01T00:00:13.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
@@ -102,15 +100,13 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 
 Instance: 019.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for an AP Receiver in a sent status"
+Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgement for an AP Receiver in a sent status"
 * contained[+] = s-03-AP-Sender
 * id = "EDS-BDS-19.2"
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * type.system = $EhmiDeliveryStatusTypes
 * type.display = "EHMI messaging event"
-* subtype[msg-sent].code = #msg-sent
-* subtype[msg-sent].system = $EdsSubtypes
-* subtype[msg-sent].display = "Message sent"
+* subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-04-01T00:00:14.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender

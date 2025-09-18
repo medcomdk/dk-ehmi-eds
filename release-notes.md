@@ -1,1 +1,1 @@
-Draft release
+Draft release to get started with development. Not a final release. Breaking changes may occur without the semantic versioning representing it.
