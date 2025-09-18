@@ -14,7 +14,7 @@ When the message transaction is Patient specific then EdsPatientDeliveryStatus i
 When successfully submitted from an EDS Client to the EDS Server then the recorded EdsBasicDeliveryStatus has conformed to the profile otherwise it would 
 not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
-insert Metadata
+* insert Metadata
 * id 1..
 * id MS SU
 * type MS SU
@@ -23,7 +23,7 @@ insert Metadata
 * type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype 1..1 MS SU
 * subtype.code from $EdsSubtypesVS
-* subtype.system = $EdsSubtypes
+// * subtype.system = $EdsSubtypes // TODO: AT - this is incorrect, as it is a ValueSet, not a CodeSystem uri
 * subtype ^slicing.discriminator.type = #value
 * subtype ^slicing.discriminator.path = "$this"
 * subtype ^slicing.rules = #open // allow other codes
@@ -82,6 +82,7 @@ insert Metadata
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 * agent.extension contains eds-otherId named GLNId 0..* MS
+* agent.extension[GLNId].valueIdentifier.value 1..1 MS //TODO: the 1..1 is already defined in the extension, perhaps we should move the MS flag to the extension too?
 * agent ^slicing.discriminator.type = #value
 * agent ^slicing.discriminator.path = "type"
 * agent ^slicing.rules = #open
@@ -90,11 +91,9 @@ insert Metadata
     ehmiReceiver 1..1 
 * agent 2..4
 //* ^agent[ehmiSender]
-* agent[ehmiSender].extension contains GLNId named gln 0..* 
 * agent[ehmiSender].name 0..1 MS 
 * agent[ehmiSender].type 1..1 MS 
-* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender "Sender"
 * agent[ehmiSender].who 1..1 MS
 * agent[ehmiSender].who only Reference(Organization)
 * agent[ehmiSender].who.identifier 1..1 MS SU
@@ -102,21 +101,13 @@ insert Metadata
 //* agent[ehmiSender].who.type 0..1 MS SU
 //* agent[ehmiSender].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
 //* agent[ehmiSender].who.type ^short = "SOR"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
+* agent[ehmiSender].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId].valueIdentifier.type ^short = "GLN"
+* agent[ehmiSender].extension[GLNId].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
 //* agent[ehmiReceiver]
-* agent[ehmiReceiver].extension ^slicing.discriminator[1].type = #value
-* agent[ehmiReceiver].extension ^slicing.discriminator[=].path = "value.ofType(Identifier).type"
-* agent[ehmiReceiver].extension[GLNId] contains 
-	  gln 0..* 
 * agent[ehmiReceiver].name 1..1 MS
 * agent[ehmiReceiver].type 1..1 MS
-* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
-* agent[ehmiReceiver].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver
-* agent[ehmiReceiver].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiReceiver].type.coding.display = "Receiver"
+* agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver "Receiver"
 * agent[ehmiReceiver].who 1..1 MS
 * agent[ehmiReceiver].who only Reference(Organization)
 * agent[ehmiReceiver].who.identifier 1..1 MS SU
@@ -124,17 +115,16 @@ insert Metadata
 //* agent[ehmiReceiver].who.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
 //* agent[ehmiReceiver].who.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#SOR 
 //* agent[ehmiReceiver].who.type  ^short = "SOR"
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type ^short = "GLN"
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value 1..1 MS
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.type ^short = "GLN"
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.value ^short = "equals SBDH/Receiver/Identifier"
 //source
 * source.observer 1..1 
 * source.observer only Reference(Device)
 * source.type 1..1 MS 
 * source.type from $EhmiDeliveryStatusSourceTypeValueSet
 * source.type.system = $EhmiDeliveryStatusSourceType
-* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice
+* source.observer.type = $EhmiDeliveryStatusParticipationRoleType#ehmiDevice // TODO: I think this should be fixed for Device form FHIR codes, not the 'ehmiDevice' code
 * source.observer.identifier 0..1 MS SU
 * contained.id
 // entity
@@ -142,8 +132,8 @@ insert Metadata
 * entity ^slicing.discriminator.type = #value
 * entity ^slicing.discriminator.path = "type.code"
 * entity ^slicing.rules = #open
+* entity.type from $EhmiDeliveryStatusEntityTypeValueSet
 * entity.type.system = $EhmiDeliveryStatusEntityType
-* entity.type.code from $EhmiDeliveryStatusEntityTypeValueSet
 * entity contains
     ehmiMessage 1..1 and
     ehmiMessageEnvelope 0..1 and
@@ -155,37 +145,23 @@ insert Metadata
 * entity[ehmiMessage].type.code 1..1 MS 
 * entity[ehmiMessage].type.system 1..1 MS 
 * entity[ehmiMessage].type.display 1..1 MS
-//* entity[ehmiMessage].type.code from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiMessage].type.code = #ehmiMessage (exactly)
-* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessage].type.display = "Message"
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage "Message"
 * entity[ehmiMessage].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open 
-  * ^short = "something short"
+* entity[ehmiMessage].detail ^slicing.discriminator.path = type
+* entity[ehmiMessage].detail ^slicing.rules = #open // TODO based on card of 2...3 i would say this is a closed slicing?
+* entity[ehmiMessage].detail ^short = "something short"
 * entity[ehmiMessage].detail contains
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 and
     ehmiStatisticalInfo 0..1 
 * entity[ehmiMessage].detail 2..3
-
-//* entity[ehmiMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-//* entity[ehmiMessage].detail[ehmiMessageType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType (exactly)
 * entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
-//* entity[ehmiMessage].detail[ehmiMessageType].type.code from $MedComMessageDefinitionUriVS
-//* entity[ehmiMessage].detail[ehmiMessageType].type.system = $MedComMessageDefinitionUri
-
-//* entity[ehmiMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-//* entity[ehmiMessage].detail[ehmiMessageVersion].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion (exactly)
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
-
-//* entity[ehmiMessage].detail[ehmiStatisticalInfo].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-//* entity[ehmiMessage].detail[ehmiStatisticalInfo].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiStatisticalInfo (exactly)
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].type = #ehmiStatisticalInfo (exactly)
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
@@ -194,19 +170,17 @@ insert Metadata
 * entity[ehmiMessageEnvelope].type.code 1..1 MS 
 * entity[ehmiMessageEnvelope].type.system 1..1 MS 
 * entity[ehmiMessageEnvelope].type.display 1..1 MS
-* entity[ehmiMessageEnvelope].type.code = #ehmiMessageEnvelope (exactly)
-* entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessageEnvelope].type.display = "Message Envelope"
+* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
+* entity[ehmiMessageEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open 
-  * ^short = "something short"
+* entity[ehmiMessageEnvelope].detail ^slicing.discriminator.path = type
+* entity[ehmiMessageEnvelope].detail ^slicing.rules = #open 
+* entity[ehmiMessageEnvelope].detail ^short = "something short"
 * entity[ehmiMessageEnvelope].detail contains
     ehmiMessageEnvelopeType 0..1 //and
 //    ehmiMessageVersion 0..1 
 * entity[ehmiMessageEnvelope].detail 0..1
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type.value = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType (exactly)
+* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = #ehmiMessageEnvelopeType (exactly)
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString 1..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString ^short = "equals 'SBDH/DocumentIdentification/Type/[value]' e.g. Bundle"
 //* entity[ehmiTransportEnvelope]
@@ -216,23 +190,20 @@ insert Metadata
 * entity[ehmiTransportEnvelope].type.display 1..1 MS
 //* entity[ehmiTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
 //* entity[ehmiTransportEnvelope].type = #ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.code = #ehmiTransportEnvelope (exactly)
-* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
+* entity[ehmiTransportEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open 
-  * ^short = "something short"
+* entity[ehmiTransportEnvelope].detail ^slicing.discriminator.path = type
+* entity[ehmiTransportEnvelope].detail ^slicing.rules = #open 
+* entity[ehmiTransportEnvelope].detail ^short = "something short"
 * entity[ehmiTransportEnvelope].detail contains
     ehmiTransportEnvelopeType 0..1 and
     ehmiTransportEnvelopeVersion 0..1
 * entity[ehmiTransportEnvelope].detail 0..2
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType (exactly)
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString ^short = "= 'SBDH'"
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 //* entity[ehmiOrigMessage]
@@ -240,48 +211,39 @@ insert Metadata
 * entity[ehmiOrigMessage].type.code 1..1 MS
 * entity[ehmiOrigMessage].type.system 1..1 MS 
 * entity[ehmiOrigMessage].type.display 1..1 MS
-//* entity[ehmiOrigMessage].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiOrigMessage].type = #ehmiOrigMessage
-* entity[ehmiOrigMessage].type.code = #ehmiOrigMessage (exactly)
-* entity[ehmiOrigMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigMessage].type.display = "Original Message"
+* entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage "Original Message"
+* entity[ehmiOrigMessage].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open  
-  * ^short = "something short"
+* entity[ehmiOrigMessage].detail ^slicing.discriminator.path = type
+* entity[ehmiOrigMessage].detail ^slicing.rules = #open  
+* entity[ehmiOrigMessage].detail ^short = "something short"
 * entity[ehmiOrigMessage].detail contains
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
 * entity[ehmiOrigMessage].detail 2..2
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType (exactly)
+
+* entity[ehmiOrigMessage].detail[ehmiMessageType].type = #ehmiMessageType (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion (exactly)
+* entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion (exactly)
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 //* entity[ehmiOrigTransportEnvelope]
 * entity[ehmiOrigTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigTransportEnvelope].type.code 1..1 MS
 * entity[ehmiOrigTransportEnvelope].type.system 1..1 MS 
 * entity[ehmiOrigTransportEnvelope].type.display 1..1 MS
-//* entity[ehmiOrigTransportEnvelope].type from $EhmiDeliveryStatusEntityTypeValueSet
-//* entity[ehmiOrigTransportEnvelope].type = #ehmiOrigTransportEnvelope
-* entity[ehmiOrigTransportEnvelope].type.code = #ehmiOrigTransportEnvelope (exactly)
-* entity[ehmiOrigTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiOrigTransportEnvelope].type.display = "Original Transport Envelope"
+* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope "Original Transport Envelope"
+* entity[ehmiOrigTransportEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
-  * ^slicing.rules = #open //#closed eller #open 
-  * ^short = "something short"
+* entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.path = type
+* entity[ehmiOrigTransportEnvelope].detail ^slicing.rules = #open //#closed eller #open 
+* entity[ehmiOrigTransportEnvelope].detail ^short = "something short"
 * entity[ehmiOrigTransportEnvelope].detail contains
     ehmiTransportEnvelopeType 0..1 and
     ehmiTransportEnvelopeVersion 0..1
 * entity[ehmiOrigTransportEnvelope].detail 0..2
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType (exactly)
+* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type from $EhmiDeliveryStatusEntityDetailTypeValueSet
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion (exactly)
+* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion (exactly)
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
 Extension: EdsOtherId
@@ -292,8 +254,8 @@ Description: "Carries other identifiers that are known for an agent."
 * ^context[=].expression = "AuditEvent.agent"
 * value[x] only Identifier
 * valueIdentifier.type 1..1
-* valueIdentifier.value 1..1
-
+* valueIdentifier.value 1..1 
+ 
 Invariant: uuid
 Description: "General UUID expression"
 Severity: #error

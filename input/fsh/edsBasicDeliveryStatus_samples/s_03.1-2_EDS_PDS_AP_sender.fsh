@@ -18,26 +18,21 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 "
 * contained[+] = s-03-AP-Sender
 * id = "EDS-PDS-03.1"
-* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* type.system = $EhmiDeliveryStatusTypes
-* type.display = "EHMI messaging event"
+* type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 
-* subtype[msg-received].code = #msg-received
-* subtype[msg-received].system = $EdsSubtypes
-* subtype[msg-received].display = "Message received"
+* subtype[msg-received] = $EdsSubtypesCS#msg-received "Message received"
 * recorded = "2025-04-01T00:00:05.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
 * agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender "Sender"
+
 * agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
 * agent[ehmiSender].who.display = "Aarhus Kommune"
 * agent[ehmiSender].who.identifier.value = "937961000016000"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+* agent[ehmiSender].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Lægerne Stjernepladsen I/S"
 * agent[ehmiReceiver].requestor = false
@@ -47,8 +42,8 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
 * agent[ehmiReceiver].who.display = "Lægerne Stjernepladsen I/S"
 * agent[ehmiReceiver].who.identifier.value = "698141000016008"
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer = Reference(Device/s-03-AP-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
@@ -66,31 +61,22 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
-* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
-* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessage].type.display = "Message"
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage "Message"
+* entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
-* entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
-* entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessageEnvelope].type.display = "Message Envelope"
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
+* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
+* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = #ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 // Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
-* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
 
 Instance: 003.2-EDS_PDS_Create-AP-Sender-msg-sent
@@ -112,25 +98,20 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 "
 * contained[+] = s-03-AP-Sender
 * id = "EDS-PDS-03.2"
-* type.code = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-* type.system = $EhmiDeliveryStatusTypes
-* type.display = "EHMI messaging event"
-* subtype[msg-sent].code = #msg-sent
-* subtype[msg-sent].system = $EdsSubtypes
-* subtype[msg-sent].display = "Message sent"
+* type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* subtype[msg-sent] = $EdsSubtypesCS#msg-sent "Message sent"
 * recorded = "2025-04-01T00:00:06.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 // ehmiSender
 * agent[ehmiSender].name = "Aarhus Kommune - Sundhed og Omsorg"
 * agent[ehmiSender].requestor = true
-* agent[ehmiSender].type.coding.code = $EhmiDeliveryStatusParticipationRoleType#ehmiSender
-* agent[ehmiSender].type.coding.system = $EhmiDeliveryStatusParticipationRoleType
-* agent[ehmiSender].type.coding.display = "Sender"
+* agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender "Sender"
+
 * agent[ehmiSender].who = Reference(Organization/EER.SOR.HI-AAR-Kommune.937961000016000)
 * agent[ehmiSender].who.display = "Aarhus Kommune"
 * agent[ehmiSender].who.identifier.value = "937961000016000"
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiSender].extension[GLNId][gln].valueIdentifier.value = "GLN-1234"
+* agent[ehmiSender].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiSender].extension[GLNId].valueIdentifier.value = "GLN-1234"
 // ehmiReceiver
 * agent[ehmiReceiver].name = "Lægerne Stjernepladsen I/S"
 * agent[ehmiReceiver].requestor = false
@@ -140,8 +121,8 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * agent[ehmiReceiver].who = Reference(Organization/LaegerneStjernepladsen.8200.AarhusN.698141000016008)
 * agent[ehmiReceiver].who.display = "Lægerne Stjernepladsen I/S"
 * agent[ehmiReceiver].who.identifier.value = "698141000016008"
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
-* agent[ehmiReceiver].extension[GLNId][gln].valueIdentifier.value = "GLN-12345"
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN 
+* agent[ehmiReceiver].extension[GLNId].valueIdentifier.value = "GLN-12345"
 // source
 * source.observer = Reference(Device/s-03-AP-Sender)
 * source.type.code = $EhmiDeliveryStatusSourceType#AP
@@ -159,29 +140,20 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
 // Message
 * entity[ehmiMessage].what.identifier.value = "MSG1234567890"
-* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage
-* entity[ehmiMessage].type.code = $EhmiDeliveryStatusEntityType#ehmiMessage
-* entity[ehmiMessage].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessage].type.display = "Message"
-* entity[ehmiMessage].detail[ehmiMessageType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageType
+* entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage "Message"
+* entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
-* entity[ehmiMessage].detail[ehmiMessageVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageVersion
+* entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
 // Message Envelope
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
-* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
-* entity[ehmiMessageEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope
-* entity[ehmiMessageEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiMessageEnvelope].type.display = "Message Envelope"
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiMessageEnvelopeType
+* entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
+* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = #ehmiMessageEnvelopeType
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
 // Transport Envelope 
 * entity[ehmiTransportEnvelope].what.identifier.value = "SBDH1234567890"
-* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.code = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope
-* entity[ehmiTransportEnvelope].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiTransportEnvelope].type.display = "Transport Envelope"
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeType
+* entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = $EhmiDeliveryStatusEntityDetailType#ehmiTransportEnvelopeVersion
+* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
