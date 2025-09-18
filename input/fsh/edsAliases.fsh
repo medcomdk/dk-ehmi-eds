@@ -17,7 +17,7 @@ Alias: $EhmiDeliveryStatusEntityMessageType = http://medcomehmi.dk/ig/terminolog
 
 Alias: $EdsSubtypes = http://hl7.org/fhir/ValueSet/audit-event-sub-type
 Alias: $EdsSubtypesVS = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-delivery-status-sub-types-valueset
-
+Alias: $EdsSubtypesCS = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-delivery-status-sub-types
 // EER Aliases
 Alias: $MedComMessageDefinitionUri = http://medcomehmi.dk/ig/terminology/CodeSystem/ehmi-medcom-message-definition-uri
 Alias: $MedComMessageDefinitionUriVS = http://medcomehmi.dk/ig/terminology/ValueSet/ehmi-medcom-message-definition-uri-valueset
