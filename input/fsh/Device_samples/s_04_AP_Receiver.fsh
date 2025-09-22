@@ -1,4 +1,3 @@
-
 Instance: s_04_AP_Receiver
 InstanceOf: Device
 Description: "An instance of a AP_Receiver Device"

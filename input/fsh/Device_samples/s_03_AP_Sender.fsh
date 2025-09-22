@@ -1,4 +1,3 @@
-
 Instance: s_03_AP_Sender
 InstanceOf: Device
 Description: "An instance of a AP_Sender Device"

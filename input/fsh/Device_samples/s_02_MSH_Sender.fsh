@@ -1,4 +1,3 @@
-
 Instance: s_02_MSH_Sender
 InstanceOf: Device
 Description: "An instance of a MSH_Sender Device"

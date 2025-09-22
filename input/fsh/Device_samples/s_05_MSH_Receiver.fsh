@@ -1,4 +1,3 @@
-
 Instance: s_05_MSH_Receiver
 InstanceOf: Device
 Description: "An example of MSH_Receiver Device"

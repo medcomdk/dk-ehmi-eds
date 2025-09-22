@@ -1,4 +1,3 @@
-
 Instance: s_06_EUA_Receiver
 InstanceOf: Device
 Description: "An instance of a EUA_Receiver Device"

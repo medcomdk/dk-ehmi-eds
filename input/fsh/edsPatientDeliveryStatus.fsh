@@ -13,30 +13,11 @@ When the message transaction is not Patient specific then EdsBasicDeliveryStatus
 When successfully submitted from an EDS Client to the EDS Server then the recorded EdsPatientDeliveryStatus has conformed to the profile otherwise it would 
 not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
-* ^url = "http://medcomehmi.dk/ig/eds/StructureDefinition/EdsPatientDeliveryStatus"
-* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>StructureDefinition for the EdsPatientDeliveryStatus.</div>"
-* ^text.status = #additional
-* ^contact[0].name = "MedCom"
-* ^contact[=].telecom.value = "https://www.medcom.dk/"
-* ^contact[=].telecom.system = #url
-* ^contact[+].name = "MedCom EHMI Team"
-* ^contact[=].telecom.value = "ehmi@medcom.dk"
-* ^contact[=].telecom.system = #email
-//* ^jurisdiction = urn:iso:std:iso:3166#CH
-* ^status = #active
-* ^publisher = "MedCom"
-* ^date = "2025-04-01"
-* ^copyright = "CC0-1.0"
-* ^experimental = false
+* insert Metadata
 * entity contains
     ehmiPatient 1..1 
 * entity 3..
-* entity[ehmiPatient].what.identifier 1..1 MS SU // Patient identifier UUIDv5 converted
-//* entity[ehmiPatient].what.identifier obeys uuid
+* entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
-* entity[ehmiPatient].type from $EhmiDeliveryStatusEntityTypeValueSet
-* entity[ehmiPatient].type = #ehmiPatient "Patient"
 * entity[ehmiPatient].role = http://terminology.hl7.org/CodeSystem/object-role#1 // "Patient"
-* entity[ehmiPatient].type.code = #ehmiPatient
-* entity[ehmiPatient].type.system = $EhmiDeliveryStatusEntityType
-* entity[ehmiPatient].type.display = "Patient"
+* entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
