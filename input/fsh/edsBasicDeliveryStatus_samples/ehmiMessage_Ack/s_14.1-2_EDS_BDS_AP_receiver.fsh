@@ -45,7 +45,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
 
 * entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
@@ -101,7 +101,7 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
 
 * entity[ehmiTransportEnvelope].what.identifier.value = "SBDH2345678901"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"

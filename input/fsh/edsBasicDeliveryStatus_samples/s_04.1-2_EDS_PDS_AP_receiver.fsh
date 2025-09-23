@@ -52,7 +52,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
 
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
@@ -120,7 +120,7 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "HomeCareObservation"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
 
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
