@@ -3,3 +3,7 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+%The left side is inherently a collection, and so the expression 'type.coding.code = 'ehmiReceiver'' may fail or return false if there is more than one item in the content being evaluated%
+
+%The left side is inherently a collection, and so the expression 'type.coding.code = 'ehmiSender'' may fail or return false if there is more than one item in the content being evaluated%

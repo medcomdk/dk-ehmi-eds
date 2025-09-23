@@ -1,7 +1,7 @@
 Instance: SearchParameter-EDS-CPR
 InstanceOf: SearchParameter
 Usage: #definition
-* insert Metadata
+* insert SearchParameterMetadata
 * name = "EDSEHMICPRSearchParameter"
 * description = "Search AuditEvent resources by CPR"
 * code = #cpr

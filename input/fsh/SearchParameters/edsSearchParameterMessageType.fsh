@@ -1,7 +1,7 @@
 Instance: SearchParameter-EDS-MessageType
 InstanceOf: SearchParameter
 Usage: #definition
-* insert Metadata
+* insert SearchParameterMetadata
 * name = "EDSMessageTypeSearchParameter"
 * description = "Search AuditEvent resources by the EHMI Message Type"
 * code = #ehmiMessageType

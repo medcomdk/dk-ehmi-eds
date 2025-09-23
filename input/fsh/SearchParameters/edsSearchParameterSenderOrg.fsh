@@ -1,7 +1,7 @@
 Instance: SearchParameter-EHMI-SenderOrg
 InstanceOf: SearchParameter
 Usage: #definition
-* insert Metadata
+* insert SearchParameterMetadata
 * name = "EDSSenderOrgSearchParameter"
 * description = "Search AuditEvent resources by the Sender Organization"
 * code = #senderOrg
@@ -9,6 +9,8 @@ Usage: #definition
 * type = #string
 * expression = """
   AuditEvent.agent.where(type.coding.code = 'ehmiSender').who.identifier.value |
-  AuditEvent.agent.where(type.coding.code = 'ehmiSender').extension.where(url = 'http://medcomehmi.dk/ig/eds/StructureDefinition/eds-otherId').valueIdentifier.value |
+  AuditEvent.agent.where(type.coding.code = 'ehmiSender')
+      .extension('http://medcomehmi.dk/ig/eds/StructureDefinition/eds-otherId')
+      .value.ofType(Identifier).value |
   AuditEvent.agent.where(type.coding.code = 'ehmiSender').name
 """
