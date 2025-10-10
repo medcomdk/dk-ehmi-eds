@@ -12,7 +12,7 @@ RuleSet: Metadata
 * ^experimental = false
 
 RuleSet: SearchParameterMetadata
-* status = #draft
+* status = #active
 * publisher = "MedCom"
 * contact[0].name = "MedCom"
 * contact[=].telecom.value = "https://www.medcom.dk/"

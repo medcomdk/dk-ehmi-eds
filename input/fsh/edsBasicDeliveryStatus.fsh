@@ -14,7 +14,6 @@ When successfully submitted from an EDS Client to the EDS Server then the record
 not have a successful outcome and the EDS Client will receive an OperationOutcome indicating the failure.
 " 
 * insert Metadata
-* id 1..
 * id MS SU
 * type MS SU
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
@@ -32,7 +31,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * outcomeDesc 0..0
 * purposeOfEvent 0..0
 * agent.extension contains eds-otherId named GLNId 0..* MS
-* agent.extension[GLNId].valueIdentifier.value 1..1 MS
+* agent.extension[GLNId].valueIdentifier.value 1..1
 * agent ^slicing.discriminator.type = #value
 * agent ^slicing.discriminator.path = "type"
 * agent ^slicing.rules = #open
@@ -69,6 +68,15 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * source.observer.identifier 0..1 MS SU
 
 * entity 2..
+* entity.what.identifier 1..1 MS SU
+* entity.detail.value[x] only string
+* entity.detail.valueString 1..1
+
+* entity.type 1..1 MS
+* entity.type.code 1..1
+* entity.type.system 1..1
+* entity.type.display 1..1
+
 * entity ^slicing.discriminator.type = #value
 * entity ^slicing.discriminator.path = "type"
 * entity ^slicing.rules = #open
@@ -81,12 +89,10 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
     ehmiOrigMessage 0..1 and
     ehmiOrigTransportEnvelope 0..1 
 
-* entity[ehmiMessage].what.identifier 1..1 MS SU
-
 * entity[ehmiMessage].type = $EhmiDeliveryStatusEntityType#ehmiMessage "Message"
 * entity[ehmiMessage].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessage].detail ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+  * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #closed 
 * entity[ehmiMessage].detail contains
     ehmiMessageType 1..1 and
@@ -95,18 +101,14 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiMessage].detail 2..3
 
 * entity[ehmiMessage].detail[ehmiMessageType].type = #ehmiMessageType (exactly)
-* entity[ehmiMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiMessage].detail[ehmiMessageType].valueString ^short = "equals 'SBDH/DocumentIdentification/Standard/[value]' e.g. homecareobservation-message"
 
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion (exactly)
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString 1..1
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.0"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString ^short = "equals 'SBDH/DocumentIdentification/TypeVersion/[value]' e.g. 1.1"
 
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].type = #ehmiStatisticalInfo (exactly)
-* entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString 1..1
 * entity[ehmiMessage].detail[ehmiStatisticalInfo].valueString ^short = "equals 'MCM:' + SBDH/DocumentIdentification/Standard/[value]+'|'+SBDH/DocumentIdentification/TypeVersion/[value]+#[Postfix values]"
 
-* entity[ehmiMessageEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
 * entity[ehmiMessageEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiMessageEnvelope].detail ^slicing.discriminator.type = #value
@@ -116,10 +118,8 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
     ehmiMessageEnvelopeType 0..1 
 * entity[ehmiMessageEnvelope].detail 0..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = #ehmiMessageEnvelopeType (exactly)
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString 1..1
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString ^short = "equals 'SBDH/DocumentIdentification/Type/[value]' e.g. Bundle"
 
-* entity[ehmiTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
 * entity[ehmiTransportEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiTransportEnvelope].detail ^slicing.discriminator.type = #value
@@ -130,27 +130,21 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
     ehmiTransportEnvelopeVersion 0..1
 * entity[ehmiTransportEnvelope].detail 0..2
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType (exactly)
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString ^short = "= 'SBDH'"
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion (exactly)
-* entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 * entity[ehmiTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString ^short = "equals SBDH/HeaderVersion/[value] e.g. 1.2"
 
-* entity[ehmiOrigMessage].what.identifier 1..1 MS SU
 * entity[ehmiOrigMessage].type = $EhmiDeliveryStatusEntityType#ehmiOrigMessage "Original Message"
 * entity[ehmiOrigMessage].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
-  * ^slicing.rules = #closed  
+  * ^slicing.rules = #closed
 * entity[ehmiOrigMessage].detail contains
     ehmiMessageType 1..1 and
     ehmiMessageVersion 1..1 
 * entity[ehmiOrigMessage].detail 2..2
 * entity[ehmiOrigMessage].detail[ehmiMessageType].type = #ehmiMessageType (exactly)
-* entity[ehmiOrigMessage].detail[ehmiMessageType].valueString 1..1
 * entity[ehmiOrigMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion (exactly)
-* entity[ehmiOrigMessage].detail[ehmiMessageVersion].valueString 1..1
 
-* entity[ehmiOrigTransportEnvelope].what.identifier 1..1 MS SU
 * entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope "Original Transport Envelope"
 * entity[ehmiOrigTransportEnvelope].detail ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
@@ -161,9 +155,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity[ehmiOrigTransportEnvelope].detail 0..2
 * entity[ehmiOrigTransportEnvelope].detail.type from $EhmiDeliveryStatusEntityDetailTypeValueSet
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType (exactly)
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString 1..1
 * entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion (exactly)
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString 1..1
 
 Extension: EdsOtherId
 Id: eds-otherId

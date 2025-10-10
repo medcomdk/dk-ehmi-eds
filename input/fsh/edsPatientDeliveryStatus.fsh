@@ -17,7 +17,6 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * entity contains
     ehmiPatient 1..1 
 * entity 3..
-* entity[ehmiPatient].what.identifier 1..1 MS SU
 * entity[ehmiPatient].type 1..1 MS 
 * entity[ehmiPatient].role = http://terminology.hl7.org/CodeSystem/object-role#1 // "Patient"
 * entity[ehmiPatient].type = $EhmiDeliveryStatusEntityType#ehmiPatient "Patient"
