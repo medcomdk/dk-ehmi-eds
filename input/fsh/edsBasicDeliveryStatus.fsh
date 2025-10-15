@@ -16,7 +16,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * insert Metadata
 * id MS SU
 * type MS SU
-* type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
+* type from $EhmiDeliveryStatusTypesValueSet
 
 * subtype 1..1 MS 
   * code 1..1
