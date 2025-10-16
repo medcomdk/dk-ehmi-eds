@@ -39,6 +39,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
     ehmiSender 1..1 and
     ehmiReceiver 1..1 
 * agent 2..4
+* agent.type from $EhmiDeliveryStatusParticipationRoleTypeValueSet
 * agent[ehmiSender].name 0..1 MS 
 * agent[ehmiSender].type 1..1 MS 
 * agent[ehmiSender].type = $EhmiDeliveryStatusParticipationRoleType#ehmiSender "Sender"
@@ -165,4 +166,5 @@ Description: "Carries other identifiers that are known for an agent."
 * ^context[=].expression = "AuditEvent.agent"
 * value[x] only Identifier
 * valueIdentifier.type 1..1
+* valueIdentifier.type from $EhmiDeliveryStatusAgentWhoIdentifierTypesValueset
 * valueIdentifier.value 1..1 MS
