@@ -7,10 +7,4 @@ Usage: #definition
 * code = #senderOrg
 * base = #AuditEvent
 * type = #string
-* expression = """
-  AuditEvent.agent.where(type.coding.code = 'ehmiSender').who.identifier.value |
-  AuditEvent.agent.where(type.coding.code = 'ehmiSender')
-      .extension('http://medcomehmi.dk/ig/eds/StructureDefinition/eds-otherId')
-      .value.ofType(Identifier).value |
-  AuditEvent.agent.where(type.coding.code = 'ehmiSender').name
-"""
+* expression = "AuditEvent.agent.where(type.coding.code = 'ehmiSender').who.identifier.value | AuditEvent.agent.where(type.coding.code = 'ehmiSender').extension('http://medcomehmi.dk/ig/eds/StructureDefinition/eds-otherId').value.ofType(Identifier).value | AuditEvent.agent.where(type.coding.code = 'ehmiSender').name"
