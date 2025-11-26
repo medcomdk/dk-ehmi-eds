@@ -1,7 +1,6 @@
 Profile: EdsBasicDeliveryStatus
 Parent: AuditEvent
-Description: "
-EdsBasicDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
+Description: "EdsBasicDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
 
 A basic EdsBasicDeliveryStatus is based on the AuditEvent profile for and is submitted when a EHMI Core Messaging transaction 
 from one station in the messageflow to another station happens successfully.

@@ -1,7 +1,6 @@
 Profile: EdsPatientDeliveryStatus
 Parent: EdsBasicDeliveryStatus
-Description: "
-EdsPatientDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
+Description: "EdsPatientDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
 
 The EdsPatientDeliveryStatus is an enhancement of the basic EdsBasicDeliveryStatus and is submitted when a EHMI Core Messaging transaction 
 from one station in the messageflow to another station happens successfully.

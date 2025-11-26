@@ -1,15 +1,13 @@
 {
     "package-id": "dk.ehmi.eds",
-    "version": "1.0.1-draft",
-    "path": "http://medcomehmi.dk/ig/eds/1.0.1-draft",
+    "version": "1.0.2-draft",
+    "path": "http://medcomehmi.dk/ig/eds/1.0.2-draft",
     "status": "draft",
     "sequence": "Release 1.x.x",
-    "mode": "milestone",
-    "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-ehmi-eds",
-    "title": "DK EHMI Delivery Status (EDS)",
-    "category": "Infrastructure",
+    "mode": "patch",
     "introduction": "DK EHMI Delivery Status (EDS)",
     "desc": "Draft release to get started with development. Not a final release. Breaking changes may occur without the semantic versioning representing it.",
     "descmd": "@release-notes.md",
-    "first" : true
+    "first" : false,
+    "RelatedIgs": "http://medcomehmi.dk/ig/eds/1.0.1-draft"
 }
