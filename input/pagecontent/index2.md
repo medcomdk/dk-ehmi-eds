@@ -36,7 +36,7 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 ### 1. EDS scenarios for the primary MedCom message in EHMI
 
 <table border="1" width="100%">
-<tr><th width="3%">#</th><th width="67%">usecase</th><th width="10%">Graphical View</th><th width="10%">Raw view(server)</th><th width="10%">Raw View(IG)</th></tr>
+<tr><th width="3%">#</th><th width="61%">usecase</th><th width="12%">Graphical View</th><th width="12%">Raw view(server)</th><th width="12%">Raw View(IG)</th></tr>
 <tr>
     <td>1.1</td>
     <td>When a message is created and sent in an EUA (The user has hit the "sent button") </td>
@@ -112,7 +112,7 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 ### 2. EDS scenarios for the ehmiSBDH Acknowledgement in EHMI
 
 <table border="1" width="100%">
-<tr><th width="3%">#</th><th width="67%">usecase</th><th width="10%">Graphical View</th><th width="10%">Raw view(server)</th><th width="10%">Raw View(IG)</th></tr>
+<tr><th width="3%">#</th><th width="61%">usecase</th><th width="12%">Graphical View</th><th width="12%">Raw view(server)</th><th width="12%">Raw View(IG)</th></tr>
 <tr>
     <td>7.1</td>
     <td>When an ehmiSBDH envelope has been received in the receiving MSH (at 5.1 in the above use case)<br/>and the Receiving MSH creates and sends an ehmiSBDH Acknowledgement</td>
@@ -160,7 +160,7 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 ### 3. EDS scenarios for the corresponding MedCom Acknowledgement message in EHMI
 
 <table border="1" width="100%">
-<tr><th width="3%">#</th><th width="67%">usecase</th><th width="10%">Graphical View</th><th width="10%">Raw view(server)</th><th width="10%">Raw View(IG)</th></tr>
+<tr><th width="3%">#</th><th width="61%">usecase</th><th width="12%">Graphical View</th><th width="12%">Raw view(server)</th><th width="12%">Raw View(IG)</th></tr>
 <tr>
     <td>11.1</td>
     <td>When an Acknowledgement message is created and sent in an EUA (Automatically) </td>
