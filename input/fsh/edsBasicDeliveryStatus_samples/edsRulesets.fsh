@@ -67,7 +67,7 @@ RuleSet: ehmiMessage-ACK
 * entity[ehmiMessage].what.identifier.value = "Ack1234567890"
 * entity[ehmiMessage].detail[ehmiMessageType].valueString = "Acknowledgement"
 * entity[ehmiMessage].detail[ehmiMessageVersion].type = #ehmiMessageVersion
-* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
+* entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "2.0"
 
 RuleSet: ehmiMessage-SBDHAck-Body
 * insert ehmiMessage-Body
