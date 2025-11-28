@@ -14,32 +14,32 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiOrigTransportEnvelope = ENV3456789012
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-- ehmiOrigMessage = MSG1234567890
-    - ehmiOrigMessageType = HomeCareObservation
-    - ehmiOrigMessageVersion = 1.0
+- * insert ehmiOrigMessage-HCO
+ = MSG1234567890
+    - * insert ehmiOrigMessage-HCO
+Type = HomeCareObservation
+    - * insert ehmiOrigMessage-HCO
+Version = 1.0
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
-* contained[+] = s-04-AP-Receiver
+* contained[+] = MultiMed-AP
 * id = "EDS-BDS-08.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-received "Message received"
 * recorded = "2025-11-01T00:00:10.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiAckSender
-* insert ehmiAckReceiver
+* insert ehmiSender-HCO-SDBHAck
+* insert ehmiReceiver-HCO-SBDHAck
+* insert MultiMed-AP
+* insert ehmiMessage-HCO-SBDHAck
+* insert ehmiTransportEnvelope-HCO-SBDHAck
+* insert ehmiOrigMessage-HCO
+* insert ehmiOrigTransportEnvelope-HCO
 
-* source.observer = Reference(Device/s-04-AP-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#AP "AP (Access Point)"
-
-* insert ehmiMessage_SBDH_Ack
-* insert ehmiTransportEnvelope_SBDH_Ack
-* insert ehmiOrigMessage
-* insert ehmiOrigTransportEnvelope
-
-Instance: 008.2-EDS_BDS_Create-SBDHAck-AP-Sender-msg-sent
+Instance: 08.2-EDS_BDS_Create-SBDHAck-AP-Sender-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
 Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgment for a MSH in a create status
 - recorded by the client
@@ -55,27 +55,27 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiOrigTransportEnvelope = ENV3456789012
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-- ehmiOrigMessage = MSG1234567890
-    - ehmiOrigMessageType = HomeCareObservation
-    - ehmiOrigMessageVersion = 1.0
+- * insert ehmiOrigMessage-HCO
+ = MSG1234567890
+    - * insert ehmiOrigMessage-HCO
+Type = HomeCareObservation
+    - * insert ehmiOrigMessage-HCO
+Version = 1.0
 - ehmiOrigTransportEnvelope = ENV1234567890
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
-* contained[+] = s-04-AP-Receiver
+* contained[+] = MultiMed-AP
 * id = "EDS-BDS-08.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-11-01T00:00:11.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiAckSender
-* insert ehmiAckReceiver
-
-* source.observer = Reference(Device/s-04-AP-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#AP "AP (Access Point)"
-
-* insert ehmiMessage_SBDH_Ack
-* insert ehmiTransportEnvelope_SBDH_Ack
-* insert ehmiOrigMessage
-* insert ehmiOrigTransportEnvelope
+* insert ehmiSender-HCO-SDBHAck
+* insert ehmiReceiver-HCO-SBDHAck
+* insert MultiMed-AP
+* insert ehmiMessage-HCO-SBDHAck
+* insert ehmiTransportEnvelope-HCO-SBDHAck
+* insert ehmiOrigMessage-HCO
+* insert ehmiOrigTransportEnvelope-HCO

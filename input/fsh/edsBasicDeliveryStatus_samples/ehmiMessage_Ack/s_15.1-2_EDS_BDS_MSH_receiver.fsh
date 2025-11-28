@@ -14,24 +14,20 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
+* contained[+] = Cura-MSH
 * id = "EDS-BDS-15.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-received "Message received"
 * recorded = "2025-11-01T00:00:18.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiAckSender
-* insert ehmiAckReceiver
-
-* source.observer = Reference(Device/s-05-MSH-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#MSH "MSH (Application Server)"
-
-* insert ehmiAckMessage
-* insert ehmiAckMessageEnvelope
-* insert ehmiTransportEnvelope_Acknowledgement
-* insert ehmiOrigMessage
-* insert ehmiOrigTransportEnvelope
+* insert ehmiSender-ACK
+* insert ehmiReceiver-ACK
+* insert Cura-MSH
+* insert ehmiMessage-ACK
+* insert ehmiMessageEnvelope-Ack
+* insert ehmiTransportEnvelope-Ack
+* insert ehmiOrigMessage-HCO
 
 Instance: 015.2-EDS_BDS_Create-MSH-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
@@ -49,21 +45,16 @@ Description: "An instance of an EdsBasicDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
+* contained[+] = Cura-MSH
 * id = "EDS-BDS-15.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-11-01T00:00:19.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiAckSender
-* insert ehmiAckReceiver
-
-* source.observer = Reference(Device/s-05-MSH-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#MSH "MSH (Application Server)"
-
-* insert ehmiAckMessage
-* insert ehmiAckMessageEnvelope
-* insert ehmiTransportEnvelope_Acknowledgement
-* insert ehmiOrigMessage
-* insert ehmiOrigTransportEnvelope
+* insert ehmiSender-ACK
+* insert ehmiReceiver-ACK
+* insert Cura-MSH
+* insert ehmiMessage-ACK
+* insert ehmiMessageEnvelope-Ack
+* insert ehmiOrigMessage-HCO

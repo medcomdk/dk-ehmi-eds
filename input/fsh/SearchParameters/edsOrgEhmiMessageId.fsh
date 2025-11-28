@@ -7,4 +7,5 @@ Usage: #definition
 * code = #orig-message-id
 * base = #AuditEvent
 * type = #string
-* expression = "AuditEvent.entity.where(type.code = 'ehmiOrigMessage').what.identifier.value"
+* expression = "AuditEvent.entity.where(type.code = '* insert ehmiOrigMessage-HCO
+').what.identifier.value"

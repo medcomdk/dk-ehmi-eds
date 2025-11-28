@@ -1,8 +1,8 @@
-Instance: s_05_MSH_Receiver
+Instance: MultiMed-MSH-instance
 InstanceOf: Device
 Description: "An example of MSH_Receiver Device"
-* id = "s-05-MSH-Receiver"
-* identifier.value = "s_05_MSH_Receiver"
+* id = "MultiMed-MSH"
+* identifier.value = "MultiMed-MSH"
 * status = #active
 * manufacturer = "MultiMed"
 * deviceName.name = "MultiMed Integrator"

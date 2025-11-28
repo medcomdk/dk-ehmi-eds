@@ -1,11 +1,10 @@
-Instance: s_11_EUA_Sender
+Instance: Cura-EUA-instance
 InstanceOf: Device
 Description: "An instance of a EUA_Sender Device"
-* id = "s-11-EUA-Sender"
-* identifier.value = "s_11_EUA_Sender"
+* id = "Cura-EUA"
+* identifier.value = "Cura-EUA"
 * status = #active
 * manufacturer = "Systematic"
 * deviceName.name = "Columna Cura"
 * deviceName.type = #manufacturer-name
 * type = $EhmiDeliveryStatusSourceType#EUA
-

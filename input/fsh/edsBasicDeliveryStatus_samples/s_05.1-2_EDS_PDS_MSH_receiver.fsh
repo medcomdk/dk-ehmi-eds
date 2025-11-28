@@ -15,24 +15,20 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
+* contained[+] = MultiMed-MSH
 * id = "EDS-PDS-05.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-
 * subtype = $EdsSubtypes#msg-received "Message received"
 * recorded = "2025-11-01T00:00:08.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiSender
-* insert ehmiReceiver
-
-* source.observer = Reference(Device/s-05-MSH-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#MSH "MSH (Application Server)"
-
+* insert ehmiSender-HCO
+* insert ehmiReceiver-HCO
+* insert MultiMed-MSH
 * insert ehmiPatient
-* insert ehmiMessage
-* insert ehmiMessageEnvelope
-* insert ehmiTransportEnvelope
+* insert ehmiMessage-HCO
+* insert ehmiMessageEnvelope-HCO
+* insert ehmiTransportEnvelope-HCO
 
 Instance: 05.2-EDS_PDS_Create-MSH-Receiver-msg-sent
 InstanceOf: EdsPatientDeliveryStatus
@@ -51,21 +47,16 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiTransportEnvelopeType = SBDH
 - ehmiTransportEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
+* contained[+] = MultiMed-MSH
 * id = "EDS-PDS-05.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
-
 * subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-11-01T00:00:09.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiSender
-* insert ehmiReceiver
-
-* source.observer = Reference(Device/s-05-MSH-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#MSH "MSH (Application Server)"
-
+* insert ehmiSender-HCO
+* insert ehmiReceiver-HCO
+* insert MultiMed-MSH
 * insert ehmiPatient
-* insert ehmiMessage
-* insert ehmiMessageEnvelope
-* insert ehmiTransportEnvelope
+* insert ehmiMessage-HCO
+* insert ehmiMessageEnvelope-HCO

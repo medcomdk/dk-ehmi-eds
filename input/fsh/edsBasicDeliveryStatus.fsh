@@ -1,6 +1,7 @@
 Profile: EdsBasicDeliveryStatus
 Parent: AuditEvent
-Description: "EdsBasicDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
+Description: "
+EdsBasicDeliveryStatus is used to define the basic delivery status reporting for EDS from an EDS Client to the EDS Server.
 
 A basic EdsBasicDeliveryStatus is based on the AuditEvent profile for and is submitted when a EHMI Core Messaging transaction 
 from one station in the messageflow to another station happens successfully.
@@ -49,7 +50,7 @@ not have a successful outcome and the EDS Client will receive an OperationOutcom
 * agent[ehmiSender].extension[GLNId].valueIdentifier.type = $EhmiDeliveryStatusAgentWhoIdentifierTypes#GLN
 * agent[ehmiSender].extension[GLNId].valueIdentifier.type ^short = "GLN"
 * agent[ehmiSender].extension[GLNId].valueIdentifier.value ^short = "equals SBDH/Sender/Identifier"
-* agent[ehmiReceiver].name 1..1 MS
+* agent[ehmiReceiver].name 0..1 MS
 * agent[ehmiReceiver].type 1..1 MS
 * agent[ehmiReceiver].type = $EhmiDeliveryStatusParticipationRoleType#ehmiReceiver "Receiver"
 * agent[ehmiReceiver].who 1..1 MS

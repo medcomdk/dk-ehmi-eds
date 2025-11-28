@@ -1,8 +1,8 @@
-Instance: s_03_AP_Sender
+Instance: KvalitetsIT-AP-instance
 InstanceOf: Device
 Description: "An instance of a AP_Sender Device"
-* id = "s-03-AP-Sender"
-* identifier.value = "s_03_AP_Sender"
+* id = "KvalitetsIT-AP"
+* identifier.value = "KvalitetsIT-AP"
 * status = #active
 * manufacturer = "KvalitetsIt"
 * deviceName.name = "KIT AP"

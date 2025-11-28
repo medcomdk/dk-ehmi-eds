@@ -13,36 +13,27 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 - ehmiOrigTransportEnvelope = ENV3456789012
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
-- ehmiOrigMessage = MSG1234567890
-    - ehmiOrigMessageType = HomeCareObservation
-    - ehmiOrigMessageVersion = 1.0
+- * insert ehmiOrigMessage-HCO
+ = MSG1234567890
+    - * insert ehmiOrigMessage-HCO
+Type = HomeCareObservation
+    - * insert ehmiOrigMessage-HCO
+Version = 1.0
 - ehmiOrigTransportEnvelope = ENV2345678901
     - ehmiOrigEnvelopeType = SBDH
     - ehmiOrigEnvelopeVersion = 2.0
 "
-* contained[+] = s-05-MSH-Receiver
+* contained[+] = MultiMed-MSH
 * id = "EDS-BDS-17.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-created-and-sent "Message created and sent"
 * recorded = "2025-11-01T00:00:19.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiSender
-* insert ehmiReceiver
-
-* source.observer = Reference(Device/s-05-MSH-Receiver)
-* source.type = $EhmiDeliveryStatusSourceType#MSH "MSH (Application Server)"
-
-* insert ehmiMessage_SBDH_Ack
-
-* insert ehmiTransportEnvelope_SBDH_Ack
-
-* insert ehmiOrigMessage
-
-
-* entity[ehmiOrigTransportEnvelope].what.identifier.value = "SBDH2345678901"
-* entity[ehmiOrigTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiOrigTransportEnvelope "Original Transport Envelope"
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].type = #ehmiTransportEnvelopeType
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeType].valueString = "SBDH"
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].type = #ehmiTransportEnvelopeVersion
-* entity[ehmiOrigTransportEnvelope].detail[ehmiTransportEnvelopeVersion].valueString = "2.0"
+* insert ehmiSender-ACK-SDBHAck
+* insert ehmiReceiver-ACK-SBDHAck
+* insert MultiMed-MSH
+* insert ehmiMessage-ACK-SBDHAck
+* insert ehmiTransportEnvelope-ACK-SBDHAck
+* insert ehmiOrigMessage-Ack
+* insert ehmiOrigTransportEnvelope-Ack

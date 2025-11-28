@@ -12,22 +12,19 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
+* contained[+] = Cura-EUA
 * id = "EDS-PDS-01.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-created-and-sent "Message created and sent"
 * recorded = "2025-11-01T00:00:01.000+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0 "Success"
 
-* insert ehmiSender
-* insert ehmiReceiver
-
-* source.observer = Reference(Device/s-01-EUA-Sender)
-* source.type = $EhmiDeliveryStatusSourceType#EUA "EUA (End-user Application)"
-
+* insert ehmiSender-HCO
+* insert ehmiReceiver-HCO
+* insert Cura-EUA
 * insert ehmiPatient
-* insert ehmiMessage
-* insert ehmiMessageEnvelope
+* insert ehmiMessage-HCO
+* insert ehmiMessageEnvelope-HCO
 
 
 Instance: 01.2-EDS_PDS_Create-EUA-Sender-msg-sent
@@ -44,20 +41,16 @@ Description: "An instance of an EdsPatientDeliveryStatus.
 - ehmiMessageType = HomeCareObservation
 - ehmiMessageVersion = 1.0
 "
-* contained[+] = s-01-EUA-Sender
+* contained[+] = Cura-EUA
 * id = "EDS-PDS-01.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-11-01T00:00:02.001+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
 
-* insert ehmiSender
-* insert ehmiReceiver
-
-* source.observer = Reference(Device/s-01-EUA-Sender)
-* source.type = $EhmiDeliveryStatusSourceType#EUA "EUA (End-user Application)"
-
+* insert ehmiSender-HCO
+* insert ehmiReceiver-HCO
+* insert Cura-EUA
 * insert ehmiPatient
-* insert ehmiMessage
-* insert ehmiMessageEnvelope
-
+* insert ehmiMessage-HCO
+* insert ehmiMessageEnvelope-HCO
