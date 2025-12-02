@@ -4,7 +4,7 @@
     "path": "http://medcomehmi.dk/ig/eds/1.0.2-draft",
     "status": "draft",
     "sequence": "Release 1.x.x",
-    "mode": "patch",
+    "mode": "milestone",
     "introduction": "DK EHMI Delivery Status (EDS)",
     "desc": "Draft release to get started with development. Not a final release. Breaking changes may occur without the semantic versioning representing it.",
     "descmd": "@release-notes.md",
