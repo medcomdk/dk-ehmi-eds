@@ -55,7 +55,7 @@ Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknow
 * entity[ehmiMessageEnvelope].what.identifier.value = "ENV1234567890"
 * entity[ehmiMessageEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiMessageEnvelope "Message Envelope"
 * entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].type = #ehmiMessageEnvelopeType
-* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "FHIR Bundle"
+* entity[ehmiMessageEnvelope].detail[ehmiMessageEnvelopeType].valueString = "SBDH"
 
 * entity[ehmiTransportEnvelope].what.identifier.value = "ENV3456789012"
 * entity[ehmiTransportEnvelope].type = $EhmiDeliveryStatusEntityType#ehmiTransportEnvelope "Transport Envelope"
