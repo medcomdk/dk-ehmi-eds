@@ -11,8 +11,7 @@ class EdsBasicDeliveryStatus {
     + Entity ehmiTransportEnvelope
         + EntityDetail ehmiTransportEnvelopeType
         + EntityDetail ehmiTransportEnvelopeVersion
-    + Entity * insert ehmiOrigMessage-HCO
-
+    + Entity ehmiOrigMessage
         + EntityDetail ehmiMessageType
         + EntityDetail ehmiMessageVersion
     + Entity ehmiOrigTransportEnvelope
@@ -32,8 +31,7 @@ class EdsPatientDeliveryStatus {
     + Entity ehmiTransportEnvelope
         + EntityDetail ehmiTransportEnvelopeType
         + EntityDetail ehmiTransportEnvelopeVersion
-    + Entity * insert ehmiOrigMessage-HCO
-
+    + Entity ehmiOrigMessage
         + EntityDetail ehmiMessageType
         + EntityDetail ehmiMessageVersion
     + Entity ehmiOrigTransportEnvelope
