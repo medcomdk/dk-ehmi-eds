@@ -76,11 +76,11 @@ RuleSet: ehmiMessage-SBDHAck-Body
 * entity[ehmiMessage].detail[ehmiMessageVersion].valueString = "1.1"
 
 RuleSet: ehmiMessage-HCO-SBDHAck
-* entity[ehmiMessage].what.identifier.value = "Ack1234567890"
+* entity[ehmiMessage].what.identifier.value = "HCO-SBDHAck1234567890"
 * insert ehmiMessage-SBDHAck-Body
 
 RuleSet: ehmiMessage-ACK-SBDHAck
-* entity[ehmiMessage].what.identifier.value = "Ack1234567890"
+* entity[ehmiMessage].what.identifier.value = "ACK-SBDHAck1234567890"
 * insert ehmiMessage-SBDHAck-Body
 
 RuleSet: ehmiOrigMessage-HCO
@@ -192,3 +192,4 @@ RuleSet: Cura-EUA
 RuleSet: EGClinea-EUA
 * source.observer = Reference(Device/EGClinea-EUA)
 * source.type = $EhmiDeliveryStatusSourceType#EUA "EUA (End-user Application)"
+

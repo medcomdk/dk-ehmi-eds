@@ -1,36 +1,12 @@
 Instance: 09.1-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-recieved
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgement for a MSH in a create status
-- recorded by the client
-- server is EHMI Delivery Status (EDS) FHIR application server 
-- client is an AP
-- ehmiSubType = msg-received
-- ehmiSender = Aarhus Kommune
-- ehmiReceiver = Lægerne Stjernepladsen I/S
-- ehmiPatient = PAT1234567890 
-- ehmiMessage = MSG3456789012
-    - ehmiMessageType = SBDHAck
-    - ehmiMessageVersion = 1.0
-- ehmiOrigTransportEnvelope = ENV3456789012
-    - ehmiOrigEnvelopeType = SBDH
-    - ehmiOrigEnvelopeVersion = 2.0
-- * insert ehmiOrigMessage-HCO
- = MSG1234567890
-    - * insert ehmiOrigMessage-HCO
-Type = HomeCareObservation
-    - * insert ehmiOrigMessage-HCO
-Version = 1.0
-- ehmiOrigTransportEnvelope = ENV1234567890
-    - ehmiOrigEnvelopeType = SBDH
-    - ehmiOrigEnvelopeVersion = 2.0
-"
+Description: "An instance of an EdsBasicDeliveryStatus containing a SBDH Acknowledgement for a MSH in a create status"
 * contained[+] = KvalitetsIT-AP
 * id = "EDS-BDS-09.1"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-received "Message received"
 * recorded = "2025-11-01T00:00:12.500+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-
 * insert ehmiSender-HCO-SDBHAck
 * insert ehmiReceiver-HCO-SBDHAck
 * insert KvalitetsIT-AP
@@ -41,14 +17,13 @@ Version = 1.0
 
 Instance: 09.2-EDS_BDS_Create-SBDHAck-AP-Receiver-msg-sent
 InstanceOf: EdsBasicDeliveryStatus
-Description: "An instance of an EdsBasicDeliveryStatus containing an SBDH Acknowledgement for an AP Receiver in a sent status"
+Description: "An instance of an EdsBasicDeliveryStatus containing a SBDH Acknowledgement for a MSH in a create status"
 * contained[+] = KvalitetsIT-AP
 * id = "EDS-BDS-09.2"
 * type = $EhmiDeliveryStatusTypes#ehmiMessaging "EHMI messaging event"
 * subtype = $EdsSubtypes#msg-sent "Message sent"
 * recorded = "2025-11-01T00:00:13.501+02:00" 
 * outcome = $EhmiDeliveryStatusOutcome#0
-
 * insert ehmiSender-HCO-SDBHAck
 * insert ehmiReceiver-HCO-SBDHAck
 * insert KvalitetsIT-AP
