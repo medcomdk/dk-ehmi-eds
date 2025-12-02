@@ -115,42 +115,42 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 <tr><th width="3%">#</th><th width="61%">usecase</th><th width="12%">Graphical View</th><th width="12%">Raw view(server)</th><th width="12%">Raw View(IG)</th></tr>
 <tr>
     <td>7.1</td>
-    <td>When an ehmiSBDH envelope has been received in the receiving MSH (at 5.1 in the above use case)<br/>and the Receiving MSH creates and sends an ehmiSBDH Acknowledgement</td>
+    <td>When the original ehmiSBDH envelope has been received in the original receiving MSH (at 5.1 in the above use case)<br/>and the original Receiving MSH creates and sends an ehmiSBDH Acknowledgement</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-07.1" target="_blank">EDS-BDS-07.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-07.1" target="_blank">EDS-BDS-07.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-07.1.html" target="_blank">EDS-BDS-07.1</a></td>
 </tr>
 <tr>
     <td>8.1</td>
-    <td>When the ehmiSBDH Acknowledgement is received by the sending AP</td>
+    <td>When the ehmiSBDH Acknowledgement is received by the original Receiving AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-08.1" target="_blank">EDS-BDS-08.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-08.1" target="_blank">EDS-BDS-08.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-08.1.html" target="_blank">EDS-BDS-08.1</a></td>
 </tr>
 <tr>
     <td>8.2</td>
-    <td>When the ehmiSBDH Acknowledgement is actually sent again by the sending AP</td>
+    <td>When the ehmiSBDH Acknowledgement is actually sent again by the original Receiving AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-08.2" target="_blank">EDS-BDS-08.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-08.2" target="_blank">EDS-BDS-08.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-08.2.html" target="_blank">EDS-BDS-08.2</a></td>
 </tr>
 <tr>
     <td>9.1</td>
-    <td>When the ehmiSBDH Acknowledgement is received by the receiving AP</td>
+    <td>When the ehmiSBDH Acknowledgement is received by the original Sending AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-09.1" target="_blank">EDS-BDS-09.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-09.1" target="_blank">EDS-BDS-09.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-09.1.html" target="_blank">EDS-BDS-09.1</a></td>
 </tr>
 <tr>
     <td>9.2</td>
-    <td>When the ehmiSBDH Acknowledgement is actually sent again by the receiving AP</td>
+    <td>When the ehmiSBDH Acknowledgement is actually sent again by the original Sending AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-09.2" target="_blank">EDS-BDS-09.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-09.2" target="_blank">EDS-BDS-09.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-09.2.html" target="_blank">EDS-BDS-09.2</a></td>
 </tr>
 <tr>
     <td>10.1</td>
-    <td>When the ehmiSBDH Acknowledgement is received and finalized by the receiving MSH</td>
+    <td>When the ehmiSBDH Acknowledgement is received and finalized by the original Sending MSH</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-10.1" target="_blank">EDS-BDS-10.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-10.1" target="_blank">EDS-BDS-10.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-10.1.html" target="_blank">EDS-BDS-10.1</a></td>
@@ -170,63 +170,63 @@ For each scenario there are 2 examples which opens in a new window,"Graphical vi
 </tr>
 <tr>
     <td>12.1</td>
-    <td>When the Acknowledgement message is received by the sending MSH</td>
+    <td>When the Acknowledgement message is received by the original Receiving MSH</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-12.1" target="_blank">EDS-BDS-12.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-12.1" target="_blank">EDS-BDS-12.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-12.1.html" target="_blank">EDS-BDS-12.1</a></td>
 </tr>
 <tr>
     <td>12.2</td>
-    <td>When the Acknowledgement message is actually sent again by the sending MSH</td>
+    <td>When the Acknowledgement message is actually sent again by the original Receiving MSH</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-12.2" target="_blank">EDS-BDS-12.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-12.2" target="_blank">EDS-BDS-12.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-12.2.html" target="_blank">EDS-BDS-12.2</a></td>
 </tr>
 <tr>
     <td>13.1</td>
-    <td>When the Acknowledgement message is received by the sending AP</td>
+    <td>When the Acknowledgement message is received by the original Receiving AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-13.1" target="_blank">EDS-BDS-13.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-13.1" target="_blank">EDS-BDS-13.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-13.1.html" target="_blank">EDS-BDS-13.1</a></td>
 </tr>
 <tr>
     <td>13.2</td>
-    <td>When the Acknowledgement message is actually sent again by the sending AP</td>
+    <td>When the Acknowledgement message is actually sent again by the original Receiving AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-13.2" target="_blank">EDS-BDS-13.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-13.2" target="_blank">EDS-BDS-13.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-13.2.html" target="_blank">EDS-BDS-13.2</a></td>
 </tr>
 <tr>
     <td>14.1</td>
-    <td>When the Acknowledgement message is received by the receiving AP</td>
+    <td>When the Acknowledgement message is received by the original Sending AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-14.1" target="_blank">EDS-BDS-14.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-14.1" target="_blank">EDS-BDS-14.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-14.1.html" target="_blank">EDS-BDS-14.1</a></td>
 </tr>
 <tr>
     <td>14.2</td>
-    <td>When the Acknowledgement message is actually sent again by the receiving AP</td>
+    <td>When the Acknowledgement message is actually sent again by the original Sending AP</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-14.2" target="_blank">EDS-BDS-14.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-14.2" target="_blank">EDS-BDS-14.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-14.2.html" target="_blank">EDS-BDS-14.2</a></td>
 </tr>
 <tr>
     <td>15.1</td>
-    <td>When the Acknowledgement message is received by the receiving MSH</td>
+    <td>When the Acknowledgement message is received by the original Sending MSH</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-15.1" target="_blank">EDS-BDS-15.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-15.1" target="_blank">EDS-BDS-15.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-15.1.html" target="_blank">EDS-BDS-15.1</a></td>
 </tr>
 <tr>
     <td>15.2</td>
-    <td>When the Acknowledgement message is actually sent again by the receiving MSH</td>
+    <td>When the Acknowledgement message is actually sent again by the original Sending MSH</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-15.2" target="_blank">EDS-BDS-15.2</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-15.2" target="_blank">EDS-BDS-15.2</a></td>
     <td><a href="AuditEvent-EDS-BDS-15.2.html" target="_blank">EDS-BDS-15.2</a></td>
 </tr>
 <tr>
     <td>16.1</td>
-    <td>When the Acknowledgement message is actually received and finalized by the receiving EUA</td>
+    <td>When the Acknowledgement message is actually received and finalized by the original Sending EUA</td>
     <td><a href="https://vhewercom/display-product?url=https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-16.1" target="_blank">EDS-BDS-16.1</a></td>
     <td><a href="https://hapifhir.ehmi.medcom.t1.hosting.kitkube.dk/fhir/AuditEvent/EDS-BDS-16.1" target="_blank">EDS-BDS-16.1</a></td>
     <td><a href="AuditEvent-EDS-BDS-16.1.html" target="_blank">EDS-BDS-16.1</a></td>

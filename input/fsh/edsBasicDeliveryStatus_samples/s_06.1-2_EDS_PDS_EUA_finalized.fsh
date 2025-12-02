@@ -1,4 +1,4 @@
-Instance: 06.1-EDS_PDS_Create-BS-Receiver-msg-received-and-finalized
+Instance: 06.1-EDS_PDS_Create-EUA-Receiver-msg-received-and-finalized
 InstanceOf: EdsPatientDeliveryStatus
 Description: "An instance of an EdsPatientDeliveryStatus.
 - recorded by the client
