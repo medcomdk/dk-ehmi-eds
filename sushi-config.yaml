@@ -4,7 +4,7 @@ name: EHMI EDS IG
 title: "DK EHMI Delivery Status (EDS)"
 description: The DK EHMI Delivery Status (EDS)
 status: draft # draft | active | retired | unknown
-version: 1.0.1-draft
+version: 1.0.2-draft
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

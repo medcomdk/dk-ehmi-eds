@@ -1,8 +1,8 @@
-Instance: s_06_EUA_Receiver
+Instance: EGClinea-EUA-instance
 InstanceOf: Device
 Description: "An instance of a EUA_Receiver Device"
-* id = "s-06-EUA-Receiver"
-* identifier.value = "s_06_EUA_Receiver"
+* id = "EGClinea-EUA"
+* identifier.value = "EGClinea-EUA"
 * status = #active
 * manufacturer = "EG"
 * deviceName.name = "EG Clinea LPS"

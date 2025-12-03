@@ -59,9 +59,9 @@ scope 	Beskrivelse
 EDS	En angivelse af det er for EDS, at klienten ønsker et access token.
 system/AuditEvent.crs	(kun for systemklienter) En angivelse af at tokenet skal kunne registrere/læse/fremsøge forsendelsesstatus ressourcer (som er profileringer af FHIR’s AuditEvent ressource).
 user/AuditEvent.rs	(kun for brugerklienter) En angivelse af at tokenet skal kunne læse og fremsøge forsendelsesstatus ressourcer (som er profileringer af FHIR’s AuditEvent ressource).
-SOR:<XXXXX>	(kun for systemklienter og kun ved registreringer) En angivelse af organisationens SOR kode, hvor <XXXXX> sættes til selve koden.
+SOR:[XXXXX]	(kun for systemklienter og kun ved registreringer) En angivelse af organisationens SOR kode, hvor [XXXXX] sættes til selve koden.
 
-GLN:<YYYYY>	(kun for systemklienter og kun ved registreringer) En angivelse af organisationens GLN lokationsnummer, hvor <YYYYY> sættes til selve lokationsnummeret.
+GLN:[YYYYY>] (kun for systemklienter og kun ved registreringer) En angivelse af organisationens GLN lokationsnummer, hvor [YYYYY] sættes til selve lokationsnummeret.
 
 Eksempel på en samlet scope som indgår i kaldet for en systemklient: 
 

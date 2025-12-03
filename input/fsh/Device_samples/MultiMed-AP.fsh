@@ -1,8 +1,8 @@
-Instance: s_04_AP_Receiver
+Instance: MultiMed-AP-instance
 InstanceOf: Device
 Description: "An instance of a AP_Receiver Device"
-* id = "s-04-AP-Receiver"
-* identifier.value = "s_04_AP_Receiver"
+* id = "MultiMed-AP"
+* identifier.value = "MultiMed-AP"
 * status = #active
 * manufacturer = "MultiMed"
 * deviceName.name = "MultiMed AP"

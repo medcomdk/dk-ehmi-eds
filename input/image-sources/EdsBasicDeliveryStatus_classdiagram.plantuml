@@ -16,7 +16,8 @@ class EdsBasicDeliveryStatus {
         + EntityDetail ehmiTransportEnvelopeType
         + EntityDetail ehmiTransportEnvelopeVersion
 ---
-    + Entity ehmiOrigMessage
+    + Entity * insert ehmiOrigMessage-HCO
+
         + EntityDetail ehmiMessageType
         + EntityDetail ehmiMessageVersion
 ---
