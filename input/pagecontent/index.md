@@ -22,7 +22,7 @@ EDS is used in the EHMI messaging flow like above.
 
 In a more technical outline of the above, it is presented here in a sequence diagram:
 
-<img src="./ehmi-EDS-FlowCalls.png" alt="EHMI Delivery Status (EDS) <tr><td>sequence diagram" style="width:100%;height:auto;border=1;margin: 20px 20px 20px 0px">
+<img src="./ehmi-EDS-FlowCalls.png" alt="EHMI Delivery Status (EDS) sequence diagram" style="width:100%;height:auto;border=1;margin: 20px 20px 20px 0px">
 
 <br/>
 
