@@ -3,7 +3,7 @@
     "version": "1.0.2-draft",
     "path": "http://medcomehmi.dk/ig/eds/1.0.2-draft",
     "status": "draft",
-    "sequence": "Release 1.0",
+    "sequence": "Release 1.x.x",
     "mode": "working",
     "desc": "Draft release to get started with development. Not a final release. Breaking changes may occur without the semantic versioning representing it.",
     "descmd": "@release-notes.md",
