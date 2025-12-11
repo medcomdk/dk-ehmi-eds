@@ -1,11 +1,10 @@
 {
     "package-id": "dk.ehmi.eds",
-    "version": "1.0.2-draft",
-    "path": "http://medcomehmi.dk/ig/eds/1.0.2-draft",
-    "status": "draft",
+    "version": "1.0.2",
+    "path": "http://medcomehmi.dk/ig/eds/1.0.2",
+    "status": "release",
     "sequence": "Release 1.x.x",
-    "mode": "working",
-    "desc": "Draft release to get started with development. Not a final release. Breaking changes may occur without the semantic versioning representing it.",
-    "descmd": "@release-notes.md",
-    "first" : false,
+    "mode": "milestone",
+    "desc": "See release notes",
+    "descmd": "@release-notes.md"
 }
